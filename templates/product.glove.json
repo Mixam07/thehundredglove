@@ -1,0 +1,563 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "11660f37-f123-41d2-a1cc-dab26c3abecd": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "NEGATIVE CUT",
+            "text_style": "uppercase"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "0707389e-4c9f-4b51-89de-e4a495ccc229": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<h4>SELECT COLOUR</h4>\n\n<ul class=\"product-list\">\n  {% assign product_limit = 5\n%}\n  {% for product in collections.all.products limit:product_limit %}\n    <li class=\"product-item\">\n      <a href=\"{{ product.url }}\">\n        <img src=\"{{ product.featured_image.src | img_url: 'medium' }}\" class=\"product-image\" alt=\"{{ product.featured_image.alt }}\">\n      </a>\n    </li>\n  {% endfor %}\n</ul>"
+          }
+        },
+        "b096c6da-a2ec-4fa9-86c5-7383a8f2c0d6": {
+          "type": "popup",
+          "settings": {
+            "text": "Help Me Choose",
+            "page": "glove-size-img"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "f7992867-6105-4855-8a49-206fd637e3c1": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "449dae19-f761-403a-8b5c-5eee7a840458": {
+          "type": "shopify://apps/clearpay-on-site-messaging/blocks/payments-messaging/5d763983-d3e6-4888-9966-4e1170b26ae9",
+          "settings": {
+            "text_align": "center",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "9cc0f50e-9e5f-4b8f-917a-affe813bc3e2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.details | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "a92343d5-1bb0-45fa-b15b-fcc04f5aa014": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wash & Care",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.wash_care | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "d15fdf10-1e93-405f-bada-e280b9e2fab0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.shipping_return | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "339d7fd4-cab4-4784-961a-57defc90cb4e": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fit & Grip",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.fit | metafield_tag }}</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "11660f37-f123-41d2-a1cc-dab26c3abecd",
+        "title",
+        "price",
+        "vendor",
+        "description",
+        "0707389e-4c9f-4b51-89de-e4a495ccc229",
+        "b096c6da-a2ec-4fa9-86c5-7383a8f2c0d6",
+        "variant_picker",
+        "f7992867-6105-4855-8a49-206fd637e3c1",
+        "buy_buttons",
+        "449dae19-f761-403a-8b5c-5eee7a840458",
+        "9cc0f50e-9e5f-4b8f-917a-affe813bc3e2",
+        "a92343d5-1bb0-45fa-b15b-fcc04f5aa014",
+        "d15fdf10-1e93-405f-bada-e280b9e2fab0",
+        "339d7fd4-cab4-4784-961a-57defc90cb4e"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 24,
+        "text_1": "NEGATIVE CUT"
+      }
+    },
+    "f4f14b8d-6bd4-4443-9261-276ff4a523a5": {
+      "type": "product-grid-layout",
+      "settings": {
+        "title-pro": "Breathable Backhand",
+        "p-description": "Unlock your true potential with our meticulously engineered ultra-lightweight gloves. Designed to provide exceptional support and prioritise breathability, we've left no detail untouched.",
+        "image-selection": "shopify://shop_images/Product1-img.jpg"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "79759513-694e-4a22-84b5-cc96d56e6a0d": {
+      "type": "two-col-img-left",
+      "settings": {
+        "image-selection": "shopify://shop_images/Product2-img.jpg",
+        "title-pro": "Unmatched Stickiness",
+        "p-description": "Experience the unbeatable performance of our gloves, designed to excel on any playing field. From grass to turf, concrete to artificial surfaces, our gloves consistently deliver unmatched grip and control."
+      }
+    },
+    "4b9b2765-ed2c-4716-abc0-3c45073c079f": {
+      "type": "product-grid-layout",
+      "settings": {
+        "title-pro": "Negative Cut",
+        "p-description": "Trusted by goalkeepers worldwide, the negative cut is the preferred choice for those seeking precision and confidence in their game. Elevate your performance with gloves that are engineered for optimal comfort and exceptional handling.",
+        "image-selection": "shopify://shop_images/Product3-img.jpg"
+      }
+    },
+    "29656bfb-4786-4e29-a573-c96116ceabcf": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16727603183872__29656bfb-4786-4e29-a573-c96116ceabcf-16772448282781fe6a-0": {
+          "type": "column",
+          "settings": {
+            "title": "96%",
+            "text": "<p>of goalkeepers said our gloves outlasted others they've used</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "d1e6ebad-84ff-4fd4-b8b0-cda47b1b9fa8": {
+          "type": "column",
+          "settings": {
+            "title": "94%",
+            "text": "<p>of goalkeepers said they preferred the fit of our gloves</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "acee73cd-9b66-4a31-8f3d-f229d6027d0b": {
+          "type": "column",
+          "settings": {
+            "title": "99%",
+            "text": "<p>of goalkeepers said they feel more confident wearing our gloves</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16727603183872__29656bfb-4786-4e29-a573-c96116ceabcf-16772448282781fe6a-0",
+        "d1e6ebad-84ff-4fd4-b8b0-cda47b1b9fa8",
+        "acee73cd-9b66-4a31-8f3d-f229d6027d0b"
+      ],
+      "settings": {
+        "title": "In Customer Testing, Keepers Were Shown To Love The Hundred Glove",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "2420e26f-476c-4486-b4c3-eecf8051f3aa": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"grip_contant main content\">\n \n<span class=\"inline_content content-span \"><h1 class=\"heading-content\">GRIP THAT LASTS <p class=\"content-para\">2X LONGER </p></h1></span>\n<h3 class=\"subheading_pera\">\nTHAN THE NEXT BEST SELLING BRAND</h3>\n\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "96099ad3-0406-4075-a2e3-6b9041c848e5": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16790093332736__96099ad3-0406-4075-a2e3-6b9041c848e5-1687775857c0f3c53c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "If You Don’t Love It, It’s On Us",
+            "heading_size": "h1"
+          }
+        },
+        "template--16790093332736__96099ad3-0406-4075-a2e3-6b9041c848e5-1687775857c0f3c53c-1": {
+          "type": "text",
+          "settings": {
+            "text": "We're confident in the quality and effectiveness of our products. That means, if you don't see results, you will get your money back!",
+            "text_style": "body"
+          }
+        },
+        "template--16790093332736__96099ad3-0406-4075-a2e3-6b9041c848e5-1687775857c0f3c53c-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "FIND OUT MORE",
+            "button_link_1": "https://thehundredglove.com/pages/find-out-more",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16790093332736__96099ad3-0406-4075-a2e3-6b9041c848e5-1687775857c0f3c53c-0",
+        "template--16790093332736__96099ad3-0406-4075-a2e3-6b9041c848e5-1687775857c0f3c53c-1",
+        "template--16790093332736__96099ad3-0406-4075-a2e3-6b9041c848e5-1687775857c0f3c53c-2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/attachment.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4941ad48-5d78-467b-a95c-5b4b49397b5c",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "ab64d8a8-11d6-472e-8216-209e589da89d": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16749975011584__ab64d8a8-11d6-472e-8216-209e589da89d-1680528000bdf4baf6-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ARE ALL OF YOUR GLOVES DURABLE?",
+            "icon": "none",
+            "row_content": "<p>Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear.<br/></p>",
+            "page": ""
+          }
+        },
+        "template--16749975011584__ab64d8a8-11d6-472e-8216-209e589da89d-1680528000bdf4baf6-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO YOU ENSURE BOTH OUTSTANDING GRIP + DURABILITY?",
+            "icon": "none",
+            "row_content": "<p>We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability.<br/></p>",
+            "page": ""
+          }
+        },
+        "template--16749975011584__ab64d8a8-11d6-472e-8216-209e589da89d-1680528000bdf4baf6-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW LONG IS THE RISK FREE GUARANTEE?",
+            "icon": "none",
+            "row_content": "<p>Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked.</p>",
+            "page": ""
+          }
+        },
+        "template--16749975011584__ab64d8a8-11d6-472e-8216-209e589da89d-1680528000bdf4baf6-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "DO ALL OF YOUR GLOVES FIT TRUE TO SIZE?",
+            "icon": "none",
+            "row_content": "<p>They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available.<br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16749975011584__ab64d8a8-11d6-472e-8216-209e589da89d-1680528000bdf4baf6-0",
+        "template--16749975011584__ab64d8a8-11d6-472e-8216-209e589da89d-1680528000bdf4baf6-1",
+        "template--16749975011584__ab64d8a8-11d6-472e-8216-209e589da89d-1680528000bdf4baf6-2",
+        "template--16749975011584__ab64d8a8-11d6-472e-8216-209e589da89d-1680528000bdf4baf6-3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ's",
+        "heading_size": "h0",
+        "heading_alignment": "left",
+        "layout": "section",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "show_border": false
+      }
+    },
+    "c93957df-d83e-4f24-bd59-d84e462d871f": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"main content\">\n \n<span class=\"content-span\"><h1 class=\"heading-content\">IF YOU DON'T LOVE IT,<p class=\"content-para\">IT'S ON US </p></h1></span>\n\n<p class=\"secont-content-para\">We're confident in the quality and effectiveness of our products. That means, if you don't see results, you will get your money back!</p>\n\n<button type=\"submit\" name=\"add\" class=\"button button123\">\n                        <span>FIND OUT MORE</span>\n                        <div class=\"loading-overlay__spinner hidden\">\n                          <svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"spinner\" viewBox=\"0 0 66 66\" xmlns=\"http://www.w3.org/2000/svg\">\n                            <circle class=\"path\" fill=\"none\" stroke-width=\"6\" cx=\"33\" cy=\"33\" r=\"30\"></circle>\n                          </svg>\n                        </div>\n                      </button>\n\n</div>",
+        "color_scheme": "inverse",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1675412991975636fd": {
+      "type": "apps",
+      "blocks": {
+        "d7f641b5-e062-4bed-9586-4f48e9b5a54c": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-card-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "maxWidth": 1100,
+            "borderRadius": 8,
+            "itemsPerView": 4,
+            "maxNumberOfCharacters": 100,
+            "imageRatio": "0.72",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "itemBackgroundColor": "#ffffff",
+            "starsColor": "",
+            "starsBackgroundColor": "#ffffff",
+            "arrows_backgroundColor": "#ffffff",
+            "arrows_iconColor": "#9a9a9a",
+            "shadow": "offset-dark",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": ""
+          }
+        },
+        "4a382f86-6bbf-43a4-bfa0-1c1479ba2eaf": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": true,
+            "limit": 2,
+            "hide_thumbnails": false,
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "d7f641b5-e062-4bed-9586-4f48e9b5a54c",
+        "4a382f86-6bbf-43a4-bfa0-1c1479ba2eaf"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "550e689b-7c06-44fa-9e5b-7c45cb9da63b": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Customers Also Brought",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 8
+      }
+    },
+    "4ec3faaf-9da7-433f-a9f4-279607f1bde4": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16790093332736__4ec3faaf-9da7-433f-a9f4-279607f1bde4-1687845291524cc832-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow Our Journey",
+            "heading_size": "h1"
+          }
+        },
+        "template--16790093332736__4ec3faaf-9da7-433f-a9f4-279607f1bde4-1687845291524cc832-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--16790093332736__4ec3faaf-9da7-433f-a9f4-279607f1bde4-1687845291524cc832-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16790093332736__4ec3faaf-9da7-433f-a9f4-279607f1bde4-1687845291524cc832-0",
+        "template--16790093332736__4ec3faaf-9da7-433f-a9f4-279607f1bde4-1687845291524cc832-1",
+        "template--16790093332736__4ec3faaf-9da7-433f-a9f4-279607f1bde4-1687845291524cc832-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "7afd5de6-36f8-47b7-9da7-f89e4603313a": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<p class=\"instafeed_p\">TAG YOUR POST WITH <a href=\"\">@THEHUNDREDGLOVE</a> TO BE FEATURED</p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "16878452609ece7365": {
+      "type": "apps",
+      "blocks": {
+        "e80ec9b2-8eba-4e7b-96e9-10a323faf121": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "e80ec9b2-8eba-4e7b-96e9-10a323faf121"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f4f14b8d-6bd4-4443-9261-276ff4a523a5",
+    "related-products",
+    "79759513-694e-4a22-84b5-cc96d56e6a0d",
+    "4b9b2765-ed2c-4716-abc0-3c45073c079f",
+    "29656bfb-4786-4e29-a573-c96116ceabcf",
+    "2420e26f-476c-4486-b4c3-eecf8051f3aa",
+    "96099ad3-0406-4075-a2e3-6b9041c848e5",
+    "ab64d8a8-11d6-472e-8216-209e589da89d",
+    "c93957df-d83e-4f24-bd59-d84e462d871f",
+    "1675412991975636fd",
+    "550e689b-7c06-44fa-9e5b-7c45cb9da63b",
+    "4ec3faaf-9da7-433f-a9f4-279607f1bde4",
+    "7afd5de6-36f8-47b7-9da7-f89e4603313a",
+    "16878452609ece7365"
+  ]
+}

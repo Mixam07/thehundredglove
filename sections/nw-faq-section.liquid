@@ -1,0 +1,176 @@
+
+<style>
+  .nwFaqSection{
+    padding: 40px 0;
+  }
+  .nwFaqSectionTitle{
+    color: #000;
+    font-family: anton;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 140%; /* 64.4px */
+    letter-spacing: 0.92px;
+    text-align:center;
+  }
+  .nwFaqSectionItems{
+    margin-top: 30px;
+  }
+  .nwFaqSectionItemsOne{
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background: #F4F4F4;
+    padding: 32px 32px 32px 32px;
+  }
+  .nwFaqSectionItemsOne:last-child{
+    margin-bottom: 0;
+  }
+  .nwFaqSectionItemsOneTop{
+    color: #000;
+    font-family: Arial;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    padding-right: 40px;
+    position:relative;
+    cursor:pointer;
+  }
+  .nwFaqSectionItemsOneTop.active{
+    color: #D75454;
+  }
+  .nwFaqSectionItemsOneTop:before{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.3335 7.50008L10.0002 14.1667L16.6668 7.50008L15.0002 5.83342L10.0002 10.8334L5.00016 5.83342L3.3335 7.50008Z' fill='black'/%3E%3C/svg%3E");
+    background-size: cover;
+    right: 0;
+    top: calc(50% - 10px);
+    transition:all ease .2s;
+  }
+  .nwFaqSectionItemsOneTop.active:before{
+    transform:rotate(180deg);
+  }
+  .nwFaqSectionItemsOneBottom{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #000;
+    color: #000;
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 14px;
+  }
+  .nwFaqSectionItemsOneBottom{
+    display:none;
+  }
+
+  @media(max-width: 999px){
+    .nwFaqSection{
+      padding: 20px 0 30px 0;
+    }
+    .nwFaqSectionTitle{
+      font-size: 26px;
+      text-align:left;
+    }
+    .nwFaqSectionItemsOne{
+      padding: 12px 14px;
+    }
+    .nwFaqSectionItemsOneTop{
+      font-size: 14px;
+    }
+    .nwFaqSectionItemsOneBottom{
+      font-size: 14px;
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+    .nwFaqSectionItemsOne{
+      margin-bottom: 12px;
+    }
+  }
+</style>
+
+ <div class="nwFaqSection">
+  <div class="page-width" style="max-width: 1100px;">
+
+    <div class="nwFaqSectionTitle">
+      {{ section.settings.title }}
+    </div>
+
+    <div class="nwFaqSectionItems">
+      {% for block in section.blocks %}
+        <div class="nwFaqSectionItemsOne">
+          <div class="nwFaqSectionItemsOneTop">
+            {{ block.settings.title }}
+          </div>
+  
+          <div class="nwFaqSectionItemsOneBottom">
+            {{ block.settings.text }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+ </div>
+
+
+<script>
+  $('.nwFaqSectionItemsOneTop').click(function(){
+    if($(this).hasClass('active')){
+      $(this).removeClass('active');
+      $(this).parent().find('.nwFaqSectionItemsOneBottom').slideUp();
+      return
+    }
+    $(this).addClass('active');
+    $(this).parent().find('.nwFaqSectionItemsOneBottom').slideDown();
+  })
+</script>
+
+ 
+{% schema %}
+  {
+    "name": "nw faq section",
+    "settings": [
+     {
+       "type": "text",
+       "label": "Title",
+       "id": "title"
+     }
+    ],
+    "blocks": [
+         {
+           "name": "Slide",
+           "type": "slide",
+           "settings": [
+             {
+               "type": "text",
+               "id": "title",
+               "label": "Title"
+             },
+             {
+               "type": "textarea",
+               "id": "text",
+               "label": "Text"
+             }
+           ]
+         }
+      ],
+    "presets": [
+      {
+        "name": "nw faq section"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

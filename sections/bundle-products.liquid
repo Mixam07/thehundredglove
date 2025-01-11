@@ -1,0 +1,1098 @@
+<script src="https://cdn.tailwindcss.com"></script>
+{% assign url_path = request.path %}
+{% assign segments = url_path | split: '/' %}
+{% assign last_index = segments.size | minus: 1 %}
+{% assign box_size = segments[last_index] %}
+
+{% assign box = shop.metaobjects.box_products[box_size] %}
+
+<section class="bundle-product bg-transparent undefined page-width" id="build-bundle-product">
+  <div
+    class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin"
+    style="margin-top: 0;"
+  >
+    <h2 class="title inline-richtext h1 text-center" style="margin: auto;">{{ section.settings.title }}</h2>
+  </div>
+  <div class="relative w-full mx-auto py-6 lg:py-8 px-6 lg:px-8 ">
+    <div class="grid grid-cols-1 grid-rows-1 items-start gap-6 min-h-96 lg:grid-cols-4 text-foreground flexinmobilefix">
+      <div class="flex flex-col col-span-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-5 gap-y-10 items-stretch">
+          {% for product in section.settings.collection.products %}
+            {% assign has_available_variant = false %}
+
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                {% assign has_available_variant = true %}
+                {% break %}
+                <!-- Exit the loop once an available variant is found -->
+              {% endif %}
+            {% endfor %}
+            {% if has_available_variant %}
+              <div class="h-full w-full relative product-container" id="product-{{ product.id }}">
+                <div class="border bg-card text-card-foreground relative overflow-hidden transition-all rounded-lg shadow-none border-border hover:border-primary hover:shadow-lg shadow-secondary-foreground/60 dark:shadow-secondary/60 hover:shadow-secondary-foreground/60 false false">
+                  <div style="position: relative;padding-top: 100%;background-color: #F0F0F0;">
+                    <img
+                      alt="{{ product.title }}"
+                      decoding="async"
+                      height="90"
+                      loading="eager"
+                      src="{{ product.images.first | img_url: 'master' }}"
+                      width="100"
+                      class="rounded-b-none relative object-cover object-center w-full h-full"
+                      style="width: auto;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);height: 90%;"
+                    >
+
+                    <div
+                      class="absolute inset-0 bg-gradient-to-b from-foreground/0 via-foreground/20 to-foreground/80 dark:from-background/0 dark:via-background/20 dark:to-background/80"
+                    ></div>
+                  </div>
+                </div>
+                <button
+                  class="add_in-bundle mt-5 bg-[#D75555] rounded-[6px] outline-none w-full relative product-button text-white text-[20px] p-[5px]"
+                  data-variant-id="{{ product.variant.value.id }}"
+                  data-product-id="{{ product.id }}"
+                  data-product-title="{{ product.title }}"
+                  data-product-image="{{ product.images.first | img_url: 'master' }}"
+                >
+                  ADD +
+                </button>
+                <div class="pt-8 w-full flex flex-col gap-1 dark:text-accent-foreground text-accent">
+                  <h3 class="text-[18px] leading-none dark:text-foreground  text-background text-left titleproductcard">
+                    {{ product.title }}
+                  </h3>
+                </div>
+                <div class="my-3 w-full flex flex-col gap-1 dark:text-accent-foreground text-accent">
+                  <h3 class="arial font-semibold text-[14px] leading-none tracking-tight dark:text-foreground text-[#12121280]">
+                    {{ product.metafields.custom.glove_type }}
+                  </h3>
+                </div>
+                <div class="w-full flex flex-col gap-1 dark:text-accent-foreground text-accent">
+                  <h3 class="variant-price text-[16px] leading-none tracking-tight dark:text-foreground">
+                    {{ product.price | money }}
+                  </h3>
+                </div>
+                <div class="mt-3 w-full flex flex-row gap-1 justify-between dark:text-accent-foreground text-accent">
+                  <span>Size:</span>
+                  <modal-opener
+                    class="product-popup-modal__opener no-js-hidden quick-add-hidden"
+                    data-modal="#PopupModal-{{ forloop.index }}"
+                  >
+                    <button
+                      id="ProductPopup-{{ forloop.index }}"
+                      class="product-popup-modal__button link"
+                      type="button"
+                      aria-haspopup="dialog"
+                    >
+                      Size Guide
+                    </button>
+                  </modal-opener>
+                  <a href="#" class="product-popup-modal__button link no-js"> Size Guide </a>
+                  <modal-dialog id="PopupModal-{{ forloop.index }}" class="product-popup-modal">
+                    <div
+                      role="dialog"
+                      aria-label="Size Guide"
+                      aria-modal="true"
+                      class="product-popup-modal__content"
+                      tabindex="-1"
+                      style="max-width: 600px;"
+                    >
+                      <button
+                        id="ModalClose-{{ forloop.index }}"
+                        type="button"
+                        class="product-popup-modal__toggle"
+                        aria-label="{{ 'accessibility.close' | t }}"
+                      >
+                        {% render 'icon-close' %}
+                      </button>
+                      <div class="product-popup-modal__content-info">
+                        <h1 class="h2">Size Guide</h1>
+                        {{ section.settings.page.content }}
+                      </div>
+                    </div>
+                  </modal-dialog>
+                </div>
+                <select
+                  name="id"
+                  class="variant-select outline-none w-full border border-[#B2B2B2] rounded-[6px] mt-[4px] shadow-none px-2"
+                >
+                  <option disabled value="">Choose an option</option>
+                  {% assign first_available_found = false %}
+                  <!-- Initialize the tracking variable -->
+                  {% for variant in product.variants %}
+                    {% if variant.available %}
+                      {% unless first_available_found %}
+                        <!-- Check if the first available hasn't been found yet -->
+                        <option value="{{ variant.id }}" data-price="{{ variant.price | money }}" selected>
+                          {{ variant.title }}
+                        </option>
+                        {% assign first_available_found = true %}
+                        <!-- Mark that the first available has been found -->
+                      {% else %}
+                        <option value="{{ variant.id }}" data-price="{{ variant.price | money }}">
+                          {{ variant.title }}
+                        </option>
+                      {% endunless %}
+                    {% endif %}
+                  {% endfor %}
+                </select>
+                <div class="flex align-center justify-between mt-[8px]">
+                  <span class="text-[#121212] text-[14px] ">Personalisation:</span>
+                  <span class="text-[14px] text-[#121212]/50">{{ '700' | money }}</span>
+                </div>
+                <input class="outline-none px-2 shadow-none w-full border border-[#B2B2B2] rounded-[6px] mt-[4px] personalisation">
+                <div class="{%if product.adjustment.value == 0 %}d-none{% endif %} inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 absolute top-4 right-3">
+                  <div class="adjustment-value">
+                    {% if product.adjustment.value > 0 %}+{% endif -%}
+                    {{- product.adjustment.value | money }}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-span-2 h-full flex flex-col justify-stretch w-full">
+        <div class="h-auto  max-h-screen -my-6 py-6  transition-all duration-100">
+          <div class="p-[32px] rounded-[8px] border-border text-card-foreground shadow-sm flex flex-col items-stretch justify-between col-span-1 bg-card bg-cardwrap">
+            <h4 class="text-center text-[20px] md:text-[27px]  leading-[33px]">Choose Bundle Option</h4>
+            <div class="bg-[#ffffff] rounded-[100px] py-[6px] px-[12px] text-[16px] text-[#121212] mt-[14px] mx-auto max-w-[260px] text-center  mb-[32px] mbm0">
+              More Pairs = More Savings
+            </div>
+            <div class="flex flex-col min-h-0">
+              <div class="flex flex-col gap-4 md:flex-row mt-[20px] gapFix">
+                {% assign boxes = shop.metaobjects.box_products.values | reverse %}
+                {% for box in boxes %}
+                  {% liquid
+                    assign opacity = 75
+                    assign boxCheck = false
+                    assign borderWidth = 0
+                    assign borderColor = ''
+                    assign selectedClass = 'bundle_option'
+                    assign lower_box_size = box_size | downcase | strip
+                    assign lower_box_title = box.title | downcase | strip
+                    if forloop.last
+                      assign opacity = 100
+                      assign borderWidth = 1
+                      assign borderColor = '#D75555'
+                      assign boxCheck = 'checked'
+                      assign selectedClass = 'bundle_option selected'
+                    endif
+                  %}
+                  <div class="w-full align-middle peer-disabled:cursor-not-allowed min-w-48 {{ selectedClass }}">
+                    <label for="{{ box.title | downcase }}">
+                      <div
+                        style="text-align:center;padding:7px;"
+                        class="relative border shadow-sm px-4 py-[20px] w-full group/radio items-center gap-1 text-sm transition-all duration-200 justify-between bg-card border-muted-foreground text-muted-foreground bg-[#ffffffb3] rounded-t-[6px] hover:bg-accent cursor-pointer"
+                      >
+                        {% if box.poppins %}
+                          <div
+                            style="text-align:center;"
+                            class="left-[50%] -translate-x-[50%] w-full max-w-[90%] mx-auto absolute text-center text-[16px] font-[600] leading-[22px] text-white -top-[27px] bg-[{{ box.poppins_background }}] p-[6px] rounded-[6px]"
+                          >
+                            {{ box.poppins }}
+                          </div>
+                        {% endif %}
+                        <div class="flex items-start justify-between w-full gap-4 text-lg  text-foreground">
+                          <div class="w-full">
+                            <div
+                              class="w-full inline-flex items-center gap-2 justify-between"
+                              style="justify-content: center;"
+                            >
+                              <div class="inline-flex items-end gap-2">
+                                <div class="mb-1 overflow-hidden text-uppercase text-[20px] leading-[28px] font-[500] text-[#121212] sibtextcts">
+                                  {{ box.allowed_items }}
+                                  {% if box.allowed_items == 1 %}
+                                    Pair
+                                  {% else %}
+                                    Pairs
+                                  {% endif %}
+                                </div>
+                              </div>
+                              <div class="relative relativeCUSTOM w-[24px] h-[24px]" style="width:0;">
+                                <input
+                                  style="opacity:0;"
+                                  type="radio"
+                                  title="{{ box.title | downcase }}"
+                                  id="{{ box.title | downcase }}"
+                                  name="boxType"
+                                  {% if forloop.last %}
+                                    checked
+                                  {% endif %}
+                                  class="w-[24px] h-[24px]"
+                                  value="{{ box.title | downcase }}"
+                                >
+                                <span></span>
+                              </div>
+                            </div>
+
+                            {% if forloop.index == 1 %}
+                              <img
+                                src="https://cdn.shopify.com/s/files/1/0667/5877/0944/t/55/assets/27%20(1).png?v=1733250952"
+                                style="width: 100%;aspect-ratio: 1 / 1;margin-top: -10px;object-fit: cover;"
+                              >
+                            {% endif %}
+                            {% if forloop.index == 2 %}
+                              <img
+                                src="https://cdn.shopify.com/s/files/1/0667/5877/0944/t/55/assets/White%20Blue%20Gloves.png?v=1733252178"
+                                style="width: 100%;aspect-ratio: 1 / 1;margin-top: -10px;object-fit: cover;"
+                              >
+                            {% endif %}
+                            {% if forloop.index == 3 %}
+                              <img
+                                src="https://cdn.shopify.com/s/files/1/0667/5877/0944/t/55/assets/26.png?v=1733252231"
+                                style="width: 100%;aspect-ratio: 1 / 1;margin-top: -10px;object-fit: cover;"
+                              >
+                            {% endif %}
+                          </div>
+                        </div>
+                        {% if box.description %}
+                          <div class="mt-[12px] text-[14px] font-[400] text-[#121212b3]">{{ box.description }}</div>
+                        {% endif %}
+                        {% if box.price %}
+                          {% comment %}
+                            <div class="mt-[6px] text-[18px] font-[400] text-[#121212]">
+                              {{ box.price | times: 100 | money }}
+                            </div>
+                          {% endcomment %}
+                        {% endif %}
+                        {% if box.sale_price %}
+                          <div
+                            class="mt-[20px] text-[14px] font-[400] text-[#12121299]"
+                            style="margin:0;margin-top:4px;"
+                          >
+                            {% if forloop.index == 1 %}
+                              <span class="money-mm"> Regular Price </span>
+                            {% else %}
+                              <span class="money-mm">
+                                {{ box.sale_price | times: 100 | money -}}
+                                /pair</span
+                              >
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                      </div>
+                      {% if box.save_price_text %}
+                        <div class="bg-[#D75555] text-center p-[7px] mt-0 text-white text-[16px] rounded-b-[6px] ">
+                          {{ box.save_price_text }}
+                        </div>
+                      {% endif %}
+                    </label>
+                  </div>
+                {% endfor %}
+              </div>
+
+              <div class="asdsasd" id="fixedpart">
+                <!-- free gifts -->
+                <style>
+                                    .giftsWrap{
+                                      margin-top: 16px;
+                                    }
+                                    .giftsWrapItems{
+                                      margin: 18px auto auto auto;
+                                      max-width: 376px;
+                                      display:grid;
+                                      gap: 15px;
+                                      grid-template-columns: 1fr 1fr 1fr;
+                                    }
+                                    .giftsWrapItemsOne{
+                                      padding-bottom: 100%;
+                                      box-sizing: border-box;
+                                      background: #FFFFFF;
+                                      border: 0.650784px dashed #000000;
+                                      border-radius: 3.25392px;
+                                      position:relative;
+                                    }
+                                    .giftsWrapItemsOneText{
+                                      font-size: 11px;
+                                      text-align:center;
+                                      margin-top: 6px;
+                                      font-family: 'Work Sans';
+                                      font-style: normal;
+                                      font-weight: 600;
+                                      line-height: 140%;
+                                      color: #D75555;
+                                    }
+                                    .giftImgLock{
+                                      position:absolute;
+                                      width: 44px;
+                                      left: 50%;
+                                      top: 50%;
+                                      transform:translate(-50%, -50%);
+                                    }
+                                    .giftsWrapFree{
+                                      position: absolute;
+                                      padding: 1px 8px;
+                                      background: #D75555;
+                                      z-index: 2;
+                                      border-radius: 8px;
+                                      font-size: 10px;
+                                      color: #fff;
+                                      font-weight: 600;
+                                      top: -8px;
+                                      left: 50%;
+                                      transform:translateX(-50%);
+                                      white-space: nowrap;
+                                    }
+                                    .giftsWrapFree i{
+                                      text-decoration: line-through;
+                                      font-style: normal;
+                                    }
+                                    .giftsWrapItemsOneWrap{
+                                      position:relative;
+                                    }
+                                    .giftImgLock{
+                                      display:none;
+                                    }
+                                    .giftImgOpen{
+                                      position: absolute;
+                                      width: 90%;
+                                      height: 90%;
+                                      left: 50%;
+                                      top: 50%;
+                                      transform:translate(-50%, -50%);
+                                      display: flex;
+                                      justify-content: center;
+                                      align-items: center;
+                                    }
+                                    .giftImgOpen img{
+                                      display:block;
+                                      width: 95%;
+                                      height: auto;
+                                    }
+                                    @media(max-width: 999px){
+                                      .giftsWrapItems{
+                                        grid-template-columns: 99PX 99PX 99PX;
+                                        justify-content: center;
+                                        gap:9px;
+                                      }
+                                      .giftsWrapItemsOneText{
+                                        font-size:9px;
+                                      }
+                                      .giftsWrapItemsOneText{
+                                        //display:none;
+                                      }
+                                      .giftsWrapFree{
+                                        font-size: 6px;
+                                      }
+                                      .giftsWrapFree i{
+                                        display:none;
+                                      }
+                                      .giftImgLock{
+                                        width: 22px;
+                                      }
+                                      .giftImgLock svg{
+                                        width: 100%;
+                                      }
+                                    }
+                                    @media (max-width: 450px) {
+                     .money-mm {
+                          font-size: 11px!important;
+                      }
+                                      .money-mm  .money{
+                          font-size: 11px!important;
+                      }
+                  }
+                </style>
+
+                <div class="giftsWrap">
+                  <h4 class="text-[24px] text-[#000000] text-center mt-[25px] mb-[20px] font-bold">
+                    Free Gifts with Your Order
+                  </h4>
+
+                  <div class="giftsWrapItems">
+                    <div class="giftsWrapItemsOneWrap">
+                      <span class="giftsWrapFree">Free <i>£7.00</i> </span>
+
+                      <div class="giftsWrapItemsOne">
+                        <div class="giftImgLock giftImgLock1">
+                          {% render 'gift-lock' %}
+                        </div>
+
+                        <div class="giftImgOpen giftImgOpen1">
+                          <img src="{{ 'gift-1.svg' | asset_url }}" alt="gift">
+                        </div>
+                      </div>
+
+                      <p class="giftsWrapItemsOneText">Free Shipping</p>
+                    </div>
+
+                    <div class="giftsWrapItemsOneWrap">
+                      <span class="giftsWrapFree">Free <i>£19.99</i> </span>
+
+                      <div class="giftsWrapItemsOne">
+                        <div class="giftImgLock giftImgLock2">
+                          {% render 'gift-lock' %}
+                        </div>
+
+                        <div class="giftImgOpen giftImgOpen2">
+                          <img src="{{ 'gift-2.svg' | asset_url }}" alt="gift">
+                        </div>
+                      </div>
+
+                      <p class="giftsWrapItemsOneText">Free Gift</p>
+                    </div>
+
+                    <div class="giftsWrapItemsOneWrap">
+                      <span class="giftsWrapFree">Free <i>£9.95</i> </span>
+
+                      <div class="giftsWrapItemsOne">
+                        <div class="giftImgLock giftImgLock3">
+                          {% render 'gift-lock' %}
+                        </div>
+
+                        <div class="giftImgOpen giftImgOpen3">
+                          <img src="{{ 'gift-3.svg' | asset_url }}" alt="gift">
+                        </div>
+                      </div>
+
+                      <p class="giftsWrapItemsOneText">Goalkeeper Workout Plan Ebook</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-sticky">
+                  <h4 class="text-[24px] text-[#000000] text-center mt-[25px] mb-[20px] ">Your Bundle</h4>
+                  <div
+                    id="bundle-products"
+                    class="bundle-products grid grid-cols-3 gap-[5px] md:gap-[20px] justify-center"
+                  ></div>
+                  <div class="flex flex-col gap-[8px]">
+                    <button
+                      type="button"
+                      id="add-to-cart-button"
+                      class="bg-[#D75555] opacity-75 rounded-[6px] text-white text-[22px] py-[20px] px-[5px] max-w-[400px] w-full mx-auto uppercase"
+                    >
+                      Add 3 More Items
+                    </button>
+                    <div class="flex align-center justify-center gap-[8px]">
+                      <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m6.625 11.958 4.708-4.708-1.187-1.187-3.521 3.52-1.75-1.75-1.187 1.188zm.875 5.375q-2.895-.729-4.781-3.322Q.833 11.416.833 8.25V3.166L7.5.667l6.667 2.5V8.25q0 3.166-1.886 5.76-1.885 2.595-4.781 3.323m0-1.75q2.166-.687 3.583-2.75A7.9 7.9 0 0 0 12.5 8.25V4.313l-5-1.875-5 1.875V8.25q0 2.52 1.417 4.583 1.416 2.063 3.583 2.75" fill="#121212"/>
+                      </svg>
+                      <span class="text-[#121212] text-[14px] risktext"
+                        >TRY 100% RISK FREE WITH OUR 10 GAME GUARANTEE</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[6px] border border-[#B2B2B2] grid grid-cols-3 py-[12px] mt-[20px] hideinmobile">
+            <div class="flex flex-col items-center justify-center gap-[12px] columnitemfix">
+              <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.875 23.25a2.625 2.625 0 1 0 0-5.25 2.625 2.625 0 0 0 0 5.25ZM7 23.25A2.625 2.625 0 1 0 7 18a2.625 2.625 0 0 0 0 5.25Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M4.375 20.625H3.5A2.625 2.625 0 0 1 .875 18V4A2.625 2.625 0 0 1 3.5 1.375H14A2.625 2.625 0 0 1 16.625 4v16.625h-7m9.625 0h-2.625V8.375h6.125l4.375 5.396V18a2.625 2.625 0 0 1-2.625 2.625m2.625-7h-10.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+              </svg>
+              <span class="text-[#121212] text-[16px]">Fast Shipping</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-[12px] columnitemfix">
+              <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.625 24.5A2.625 2.625 0 0 1 25 27.125H4A2.625 2.625 0 0 1 1.375 24.5V8.75A2.625 2.625 0 0 1 4 6.125h21a2.625 2.625 0 0 1 2.625 2.625zM4 6.125 15.083.948M25 6.125l-5.76-4.01" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M19.75 6.125v8.75L18 14l-1.75.875L14.5 14l-1.75.875L11 14l-1.75.875v-8.75M5.75 19.25h7m-7 3.5h3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+              </svg>
+              <span class="text-[#121212] text-[16px]">30-Days Returns</span>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-[12px] columnitemfix">
+              <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 27.125S1.125 22.313 1.125 17.5V6.125c0-2.023 1.02-3.19 2.625-3.5L12.5.875l8.75 1.75c1.605.31 2.625 1.477 2.625 3.5V17.5c0 4.813-11.375 9.625-11.375 9.625Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="m7.444 14.3 4.075 4.075 6.037-6.037M1.125 9.625c0-2.023 1.02-3.19 2.625-3.5l8.75-1.75 8.75 1.75c1.605.31 2.625 1.477 2.625 3.5M12.5.875v3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+              </svg>
+              <span class="text-[#121212] text-[16px]">Satisfaction Guarantee</span>
+            </div>
+          </div>
+          <div class="mt-[40px] rounded-[6px] bg-[#F0F0F0] p-[16px] md:p-[32px] reviewpart">
+            <svg
+              class="mx-auto"
+              width="112"
+              height="24"
+              viewBox="0 0 112 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="m6.575 19.962 1.433-6.17L3.22 9.644l6.316-.548L12 3.28l2.464 5.817 6.315.548-4.787 4.148 1.433 6.17L12 16.689zm22 0 1.433-6.17-4.787-4.148 6.316-.548L34 3.28l2.464 5.817 6.315.548-4.787 4.148 1.433 6.17L34 16.689zm22 0 1.433-6.17-4.787-4.148 6.316-.548L56 3.28l2.464 5.817 6.315.548-4.787 4.148 1.433 6.17L56 16.689zm22 0 1.433-6.17-4.787-4.148 6.316-.548L78 3.28l2.463 5.817 6.316.548-4.787 4.148 1.433 6.17L78 16.689zm22 0 1.433-6.17-4.787-4.148 6.316-.548L100 3.28l2.464 5.817 6.315.548-4.787 4.148 1.433 6.17L100 16.689z" fill="#D75555"/>
+            </svg>
+            <p class=" pt-[8px] pb-[20px] m-0 text-center text-black text-[20px]">Best gloves 🧤</p>
+            <p class="text-center text-[16px] text-[#121212] mt-0 mb-[24px]">
+              Fantastic gloves. Having tried many brands over the last 6 years for my young goalie these are the ones
+              that lasted the longest. Fantastic grip which massively improved his ball control. Fab communication when
+              deciding on sizes and super quick delivery.
+            </p>
+            <p class="text-center text-[#121212] text-[16px] m-0 ">Kayleigh Small</p>
+            <div class="flex items-center justify-center gap-[6px]">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m6.843 17.221-1.487-2.506-2.824-.619.276-2.907L.894 9l1.914-2.19-.276-2.906 2.824-.619L6.843.78 9.5 1.907 12.157.78l1.487 2.506 2.824.619-.276 2.907L18.106 9l-1.914 2.188.276 2.907-2.824.619-1.487 2.506L9.5 16.093zm1.782-5.551 4.42-4.42-.878-.904-3.542 3.542-1.792-1.766L5.955 9z" fill="#D75555"/>
+              </svg>
+              <span class="text-[#121212] text-[16px]">Verified Reviewer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form id="bundle_form" action="/cart/add" method="post"></form>
+
+    <div class="rounded-[6px] border border-[#B2B2B2] grid grid-cols-3 py-[12px] mt-[20px] hideindesktop">
+      <div class="flex flex-col items-center justify-center gap-[12px] columnitemfix">
+        <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.875 23.25a2.625 2.625 0 1 0 0-5.25 2.625 2.625 0 0 0 0 5.25ZM7 23.25A2.625 2.625 0 1 0 7 18a2.625 2.625 0 0 0 0 5.25Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M4.375 20.625H3.5A2.625 2.625 0 0 1 .875 18V4A2.625 2.625 0 0 1 3.5 1.375H14A2.625 2.625 0 0 1 16.625 4v16.625h-7m9.625 0h-2.625V8.375h6.125l4.375 5.396V18a2.625 2.625 0 0 1-2.625 2.625m2.625-7h-10.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+        <span class="text-[#121212] text-[16px]">Fast Shipping</span>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-[12px] columnitemfix">
+        <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27.625 24.5A2.625 2.625 0 0 1 25 27.125H4A2.625 2.625 0 0 1 1.375 24.5V8.75A2.625 2.625 0 0 1 4 6.125h21a2.625 2.625 0 0 1 2.625 2.625zM4 6.125 15.083.948M25 6.125l-5.76-4.01" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M19.75 6.125v8.75L18 14l-1.75.875L14.5 14l-1.75.875L11 14l-1.75.875v-8.75M5.75 19.25h7m-7 3.5h3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+        <span class="text-[#121212] text-[16px]">30-Days Returns</span>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-[12px] columnitemfix">
+        <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.5 27.125S1.125 22.313 1.125 17.5V6.125c0-2.023 1.02-3.19 2.625-3.5L12.5.875l8.75 1.75c1.605.31 2.625 1.477 2.625 3.5V17.5c0 4.813-11.375 9.625-11.375 9.625Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="m7.444 14.3 4.075 4.075 6.037-6.037M1.125 9.625c0-2.023 1.02-3.19 2.625-3.5l8.75-1.75 8.75 1.75c1.605.31 2.625 1.477 2.625 3.5M12.5.875v3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+        <span class="text-[#121212] text-[16px]">Satisfaction Guarantee</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+    .bundle-product .grid {
+        display: grid!important;
+    }
+    @media(max-width: 999px){
+      .max-h-screen{
+        max-height: none!important;
+      }
+      .grid-cols-1{
+        grid-template-columns: repeat(2, minmax(0, 1fr))!important;
+      }
+      .justify-center{
+        text-align:center;
+      }
+      .gapFix{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        width: calc(100% + 64px);
+        margin-left: -32px;
+      }
+      .gapFix .text-white{
+        font-size: 13px;
+      }
+      .sibtextcts,.money{
+        font-size: 14px;
+      }
+      .w-[24px]{
+        width: 18px!important;
+      }
+      .w-[24px].h-[24px],
+      .relativeCUSTOM{
+        width: 18px!important;
+        height: 18px!important;
+      }
+      .min-w-48{
+        min-width: 10rem;
+      }
+      .bundle-product .grid.flexinmobilefix{
+        display:flex!important;
+        flex-direction:column-reverse;
+      }
+      .title{
+        text-align:center;
+      }
+      .title-wrapper--no-top-margin{
+        margin-bottom: 0;
+      }
+      .columnitemfix{
+        padding: 0 10px;
+      }
+    }
+    .bundle_bg{
+      background: #f0f0f0;
+    }
+    .fixed{
+      position: fixed;
+      bottom: 0;
+      background: #f0f0f0;
+      width: 100%;
+      left: 0;
+      padding: 0 15px 5px 15px;
+      z-index:5;
+    }
+    .fixed h4{
+      margin: 10px 0;
+      font-weight:100;
+    }
+    @media(max-width: 768px){
+      .my-sticky{
+      position: fixed;
+      bottom: 0;
+      background: #f0f0f0;
+      width: 100%;
+      left: 0;
+      padding: 0 15px 5px 15px;
+      z-index:5;
+    }
+       .fixed{
+      position: relative;
+         margin-top:11px;
+      bottom: 0;
+      background: none;
+      width: 100%;
+      left: 0;
+      padding: 0 15px 5px 15px;
+      z-index:5;
+    }
+      .bundle_bg{
+        padding-top: 65%!important;
+      }
+      .bundle_bg:before{
+        font-size: 24px;
+      }
+      .bundle-product .grid.hideinmobile{
+        display:none!important;
+      }
+      .bundle-products{
+        grid-template-columns: repeat(3, minmax(0, 60px))!important;
+        gap: 25px!important;
+        margin-bottom: 10px;
+      }
+      #add-to-cart-button{
+        font-size: 16px;
+        padding: 10px 5px;
+      }
+      .info p,
+      .info span{
+        display:none;
+      }
+      .fixed h4{
+        font-size: 24px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+      }
+      .risktext{
+        font-size: 10px;
+      }
+      .bundle-product_item{
+        gap: 1px;
+      }
+      .image_content-wrap div h5{
+        font-size: 18px;
+      }
+      .image_content-wrap div span{
+        font-size: 14px;
+      }
+      .mbm0{
+        margin-top: 0;
+      }
+      .bg-cardwrap{
+        margin-left: -15px;
+        padding-top: 0;
+      }
+      .titleproductcard{
+        font-size: 13px!important;
+      }
+    }
+    @media(min-width: 768px){
+      .bundle-product .grid.hideindesktop{
+        display:none!important;
+      }
+    }
+    .reviewpart {
+      display: none;
+  }
+</style>
+
+<script>
+  const section = document.getElementById("fixedpart");
+  const sectionOffset = section.offsetTop;
+
+  function handleScroll() {
+    // Only apply fixed positioning if the screen width is below 768px (mobile)
+    if (window.innerWidth <= 768) {
+      if (window.pageYOffset >= sectionOffset) {
+        section.classList.add("fixed");
+      } else {
+        section.classList.remove("fixed");
+      }
+    } else {
+      section.classList.remove("fixed"); // Remove fixed class for larger screens
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll);
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM fully loaded and parsed');
+
+  const productButtons = document.querySelectorAll('.product-button');
+  const totalSelectedElement = document.querySelector('.total-selected');
+  const progressBar = document.querySelector('.progress-bar');
+  const basePriceElement = document.querySelector('.base-price');
+  const adjustmentsElement = document.querySelector('.adjustments');
+  const totalPriceElement = document.querySelector('.total-price');
+  const selectedItemsContainer = document.querySelector('.selected-items');
+  const cartButton = document.querySelector('.add-to-cart-button');
+  const form = document.getElementById('bundle_form');
+  
+  var bundle_products = [{}, {}, {}];
+  var selected_bundle_size = 3;
+  
+  // Define the bundleVariants object
+  const bundleVariants = {
+    small: '45950893392128',   // Replace with actual Small variant ID
+    medium: '45950893359360',  // Replace with actual Medium variant ID
+    large: '45950893326592'    // Replace with actual Large variant ID
+  };
+
+  const maxItems = parseInt('{{ box.allowed_items }}');
+  const basePrice = parseFloat('{{ box.price }}');
+  let selectedItems = [];
+  let adjustments = 0;
+
+  // changing the price base on variant
+  // Get all variant select elements
+  const variantSelects = document.querySelectorAll('.variant-select');
+
+  // Loop through each select element
+  variantSelects.forEach(function(selectElement) {
+    // Trigger price update on first load (for pre-selected variants)
+    updatePrice(selectElement);
+
+    // Add an event listener for when the user changes the variant
+    selectElement.addEventListener('change', function() {
+      updatePrice(selectElement);
+    });
+  });
+
+  // Function to update the price based on the selected variant
+  function updatePrice(selectElement) {
+    // Get the parent product container
+    const productContainer = selectElement.closest('.product-container');
+
+    // Find the price element within the same container
+    const priceElement = productContainer.querySelector('.variant-price');
+
+    // Get the selected option
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+
+    // Get the price from the selected variant option's data attribute
+    const selectedPrice = selectedOption.getAttribute('data-price');
+
+    // Update the price element with the selected variant's price
+    if (selectedPrice) {
+      priceElement.innerHTML = selectedPrice;
+    } else {
+      // Reset to the default product price if no variant is selected
+      priceElement.innerHTML = '{{ product.price | money }}';
+    }
+  }
+
+  displayBundles(selected_bundle_size);
+  
+  // changeing of Option
+  $("input[name='boxType']").on('change', function() {
+    $('.bundle_option').removeClass('selected');
+    $(this).closest('.bundle_option').addClass('selected');
+    selected_bundle_size = 3;
+    switch($(this).val()) {
+      case 'small':
+        selected_bundle_size = 1;
+        break;
+      case 'medium':
+        selected_bundle_size = 2;
+        break;
+      case 'large':
+        selected_bundle_size = 3;
+    }
+    
+    // selected_bundle_size = parseInt(this.value);
+    bundle_products = new Array(selected_bundle_size).fill({});
+    displayBundles(selected_bundle_size);
+  });
+
+  $(document).on('click', '.bundle-remove', function() {
+    console.log('44$$')
+    let index = $(this).attr("data-index");
+    bundle_products[index] = {};
+    displayBundles(selected_bundle_size);
+  });
+
+  function displayBundles(index) {
+    console.log('herererer!@@#', index, bundle_products)
+
+ if(index === 3){
+      $('.giftImgOpen').css({"display":"flex"});
+      $('.giftImgLock').css({"display":"none"});
+    }else if(index === 2){
+      $('.giftImgOpen').css({"display":"none"});
+      $('.giftImgOpen3').css({"display":"flex"});
+      $('.giftImgLock3').css({"display":"none"});
+      $('.giftImgLock1').css({"display":"block"});
+      $('.giftImgLock2').css({"display":"block"});
+    }else if(index === 1){
+      $('.giftImgOpen').css({"display":"none"});
+      $('.giftImgLock1').css({"display":"block"});
+      $('.giftImgLock2').css({"display":"block"});
+      $('.giftImgLock3').css({"display":"block"});
+    }
+    
+  
+    let bundleEleHTML = "";
+    for (let i = 0; i < index; i++) {
+      let product = bundle_products[i]; // Get the product from the bundle array
+  
+      // Show product info and close icon only if the product is filled
+      let productInfo = product.name ? `
+        <p class="text-[16px] text-[#000000] text-left font-[600] p-0 m-0">${product.name}</p>
+        <span class="text-[14px] text-[#12121280]">Negative Cut</span>
+        <div class="bundle-remove absolute -top-[11px] -right-[11px] bg-black p-[6px] rounded-[100%] cursor-pointer" data-index="${i}" >
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.267 9.667-.934-.934L4.067 5 .333 1.267l.934-.934L5 4.067 8.733.333l.934.934L5.933 5l3.734 3.733-.934.934L5 5.933z" fill="#E8EAED"/></svg>
+        </div>
+      ` : '';
+
+      let productImg = product.image ? `<img class="h-full w-auto absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]" src="${product.image}" alt="" />`: "";
+  
+      bundleEleHTML += `
+        <div class="relative bundle-product_item flex flex-col gap-[12px]">
+          <div class="relative pt-[97.77%] border border-[#B2B2B2] rounded-[6px] bundle_bg" data-count="${i + 1}">
+          ${productImg}
+          </div>
+          <div class="info">
+          ${productInfo}
+          </div>
+        </div>`;
+    }
+
+    document.getElementById('bundle-products').innerHTML = bundleEleHTML;
+    updateSubmitButton();
+  }
+
+  // Update submit button
+  function updateSubmitButton() {
+    let emptySlots = bundle_products.filter(product => !product.name).length;
+    let submitButton = document.getElementById('add-to-cart-button');
+  
+    if (emptySlots === 0) {
+      submitButton.disabled = false;
+      submitButton.textContent = `Submit Bundle`;
+      submitButton.classList.add("opacity-100");
+      submitButton.classList.remove("opacity-75");
+    } else {
+      submitButton.disabled = true;
+      submitButton.textContent = `Add ${emptySlots} More Item${emptySlots > 1 ? 's' : ''}`;
+      submitButton.classList.remove("opacity-100");
+      submitButton.classList.add("opacity-75");
+    }
+  }
+
+  // Add product to bundle when "Add to bundle" is clicked
+  document.querySelectorAll('.add_in-bundle').forEach(button => {
+    console.log('button~~~~~~~~~~~~', button)
+    button.addEventListener('click', function() {
+      let product = {
+        id: this.getAttribute('data-product-id'),
+        name: this.getAttribute('data-product-title'),
+        image: this.getAttribute('data-product-image'),
+        variant_id: this.closest(".product-container").querySelector(".variant-select").value,
+        personalisation: this.closest(".product-container").querySelector(".personalisation").value,
+      };
+  
+      // Find first empty slot and add product
+      let emptyIndex = bundle_products.findIndex(item => !item.name);
+      if (emptyIndex !== -1) {
+        bundle_products[emptyIndex] = product;
+        displayBundles(selected_bundle_size);
+      }
+    });
+  });
+
+  $("#add-to-cart-button").on('click', function() {
+    addToCart();
+  });
+
+  // Function to add to cart
+  function addToCart() {
+    let itemsToAdd = [];
+    
+    if (selected_bundle_size === 1) {
+      // Add real product to cart
+      let product = bundle_products[0]; // Assume the first product is selected
+      if (product.id && product.variant_id) {
+        itemsToAdd.push({
+          id: product.variant_id,
+          quantity: 1,
+          properties: {
+            personalisation: product.personalisation
+          }
+        });
+      }
+    } 
+    else if (selected_bundle_size === 2) {
+      console.log('testtesttest')
+
+      console.log(bundle_products)
+      
+      let bundleVariantId = selected_bundle_size === 2 ? bundleVariants.medium : bundleVariants.large;
+      let bundleNote = `:`;
+      bundle_products.forEach((product, index) => {
+        if (product.name) {
+          bundleNote += `${index + 1}: ${product.name}\n${index != 2 ? ',': ''}`;
+        }
+      });
+
+      let personalisationqtu = 0
+
+      if (bundle_products[0].personalisation.length){
+        personalisationqtu++
+      }
+      if (bundle_products[1].personalisation.length){
+        personalisationqtu++
+      }
+      
+      itemsToAdd.push(
+        {
+          id: bundle_products[0].variant_id,
+          quantity: 1,
+          properties: {
+            Personalisation: bundle_products[0].personalisation
+          }
+        },
+        {
+          id: bundle_products[1].variant_id,
+          quantity: 1,
+          properties: {
+            Personalisation: bundle_products[0].personalisation
+          }
+        },
+        {
+          id: bundleVariantId,
+          quantity: 1,
+          properties: {
+            Contents: bundleNote.trim()
+          }
+        },
+        {
+          id: "44030822383872",
+          quantity: personalisationqtu,
+        }
+      );
+      
+    }
+    else {
+      // // Add bundle product to cart and add notes for the bundle contents
+      // let bundleVariantId = selected_bundle_size === 2 ? bundleVariants.medium : bundleVariants.large;
+  
+      // // Construct the note for the bundle
+      // let bundleNote = `:`;
+      // bundle_products.forEach((product, index) => {
+      //   if (product.name) {
+      //     bundleNote += `${index + 1}: ${product.name}\n${index != 2 ? ',': ''}`;
+      //   }
+      // });
+  
+      // itemsToAdd.push({
+      //   id: bundleVariantId,
+      //   quantity: 1,
+      //   properties: {
+      //     Contents: bundleNote.trim()
+      //   }
+      // });
+
+      
+      let bundleVariantId = selected_bundle_size === 2 ? bundleVariants.medium : bundleVariants.large;
+      let bundleNote = `:`;
+      bundle_products.forEach((product, index) => {
+        if (product.name) {
+          bundleNote += `${index + 1}: ${product.name}\n${index != 2 ? ',': ''}`;
+        }
+      });
+
+      let personalisationqtu = 0
+
+      if (bundle_products[0].personalisation.length){
+        personalisationqtu++
+      }
+      if (bundle_products[1].personalisation.length){
+        personalisationqtu++
+      }
+      if (bundle_products[2].personalisation.length){
+        personalisationqtu++
+      }
+      
+      itemsToAdd.push(
+        {
+          id: bundle_products[0].variant_id,
+          quantity: 1,
+          properties: {
+            Personalisation: bundle_products[0].personalisation
+          }
+        },
+        {
+          id: bundle_products[1].variant_id,
+          quantity: 1,
+          properties: {
+            Personalisation: bundle_products[0].personalisation
+          }
+        },
+        {
+          id: bundle_products[2].variant_id,
+          quantity: 1,
+          properties: {
+            Personalisation: bundle_products[0].personalisation
+          }
+        },
+        {
+          id: bundleVariantId,
+          quantity: 1,
+          properties: {
+            Contents: bundleNote.trim()
+          }
+        },
+        {
+          id: "44030822383872",
+          quantity: personalisationqtu,
+        }
+      );
+    }
+  
+    // Proceed to add items to the cart
+    if (itemsToAdd.length > 0) {
+      jQuery.post('/cart/add.js', { items: itemsToAdd })
+        .done(function() {
+          window.location.href = '/checkout'; // Redirect to checkout
+        })
+        .fail(function() {
+          alert('There was an issue adding the bundle to the cart.');
+        });
+    }
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Custom box builder",
+  "class": "j-box-builder-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "id": "page",
+      "type": "page",
+      "label": "t:sections.main-product.blocks.popup.settings.page.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom box builder"
+    }
+  ]
+}
+{% endschema %}

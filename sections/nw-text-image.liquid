@@ -1,0 +1,335 @@
+{{ 'nw-default-example.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .section-{{ section.id }}{
+      {% if section.settings.bgColor != blank %}
+        background-color: {{section.settings.bgColor}};
+      {% endif %}
+      padding-top: {{section.settings.pdTop}}px;
+      padding-bottom: {{section.settings.pdBottom}}px;
+    }
+
+    @media(max-width: 999px){
+      .section-{{ section.id }}{
+        padding-top: {{section.settings.pdTopMob}}px;
+        padding-bottom: {{section.settings.pdBottomMob}}px;
+      }
+    }
+    .nwTextImageWrap{
+      display:flex;
+      align-items:center;
+    }
+    .nwTextImageWrapLeft{
+      width: 40%;
+    }
+    .nwTextImageWrapRight{
+      width: 60%;
+      margin-left: 30px;
+    }
+    .nwTextImageWrapLeftTitle h3{
+      margin: 0;
+      color: {{ section.settings.color_title }};    max-width: 400px;
+    }
+    .nwTextImageWrapLeftTitle em{
+      color: #D75454;
+      font-style: normal;
+    }
+    .nwTextImageWrapLeftText{
+      color: {{ section.settings.color_text }};
+      font-family: Chakra Petch;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.4; /* 144.444% */
+      margin-top: 8px;
+      max-width: 424px;
+    }
+    .nwTextImageWrapLeft .button {
+      width: 80%;
+      text-transform: uppercase;
+
+          max-width: 400px!important;
+  }
+    .nwTextImageWrapLeftTextBottom{
+      max-width: 424px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      color: #fff;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 100;
+      line-height: normal;
+      margin-top: 12px;
+      text-transform: capitalize;
+    }
+    .nwTextImageWrapRightTop{
+      height: 200px;
+      position:relative;
+
+    }
+
+    .nwTextImageWrapRightBottom{
+      height: 200px;
+      margin-top: 20px;
+    }
+    @media(max-width: 999px){
+      .nwTextImageWrap{
+        flex-wrap:wrap;
+        flex-direction: column-reverse;
+      }
+      .nwTextImageWrapRightBottom,
+      .nwTextImageWrapRightTop{
+        width: calc(100% + 30px);
+        margin-left: -15px;
+      }
+
+      .nwTextImageWrapLeft,
+      .nwTextImageWrapRight{
+        width: 100%;
+      }
+      .nwTextImageWrapRight{
+        margin-left: 0;
+      }
+      .nwTextImageWrapRightTop:before{
+        display:none;
+      }
+      .nwTextImageWrapLeftTitle{
+        font-size: 24px;
+        margin-top: 30px;
+      }
+      .nwTextImageWrapLeftText p{
+        margin: 0;
+        margin-bottom: 20px;
+      }
+      .nwTextImage .swiper-slide img{
+        height: 139px!important;
+      }
+      .nwTextImageWrapRightBottom{
+        margin-top: 12px;
+      }
+    }
+</style>
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .nwTextImage .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        border-radius: 8px;
+      }
+
+     .nwTextImage .swiper-slide img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+      height: 186px;
+      /* border-radius: 10px; */
+      border: 2px solid white;
+      /* margin: 5px; */
+      /* padding: 5px; */
+  }
+
+      @media(max-width: 999px){
+        .nwTextImageWrapRightTop,
+        .nwTextImageWrapRightBottom{
+          height: 139px;
+        }
+        .nwTextImage .swiper-slide img{
+          height: 139px!important;
+        }
+      }
+</style>
+
+<section class="nwTextImage section-{{ section.id }}">
+  <div class="page-width">
+    <div class="nwTextImageWrap">
+      <div class="nwTextImageWrapLeft">
+        <div class="nwTextImageWrapLeftTitle">
+          <h3>{{ section.settings.title }}</h3>
+        </div>
+        <div class="nwTextImageWrapLeftText">
+          {{ section.settings.text }}
+        </div>
+        <a class="button button--primary button-with-hover" href="/collections/all"> shop Now </a>
+        <div class="nwTextImageWrapLeftTextBottom">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_4_510)">
+            <path d="M14.6665 2.78332C15.9234 3.50904 16.969 4.55043 17.6997 5.80441C18.4304 7.05839 18.821 8.48147 18.8327 9.93277C18.8444 11.3841 18.4769 12.8133 17.7665 14.0789C17.0561 15.3445 16.0275 16.4027 14.7825 17.1486C13.5375 17.8945 12.1193 18.3023 10.6683 18.3317C9.2172 18.3611 7.78363 18.011 6.50947 17.316C5.2353 16.6211 4.16473 15.6054 3.40373 14.3696C2.64272 13.1337 2.21768 11.7206 2.17067 10.27L2.1665 9.99999L2.17067 9.72999C2.21734 8.29082 2.63613 6.88829 3.3862 5.65915C4.13628 4.43001 5.19205 3.4162 6.45058 2.71656C7.70911 2.01692 9.12746 1.65532 10.5673 1.66702C12.0072 1.67872 13.4195 2.06332 14.6665 2.78332ZM13.589 7.74416C13.4455 7.60068 13.2546 7.51449 13.0521 7.50175C12.8496 7.48902 12.6493 7.55062 12.489 7.67499L12.4107 7.74416L9.6665 10.4875L8.589 9.41082L8.51067 9.34166C8.35033 9.21737 8.15015 9.15584 7.94768 9.16862C7.7452 9.18139 7.55434 9.26759 7.41089 9.41104C7.26744 9.5545 7.18124 9.74536 7.16847 9.94783C7.15569 10.1503 7.21722 10.3505 7.3415 10.5108L7.41067 10.5892L9.07734 12.2558L9.15567 12.325C9.30182 12.4384 9.48153 12.4999 9.6665 12.4999C9.85148 12.4999 10.0312 12.4384 10.1773 12.325L10.2557 12.2558L13.589 8.92249L13.6582 8.84416C13.7825 8.68382 13.8441 8.48361 13.8314 8.28109C13.8187 8.07857 13.7325 7.88765 13.589 7.74416Z" fill="#D75454"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_4_510">
+            <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+            </defs>
+          </svg>
+          10 Game Guarantee
+        </div>
+      </div>
+      <div class="nwTextImageWrapRight">
+        <div class="nwTextImageWrapRightTop">
+          <div class="swiper mySwiper mySwiperTop">
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                <div class="swiper-slide">
+                  <img data-src="{{ block.settings.image | img_url:'x200' }}" alt="img" class="lazy2 lazy3">
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <div class="nwTextImageWrapRightBottom">
+          <div class="swiper mySwiper mySwiperBottom">
+            <div class="swiper-wrapper">
+              {% assign newBlocks = section.blocks | reverse %}
+              {% for block in newBlocks %}
+                <div class="swiper-slide">
+                  <img
+                    data-src="{{ block.settings.image | img_url:'x200' }}"
+                    alt="img"
+                    class="lazy2 lazy3"
+                    loading="lazy"
+                  >
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiperTop = new Swiper(".mySwiperTop", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    loop: true,
+  });
+</script>
+
+<script>
+  var swiperTop = new Swiper(".mySwiperBottom", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    loop: true,
+  });
+</script>
+
+{% schema %}
+{
+  "name": "NW text image",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section main settings"
+    },
+    {
+      "type": "color_background",
+      "id": "bgColor",
+      "label": "Section background"
+    },
+    {
+      "type": "range",
+      "id": "pdTop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-top",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "pdBottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-bottom",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "pdTopMob",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-top (mobile)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "pdBottomMob",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-bottom (mobile)",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Section content settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "label": "Color Title",
+      "default": "#fff"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Color text",
+      "default": "#fff"
+    },
+  ],
+  "blocks": [
+     {
+       "name": "Item",
+       "type": "item",
+       "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "NW text image"
+    }
+  ]
+}
+{% endschema %}

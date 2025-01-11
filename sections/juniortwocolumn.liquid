@@ -1,0 +1,200 @@
+{% if page.url == '/pages/juniorgloves' %}
+     <style>
+       .footer__blocks-wrapper div:nth-child(2) {
+    display: none;
+     
+}
+           hr{
+     display: none  !important;
+}
+       .col-2 h2 {
+    margin: 0px 0px;
+}
+       .col-2 p {
+    line-height: 27px;
+    color: #424242;
+}
+       .l-c-block-flex {
+    margin: 2em 0 !important;
+}
+     </style>
+{% endif %}
+
+{{ 'landing-content.css' | asset_url | stylesheet_tag }}
+<div class="container page-width landing-content-container">
+  
+<h2 class="l-c-h1">{{ section.settings.l-c-h1}} </h2>
+<div class="row l-c-block-flex l-c-block1">
+  <div class="column l-c-block-flex-item col-1" >
+      <img  style="width:100%;" src="{{ section.settings.l-c-block1-img | img_url : 'master' }}"> 
+  </div>  
+  <div  class="column l-c-block-flex-item col-2">
+    <h2>{{ section.settings.l-c-block1-heading }}</h2>
+    <p>{{ section.settings.l-c-block1-text }}</p>
+    <div class="inner_col_review">
+      <img src="{{ section.settings.l-c-block1-imggg | img_url : 'master' }}"> 
+      <h4 class="l-c-h1">{{ section.settings.l-c-h111}} </h4>
+      <p>{{ section.settings.l-c-block112-text }}</p>
+      <h4 class="l-c-h1 bottom_main">{{ section.settings.l-c-h112}} </h4>
+    </div>
+    <a href="{{ section.settings.l-c-b2-url }}" class="button button--secondary l-c-b2" style="background-color: {{ section.settings.l-c-b2-color}}">{{ section.settings.l-c-b2 }} </a>
+   </div>
+</div>
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "juniortwo",
+    "settings": [
+      
+       {
+  "id" : "l-c-b1-url",
+  "type" : "url",
+  "label" : "Enter Button URL"
+  
+} ,
+        {
+  "id" : "l-c-b1-color",
+  "type" : "color",
+  "label" : "Button color"
+  
+} ,
+        {
+  "id" : "l-c-h1",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"Why Over 4,000 Keepers Trust The Obscure"
+  
+  
+},
+          {
+  "id" : "l-c-h11",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"enter-heading"
+  
+  
+},
+
+      {
+  "id" : "l-c-h111",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"enter-text"
+  
+  
+},
+
+      {
+  "id" : "l-c-h112",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"Unrivalled Stickiness"
+  
+  
+},
+  
+
+      {
+  "id" : "l-c-block1-imggg",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+},
+       {
+  "id" : "l-c-block1-img",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+} ,
+       {
+  "id" : "l-c-block1-heading",
+  "type" : "text",
+  "label" : "Heading" ,
+   "default":"Gloves Built With Science"
+} ,
+       {
+  "id" : "l-c-block1-text",
+  "type" : "text",
+  "label" : "Text" ,
+   "default":"Text Block One"
+} ,
+      {
+  "id" : "l-c-block112-text",
+  "type" : "text",
+  "label" : "Text" ,
+   "default":"Text Block two"
+} ,
+       {
+  "id" : "l-c-block2-img",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+} ,
+       {
+  "id" : "l-c-block2-heading",
+  "type" : "text",
+  "label" : "Heading" ,
+   "default":"More Games, Less Money"
+} ,
+       {
+  "id" : "l-c-block2-text",
+  "type" : "text",
+  "label" : "Text" ,
+   "default":"Text Block Two"
+} ,
+      {
+  "id" : "l-c-b2",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "TRY THE OBSCURE"
+} , 
+       {
+  "id" : "l-c-b2-url",
+  "type" : "url",
+  "label" : "Enter Button URL"
+  
+} ,
+        {
+  "id" : "l-c-b2-color",
+  "type" : "color",
+  "label" : "Button color"
+  
+} 
+       
+    
+    ],
+
+
+
+
+
+    
+
+    "presets" : [
+{
+  "name" : "juniortwo",
+  "category" : "Custom"
+ 
+  }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

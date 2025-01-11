@@ -1,0 +1,47 @@
+<section class="product_img_plus_content two_col_img_right">
+   <div class="left_class">
+        <h2>{{ section.settings.title-pro }}</h2>
+        <p>{{ section.settings.p-description }}</p>
+   </div>
+
+  <div class="right_image_class">
+    <img  style="width:100%;" src="{{ section.settings.image-selection | img_url : 'master' }}"> 
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "twocolumn",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title-pro",
+        "label": "Enter Title"
+      },
+       {
+        "type": "text",
+        "id": "p-description",
+        "label": "Enter Description"
+      },
+      
+   {
+      "type": "image_picker",
+      "id": "image-selection",
+      "label": "Select Image"
+   }
+    ],
+    "presets": [
+    {
+      "name": "twocolumn",
+      "category" : "Custom"
+    }
+    ]
+    
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

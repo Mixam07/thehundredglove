@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "7cd986b2-fc6d-45d2-81bf-909904879e2a": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE UK SHIPPING ON ORDERS OVER £100",
+            "link": "shopify://collections/all"
+          }
+        },
+        "d421cfec-51b9-4b11-a4aa-f6b380ab671f": {
+          "type": "announcement",
+          "settings": {
+            "text": "PAY IN 4 INTEREST FREE PAYMENTS WITH CLEARPAY",
+            "link": "shopify://collections/gloves"
+          }
+        },
+        "f871ec3c-0c36-4251-89f5-c6873d1f5421": {
+          "type": "announcement",
+          "settings": {
+            "text": "GLOVE PERSONALISATION NOW AVAILABLE",
+            "link": "shopify://collections/gloves"
+          }
+        }
+      },
+      "block_order": [
+        "7cd986b2-fc6d-45d2-81bf-909904879e2a",
+        "d421cfec-51b9-4b11-a4aa-f6b380ab671f",
+        "f871ec3c-0c36-4251-89f5-c6873d1f5421"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-1",
+        "show_line_separator": false,
+        "auto_rotate": true,
+        "change_slides_speed": 5
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [
+        ".essential_annoucement_bar_wrapper {display: none !important;}"
+      ],
+      "settings": {
+        "logo_position": "middle-left",
+        "menu": "new-header-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "reduce-logo-size",
+        "show_line_separator": true,
+        "color_scheme": "background-2",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_X4ezYD": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%if template contains 'collection' or template contains 'index' %}\n<a style=\"text-decoration:none\" href=\"https://thehundredglove.com/products/vanguard-white-pink\" >\n<div class=\"mime\">\n<div class=\"homepage_sale-banner\">\n<img class=\"offer_image\" src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/t/56/assets/sdsd-removebg-preview%20(1).png?v=1733680123\" alt=\"\"><span class=\"offer_text\"><strong>NEW:</strong> \n   \n<span class=\"bnr\" style=\"\"> VANGUARD PINK PACK   </span>\n  \n<strong>  AVAILABLE NOW!</strong> </span> \n<img class=\"offer_image\" src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/t/56/assets/ewew-removebg-preview.png?v=1733679945\" alt=\"\"></div>\n</div>\n</a>\n\n<style>\n.mime {\n  /*! CSS Used from: https://cdn.shopify.com/oxygen-v2/25194/9447/19462/1201531/assets/normalize-Coi1yNMv.css */\n  /*! CSS Used from: https://cdn.shopify.com/oxygen-v2/25194/9447/19462/1201531/assets/components-DqnVwCxe.css */\n  /*! CSS Used from: https://cdn.shopify.com/oxygen-v2/25194/9447/19462/1201531/assets/javy-shopify-staging-new-2-DFT0Px6v.css */\n  /*! CSS Used from: https://cdn.shopify.com/oxygen-v2/25194/9447/19462/1201531/assets/homepage-DdcO4qaW.css */\n}\n.mime *, .mime :before, .mime :after {\n  box-sizing: border-box;\n  border-width: 0;\n  border-style: solid;\n  border-color: #e5e7eb;\n}\n.mime :before, .mime :after {\n  --tw-content:\"\";\n}\n.mime a {\n  color: inherit;\n  text-decoration: inherit;\n}\n.mime strong {\n  font-weight: bolder;\n}\n.mime :disabled {\n  cursor: default;\n}\n.mime img, .mime svg {\n  display: block;\n  vertical-align: middle;\n}\n.mime img {\n  max-width: 100%;\n  height: auto;\n}\n.mime *, .mime :before, .mime :after {\n  --tw-border-spacing-x:0;\n  --tw-border-spacing-y:0;\n  --tw-translate-x:0;\n  --tw-translate-y:0;\n  --tw-rotate:0;\n  --tw-skew-x:0;\n  --tw-skew-y:0;\n  --tw-scale-x:1;\n  --tw-scale-y:1;\n  --tw-scroll-snap-strictness:proximity;\n  --tw-ring-offset-width:0px;\n  --tw-ring-offset-color:#fff;\n  --tw-ring-color:rgb(59 130 246 / .5);\n  --tw-ring-offset-shadow:0 0 #0000;\n  --tw-ring-shadow:0 0 #0000;\n  --tw-shadow:0 0 #0000;\n  --tw-shadow-colored:0 0 #0000;\n}\n.mime a {\n  background-color: transparent;\n}\n.mime a:active, .mime a:hover {\n  outline: 0;\n}\n.mime strong {\n  font-weight: 700;\n}\n.mime img {\n  border: 0;\n}\n.mime svg:not(:root) {\n  overflow: hidden;\n}\n.mime * {\n  box-sizing: border-box;\n}\n.mime img {\n  max-width: 100%;\n  vertical-align: middle;\n  display: inline-block;\n}\n.mime a {\n  border-color: var(--black);\n  color: var(--black);\n  text-decoration: none;\n}\n.mime img {\n  max-width: 100%;\n  display: inline-block;\n}\n.mime strong {\n  font-weight: 700;\n}\n.mime a {\n  background-color: #0000;\n}\n.mime a:active, .mime a:hover {\n  outline: 0;\n}\n.mime strong {\n  font-weight: 700;\n}\n.mime img {\n  border: 0;\n}\n.mime svg:not(:root) {\n  overflow: hidden;\n}\n.mime * {\n  box-sizing: border-box;\n}\n.mime img {\n  vertical-align: middle;\n  max-width: 100%;\n  display: inline-block;\n}\n.mime a {\n  color: #4f4f61;\n  text-decoration: underline;\n}\n.mime .homepage_sale-banner {\n  background-image: linear-gradient(5deg, #FFDEE7, #FE6F98);\n  text-decoration: none;\n  color: #000;\n  height: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 0.25rem;\n}\n.mime .homepage_sale-banner_text {\n  color: #000;\n  font-weight: 700;\n  letter-spacing: 0.025rem;\n  text-wrap: nowrap;\n  text-decoration: none;\n  font-size: 1.125rem;\n}\n@media screen and (max-width: 479px) {\n.mime .offer_text * {\n        text-align: center;\n        font-size: 9px !important;\n    }\n  .mime .homepage_sale-banner_text {\n    margin-left: 1rem;\n    font-size: 0.625rem;\n  }\n}\n.mime .homepage_sale-banner strong {\n  font-weight: 700;\n    font-size: 13px;\n}\n.mime .offer_badge {\n  width: 100px;\n}\n.mime .offer_image {\n  width: 60px;\n  height: 55px;\n  object-fit:contain;\ntransform: rotate(4deg);\n\n}\n.bnr{\nbackground-color: #000;\n    padding: 0px 5px;\n    padding-top: 1px;\n    display: inline-block;\n    transform: rotate(-2deg);\n    color: #f0bccd;\n    font-size: 11px;\n    border-radius: 4px;\n    font-weight: 600;\n    padding-top: 0.5px;\n}\n@media screen and (max-width: 479px) {\n.bnr{\nbackground-color: #000;\n        padding: 1px 6px;\n        padding-top: 1px;\n        display: inline-block;\n        transform: rotate(-2deg);\n        color: #f0bccd;\n        font-size: 11px;\n        border-radius: 4px;\n        font-weight: 600;\n        padding-top: 2.5px;\n        padding-bottom: 2.5px;\n\n}\n  .mime .offer_badge {\n    width: 100px;\n  }\n  .mime .offer_text {\n    text-align: center;\n    \n  }\n  .mime .offer_timer {\n    text-align: center;\n    width: 90px;\n  }\n  .mime .homepage_sale-banner {\n    font-size: 10px;\n    height: 40px;\n    gap: 0rem;\n    justify-content: center;\n    position: relative;\n    gap: 0;\n    \n    line-height: 1.25;\n  }\n  .mime .offer_image {\n    width: 50px;\n    \n  }\n}\n</style>\n\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_menu_cyPxbQ": {
+      "type": "section-menu",
+      "blocks": {
+        "row_1_dLPfdp": {
+          "type": "row-1",
+          "settings": {
+            "menu-title": "GIFT CARDS",
+            "menu-image": "shopify://shop_images/Gift.svg",
+            "menu-link": "shopify://products/the-hundred-glove-gift-card"
+          }
+        },
+        "row_1_G8mwij": {
+          "type": "row-1",
+          "settings": {
+            "menu-title": "ABOUT US",
+            "menu-image": "shopify://shop_images/UsersThree.svg",
+            "menu-link": "shopify://pages/about"
+          }
+        },
+        "row_1_aVknJa": {
+          "type": "row-1",
+          "settings": {
+            "menu-title": "COMMUNITY",
+            "menu-image": "shopify://shop_images/UsersFour-1.svg",
+            "menu-link": "https://www.instagram.com/thehundredglove/"
+          }
+        },
+        "row_1_nxM8iU": {
+          "type": "row-1",
+          "settings": {
+            "menu-title": "TRACK ORDERS",
+            "menu-image": "shopify://shop_images/Package-2.svg",
+            "menu-link": "https://thehundredglove.com/a/track-your-parcel"
+          }
+        },
+        "row_1_XaaL8P": {
+          "type": "row-1",
+          "settings": {
+            "menu-title": "FAQs",
+            "menu-image": "shopify://shop_images/Question.svg",
+            "menu-link": "shopify://pages/support-hub"
+          }
+        },
+        "row_2_EcMWeQ": {
+          "type": "row-2",
+          "settings": {
+            "menu-title-content": "Our Best-Selling Gloves -Trusted by Thousands",
+            "menu-image-content": "shopify://shop_images/38250860f323f64cb4689f5bb4684504.png",
+            "menu-link-content": "shopify://collections/all"
+          }
+        },
+        "row_2_ime8X3": {
+          "type": "row-2",
+          "settings": {
+            "menu-title-content": "BUNDLE & SAVE",
+            "menu-image-content": "shopify://shop_images/cdb272626af31d8551e470d9560d1a7b.png",
+            "menu-link-content": "shopify://collections/bundle"
+          }
+        }
+      },
+      "block_order": [
+        "row_1_dLPfdp",
+        "row_1_G8mwij",
+        "row_1_aVknJa",
+        "row_1_nxM8iU",
+        "row_1_XaaL8P",
+        "row_2_EcMWeQ",
+        "row_2_ime8X3"
+      ],
+      "settings": {
+        "menu-photo-1": "shopify://shop_images/ced171e40cf28139aad1219de7179b5b.png",
+        "menu-title-1": "2 PAIRS FOR £90",
+        "menu-link-1": "https://thehundredglove.com/apps/bundles/bundle/146719",
+        "menu-photo-2": "shopify://shop_images/763e649a384add5a6215d3e1748d9aed.png",
+        "menu-title-2": "3 PAIRS FOR £120",
+        "menu-link-2": "https://thehundredglove.com/apps/bundles/bundle/153564",
+        "menu-photo-3": "shopify://shop_images/a26b8d09db613f2b717ddfb9eaf5aa46.png",
+        "menu-title-3": "Ambassador Pack",
+        "menu-link-3": "https://thehundredglove.com/apps/bundles/bundle/138368"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "custom_liquid_X4ezYD",
+    "section_menu_cyPxbQ"
+  ]
+}

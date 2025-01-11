@@ -1,0 +1,54 @@
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+
+<div class="section-header__wrapper">
+    <img class="section-header__icon" src="{{ 'star.svg' | asset_url }}" alt="star">
+    <p class="section-header__info">{{ section.settings.title-header }}</p>
+    <img class="section-header__icon" src="{{ 'gift.svg' | asset_url }}" alt="gift">
+</div>
+<div class="section-header__wrap">
+    <div class="section-header__text">{{ section.settings.slogan-header }}</div>
+    <div>
+        <p class="section-header__discount">{{ section.settings.discount-header }}</p>
+    </div>
+    <div class="section-header__timer">
+        <div class="section-header__square"></div>
+        <p class="section-header__points">:</p>
+        <div class="section-header__square"></div>
+        <p class="section-header__points">:</p>
+        <div class="section-header__square"></div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "section-header",
+    "tag": "header",
+    "class": "section-header custom",
+    "settings": [
+        {
+            "id" : "title-header",
+            "type" : "text",
+            "label" : "Title",
+            "default": "Fresh Gloves for a Fresh Year - Best Price + Free Gifts for 2025!"
+        },
+        {
+            "id" : "slogan-header",
+            "type" : "text",
+            "label" : "Slogan" ,
+            "default": "NEW YEAR, NEW GLOVES"
+        },
+        {
+            "id" : "discount-header",
+            "type" : "text",
+            "label" : "Discount",
+            "default": "UP TO 53% OFF"
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-header",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

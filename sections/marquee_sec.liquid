@@ -1,0 +1,69 @@
+<!--<div class = "marquee_main">
+    <marquee class="marq" behavior="scroll">
+      <div class="inner_text_main">
+        <ul class="inner_text">
+          <li>{{ section.settings.text_field }}</li>
+          <li>{{ section.settings.text_field2 }}</li>
+          <li>{{ section.settings.text_field3 }}</li>
+        </ul>
+      <ul class="inner_text">
+           <li>{{ section.settings.text_field }}</li>
+          <li>{{ section.settings.text_field2 }}</li>
+          <li>{{ section.settings.text_field3 }}</li>
+        </ul>
+        <ul class="inner_text">
+           <li>{{ section.settings.text_field }}</li>
+          <li>{{ section.settings.text_field2 }}</li>
+          <li>{{ section.settings.text_field3 }}</li>
+        </ul>
+      
+       
+        
+      </div>
+    </marquee>
+ </div> -->
+
+
+ <div class="marquee">
+  <div class="track">
+    <div class="content"><span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span><span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span>
+    <span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span><span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span><span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span>
+    <span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span></div>
+</div>
+ </div>
+{% schema %}
+  {
+    "name": "Marquee_sec",
+    "settings": [
+     {
+       "type": "text",
+       "label": "Add Text1",
+       "id": "text_field"
+     },
+
+      {
+       "type": "text",
+       "label": "Add Text2",
+       "id": "text_field2"
+     },
+
+       {
+       "type": "text",
+       "label": "Add Text3",
+       "id": "text_field3"
+     }
+      
+    ],
+    "presets": [
+    {
+      "name": "Marquee_sec"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

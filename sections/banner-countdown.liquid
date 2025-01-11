@@ -1,0 +1,84 @@
+<link href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css" rel="stylesheet" />
+
+<style>
+  .count-down {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+.count-down .flipdown {
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.count-down h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+@media (max-width: 550px) {
+    .count-down {
+        width: 100%;
+    }
+    .count-down h2 {
+        font-size: 2.5em;
+    }
+}
+</style>
+  
+<section class="nwCountdown section-{{ section.id }}">
+  <div class="page-width">
+
+   <div class="count-down">
+        <h2>BUNDLE & SAVE</h2>
+        <div class="flipdown" id="flipdown"></div>
+    </div>
+    
+  </div>
+</section>
+
+<script src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Configurar la fecha de destino (29 de noviembre)
+  var targetDate = new Date("2024-11-29T00:00:00"); // Ajusta el año si corresponde
+
+  // Convertir la fecha a Unix timestamp en segundos
+  var toDayFromNow = Math.floor(targetDate.getTime() / 1000);
+
+  // Configurar FlipDown
+  var flipdown = new FlipDown(toDayFromNow)
+
+  // Iniciar la cuenta regresiva
+  .start()
+  // Hacer algo cuando el temporizador termine
+  .ifEnded(() => {
+      document.querySelector(".flipdown").innerHTML = `<h2>Timer is ended</h2>`;
+  });
+});
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Banner countdown",
+  "settings": [
+    
+  ],
+  "presets": [
+    {
+      "name": "Banner countdown"
+    }
+  ]
+}
+{% endschema %}

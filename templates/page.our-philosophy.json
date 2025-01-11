@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "2c0a4a3c-9283-4594-ac9b-8539911ee0f6": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/MPH01810_1_9eb2a2df-063d-43ea-90dc-dcf1953bd8e2.png",
+        "image_overlay_opacity": 20,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "a3e16f12-a0a1-4d25-9fe1-186482192ef1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16702694195456__a3e16f12-a0a1-4d25-9fe1-186482192ef1-16740327987df0f84b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR PHILOSOPHY",
+            "heading_size": "h1"
+          }
+        },
+        "template--16702694195456__a3e16f12-a0a1-4d25-9fe1-186482192ef1-16740327987df0f84b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Hundred Glove has never introduced change for its own sake. Instead, it has chosen to constantly refine.<br/><br/>Each development of The Hundred Glove is analysed carefully to ensure that it not only meets the keepers’ meticulous standards but adds to the luxurious displeasure of being a goalkeeper.<br/><br/>The Hundred Glove is progressing as it always has done, with infinite care, ensuring our products give exceptional wear.<br/><br/>We look forward to welcoming you to The Hundred Club.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16702694195456__a3e16f12-a0a1-4d25-9fe1-186482192ef1-16740327987df0f84b-0",
+        "template--16702694195456__a3e16f12-a0a1-4d25-9fe1-186482192ef1-16740327987df0f84b-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2c0a4a3c-9283-4594-ac9b-8539911ee0f6",
+    "a3e16f12-a0a1-4d25-9fe1-186482192ef1"
+  ]
+}

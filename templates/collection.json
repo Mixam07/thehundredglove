@@ -1,0 +1,310 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "7a0458a4-18e1-4a5c-8479-d4d3ee669f25": {
+      "type": "nw-collection-banner",
+      "disabled": true,
+      "settings": {
+        "title": "The Hundred Glove",
+        "text": "We embody goalkeeping expertise. Unlike some brands that prioritise style over substance, we focus on what truly matters. Our gloves are designed for your comfort, excellent performance, and the unwavering confidence they instill in your hands.",
+        "image": "shopify://shop_images/Rectangle_37.png"
+      }
+    },
+    "image_banner_jViTYX": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_LV6qrV": {
+          "type": "heading",
+          "settings": {
+            "heading": "The hundred glove",
+            "heading_size": "h1"
+          }
+        },
+        "text_qgLmna": {
+          "type": "text",
+          "settings": {
+            "text": "We embody goalkeeping expertise. Unlike some brands that prioritise style over substance, we focus on what truly matters. Our gloves are designed for your comfort, excellent performance and the unwavering confidence they instill in your hands.",
+            "text_style": "body"
+          }
+        },
+        "features_8PPQFQ": {
+          "type": "features",
+          "settings": {
+            "feature_1_icon": "shopify://shop_images/icon_1.svg",
+            "feature_1_icon_alt": "Feature 1 icon",
+            "feature_1_title": "Unmatched Grip",
+            "feature_2_icon": "shopify://shop_images/Untitled_design_5_1.png",
+            "feature_2_icon_alt": "Feature 2 icon",
+            "feature_2_title": "Trusted by 10,000+",
+            "feature_3_icon": "shopify://shop_images/Star_6.svg",
+            "feature_3_icon_alt": "Feature 3 icon",
+            "feature_3_title": "10 Game Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LV6qrV",
+        "text_qgLmna",
+        "features_8PPQFQ"
+      ],
+      "custom_css": [
+        "@media (min-width: 750px) {.banner--medium.banner--desktop-transparent .banner__box {padding-left: 0; padding-right: 0; } .banner--medium.banner--desktop-transparent .banner__box h2 {} .banner__text p {max-width: 450px; margin: auto; } .banner__box > * + .banner__buttons {margin-top: 4rem; }}",
+        ".bannerTrustBadge {margin: 0;}"
+      ],
+      "settings": {
+        "customClass": "",
+        "show_badge": true,
+        "badge_text": "4.5/5",
+        "toptitle_text": "",
+        "color_toptitle": "#ffffff",
+        "image": "shopify://shop_images/Hero_1920x600_0b659255-229a-4347-83e4-8d385d152d2b.png",
+        "imagemobile": "shopify://shop_images/BFCM_THG_Hero_Section_Mobile_4.png",
+        "moveBanner": false,
+        "body_text": "#000000",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "custom_liquid_CWPCNR": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"upTo_last_chance_box\">\n<h2 class=\"up_to_off_text\">UP TO 53% OFF SITEWIDE</h2>\n<p class=\"last_chance_text\">RAID THE VAULT NOW</p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "c4139915-ba9e-4b13-8d8a-cd978e4feba1": {
+      "type": "collection-list",
+      "blocks": {
+        "a1638294-7890-43e9-8ae0-6e5f83d6b398": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all"
+          }
+        },
+        "template--16790092644608__c4139915-ba9e-4b13-8d8a-cd978e4feba1-1687518394fa4a8d70-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gloves"
+          }
+        },
+        "7398d056-79c4-40a1-9f69-95e590823ad4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "clothings"
+          }
+        },
+        "template--16790092644608__c4139915-ba9e-4b13-8d8a-cd978e4feba1-1687518394fa4a8d70-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        }
+      },
+      "block_order": [
+        "a1638294-7890-43e9-8ae0-6e5f83d6b398",
+        "template--16790092644608__c4139915-ba9e-4b13-8d8a-cd978e4feba1-1687518394fa4a8d70-1",
+        "7398d056-79c4-40a1-9f69-95e590823ad4",
+        "template--16790092644608__c4139915-ba9e-4b13-8d8a-cd978e4feba1-1687518394fa4a8d70-0"
+      ],
+      "custom_css": [
+        ".card__information {position: relative;}",
+        "ul#Slider-template--24315719549308__c4139915-ba9e-4b13-8d8a-cd978e4feba1 {justify-content: space-around; padding: 20px; border: 1px solid #000; border-radius: 10px; max-width: 800px; margin: 20px auto; background: #fff;}",
+        "a {font-family: \"Anton\", sans-serif !important; text-transform: uppercase; font-size: 30px; line-height: 35px;}",
+        "h3 {border-radius: 10px; border: none;}",
+        "h3::before {display: none;}",
+        "@media (max-width: 999px) {li {width: auto !important; }}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 12
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": false,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "cdc040e1-da21-4b49-b720-fb4d67b3470a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16790092644608__cdc040e1-da21-4b49-b720-fb4d67b3470a-168786309834340ea9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow Our Journey",
+            "heading_size": "h1"
+          }
+        },
+        "template--16790092644608__cdc040e1-da21-4b49-b720-fb4d67b3470a-168786309834340ea9-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "template--16790092644608__cdc040e1-da21-4b49-b720-fb4d67b3470a-168786309834340ea9-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16790092644608__cdc040e1-da21-4b49-b720-fb4d67b3470a-168786309834340ea9-0",
+        "template--16790092644608__cdc040e1-da21-4b49-b720-fb4d67b3470a-168786309834340ea9-1",
+        "template--16790092644608__cdc040e1-da21-4b49-b720-fb4d67b3470a-168786309834340ea9-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "0d15bfd6-ed1b-48a5-87df-161a18ed783a": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<p class=\"instafeed_p\">TAG YOUR POST WITH <a href=\"\">@THEHUNDREDGLOVE</a> TO BE FEATURED</p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1687863215d0f1e416": {
+      "type": "apps",
+      "blocks": {
+        "8041a6cb-6c7a-4a85-a9b1-f3c2713be161": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "8041a6cb-6c7a-4a85-a9b1-f3c2713be161"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "bd49e8c7-e6c7-445d-805b-26ae6ebe7eaf": {
+      "type": "nw-faq-section",
+      "blocks": {
+        "a086e7f7-a7c5-4aee-bda3-f51c19ca7649": {
+          "type": "slide",
+          "settings": {
+            "title": "ARE ALL OF YOUR GLOVES DURABLE?",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through \nrigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
+          }
+        },
+        "e833c80c-8d5b-4875-a0d1-afb4a724188e": {
+          "type": "slide",
+          "settings": {
+            "title": "ARE ALL OF YOUR GLOVES DURABLE?",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through \nrigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
+          }
+        },
+        "f422116a-c888-47ca-8a07-d02bf67e546f": {
+          "type": "slide",
+          "settings": {
+            "title": "ARE ALL OF YOUR GLOVES DURABLE?",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through \nrigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
+          }
+        },
+        "5b607a2e-d8db-48d4-96f6-0efa3abe4919": {
+          "type": "slide",
+          "settings": {
+            "title": "ARE ALL OF YOUR GLOVES DURABLE?",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through \nrigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
+          }
+        }
+      },
+      "block_order": [
+        "a086e7f7-a7c5-4aee-bda3-f51c19ca7649",
+        "e833c80c-8d5b-4875-a0d1-afb4a724188e",
+        "f422116a-c888-47ca-8a07-d02bf67e546f",
+        "5b607a2e-d8db-48d4-96f6-0efa3abe4919"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Questions? We’re here to help"
+      }
+    }
+  },
+  "order": [
+    "7a0458a4-18e1-4a5c-8479-d4d3ee669f25",
+    "image_banner_jViTYX",
+    "custom_liquid_CWPCNR",
+    "c4139915-ba9e-4b13-8d8a-cd978e4feba1",
+    "banner",
+    "product-grid",
+    "cdc040e1-da21-4b49-b720-fb4d67b3470a",
+    "0d15bfd6-ed1b-48a5-87df-161a18ed783a",
+    "1687863215d0f1e416",
+    "bd49e8c7-e6c7-445d-805b-26ae6ebe7eaf"
+  ]
+}

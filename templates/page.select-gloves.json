@@ -1,0 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_bundle_products_inRQjf": {
+      "type": "section-bundle-products",
+      "settings": {
+        "collection": "gloves",
+        "page": "glove-size-img",
+        "bundle-caption": "Goalkeepers are raving. NEW Gloves selling fast!",
+        "bundle-title-bold": "HOLIDAY SPECIAL:",
+        "bundle-title": "Big saving and FREE gifts on your 3 pair gloves",
+        "bundle-prevpage": "shopify://pages/glove-page"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_bundle_products_inRQjf"
+  ]
+}

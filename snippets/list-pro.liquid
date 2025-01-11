@@ -1,0 +1,149 @@
+<style>
+
+  @media only screen and (max-width: 600px) {
+  .header-lp{
+    font-size: 16px;
+    padding: 0px;
+  }
+     .l-c-h2{
+     font-size: 2em !important;
+       padding-top: 25px !important;
+    padding-bottom: 20px !important;
+  }
+    .grid__item.product__media-wrapper.slider_custom {
+    width: auto !important;
+}
+}
+
+
+
+ 
+ .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+  .product-item {
+    box-sizing: border-box;
+    margin: 0 10px 20px;
+    padding: 3px;
+    text-align: center;
+    border: 1px solid #d75555;
+    border-radius: 10px;
+    height: 80px !important;
+    width: 80px;
+}
+  .product-image {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+    height: 100%;
+}
+
+  .white-product {
+    display: none;
+}
+
+  .navy-product {
+    display: none;
+}
+
+  .black-product {
+    display: block;
+}
+
+   .red-product {
+    display: none;
+}
+
+  .owl-dots {
+    DISPLAY: NONE;
+}
+</style>
+
+
+
+<h4>SELECT COLOUR</h4>
+{% comment %}
+<ul class="product-list">
+
+  
+  {% assign product_limit = 4
+%}
+  {% for product in collections.all.products limit:product_limit %}
+    <li class="product-item">
+      <a href="#" class="hide-show">
+        <img src="{{ product.featured_image.src | img_url: 'medium' }}" class="product-image" alt="{{ product.featured_image.alt }}">
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% endcomment %}
+<ul class="product-list">
+  
+  
+    <li class="product-item">
+      <a href="" class="pro-black">
+        <img src="//cdn.shopify.com/s/files/1/0667/5877/0944/products/black_001_medium.png?v=1674903356" class="product-image" alt="The Hundred Glove - Obscure (Black)">
+      </a>
+    </li>
+  
+    <li class="product-item">
+      <a href="" class="pro-white">
+        <img src="//cdn.shopify.com/s/files/1/0667/5877/0944/products/mainLi_medium.png?v=1676545405" class="product-image" alt="The Hundred Glove - Obscure (White)">
+      </a>
+    </li>
+  
+    <li class="product-item">
+      <a href="" class="pro-navy">
+        <img src="//thehundredglove.com/cdn/shop/files/redimage_7_medium.png?v=1688645741" class="product-image" alt="The Hundred Glove - Obscure (Navy/White)">
+      </a>
+    </li>
+  
+    <li class="product-item">
+      <a href="" class="pro-red">
+        <img src="//thehundredglove.com/cdn/shop/files/redimage_5_medium.png?v=1688645619" class="product-image" alt="The Hundred Glove - Obscure (Red/White)">
+      </a>
+    </li>
+   
+  
+</ul>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$( ".pro-white" ).on( "click", function(e) {
+  e.preventDefault();
+ $(".white-product").show();
+  $(".black-product").hide();
+  $(".navy-product").hide();
+  $(".red-product").hide();
+});
+
+
+  $( ".pro-black" ).on( "click", function(e) {
+  e.preventDefault();
+ $(".white-product").hide();
+  $(".black-product").show();
+  $(".navy-product").hide();
+  $(".red-product").hide();
+});
+
+   $( ".pro-navy" ).on( "click", function(e) {
+  e.preventDefault();
+ $(".white-product").hide();
+  $(".black-product").hide();
+  $(".navy-product").show();
+  $(".red-product").hide();
+});
+
+     $( ".pro-red" ).on( "click", function(e) {
+  e.preventDefault();
+ $(".white-product").hide();
+  $(".black-product").hide();
+  $(".navy-product").hide();
+  $(".red-product").show();
+});
+</script>

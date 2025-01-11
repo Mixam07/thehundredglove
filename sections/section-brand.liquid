@@ -1,0 +1,101 @@
+{{ 'section-brand.css' | asset_url | stylesheet_tag }}
+ <hr />
+
+<div class="container page-width" style="margin-bottom:100px">
+   <div class="row grid grid--1-col grid--3-col-tablet grid--3-col-desktop  ">	
+     <div class="grid__item center imgBoxSmallScreen"> 
+      <img src="{{ section.settings.first-image | img_url : 'master' }}"> 
+      <h3 class="">{{ section.settings.first-image-text }}</h3>
+    
+    </div> 
+	<div class="grid__item center imgBoxSmallScreen"> 
+      <img src="{{ section.settings.two-image | img_url : 'master' }}"> 
+      <h3 class="">{{ section.settings.two-image-text }}</h3>
+    
+    </div> 
+	<div class="grid__item center imgBoxSmallScreen"> 
+      <img src="{{ section.settings.three-image | img_url : 'master' }}"> 
+      <h3 class="">{{ section.settings.three-image-text }}</h3>
+    
+    </div> 
+	  
+</div>
+  
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Section Brand",
+    "settings": [ 
+      {
+  "id" : "heading",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "ABC"
+},
+  {
+  "id" : "first-image",
+  "type" : "image_picker",
+  "label" : "First image"
+  
+},
+   {
+  "id" : "first-image-text",
+  "type" : "text",
+  "label" : "First image Text",
+   "default" : "Authentic Performance Technology"
+  
+},{
+  "id" : "two-image",
+  "type" : "image_picker",
+  "label" : "two image"
+  
+},
+   {
+  "id" : "two-image-text",
+  "type" : "text",
+  "label" : "Two image Text",
+   "default" : "Unmatched Stickiness & Grip"
+  
+},
+  {
+  "id" : "three-image",
+  "type" : "image_picker",
+  "label" : "Three image"
+  
+},
+   {
+  "id" : "three-image-text",
+  "type" : "text",
+  "label" : "Three Image Text",
+   "default" : "Ultra Lightweight Build"
+  
+},
+      {
+  "id" : "four-image",
+  "type" : "image_picker",
+  "label" : "Four image"
+  
+} 
+      
+      
+    ]
+    ,
+        "presets" : [
+{
+  "name" : "Section Brand",
+  "category" : "Custom"
+ 
+  }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,250 @@
+<style>
+  .nwFCollectionBannerBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position:relative;
+    gap: 50px;
+  }
+  .nwFCollectionBannerBodyLeft{
+    padding: 112px 0;
+    padding-left: 80px;
+  }
+  .nwFCollectionBanner{
+    background: #000;
+    overflow:hidden;
+  }
+  .nwFCollectionBannerBodyLeftTitle{
+    margin: 0;
+    color: #FFF;
+    font-family: Chakra Petch;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5; /* 158.333% */
+  }
+  .nwFCollectionBannerBodyLeftText{
+    color: #FFF;
+    font-family: Chakra Petch;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2; /* 212.5% */
+    text-transform: capitalize;
+    margin-top: 16px;
+  }
+  .nwFCollectionBannerBodyLeftInfo{
+    margin-top: 20px;
+  }
+  .nwFCollectionBannerBodyLeftBottom{
+    margin-top: 39px;
+  }
+  .nwFCollectionBanner{
+  }
+  .nwFCollectionBannerBodyRight{
+    overflow:hidden;
+    position: absolute;
+    width: 50vw;
+    top: 0;
+    height: 100%;
+    left: 50%;
+  }
+  .nwFCollectionBannerBodyRight img{
+    display:block;
+    position:absolute;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+  }
+  .nwFCollectionBannerBodyLeftBottomItem{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  .nwFCollectionBannerBodyLeftBottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  @media(max-width: 999px){
+    .nwFCollectionBannerBodyRight{
+      position:relative;
+      left: auto;
+      top: auto;
+      height: auto;
+      width: 100%;
+      width: calc(100% + 30px);
+      margin-left: -15px;
+    }
+    .nwFCollectionBannerBodyRight img{
+      position:relative;
+      display:block;
+      width: 100%;
+      height: auto;
+      top: auto;
+      transform: none;
+      left: auto;
+    }
+    .nwFCollectionBannerBody{
+      grid-template-columns: 1fr;
+      gap: 0;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .nwFCollectionBannerBodyLeft{
+      padding: 30px 15px;
+    }
+    .nwFCollectionBannerBodyLeftTitle{
+      font-size: 24px;
+    }
+    .nwFCollectionBannerBodyLeftText{
+      font-size: 14px;
+    }
+    .nwFCollectionBannerBodyLeftBottomItemBottom{
+      font-size: 12px;
+    }
+    .nwFCollectionBannerBodyLeftBottom{
+      gap: 24px;
+      text-align: center;
+    }
+  }
+</style>
+
+ <div class="nwFCollectionBanner">
+  <div class="page-width">
+
+    <div class="nwFCollectionBannerBody">
+      <div class="nwFCollectionBannerBodyLeft">
+        <h4 class="nwFCollectionBannerBodyLeftTitle">
+          {{ section.settings.title }}
+        </h4>
+        <div class="nwFCollectionBannerBodyLeftText">
+          {{ section.settings.text }}
+        </div>
+        
+        <div class="nwFCollectionBannerBodyLeftInfo">
+          <svg width="212" height="24" viewBox="0 0 212 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.2836 8.27584L15.3328 7.411L12.6727 2.01803C12.6 1.87037 12.4805 1.75084 12.3328 1.67818C11.9625 1.49537 11.5125 1.64771 11.3274 2.01803L8.6672 7.411L2.71642 8.27584C2.55236 8.29928 2.40236 8.37662 2.28751 8.49381C2.14867 8.63651 2.07217 8.8285 2.0748 9.02758C2.07744 9.22666 2.15901 9.41655 2.30158 9.55553L6.60704 13.7532L5.58986 19.6805C5.566 19.8184 5.58126 19.9602 5.6339 20.0899C5.68654 20.2195 5.77445 20.3318 5.88767 20.4141C6.00089 20.4963 6.13489 20.5452 6.27447 20.5551C6.41404 20.5651 6.55362 20.5357 6.67736 20.4704L12 17.6719L17.3227 20.4704C17.468 20.5477 17.6367 20.5735 17.7985 20.5454C18.2063 20.4751 18.4805 20.0883 18.4102 19.6805L17.393 13.7532L21.6985 9.55553C21.8156 9.44068 21.893 9.29068 21.9164 9.12662C21.9797 8.71646 21.6938 8.33678 21.2836 8.27584Z" fill="#FBBC04"/>
+          <path d="M53.2836 8.27584L47.3328 7.411L44.6727 2.01803C44.6 1.87037 44.4805 1.75084 44.3328 1.67818C43.9625 1.49537 43.5125 1.64771 43.3274 2.01803L40.6672 7.411L34.7164 8.27584C34.5524 8.29928 34.4024 8.37662 34.2875 8.49381C34.1487 8.63651 34.0722 8.8285 34.0748 9.02758C34.0774 9.22666 34.159 9.41655 34.3016 9.55553L38.607 13.7532L37.5899 19.6805C37.566 19.8184 37.5813 19.9602 37.6339 20.0899C37.6865 20.2195 37.7745 20.3318 37.8877 20.4141C38.0009 20.4963 38.1349 20.5452 38.2745 20.5551C38.414 20.5651 38.5536 20.5357 38.6774 20.4704L44 17.6719L49.3227 20.4704C49.468 20.5477 49.6367 20.5735 49.7985 20.5454C50.2063 20.4751 50.4805 20.0883 50.4102 19.6805L49.393 13.7532L53.6985 9.55553C53.8156 9.44068 53.893 9.29068 53.9164 9.12662C53.9797 8.71646 53.6938 8.33678 53.2836 8.27584Z" fill="#FBBC04"/>
+          <path d="M85.2836 8.27584L79.3328 7.411L76.6727 2.01803C76.6 1.87037 76.4805 1.75084 76.3328 1.67818C75.9625 1.49537 75.5125 1.64771 75.3273 2.01803L72.6672 7.411L66.7164 8.27584C66.5523 8.29928 66.4023 8.37662 66.2875 8.49381C66.1487 8.63651 66.0722 8.8285 66.0748 9.02758C66.0774 9.22666 66.159 9.41655 66.3016 9.55553L70.607 13.7532L69.5898 19.6805C69.566 19.8184 69.5812 19.9602 69.6339 20.0899C69.6865 20.2195 69.7744 20.3318 69.8877 20.4141C70.0009 20.4963 70.1349 20.5452 70.2745 20.5551C70.414 20.5651 70.5536 20.5357 70.6773 20.4704L76 17.6719L81.3227 20.4704C81.468 20.5477 81.6367 20.5735 81.7984 20.5454C82.2062 20.4751 82.4805 20.0883 82.4102 19.6805L81.393 13.7532L85.6984 9.55553C85.8156 9.44068 85.893 9.29068 85.9164 9.12662C85.9797 8.71646 85.6937 8.33678 85.2836 8.27584Z" fill="#FBBC04"/>
+          <path d="M117.284 8.27584L111.333 7.411L108.673 2.01803C108.6 1.87037 108.48 1.75084 108.333 1.67818C107.962 1.49537 107.512 1.64771 107.327 2.01803L104.667 7.411L98.7164 8.27584C98.5523 8.29928 98.4023 8.37662 98.2875 8.49381C98.1487 8.63651 98.0722 8.8285 98.0748 9.02758C98.0774 9.22666 98.159 9.41655 98.3016 9.55553L102.607 13.7532L101.59 19.6805C101.566 19.8184 101.581 19.9602 101.634 20.0899C101.687 20.2195 101.774 20.3318 101.888 20.4141C102.001 20.4963 102.135 20.5452 102.274 20.5551C102.414 20.5651 102.554 20.5357 102.677 20.4704L108 17.6719L113.323 20.4704C113.468 20.5477 113.637 20.5735 113.798 20.5454C114.206 20.4751 114.48 20.0883 114.41 19.6805L113.393 13.7532L117.698 9.55553C117.816 9.44068 117.893 9.29068 117.916 9.12662C117.98 8.71646 117.694 8.33678 117.284 8.27584Z" fill="#FBBC04"/>
+          <path d="M149.284 8.27584L143.333 7.411L140.673 2.01803C140.6 1.87037 140.48 1.75084 140.333 1.67818C139.962 1.49537 139.512 1.64771 139.327 2.01803L136.667 7.411L130.716 8.27584C130.552 8.29928 130.402 8.37662 130.287 8.49381C130.149 8.63651 130.072 8.8285 130.075 9.02758C130.077 9.22666 130.159 9.41655 130.302 9.55553L134.607 13.7532L133.59 19.6805C133.566 19.8184 133.581 19.9602 133.634 20.0899C133.687 20.2195 133.774 20.3318 133.888 20.4141C134.001 20.4963 134.135 20.5452 134.274 20.5551C134.414 20.5651 134.554 20.5357 134.677 20.4704L140 17.6719L145.323 20.4704C145.468 20.5477 145.637 20.5735 145.798 20.5454C146.206 20.4751 146.48 20.0883 146.41 19.6805L145.393 13.7532L149.698 9.55553C149.816 9.44068 149.893 9.29068 149.916 9.12662C149.98 8.71646 149.694 8.33678 149.284 8.27584Z" fill="#FBBC04"/>
+          <path d="M165.28 17.4V5.416L166.752 3.944H168.544V5H167.264L166.464 5.784V17.032L167.264 17.816H168.544V18.872H166.752L165.28 17.4ZM174.842 14.712H169.338V12.824L174.122 5.8H176.058V13.624H177.418V14.712H176.058V17H174.842V14.712ZM174.842 13.656V6.824H174.746L170.522 13.016V13.656H174.842ZM178.488 16.536V15.832L178.952 15.368H179.656L180.12 15.832V16.536L179.656 17H178.952L178.488 16.536ZM181.679 15.528V14.28H182.895V15.128L183.695 15.912H187.055L187.855 15.128V11.928L187.055 11.144H181.839V5.8H188.847V6.872H183.023V10.056H187.583L189.071 11.544V15.528L187.599 17H183.151L181.679 15.528ZM196.223 5.784H197.471L191.279 17H190.031L196.223 5.784ZM198.429 15.528V14.28H199.645V15.128L200.445 15.912H203.805L204.605 15.128V11.928L203.805 11.144H198.589V5.8H205.597V6.872H199.773V10.056H204.333L205.821 11.544V15.528L204.349 17H199.901L198.429 15.528ZM207.181 18.872V17.816H208.461L209.261 17.032V5.784L208.461 5H207.181V3.944H208.973L210.445 5.416V17.4L208.973 18.872H207.181Z" fill="white"/>
+          </svg>
+        </div>
+
+        <div class="nwFCollectionBannerBodyLeftBottom">
+          <div class="nwFCollectionBannerBodyLeftBottomItem">
+            <div class="nwFCollectionBannerBodyLeftBottomItemTop">
+              <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_67)">
+              <path d="M11.8333 7.08329C11.8333 7.45902 11.9826 7.81935 12.2483 8.08503C12.5139 8.3507 12.8743 8.49996 13.25 8.49996C13.6257 8.49996 13.9861 8.3507 14.2517 8.08503C14.5174 7.81935 14.6667 7.45902 14.6667 7.08329C14.6667 6.70757 14.5174 6.34723 14.2517 6.08156C13.9861 5.81588 13.6257 5.66663 13.25 5.66663C12.8743 5.66663 12.5139 5.81588 12.2483 6.08156C11.9826 6.34723 11.8333 6.70757 11.8333 7.08329Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.8333 17C11.8333 17.3758 11.9826 17.7361 12.2483 18.0018C12.5139 18.2675 12.8743 18.4167 13.25 18.4167C13.6257 18.4167 13.9861 18.2675 14.2517 18.0018C14.5174 17.7361 14.6667 17.3758 14.6667 17C14.6667 16.6243 14.5174 16.264 14.2517 15.9983C13.9861 15.7326 13.6257 15.5834 13.25 15.5834C12.8743 15.5834 12.5139 15.7326 12.2483 15.9983C11.9826 16.264 11.8333 16.6243 11.8333 17Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.8333 26.9167C11.8333 27.2924 11.9826 27.6527 12.2483 27.9184C12.5139 28.1841 12.8743 28.3333 13.25 28.3333C13.6257 28.3333 13.9861 28.1841 14.2517 27.9184C14.5174 27.6527 14.6667 27.2924 14.6667 26.9167C14.6667 26.5409 14.5174 26.1806 14.2517 25.9149C13.9861 25.6493 13.6257 25.5 13.25 25.5C12.8743 25.5 12.5139 25.6493 12.2483 25.9149C11.9826 26.1806 11.8333 26.5409 11.8333 26.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20.3333 7.08329C20.3333 7.45902 20.4826 7.81935 20.7483 8.08503C21.0139 8.3507 21.3743 8.49996 21.75 8.49996C22.1257 8.49996 22.4861 8.3507 22.7517 8.08503C23.0174 7.81935 23.1667 7.45902 23.1667 7.08329C23.1667 6.70757 23.0174 6.34723 22.7517 6.08156C22.4861 5.81588 22.1257 5.66663 21.75 5.66663C21.3743 5.66663 21.0139 5.81588 20.7483 6.08156C20.4826 6.34723 20.3333 6.70757 20.3333 7.08329Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20.3333 17C20.3333 17.3758 20.4826 17.7361 20.7483 18.0018C21.0139 18.2675 21.3743 18.4167 21.75 18.4167C22.1257 18.4167 22.4861 18.2675 22.7517 18.0018C23.0174 17.7361 23.1667 17.3758 23.1667 17C23.1667 16.6243 23.0174 16.264 22.7517 15.9983C22.4861 15.7326 22.1257 15.5834 21.75 15.5834C21.3743 15.5834 21.0139 15.7326 20.7483 15.9983C20.4826 16.264 20.3333 16.6243 20.3333 17Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20.3333 26.9167C20.3333 27.2924 20.4826 27.6527 20.7483 27.9184C21.0139 28.1841 21.3743 28.3333 21.75 28.3333C22.1257 28.3333 22.4861 28.1841 22.7517 27.9184C23.0174 27.6527 23.1667 27.2924 23.1667 26.9167C23.1667 26.5409 23.0174 26.1806 22.7517 25.9149C22.4861 25.6493 22.1257 25.5 21.75 25.5C21.3743 25.5 21.0139 25.6493 20.7483 25.9149C20.4826 26.1806 20.3333 26.5409 20.3333 26.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1_67">
+              <rect width="34" height="34" fill="white" transform="translate(0.5)"/>
+              </clipPath>
+              </defs>
+              </svg>
+            </div>
+            <div class="nwFCollectionBannerBodyLeftBottomItemBottom">
+              Unmatched Grip
+            </div>
+          </div>
+
+          <div class="nwFCollectionBannerBodyLeftBottomItem">
+            <div class="nwFCollectionBannerBodyLeftBottomItemTop">
+              <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_77)">
+              <path d="M4.75 17C4.75 18.6744 5.07979 20.3323 5.72054 21.8792C6.36128 23.4261 7.30044 24.8317 8.48439 26.0156C9.66834 27.1996 11.0739 28.1387 12.6208 28.7795C14.1677 29.4202 15.8256 29.75 17.5 29.75C19.1744 29.75 20.8323 29.4202 22.3792 28.7795C23.9261 28.1387 25.3317 27.1996 26.5156 26.0156C27.6996 24.8317 28.6387 23.4261 29.2795 21.8792C29.9202 20.3323 30.25 18.6744 30.25 17C30.25 15.3256 29.9202 13.6677 29.2795 12.1208C28.6387 10.5739 27.6996 9.16834 26.5156 7.98439C25.3317 6.80044 23.9261 5.86128 22.3792 5.22054C20.8323 4.57979 19.1744 4.25 17.5 4.25C15.8256 4.25 14.1677 4.57979 12.6208 5.22054C11.0739 5.86128 9.66834 6.80044 8.48439 7.98439C7.30044 9.16834 6.36128 10.5739 5.72054 12.1208C5.07979 13.6677 4.75 15.3256 4.75 17Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17.5 9.91663L24.2433 14.8041L21.75 22.6666H13.25L10.7567 14.8041L17.5 9.91663Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17.5 9.91667V4.25M21.75 22.6667L25.2917 26.9167M24.2433 14.8042L29.5417 12.75M13.335 22.7375L9.70833 26.9167M10.7567 14.8042L5.45833 12.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1_77">
+              <rect width="34" height="34" fill="white" transform="translate(0.5)"/>
+              </clipPath>
+              </defs>
+              </svg>
+            </div>
+            <div class="nwFCollectionBannerBodyLeftBottomItemBottom">
+              Trusted by 10,000+
+            </div>
+          </div>
+
+          <div class="nwFCollectionBannerBodyLeftBottomItem">
+            <div class="nwFCollectionBannerBodyLeftBottomItemTop">
+              <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_84)">
+              <path d="M17 25.1458L8.25633 29.7429L9.92658 20.0062L2.84325 13.1113L12.6182 11.6946L16.9901 2.83618L21.3619 11.6946L31.1369 13.1113L24.0536 20.0062L25.7238 29.7429L17 25.1458Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1_84">
+              <rect width="34" height="34" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+            </div>
+            <div class="nwFCollectionBannerBodyLeftBottomItemBottom">
+              10 Game Guarantee 
+            </div>
+          </div>
+                
+        </div>
+      </div>
+
+      <div class="nwFCollectionBannerBodyRight">
+        <img src="{{ section.settings.image | img_url:'master' }}">
+      </div>
+    </div>
+
+  </div>
+ </div>
+
+
+
+
+ 
+{% schema %}
+  {
+    "name": "nw colleciton banner",
+    "settings": [
+     {
+       "type": "text",
+       "label": "Title",
+       "id": "title"
+     },
+      {
+       "type": "textarea",
+       "label": "Text",
+       "id": "text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "nw colleciton banner"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

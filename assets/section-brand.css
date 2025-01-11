@@ -1,0 +1,27 @@
+hr {
+  display: block;
+margin: 115px 0px;
+  
+  border-style: inset;
+  border-width: 1px;
+  border-width: 2px;
+color: #0000;
+}
+
+.fourcolumn-h2{
+ font-size:1.85em; 
+  text-align:center;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+
+@media only screen and  (min-width: 430px) and (max-width: 750px){
+ #grid-custom-main.grid--2-col-tablet .grid__item {
+  width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+}
+
+    
+  }
+
+

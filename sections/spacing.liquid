@@ -1,0 +1,28 @@
+<hr class="page-divider {% if section.settings.divider_border %}active-divider{% endif %}" style="{% if section.settings.divider_spacing %}margin: {{ section.settings.divider_spacing }}px 0px;{% endif %}">
+
+{% schema %}
+
+{
+  "name": "space-sec",
+  "class": "spce",
+  "settings": [
+ {
+          "type": "range",
+          "id": "divider_spacing",
+          "min": 0,
+          "max": 70,
+          "step": 5,
+          "unit": "px",
+          "label": "Spacing",
+          "default": 20
+        }
+  ],
+  "presets": [{
+    "name": "space-sec",
+    "category": "image",
+    "settings": {
+    }
+  }]
+}
+
+{% endschema %}

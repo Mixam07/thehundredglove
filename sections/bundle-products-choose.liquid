@@ -1,0 +1,69 @@
+<section class="bg-transparent undefined">
+  <div class="relative w-full mx-auto max-w-7xl py-6 lg:py-8 px-6 lg:px-8 ">
+    <div class=" pb-5 sm:flex sm:items-center sm:justify-between">
+      <div>
+        <h3 class="text-2xl font-semibold leading-6 text-secondary-foreground">{{ section.settings.title }}</h3>
+        <p class="text-sm text-secondary-foreground mt-1"></p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-2 min-h-48">
+            <div class="flex flex-col gap-4 md:flex-row">
+              {% assign boxes = shop.metaobjects.box_products.values | reverse %}
+              {% for box in boxes %}
+                <div class="w-full align-middle peer-disabled:cursor-not-allowed min-w-48" onclick="document.location = '/pages/landing-page/{{ box.title | downcase }}'">
+                  <label for="{{ box.title | downcase }}">
+                    <input type="radio" title="{{ box.title | downcase }}" id="{{ box.title | downcase }}" name="boxType" class="sr-only peer" value="{{ box.title | downcase }}">
+                    <div class="border shadow-sm p-4 w-full group/radio items-center rounded-sm gap-1 text-sm transition-all duration-200 justify-between h-full bg-card border-muted-foreground text-muted-foreground hover:bg-accent cursor-pointer">
+                      <div class="flex items-start justify-between w-full gap-4 text-lg font-bold text-foreground">
+                        <div>
+                          <div class="inline-flex items-center gap-2">
+                            <div class="relative w-5 h-5">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle w-5 h-5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                              </svg>
+                            </div>
+                            <div class="inline-flex items-end gap-2">
+                              <div class="overflow-hidden text-2xl text-uppercase ">{{ box.title }}</div>
+                              <div class="mb-1 overflow-hidden text-sm font-normal text-uppercase"> / {{ box.allowed_items }} Products</div>
+                            </div>
+                          </div>
+                          <div class="text-sm font-normal">{{ box.description }}</div>
+                        </div>
+                        <div class="flex flex-col items-center justify-end gap-0 text-nowrap">
+                          <div class="text-xs font-light">Starts at:</div>
+                          <div class="leading-5 ">${{ box.price }}</div>
+                        </div>
+                      </div>
+                      <div data-orientation="horizontal" role="none" class="shrink-0 h-[1px] w-full my-4 bg-muted-foreground"></div>
+                    </div>
+                  </label>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom box choose size",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom box choose size"
+      }
+    ]
+  }
+{% endschema %}

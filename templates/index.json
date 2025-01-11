@@ -1,0 +1,530 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "83042eb1-6a0d-4bac-9b91-131997bd6195": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16790092677376__83042eb1-6a0d-4bac-9b91-131997bd6195-16872475337cd37911-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "ELITE GOALKEEPER GLOVES",
+            "heading_size": "h1"
+          }
+        },
+        "template--16790092677376__83042eb1-6a0d-4bac-9b91-131997bd6195-16872475337cd37911-1": {
+          "type": "text",
+          "settings": {
+            "text": "Dive into the hype and discover the gloves everyone's talking about!",
+            "text_style": "body"
+          }
+        },
+        "template--16790092677376__83042eb1-6a0d-4bac-9b91-131997bd6195-16872475337cd37911-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "CHOOSE YOUR GLOVE",
+            "button_link_1": "https://thehundredglove.com/collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16790092677376__83042eb1-6a0d-4bac-9b91-131997bd6195-16872475337cd37911-0",
+        "template--16790092677376__83042eb1-6a0d-4bac-9b91-131997bd6195-16872475337cd37911-1",
+        "template--16790092677376__83042eb1-6a0d-4bac-9b91-131997bd6195-16872475337cd37911-2"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.banner__text p {text-align: start; max-width: 150px; } .banner__text {margin: 2rem 0 !important; margin-bottom: -78px !important; } .banner__buttons {margin-top: 15rem !important; margin: 0 auto; } .banner__box {text-align: start; align-items: start; padding: 8rem 2rem !important; } .banner__box h1 {font-size: 50px !important; line-height: 60px !important; margin: 0; max-width: 80%; } .banner__buttons a {letter-spacing: 0px; font-size: 17px !important; padding: 10px 30px; } .banner__media {height: 55rem !important; }}"
+      ],
+      "settings": {
+        "customClass": "",
+        "show_badge": true,
+        "badge_text": "Trusted by 10,000+ Keepers",
+        "toptitle_text": "",
+        "color_toptitle": "#ffffff",
+        "image": "shopify://shop_images/8e9578d3937c5d0ddaf16a82126123ab.png",
+        "imagemobile": "shopify://shop_images/56ffcfcc5c66e591605c947e65feb7c2.png",
+        "moveBanner": false,
+        "body_text": "#000000",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-4941ad48-5d78-467b-a95c-5b4b49397b5c",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "custom_liquid_UDqQNm": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "<div class=\"upTo_last_chance_box\">\n<h2 class=\"up_to_off_text\">UP TO 53% OFF SITEWIDE</h2>\n<p class=\"last_chance_text\">RAID THE VAULT NOW</p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media (max-width: 749px) {.title {margin: 0; } .grid--peek .grid__item, .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {width: calc(65% - var(--grid-mobile-horizontal-spacing) - 3rem); max-width: 100%; }}",
+        "ul#Slider-template--23836371845500__featured_collection {gap: 20px;}"
+      ],
+      "settings": {
+        "title": "FAN FAVOURITES 🔥",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 11,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "f83b6b96-36cd-45b0-b7d4-898890fc0c56": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16790092677376__f83b6b96-36cd-45b0-b7d4-898890fc0c56-16873308894afd46e0-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/column-image-1.jpg",
+            "title": "",
+            "text": "<p> </p>",
+            "link_label": "SHOP BESTSELLERS",
+            "link": "https://thehundredglove.com/collections/all"
+          }
+        },
+        "template--16790092677376__f83b6b96-36cd-45b0-b7d4-898890fc0c56-16873308894afd46e0-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/column-image-3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "SHOP CLOTHING",
+            "link": "https://thehundredglove.com/collections/clothings"
+          }
+        },
+        "template--16790092677376__f83b6b96-36cd-45b0-b7d4-898890fc0c56-16873308894afd46e0-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/column-image-2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "SHOP GLOVES",
+            "link": "https://thehundredglove.com/collections/gloves"
+          }
+        }
+      },
+      "block_order": [
+        "template--16790092677376__f83b6b96-36cd-45b0-b7d4-898890fc0c56-16873308894afd46e0-0",
+        "template--16790092677376__f83b6b96-36cd-45b0-b7d4-898890fc0c56-16873308894afd46e0-1",
+        "template--16790092677376__f83b6b96-36cd-45b0-b7d4-898890fc0c56-16873308894afd46e0-2"
+      ],
+      "custom_css": [
+        ".grid {gap: 0 !important; justify-content: space-between;}",
+        "@media (min-width: 999px) {.grid--3-col-desktop .grid__item {width: 33.333%; max-width: 33.333%; }}",
+        "@media (max-width: 768px) {.grid {gap: 20px !important; } .multicolumn-list__item.grid__item {width: 80% !important; } .link.animate-arrow.button-with-hover {width: 78%; font-size: 17px !important; padding: 10px 26px; } .slider-buttons {display: none; }}"
+      ],
+      "settings": {
+        "customClass": "Slider-template--16810673963264__f83b6b96-36cd-45b0-b7d4-898890fc0c56",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "button_subtext": "Button Sub Text",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "46e54b38-38b9-4d23-a389-40a835204ffa": {
+      "type": "collection-tab",
+      "settings": {
+        "titlesmall": "",
+        "button1": "Gloves",
+        "button2": "Clothing",
+        "button3": "Accessories"
+      }
+    },
+    "image_banner_epWtCR": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_hzCWkr": {
+          "type": "heading",
+          "settings": {
+            "heading": "BUILD YOUR OWN BUNDLE",
+            "heading_size": "h2"
+          }
+        },
+        "text_CQx3fm": {
+          "type": "text",
+          "settings": {
+            "text": "The more you buy, the more you save, the more exclusives you unlock.",
+            "text_style": "body"
+          }
+        },
+        "buttons_h8rEPi": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/bundle",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hzCWkr",
+        "text_CQx3fm",
+        "buttons_h8rEPi"
+      ],
+      "custom_css": [
+        "@media (max-width: 750px) {.banner__content.banner__content--middle-left {margin-bottom: 300px !important; } .banner__box {text-align: center; align-items: center; } .banner__box h1 {text-align: center; }}"
+      ],
+      "settings": {
+        "customClass": "",
+        "show_badge": false,
+        "badge_text": "Trusted by 10,000+ Keepers",
+        "toptitle_text": "BUNDLE & SAVE",
+        "color_toptitle": "#ffffff",
+        "image": "shopify://shop_images/8ada431495ac601c19ded4d55de4ece0.png",
+        "imagemobile": "shopify://shop_images/4b0cf7489ddf2c6061631797e0a19e94.png",
+        "moveBanner": false,
+        "body_text": "#000000",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-4941ad48-5d78-467b-a95c-5b4b49397b5c",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "11a8ffd1-6b0e-4f7c-bf86-acafbfdca859": {
+      "type": "nw-reviews",
+      "blocks": {
+        "e08ceb6e-480d-431b-b2c7-75b02c761ae2": {
+          "type": "item",
+          "settings": {
+            "title": "Holding Up Great",
+            "text": "I’ve used my 100 gloves in five match’s so far and they are holding up great. Fit, finish, durability, and grip have been great. \n\nAll the best",
+            "name": "Dr Keith Ingram",
+            "product": "the-hundred-glove-obscure-white"
+          }
+        },
+        "ff573ca0-cb64-450d-bcae-e6c3abfa2e66": {
+          "type": "item",
+          "settings": {
+            "title": "Amazing Quality",
+            "text": "Amazing quality, my son trains 3-4 times a week on grass and Astro turf at a very high level, very impressive piece of kit, now his go to pair of gloves, ergo cut fits great, was a negative cut glove before! Shall be back buying more.",
+            "name": "Emma Dibb",
+            "product": "sentinel"
+          }
+        },
+        "f715cb36-16c6-4e55-9ec3-26a6b4ea3ea0": {
+          "type": "item",
+          "settings": {
+            "title": "Son Loved Them",
+            "text": "My son loved them as soon as he caught the first ball,seem very durable  and nice stick palm surface,will be buying again 5 star rating from my son and me",
+            "name": "Mark Binns",
+            "product": "the-hundred-glove"
+          }
+        },
+        "adc13638-f7d8-4170-8e22-5ba261b0dd91": {
+          "type": "item",
+          "settings": {
+            "title": "Better Than Other Brands",
+            "text": "My Son is really impressed with the quality much better than the other brands of gloves he’s had before.\n\nWe will be buying some more when the season starts.",
+            "name": "Serena Pardoe",
+            "product": "the-hundred-glove-obscure-white"
+          }
+        },
+        "9ce15bdd-e607-4e93-9ce5-cb896487b14c": {
+          "type": "item",
+          "settings": {
+            "title": "Fit is Sublime",
+            "text": "Being an academy GK the glove has really helped my handling and self belief - the fit is sublime and comfort the best ever",
+            "name": "Philip Wilcock",
+            "product": "the-hundred-glove-obscure-red-white"
+          }
+        }
+      },
+      "block_order": [
+        "e08ceb6e-480d-431b-b2c7-75b02c761ae2",
+        "ff573ca0-cb64-450d-bcae-e6c3abfa2e66",
+        "f715cb36-16c6-4e55-9ec3-26a6b4ea3ea0",
+        "adc13638-f7d8-4170-8e22-5ba261b0dd91",
+        "9ce15bdd-e607-4e93-9ce5-cb896487b14c"
+      ],
+      "settings": {
+        "bgColor": "",
+        "pdTop": 50,
+        "pdBottom": 50,
+        "pdTopMob": 50,
+        "pdBottomMob": 10,
+        "title": "Why Hundreds Of Keepers Love Our Gloves",
+        "text": ""
+      }
+    },
+    "ccacf7fd-9395-445a-8026-9b4062af5a06": {
+      "type": "nw-text-image",
+      "blocks": {
+        "b09c3a28-99e2-4296-b96e-baeb6d3125ad": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/LldsPxSVX_orig_adf219e2-4892-4a90-8398-e48b16aa68fc.jpg"
+          }
+        },
+        "d39fcd39-8159-472e-a7d7-c62c0d035eb2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/aR5JqO0MLd_orig.jpg"
+          }
+        },
+        "ef03e063-760b-4739-af36-bd6e172cc594": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/375177514_3254217934877558_93533399411906863_n.jpg"
+          }
+        },
+        "b02402fc-ae44-4f00-990f-4533eda67e63": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/368446131_161070420352739_4810942429868655117_n_a97e98e7-3ffe-45b2-b3df-5e9528a775e1.jpg"
+          }
+        },
+        "f4bf0c26-9592-44e6-a4c3-952b3c40cd52": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/361565001_10160634963554793_1487485778343667652_n.jpg"
+          }
+        },
+        "5e2eed5f-b536-48b6-95ea-2f81eeb990fd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/0Zn-T52lG_orig_f58c79db-fa0a-4182-b24c-628b82c20f68.jpg"
+          }
+        },
+        "9f19bd2c-5198-4d60-90a3-3797d397bdf7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Obscure_Navy_1_54d489a8-c1d8-4d4c-ba65-e0560f01ebe6.jpg"
+          }
+        },
+        "a3ffaafa-0d44-47b3-a4d2-8006f5c615da": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/PXTPbvVN9v_orig.jpg"
+          }
+        },
+        "a66db61b-034a-4e31-aa2e-6bffd97117e4": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/QiwCroHIp_orig.jpg"
+          }
+        },
+        "3048443f-ea7e-4f9f-a92e-c84515d5bb45": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/rW45FRzLLe_orig_dc9b8b00-e58f-434d-8401-db3e016ee7cb.jpg"
+          }
+        },
+        "853c5033-b328-4334-a03e-710dc9fa25f7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Sentinel_1.jpg"
+          }
+        },
+        "510dd6c9-aedb-43ca-b636-d62a1347dc98": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TqBmtt-IsL_orig_03b20fc4-381e-4f72-93ea-e8abaff77486.jpg"
+          }
+        },
+        "562a36fd-f3c7-40bb-bd7e-72396238552c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/zj-wRBFcz_orig_4842506d-7857-4cc9-a2b3-929f3f152ae9.jpg"
+          }
+        },
+        "af313dfa-1867-4620-9c3a-bd33fa803941": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2023-11-29_at_20.22.38.jpg"
+          }
+        },
+        "66eb39ff-8d83-4b07-aa04-060342a57ab0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/gzkMwR5-Q_mid.jpg"
+          }
+        },
+        "c621bb1c-1618-4432-9189-0986a200abf8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/f7RViPvlW_mid.jpg"
+          }
+        },
+        "ca5a17bb-b759-441e-9909-c5e8c0d01ab3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/399964689_10161859301599467_4138691467438386998_n.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b09c3a28-99e2-4296-b96e-baeb6d3125ad",
+        "d39fcd39-8159-472e-a7d7-c62c0d035eb2",
+        "ef03e063-760b-4739-af36-bd6e172cc594",
+        "b02402fc-ae44-4f00-990f-4533eda67e63",
+        "f4bf0c26-9592-44e6-a4c3-952b3c40cd52",
+        "5e2eed5f-b536-48b6-95ea-2f81eeb990fd",
+        "9f19bd2c-5198-4d60-90a3-3797d397bdf7",
+        "a3ffaafa-0d44-47b3-a4d2-8006f5c615da",
+        "a66db61b-034a-4e31-aa2e-6bffd97117e4",
+        "3048443f-ea7e-4f9f-a92e-c84515d5bb45",
+        "853c5033-b328-4334-a03e-710dc9fa25f7",
+        "510dd6c9-aedb-43ca-b636-d62a1347dc98",
+        "562a36fd-f3c7-40bb-bd7e-72396238552c",
+        "af313dfa-1867-4620-9c3a-bd33fa803941",
+        "66eb39ff-8d83-4b07-aa04-060342a57ab0",
+        "c621bb1c-1618-4432-9189-0986a200abf8",
+        "ca5a17bb-b759-441e-9909-c5e8c0d01ab3"
+      ],
+      "settings": {
+        "bgColor": "#222",
+        "pdTop": 70,
+        "pdBottom": 70,
+        "pdTopMob": 25,
+        "pdBottomMob": 25,
+        "title": "Join Over <b style=\"color:#D75555;\">10,000+</b> Keepers Who Have Made The Switch",
+        "color_title": "#ffffff",
+        "text": "<p>We're building an incredible community of goalkeepers who want to perform at their very best. Join the Hundred Club and never settle for average again.</p>",
+        "color_text": "#ffffff"
+      }
+    },
+    "marquee_sec_FpMyxd": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "2b06b622-743a-4083-8895-968f8af9bf99": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16580328423680__2b06b622-743a-4083-8895-968f8af9bf99-1673936474d3472ed7-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FOLLOW OUR JOURNEY",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--16580328423680__2b06b622-743a-4083-8895-968f8af9bf99-1673936474d3472ed7-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 52,
+        "padding_bottom": 0
+      }
+    },
+    "cd6e93dd-a20b-42ea-8b22-f7cfe759e08f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<p class=\"instafeed_p\">TAG YOUR POST WITH <a href=\"\">@THEHUNDREDGLOVE</a> TO BE FEATURED</p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "168734698560a6d4b3": {
+      "type": "apps",
+      "blocks": {
+        "3032b4bb-0f6c-4d49-897d-17e6769f2b08": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "3032b4bb-0f6c-4d49-897d-17e6769f2b08"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "83042eb1-6a0d-4bac-9b91-131997bd6195",
+    "custom_liquid_UDqQNm",
+    "featured_collection",
+    "f83b6b96-36cd-45b0-b7d4-898890fc0c56",
+    "46e54b38-38b9-4d23-a389-40a835204ffa",
+    "image_banner_epWtCR",
+    "11a8ffd1-6b0e-4f7c-bf86-acafbfdca859",
+    "ccacf7fd-9395-445a-8026-9b4062af5a06",
+    "marquee_sec_FpMyxd",
+    "2b06b622-743a-4083-8895-968f8af9bf99",
+    "cd6e93dd-a20b-42ea-8b22-f7cfe759e08f",
+    "168734698560a6d4b3"
+  ]
+}

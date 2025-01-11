@@ -1,0 +1,104 @@
+.personalization-box {
+  /* padding: 10px; */
+  margin-bottom: 15px;
+}
+.personalization-box__wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  /* margin: 0 0 20px 0; */
+}
+.personalization-box__wrap svg {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+.close-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(207, 208, 212, 0.5);
+  cursor: pointer;
+}
+.personalization-box__wrap span {
+  font-size: 16px;
+  font-weight: 500;
+  width: fit-content;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+}
+.personalization-box label {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.personalization-box input {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  padding: 12px 12px;
+}
+.personalization-box input:focus-visible {
+  border: none;
+}
+.personalization-box__column {
+  display: flex;
+  flex-direction: column;
+}
+.personalization-box__column span {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.close-icon svg{
+  width:15px;
+}
+  .personalization-box__wrap span:before{
+    width: 100%;
+    height: 1px;
+    background: #000;
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: -3px;
+  }
+@media(max-width: 799px){
+  .personalization-box{
+    margin: 12px 0;
+  }
+  .personalization-box__wrap svg{
+    width: 24px;
+    height: 24px;
+  }
+  .personalization-box__wrap{
+    gap: 6px
+  }
+  .personalization-box__wrap span{
+    color: #000;
+    font-family: "Chakra Petch";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .personalization-box__wrap span:before{
+    width: 100%;
+    height: 1px;
+    background: #000;
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 3px;
+  }
+}

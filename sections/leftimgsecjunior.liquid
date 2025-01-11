@@ -1,0 +1,129 @@
+{% if page.url == '/pages/juniorgloves' %}
+     <style>
+       .footer__blocks-wrapper div:nth-child(2) {
+    display: none;
+     
+}
+           hr{
+     display: none  !important;
+}
+       .col-2 h2 {
+    margin: 0px 0px;
+}
+       .col-2 p {
+    line-height: 27px;
+    color: #424242;
+}
+       .l-c-block-flex {
+    margin: 2em 0 !important;
+}
+     </style>
+{% endif %}
+
+{{ 'landing-content.css' | asset_url | stylesheet_tag }}
+<div class="container page-width landing-content-container banner_sec">
+ <div class="row l-c-block-flex l-c-block1">
+
+   <div  class="column l-c-block-flex-item col-2">
+    <a href="/"><img src="{{ section.settings.l-c-block1-imggg | img_url : 'master' }}"> </a>
+    <h2>{{ section.settings.l-c-block1-heading }}</h2>
+    <p>{{ section.settings.l-c-block1-text }}</p>
+    <a href="{{ section.settings.l-c-b2-url }}" class="button button--secondary l-c-b2" style="background-color: {{ section.settings.l-c-b2-color}}">{{ section.settings.l-c-b2 }} </a>
+   </div>
+  <div class="column l-c-block-flex-item col-1" >
+      <img  style="width:100%;" src="{{ section.settings.l-c-block1-img | img_url : 'master' }}"> 
+  </div>  
+ 
+</div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "juniorthreeleft",
+    "settings": [
+      
+   
+
+
+      {
+  "id" : "l-c-h112",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"Unrivalled Stickiness"
+  
+  
+},
+  
+
+      {
+  "id" : "l-c-block1-imggg",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+},
+       {
+  "id" : "l-c-block1-img",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+} ,
+       {
+  "id" : "l-c-block1-heading",
+  "type" : "text",
+  "label" : "Heading" ,
+   "default":"Gloves Built With Science"
+} ,
+       {
+  "id" : "l-c-block1-text",
+  "type" : "text",
+  "label" : "Text" ,
+   "default":"Text Block One"
+} ,
+     
+      {
+  "id" : "l-c-b2",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "TRY THE OBSCURE"
+} , 
+       {
+  "id" : "l-c-b2-url",
+  "type" : "url",
+  "label" : "Enter Button URL"
+  
+} ,
+        {
+  "id" : "l-c-b2-color",
+  "type" : "color",
+  "label" : "Button color"
+  
+} 
+       
+    
+    ],
+
+
+
+
+
+    
+
+    "presets" : [
+{
+  "name" : "juniorthreeleft",
+  "category" : "Custom"
+ 
+  }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

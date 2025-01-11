@@ -1,0 +1,84 @@
+{{ 'section-promo.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .header,
+    .mime,
+    .footer,
+    #tidio-chat{
+        display: none !important;
+    }
+</style>
+
+<div class="promo__container container main">
+    <h1 class="promo__title">
+        {{ section.settings.title-promo | default: "5 Reasons Why The Hundred Glove Is the <span class='promo__red'>#1 Choice</span> for Goalkeepers in 2025" }}
+    </h1>
+    <div class="promo__wrapper">
+        <div class="promo__head">
+            <div class="promo__image">
+                <img src="{{ section.settings.photo-review-promo | img_url: 'original' }}" alt="photo">
+            </div>
+            <p class="promo__caption">{{ section.settings.review-promo }} <span class="promo__author">- {{ section.settings.author-promo }}</span></p>
+        </div>
+        <div class="promo__body">
+            <div class="promo__info">
+                <p class="promo__text">{{ section.settings.time-promo }}</p>
+                <img class="promo__icon" src="{{ 'fire.svg' | asset_url }}" alt="fire">
+            </div>
+            <div class="promo__info">
+                <img class="promo__icon" src="{{ 'eye.svg' | asset_url }}" alt="eye">
+                <p class="promo__text">{{ section.settings.views-promo }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "section-promo",
+        "tag": "section",
+        "class": "promo",
+        "settings": [
+            {
+                "id" : "title-promo",
+                "type" : "text",
+                "label" : "Title"
+            },
+            {
+                "id" : "photo-review-promo",
+                "type" : "image_picker",
+                "label" : "Photo author review" 
+            },
+            {
+                "id" : "review-promo",
+                "type" : "text",
+                "label" : "Review",
+                "default":"Read this before you order your next pair of goalkeeper gloves!!"
+            },
+            {
+                "id" : "author-promo",
+                "type" : "text",
+                "label" : "Author",
+                "default":"Tom R."
+            },
+            {
+                "id" : "time-promo",
+                "type" : "text",
+                "label" : "Time",
+                "default":"2 min read"
+            },
+            {
+                "id" : "views-promo",
+                "type" : "text",
+                "label" : "Views",
+                "default":"12.568 views"
+            }
+        ],
+        "presets" : [
+            {
+                "name" : "section-promo",
+                "category" : "Custom"
+            }
+        ]
+    }
+{% endschema %}

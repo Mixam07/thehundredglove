@@ -1,0 +1,548 @@
+{{ 'section-menu.css' | asset_url | stylesheet_tag }}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<aside class="section-popup">
+    <div class="section-popup__main">
+        <div class="section-popup__header">
+            <div class="section-popup__logo">
+                <img src="{{ 'logo.svg' | asset_url }}" alt="logo">
+            </div>
+            <button data-close class="section-popup__close">
+                &times;
+            </button>
+        </div>
+        <div class="section-popup__wrapper scrollbar">
+            <div class="section-popup__wrap menu-wrapper">
+            </div>
+            <ul class="section-popup__content">
+                {% for block in section.blocks %}
+                    {% if block.type == 'row-1' %}
+                        <li>
+                            <a href="{{ block.settings['menu-link'] }}" class="section-popup__item">
+                                <div class="section-popup__photo">
+                                    <img src="{{ block.settings['menu-image'] | img_url: 'original' }}" alt="photo">
+                                </div>
+                                <p class="section-popup__text">{{ block.settings['menu-title'] }}</p>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section-popup__products product-wrapper">
+        </div>
+    </div>
+</aside>
+
+<script>
+    const close = document.querySelector("[data-close]");
+    const popup = document.querySelector(".section-popup");
+    const wrapper = document.querySelector(".menu-wrapper");
+    const product_wrapper = document.querySelector(".product-wrapper");
+    const data = [];
+    const indexes = [
+        {
+            id: "402297651456",
+            subtabs: ["418098938112", "415853609216", "402597249280", "411432321280"]
+        },
+        {
+            id: "402358862080"
+        },
+        {
+            id: "402310791424"
+        }
+    ]
+    const collections = [
+        {% for collection in collections %}
+        {
+            "id": "{{ collection.id }}",
+            "title": "{{ collection.title }}",
+            "url": "{{ collection.url }}",
+            "description": "{{ collection.description | escape }}",
+            "products": [
+            {% for product in collection.products %}
+                {
+                    "title": "{{ product.title }}",
+                    "url": "{{ product.url }}",
+                    "price": "{{ product.price | money }}",
+                    "image": "{{ product.featured_image | img_url: 'small' }}"
+                }{% if forloop.last == false %},{% endif %}
+            {% endfor %}
+            ]
+        }{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+    ];
+
+    for (let i = 0; i < indexes.length; i++) {
+        const object = indexes[i];
+        const collection = collections.filter(collection => collection.id == object.id)[0];
+
+        if (object.subtabs) {
+            delete collection.products;
+            collection.subtabs = [];
+
+            for (let q = 0; q < indexes[i].subtabs.length; q++) {
+                const objectSubtab = indexes[i].subtabs[q];
+                const collectionSubtab = collections.filter(collection => collection.id == objectSubtab)[0];
+
+                collection.subtabs.push(collectionSubtab);
+            }
+        }
+
+        data.push(collection)
+    }
+
+    const renderBundlesMobile = () => {
+        wrapper.innerHTML = `
+            <ul class='section-popup__list'>
+                <li class="section-popup__tab">
+                    <button data-back class="section-popup__back">
+                        <img class="section-popup__back-image" src="{{ 'arrow-black.svg' | asset_url }}" alt="logo" />
+                        <p class="section-popup__tab-title">Back</p>
+                    </button>
+                </li>
+                <li class="section-popup__tab">
+                    <a href="{{ section.settings.menu-link-1 }}" data-tab class="section-popup__bundles-item">
+                        <div class="section-popup__bundles-wrapper">
+                            <div class="section-popup__bundles-photo">
+                                <img src="{{ section.settings.menu-photo-1 | img_url: 'original' }}" alt="pair-2">
+                            </div>
+                            <p class="section-popup__bundles-text">{{ section.settings.menu-title-1 }}</p>
+                        </div>
+                        <div>
+                            <img src="{{ 'ArrowUpRight.svg' | asset_url }}" alt="ArrowUpRight">
+                        </div>
+                    </a>
+                </li>
+                <li class="section-popup__tab">
+                    <a href="{{ section.settings.menu-link-2 }}" data-tab class="section-popup__bundles-item">
+                        <div class="section-popup__bundles-wrapper">
+                            <div class="section-popup__bundles-photo">
+                                <img src="{{ section.settings.menu-photo-2 | img_url: 'original' }}" alt="pair-3">
+                            </div>
+                            <p class="section-popup__bundles-text">{{ section.settings.menu-title-2 }}</p>
+                        </div>
+                        <div>
+                            <img src="{{ 'ArrowUpRight.svg' | asset_url }}" alt="ArrowUpRight">
+                        </div>
+                    </a>
+                </li>
+                <li class="section-popup__tab">
+                    <a href="{{ section.settings.menu-link-3 }}" data-tab class="section-popup__bundles-item">
+                        <div class="section-popup__bundles-wrapper">
+                            <div class="section-popup__bundles-photo">
+                                <img src="{{ section.settings.menu-photo-3 | img_url: 'original' }}" alt="pack">
+                            </div>
+                            <p class="section-popup__bundles-text">{{ section.settings.menu-title-3 }}</p>
+                        </div>
+                        <div>
+                            <img src="{{ 'ArrowUpRight.svg' | asset_url }}" alt="ArrowUpRight">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        `;
+
+        document.querySelector("[data-back]").addEventListener("click", renderTab);
+    }
+
+    const renderBundles = () => {
+        product_wrapper.innerHTML = `
+            <h3 class="section-popup__bundles-title">our bundles</h3>
+            <ul class="section-popup__bundles-list">
+                <li>
+                    <a href="{{ section.settings.menu-link-1 }}" data-tab class="section-popup__bundles-item">
+                        <div class="section-popup__bundles-wrapper">
+                            <div class="section-popup__bundles-photo">
+                                <img src="{{ section.settings.menu-photo-1 | img_url: 'original' }}" alt="pair-2">
+                            </div>
+                            <p class="section-popup__bundles-text">{{ section.settings.menu-title-1 }}</p>
+                        </div>
+                        <div>
+                            <img src="{{ 'ArrowUpRight.svg' | asset_url }}" alt="ArrowUpRight">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ section.settings.menu-link-2 }}" data-tab class="section-popup__bundles-item">
+                        <div class="section-popup__bundles-wrapper">
+                            <div class="section-popup__bundles-photo">
+                                <img src="{{ section.settings.menu-photo-2 | img_url: 'original' }}" alt="pair-3">
+                            </div>
+                            <p class="section-popup__bundles-text">{{ section.settings.menu-title-2 }}</p>
+                        </div>
+                        <div>
+                            <img src="{{ 'ArrowUpRight.svg' | asset_url }}" alt="ArrowUpRight">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ section.settings.menu-link-3 }}" data-tab class="section-popup__bundles-item">
+                        <div class="section-popup__bundles-wrapper">
+                            <div class="section-popup__bundles-photo">
+                                <img src="{{ section.settings.menu-photo-3 | img_url: 'original' }}" alt="pack">
+                            </div>
+                            <p class="section-popup__bundles-text">{{ section.settings.menu-title-3 }}</p>
+                        </div>
+                        <div>
+                            <img src="{{ 'ArrowUpRight.svg' | asset_url }}" alt="ArrowUpRight">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        `;
+    }
+
+    const renderProducts = (collection) => {
+        product_wrapper.innerHTML = `
+            <h3 class="section-popup__product-title">${collection.title}</h3>
+            <ul class="section-popup__product-list"></ul>
+        `;
+
+        collection.products.forEach(item => {
+            product_wrapper.children[1].innerHTML += `
+                <li>
+                    <a href="${item.url}" data-tab class="section-popup__product-item">
+                        <div class="section-popup__product-wrapper">
+                            <img src="${item.image}" alt="photo" />
+                        </div>
+                        <div>
+                            <p class="section-popup__product-text">${item.title}</p>
+                            <p class="section-popup__product-subtext">${item.price}</p>
+                        </div>
+                    </a>
+                </li>
+            `;
+        })
+    }
+
+    const renderProductsMobile = (products, isSubtab, i) => {
+        wrapper.innerHTML = "<ul class='section-popup__list'></ul>"
+        wrapper.children[0].innerHTML += `
+            <li class="section-popup__tab">
+                <button data-back class="section-popup__back">
+                    <img class="section-popup__back-image" src="{{ 'arrow-black.svg' | asset_url }}" alt="logo" />
+                    <p class="section-popup__tab-title">Back</p>
+                </button>
+            </li>
+        `;
+
+        products.forEach(item => {
+            wrapper.children[0].innerHTML += `
+                <li class="section-popup__tab">
+                    <a href="${item.url}" data-tab class="section-popup__product-item">
+                        <div class="section-popup__product-wrapper">
+                            <img src="${item.image}" alt="photo" />
+                        </div>
+                        <div>
+                            <p class="section-popup__product-text">${item.title}</p>
+                            <p class="section-popup__product-subtext">${item.price}</p>
+                        </div>
+                    </a>
+                </li>
+            `;
+        });
+
+        document.querySelector("[data-back]").addEventListener("click", (e) => {
+            if (isSubtab) {
+                renderSubtab(i);
+            } else {
+                renderTab();
+            }
+        });
+    }
+
+    const renderSubtab = (i) => {
+        wrapper.innerHTML = "<ul class='section-popup__list'></ul>";
+        wrapper.children[0].innerHTML += `
+            <li class="section-popup__tab">
+                <button data-back class="section-popup__back">
+                    <img class="section-popup__back-image" src="{{ 'arrow-black.svg' | asset_url }}" alt="logo" />
+                    <p class="section-popup__tab-title">Back</p>
+                </button>
+            </li>
+        `;
+
+        data[i].subtabs.forEach(item => {
+            wrapper.children[0].innerHTML += `
+                <li data-tab class="section-popup__tab">
+                    <button class="section-popup__tab-item">
+                        <p class="section-popup__tab-title">The ${item.title}</p>
+                        <img src="{{ 'arrow-black.svg' | asset_url }}" alt="logo" />
+                    </button>
+                </li>
+            `;
+        });
+
+        document.querySelector("[data-back]").addEventListener("click", renderTab);
+
+        document.querySelectorAll("[data-tab]").forEach((tab, q) => {
+            tab.addEventListener("click", (e) => {
+                if (window.innerWidth < 992)
+                    renderProductsMobile(data[i].subtabs[q].products, true, i)
+            });
+        });
+
+        document.querySelectorAll("[data-tab]").forEach((tab, q) => {
+            tab.addEventListener("mouseenter", (e) => {
+                if (window.innerWidth > 992) {
+                    renderProducts(data[i].subtabs[q]);
+                    product_wrapper.classList.add("active")
+                }
+            });
+        });
+        document.querySelectorAll("[data-tab]").forEach((tab, i) => {
+            tab.addEventListener("mouseleave", (e) => {
+                product_wrapper.classList.remove("active")
+            });
+        });
+    }
+
+    const renderTab = () => {
+        wrapper.innerHTML = "<ul class='section-popup__list'></ul>"
+        wrapper.children[0].innerHTML += `
+            <li class="section-popup__tab">
+                <div class="section-popup__tab-item">
+                    <a href="/collections/all">
+                        <p class="section-popup__tab-title">Shop all</p>
+                    </a>
+                </div>
+            </li>
+        `;
+
+        data.forEach(item => {
+            wrapper.children[0].innerHTML += `
+                <li data-tab class="section-popup__tab">
+                    <button class="section-popup__tab-item">
+                        <p class="section-popup__tab-title">${item.title}</p>
+                        <img src="{{ 'arrow-black.svg' | asset_url }}" alt="logo" />
+                    </button>
+                </li>
+            `;
+        });
+
+        wrapper.children[0].innerHTML += `
+            <li data-bundles class="section-popup__tab">
+                <button class="section-popup__tab-item">
+                    <div class="section-popup__bundle-wrapper">
+                        <p class="section-popup__bundle-text">BUNDLES & SETS</p>
+                        <p class="section-popup__bundle-text">new</p>
+                    </div>
+                    <img src="{{ 'arrow-black.svg' | asset_url }}" alt="logo" />
+                </button>
+            </li>
+        `;
+
+        wrapper.innerHTML += `
+            <div class="section-popup__swiper swiper">
+                <div class="section-popup__swiper-wrapper swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {% if block.type == 'row-2' %}
+                            <div class="section-popup__swiper-slide swiper-slide">
+                                <a href="{{ block.settings['menu-link-content'] }}" class="section-popup__swiper-wrap swiper-slide">
+                                    <img class="section-popup__swiper-image" src="{{ block.settings['menu-image-content'] | img_url: 'original' }}" alt="photo">
+                                    <p class="section-popup__swiper-text">
+                                        {{ block.settings['menu-title-content'] }}
+                                    </p>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        `;
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            freeMode: true,
+            slidesPerView: 'auto',
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+        });
+
+        document.querySelectorAll("[data-tab]").forEach((tab, i) => {
+            tab.addEventListener("click", (e) => {
+                if (indexes[i].subtabs) {
+                    renderSubtab(i);
+                } else {
+                    if (window.innerWidth < 992)
+                        renderProductsMobile(data[i].products)
+                }
+            });
+        });
+
+        document.querySelectorAll("[data-tab]").forEach((tab, i) => {
+            tab.addEventListener("mouseenter", (e) => {
+                if (!indexes[i].subtabs) {
+                    if (window.innerWidth > 992){
+                        renderProducts(data[i]);
+                        product_wrapper.classList.add("active");
+                    }
+                }
+            });
+        });
+        document.querySelectorAll("[data-tab]").forEach((tab, i) => {
+            tab.addEventListener("mouseleave", (e) => {
+                if (!indexes[i].subtabs) {
+                    product_wrapper.classList.remove("active");
+                }
+            });
+        });
+
+        document.querySelector("[data-bundles]").addEventListener("click", (e) => {
+            if (window.innerWidth < 992)
+                renderBundlesMobile();
+        });
+
+        document.querySelector("[data-bundles]").addEventListener("mouseenter", (e) => {
+            if (window.innerWidth > 992){
+                renderBundles();
+                product_wrapper.classList.add("active");
+            }
+        });
+        document.querySelector("[data-bundles]").addEventListener("mouseleave", (e) => {
+            product_wrapper.classList.revome("active");
+        });
+    }
+
+    product_wrapper.addEventListener("mouseenter", (e) => {
+        if (window.innerWidth > 992)
+            product_wrapper.classList.add("active")
+    });
+    product_wrapper.addEventListener("mouseleave", (e) => {
+        product_wrapper.classList.remove("active")
+    });
+
+    document.querySelector("body").addEventListener("click", (e) => {
+        if(e.target.classList.contains("section-popup")){
+            popup.classList.remove("active");
+        }
+    });
+
+    close.addEventListener("click", (e) => {
+        popup.classList.remove("active");
+    });
+    
+    document.querySelector(".button-menu").addEventListener("click", (e) => {
+        popup.classList.add("active");
+    })
+
+    renderTab();
+</script>
+
+{{ 'section-menu.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+    "name": "section-menu",
+    "settings": [
+        {
+            "id" : "menu-photo-1",
+            "type" : "image_picker",
+            "label" : "Bundle photo 1" 
+        },
+        {
+            "id" : "menu-title-1",
+            "type" : "text",
+            "label" : "Bundle title 1",
+            "default": "2 PAIRS FOR £90"
+        },
+        {
+            "id": "menu-link-1",
+            "type": "url",
+            "label": "Bundle link 1"
+        },
+        {
+            "id" : "menu-photo-2",
+            "type" : "image_picker",
+            "label" : "Bundle photo 2" 
+        },
+        {
+            "id" : "menu-title-2",
+            "type" : "text",
+            "label" : "Bundle title 2",
+            "default": "3 PAIRS FOR £120"
+        },
+        {
+            "id": "menu-link-2",
+            "type": "url",
+            "label": "Bundle link 2"
+        },
+        {
+            "id" : "menu-photo-3",
+            "type" : "image_picker",
+            "label" : "Bundle photo 3" 
+        },
+        {
+            "id" : "menu-title-3",
+            "type" : "text",
+            "label" : "Bundle title 3",
+            "default": "Ambassador Pack"
+        },
+        {
+            "id": "menu-link-3",
+            "type": "url",
+            "label": "Bundle link 3"
+        }
+    ],
+    "blocks": [
+    {
+        "type": "row-1",
+        "name": "Navigation",
+        "settings": 
+            [
+                {
+                    "id": "menu-title",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "Title"
+                },
+                {
+                    "id": "menu-image",
+                    "type": "image_picker",
+                    "label": "Image"
+                },
+                {
+                    "id": "menu-link",
+                    "type": "url",
+                    "label": "Link"
+                }
+            ]
+        },
+        {
+            "type": "row-2",
+            "name": "Content",
+            "settings": [
+                {
+                    "id": "menu-title-content",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "Title content"
+                },
+                {
+                    "id": "menu-image-content",
+                    "type": "image_picker",
+                    "label": "Image content"
+                },
+                {
+                    "id": "menu-link-content",
+                    "type": "url",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "section-menu"
+        }
+    ]
+}
+{% endschema %}

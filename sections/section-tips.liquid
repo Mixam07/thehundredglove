@@ -1,0 +1,46 @@
+{{ 'section-tips.css' | asset_url | stylesheet_tag }}
+
+<div class="section-tips__container container">
+    <div class="section-tips__wrapper">
+        <h1 class="section-tips__title">{{ section.settings.tips-title }}</h1>
+        <div class="section-tips__wrap">
+            <div class="section-tips__photo">
+                <img src="{{ section.settings.tips-photo | img_url: 'original' }}" alt="schedule">
+            </div>
+            <div class="section-tips__information">{{ section.settings.tips-text }}</div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "section-tips",
+    "tag": "section",
+    "class": "section-tips",
+    "settings": [
+        {
+            "id" : "tips-title",
+            "type" : "text",
+            "label" : "Title",
+            "default": "Save Your Wallet Too"
+        },
+        {
+            "id" : "tips-photo",
+            "type" : "image_picker",
+            "label" : "Main photo" 
+        },
+        {
+            "id": "tips-text",
+            "type": "textarea",
+            "label": "Test",
+            "default": "<p class=\"section-tips_text\">Most keepers spend hundreds replacing cheap gloves that tear or overpaying for overpriced 'elite' gloves. <span class=\"section-tips__bold\">With The Hundred Glove, you get pro-level performance and durability for less.</span></p><p class=\"section-tips__caption\">Here’s what you get:</p><ul class=\"section-tips__list\"><li class=\"section-tips__item section-tips__bold\">Premium gloves that last longer—saving you money and hassle.</li><li class=\"section-tips__item section-tips__bold\">Pro performance at £49–£54 (not £80+ like other brands).</li><li class=\"section-tips__item section-tips__bold\">Quality that keeps up, match after match—no compromises.</li></ul><p class=\"section-tips__text\">Stop overpaying for gloves that don’t deliver. Upgrade to The Hundred Glove and save your game and your wallet.</p>"
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-tips",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

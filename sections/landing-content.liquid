@@ -1,0 +1,273 @@
+{% if page.url == '/pages/tryobscure' %}
+     <style>
+       .footer__blocks-wrapper div:nth-child(2) {
+    display: none;
+     
+}
+           hr{
+     display: none  !important;
+}
+     </style>
+{% endif %}
+
+{{ 'landing-content.css' | asset_url | stylesheet_tag }}
+<div class="container page-width landing-content-container">
+  
+<h2 class="l-c-h1">{{ section.settings.l-c-h1}} </h2>
+<div class="row l-c-block-flex l-c-block1">
+  <div class="column l-c-block-flex-item col-1" >
+      <img  style="width:100%;" src="{{ section.settings.l-c-block1-img | img_url : 'master' }}"> 
+  </div> 
+  <div  class="column l-c-block-flex-item col-2">
+    <h2>{{ section.settings.l-c-block1-heading }}</h2>
+   {{ section.settings.l-c-block1-text }}
+    
+      <a href="{{ section.settings.l-c-block1-url }}" class="button button--secondary l-c-b1" style="background-color: {{ section.settings.l-c-block1-color}}">{{ section.settings.l-c-block1-b1 }} <span class="icon-wrap">&nbsp;<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+</path></svg>
+</span></a>
+   </div>
+</div>
+<div class="row l-c-block-flex l-c-block2">
+  <div class="column l-c-block-flex-item col-1" >
+      <img  style="width:100%;" src="{{ section.settings.l-c-block2-img | img_url : 'master' }}"> 
+  </div>  <div  class="column l-c-block-flex-item col-2">
+    <h2>{{ section.settings.l-c-block2-heading }}</h2>
+    {{ section.settings.l-c-block2-text }}
+      <a href="{{ section.settings.l-c-block2-url }}" class="button button--secondary l-c-b1" style="background-color: {{ section.settings.l-c-block2-color}}">{{ section.settings.l-c-block2-b1 }} <span class="icon-wrap">&nbsp;<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+</path></svg>
+</span></a>
+   </div>
+</div>
+<div class="row l-c-block-flex l-c-block3">
+  <div class="column l-c-block-flex-item col-1" >
+      <img  style="width:100%;" src="{{ section.settings.l-c-block3-img | img_url : 'master' }}"> 
+  </div>  <div  class="column l-c-block-flex-item col-2">
+    <h2>{{ section.settings.l-c-block3-heading }}</h2>
+    {{ section.settings.l-c-block3-text }}
+      <a href="{{ section.settings.l-c-block3-url }}" class="button button--secondary l-c-b1" style="background-color: {{ section.settings.l-c-block3-color}}">{{ section.settings.l-c-block3-b1 }} <span class="icon-wrap">&nbsp;<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+</path></svg>
+</span></a>
+   </div>
+</div>
+
+  
+</div>
+
+  <div class="btm_imagee">
+    <div class="container page-width landing-content-container">
+  <h2 class="l-c-h2">{{ section.settings.l-c-h2}} </h2>
+<img  style="width:100%;" src="{{ section.settings.l-c-features-img-desktop | img_url : 'master' }}" class="features-img-desktop"> 
+<img  style="width:100%;" src="{{ section.settings.l-c-features-img-mobile | img_url : 'master' }}"  class="features-img-mobile"> 
+ <a href="{{ section.settings.l-c-b2-url }}" class="button button--secondary l-c-b2" style="background-color: {{ section.settings.l-c-b2-color}}">{{ section.settings.l-c-b2 }}<span class="icon-wrap">&nbsp;<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+</path></svg>
+</span></a>
+  </div>
+      </div>
+  
+
+
+
+
+{% schema %}
+  {
+    "name": "Landing page content",
+    "settings": [
+        {
+  "id" : "l-c-h1",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"Why Over 4,000 Keepers Trust The Obscure"
+  
+  
+},
+          {
+  "id" : "l-c-h11",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"Unrivalled Stickiness"
+  
+  
+},
+ {
+  "id" : "l-c-block1-imgg",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+},
+       {
+  "id" : "l-c-block1-img",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+} ,
+       {
+  "id" : "l-c-block1-heading",
+  "type" : "text",
+  "label" : "Heading" ,
+   "default":"Gloves Built With Science"
+} ,
+       {
+  "id" : "l-c-block1-text",
+  "type" : "richtext",
+  "label" : "Text" ,
+   "default": "<p>Use this text to share information about your brand with your customers.</p>"
+} ,
+            {
+  "id" : "l-c-block1-b1",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "TRY THE OBSCURE"
+} , 
+       {
+  "id" : "l-c-block1-url",
+  "type" : "url",
+  "label" : "Enter Button URL"
+  
+} ,
+        {
+  "id" : "l-c-block1-color",
+  "type" : "color",
+  "label" : "Button color"
+  
+} ,
+       {
+  "id" : "l-c-block2-img",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+} ,
+       {
+  "id" : "l-c-block2-heading",
+  "type" : "text",
+  "label" : "Heading" ,
+   "default":"More Games, Less Money"
+} ,
+       {
+  "id" : "l-c-block2-text",
+  "type" : "richtext",
+  "label" : "Text" ,
+    "default": "<p>Use this text to share information about your brand with your customers.</p>"
+} ,
+                  {
+  "id" : "l-c-block2-b1",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "TRY THE OBSCURE"
+} , 
+       {
+  "id" : "l-c-block2-url",
+  "type" : "url",
+  "label" : "Enter Button URL"
+  
+} ,
+        {
+  "id" : "l-c-block2-color",
+  "type" : "color",
+  "label" : "Button color"
+  
+} ,
+       {
+  "id" : "l-c-block3-img",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+} ,
+       {
+  "id" : "l-c-block3-heading",
+  "type" : "text",
+  "label" : "Heading" ,
+   "default":"10 Game Guarantee"
+} ,
+       {
+  "id" : "l-c-block3-text",
+  "type" : "richtext",
+  "label" : "Text" ,
+   "default": "<p>Use this text to share information about your brand with your customers.</p>"
+} ,
+                  {
+  "id" : "l-c-block3-b1",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "TRY THE OBSCURE"
+} , 
+       {
+  "id" : "l-c-block3-url",
+  "type" : "url",
+  "label" : "Enter Button URL"
+  
+} ,
+        {
+  "id" : "l-c-block3-color",
+  "type" : "color",
+  "label" : "Button color"
+  
+} ,
+  {
+  "id" : "l-c-b2",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "TRY THE OBSCURE"
+} , 
+       {
+  "id" : "l-c-b2-url",
+  "type" : "url",
+  "label" : "Enter Button URL"
+  
+} ,
+        {
+  "id" : "l-c-b2-color",
+  "type" : "color",
+  "label" : "Button color"
+  
+} ,
+
+          {
+  "id" : "l-c-features-img-desktop",
+  "type" : "image_picker",
+  "label" : "Features Image ( Desktop Only ) "
+   
+},
+    
+          {
+  "id" : "l-c-features-img-mobile",
+  "type" : "image_picker",
+  "label" : "Features Image ( Mobile Only ) "
+   
+},
+  {
+  "id" : "l-c-h2",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"We’re Different"
+  
+  
+}
+    
+    ],
+
+
+
+
+
+    
+
+    "presets" : [
+{
+  "name" : "Landing Page Content",
+  "category" : "Custom"
+ 
+  }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

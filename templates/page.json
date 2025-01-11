@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "900f8631-62dd-4b4d-abef-74c443f4eb4d": {
+      "type": "replo-custom-products",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "subtitle": "Personalise what's flying off the shelves at the minute"
+      }
+    },
+    "custom_liquid_pnUmr3": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-Yaxk29\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "900f8631-62dd-4b4d-abef-74c443f4eb4d",
+    "custom_liquid_pnUmr3"
+  ]
+}

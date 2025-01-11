@@ -1,0 +1,75 @@
+{{ 'section-advantages.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .section-advantages__wrapper{
+        background: url("{{ 'bg.svg' | asset_url }}") center/contain no-repeat;
+        background-color: #F4F6FA;
+    }
+</style>
+
+<div class="section-advantages__container container">
+    <h1 class="section-advantages__title">{{ section.settings.advantages-title }}</h1>
+    <ul class="section-advantages__list">
+        {% for block in section.blocks %}
+            {% if block.type == 'row' %}
+                <li class="section-advantages__item">
+                    <div class="section-advantages__wrapper">
+                        <div class="section-advantages__icon">
+                            <img src="{{ block.settings['advantages-image'] | img_url: 'original' }}" alt="icon">
+                        </div>
+                    </div>
+                    <h3 class="section-advantages__caption">{{ block.settings['advantages-title'] }}</h3>
+                    <h4 class="section-advantages__description">{{ block.settings['advantages-description'] }}</h4>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+{% schema %}
+{
+    "name": "section-advantages",
+    "tag": "section",
+    "class": "section-advantages",
+    "settings": [
+        {
+            "id" : "advantages-title",
+            "type" : "text",
+            "label" : "Title",
+            "default":"What Makes THE HUNDRED GLOVE Ultimate GLOVE for Your MATCH?"
+        }
+    ],
+    "blocks": [
+    {
+        "type": "row",
+        "name": "Advantages",
+        "settings": 
+            [
+                {
+                    "id": "advantages-title",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "Title"
+                },
+                {
+                    "id": "advantages-description",
+                    "type": "textarea",
+                    "label": "Description",
+                    "default": "Description"
+                },
+                {
+                    "id": "advantages-image",
+                    "type": "image_picker",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-advantages",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

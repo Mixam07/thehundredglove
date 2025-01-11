@@ -1,0 +1,237 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+  .nwPdpContent{
+    padding: 40px 0;
+  }
+  section#shopify-section-template--16869260525824__29656bfb-4786-4e29-a573-c96116ceabcf>.gradient{
+    margin-top: 0!important;
+  }
+  .nwPdpContentItem{
+    padding: 40px 0;
+    display:flex;
+    align-items:Center;
+  }
+  .nwPdpContentItemLeft{
+    width: 47%;
+    padding: 0 40px;
+  }
+  .nwPdpContentItemRight{
+    width: 53%;
+  }
+  .nwPdpContentItemRight img{
+    display:block;
+    width: 100%;
+  }
+  .nwPdpContentItemLeftTitle{
+    margin-top: 15px;
+    color: #000;
+    font-family: anton;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.2; /* 64.4px */
+  
+    text-transform:uppercase;
+  }
+  .nwPdpContentItemLeftText{
+    margin-top: 10px;
+    color: #000;
+    font-family: arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3; /* 140.909% */
+  }
+  .nwPdpContentItemLeftNum{
+    color: #000;
+    font-family: arial;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+  }
+  .nwPdpContentItemLeftNum span{
+    display:block;
+    width: 50px;
+    height: 2px;
+    background: #000;
+    margin-right: 20px;
+  }
+  @media(max-width: 799px){
+    .hideeMobile{
+      display:none!important;
+    }
+  }
+  @media(min-width: 799px){
+    .hideeDesktop{
+      display:none!important;
+    }
+  }
+  .nwmobileSlideImg img{
+    display:block;
+    width: 100%;
+  }
+  .nwmobileSlideNum{
+    margin: 15px 0;
+    color: #000;
+    font-family: arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+  }
+  .nwmobileSlideNum span{
+    display:block;
+    width: 50px;
+    height: 2px;
+    background: #000;
+    margin-right: 15px;
+  }
+  .nwmobileSlideTitle{
+    color: #000;
+    font-family: anton;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 1.4; /* 72.8px */
+    text-transform: uppercase;
+  }
+  .nwmobileSlideText{
+    margin-top: 12px;
+    color: #000;
+    font-family: arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+</style>
+
+ <div class="nwPdpContent">
+  <div class="page-width" style="max-width: 1100px;">
+
+    {% for block in section.blocks %}
+      <div class="nwPdpContentItem hideeMobile" style="{% if block.settings.reverse == true %}flex-direction: row-reverse;{% endif %}">
+        <div class="nwPdpContentItemLeft">
+          <div class="nwPdpContentItemLeftNum">
+            <span></span>
+            {%- if forloop.index < 10 -%}
+              0
+            {%- endif -%}
+            {{ forloop.index }}
+          </div>
+          <div class="nwPdpContentItemLeftTitle">
+            {{ block.settings.title }}
+          </div>
+          <div class="nwPdpContentItemLeftText">
+            {{ block.settings.text }}
+          </div>
+        </div>
+        
+        <div class="nwPdpContentItemRight">
+          <img src="{{ block.settings.image | img_url:'master' }}" alt="img">
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="swiper mySwiper hideeDesktop">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="nwmobileSlide">
+            <div class="nwmobileSlideImg">
+              <img src="{{ block.settings.image | img_url:'master' }}" alt="img">
+            </div>
+            <div class="nwmobileSlideNum">
+              <span></span>
+              {%- if forloop.index < 10 -%}
+                0
+              {%- endif -%}
+              {{ forloop.index }}
+            </div>
+            <div class="nwmobileSlideTitle">
+              {{ block.settings.title }}
+            </div>
+            <div class="nwmobileSlideText">
+              {{ block.settings.text }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+  </div>
+ </div>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 30,
+  });
+</script>
+ 
+{% schema %}
+  {
+    "name": "nw pdp content",
+    "settings": [
+     {
+       "type": "text",
+       "label": "Add Text1",
+       "id": "text_field"
+     }
+    ],
+    "blocks": [
+         {
+           "name": "Slide",
+           "type": "slide",
+           "settings": [
+             {
+               "type": "image_picker",
+               "id": "image",
+               "label": "Image"
+             },
+             {
+               "type": "text",
+               "id": "title",
+               "label": "Title"
+             },
+             {
+               "type": "textarea",
+               "id": "text",
+               "label": "Text"
+             },
+             {
+                "type": "checkbox",
+                "id": "reverse",
+                "label": "reverse",
+                "default": false
+              }
+
+           ]
+         }
+      ],
+    "presets": [
+      {
+        "name": "nw pdp content"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

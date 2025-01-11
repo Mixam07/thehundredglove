@@ -1,0 +1,35 @@
+{{ 'section-footer-new.css' | asset_url | stylesheet_tag }}
+
+<a href="/" class="section-footer__logo">
+    <img src="{{ 'logo.svg' | asset_url }}" alt="logo">
+</a>
+<nav class="section-footer__nav">
+    <a class="section-footer__href" href="{{ section.settings.footer-terms-conditions }}">Terms & Conditions</a>
+    <a class="section-footer__href" href="{{ section.settings.footer-privacy-policy }}">Privacy Policy</a>
+</nav>
+
+{% schema %}
+{
+    "name": "section-footer-new",
+    "tag": "footer",
+    "class": "section-footer",
+    "settings": [
+        {
+            "id": "footer-terms-conditions",
+            "type": "url",
+            "label": "Link Terms & Conditions"
+        },
+        {
+            "id": "footer-privacy-policy",
+            "type": "url",
+            "label": "Link Privacy Policy"
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-footer-new",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

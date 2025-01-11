@@ -1,0 +1,506 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "a9ce5628-a8b1-4d19-9d08-cc8a6ff7128d": {
+      "type": "landing-header-top",
+      "settings": {
+        "l-c-block1-imggg": "shopify://shop_images/gloves-logo.svg",
+        "l-c-b2": "TRY SENTINEL",
+        "l-c-b2-url": "#lp-p",
+        "l-c-b2-color": "#d75555"
+      }
+    },
+    "60c99dd4-fb19-4997-83c4-29b40790164b": {
+      "type": "landing-banner",
+      "blocks": {
+        "template--16771245932800__60c99dd4-fb19-4997-83c4-29b40790164b-16838836828c67836d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pro Grade Goalkeeper Gloves Without The Expensive Price Tag",
+            "heading_size": "h1"
+          }
+        },
+        "b2b19de5-1de6-4693-bf1b-3a040adcc00b": {
+          "type": "html",
+          "settings": {
+            "banner_html": "<div class=\"trustpilt-sec\">\n<h3>\n<span>★★★★★</span> <span style=\"color: #fff; font-weight: 400; font-si :px;\">Rated 4.9 by 4000+ Satisfied Goalkeepers</span>\n</h3>\n</div>"
+          }
+        },
+        "template--16771245932800__60c99dd4-fb19-4997-83c4-29b40790164b-16838836828c67836d-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "TRY THE SENTINEL",
+            "button_link_2": "#lp-p",
+            "button_style_secondary_2": true
+          }
+        },
+        "template--16771245932800__60c99dd4-fb19-4997-83c4-29b40790164b-16838836828c67836d-1": {
+          "type": "text",
+          "settings": {
+            "text": "+ FREE 10 Game Guarantee",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16771245932800__60c99dd4-fb19-4997-83c4-29b40790164b-16838836828c67836d-0",
+        "b2b19de5-1de6-4693-bf1b-3a040adcc00b",
+        "template--16771245932800__60c99dd4-fb19-4997-83c4-29b40790164b-16838836828c67836d-2",
+        "template--16771245932800__60c99dd4-fb19-4997-83c4-29b40790164b-16838836828c67836d-1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/DSC7968_1.png",
+        "image_2": "shopify://shop_images/Mask_group_0fa2d1a5-3d35-4aac-9e46-fc073056bac3.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "ecdd5567-efbb-4a81-aca3-f070e6afb4c4": {
+      "type": "Four-column",
+      "settings": {
+        "heading": "The Hundred Glove Puts Grip and Durability Together",
+        "first-image": "shopify://shop_images/Mask_group1_65b01cc4-2da6-4dca-8efc-0b20af295a28.png",
+        "first-image-text": "Authentic Performance Technology",
+        "two-image": "shopify://shop_images/Mask_group2.png",
+        "two-image-text": "Unmatched Stickiness & Grip",
+        "three-image": "shopify://shop_images/Mask_group3.png",
+        "three-image-text": "Ultra Lightweight Build",
+        "four-image": "shopify://shop_images/Mask_group4.png",
+        "four-image-text": "25+ Match Gameplay",
+        "l-c-b1": "TRY THE SENTINEL",
+        "l-c-b1-url": "#lp-p",
+        "l-c-b1-color": ""
+      }
+    },
+    "0c169a1f-95ac-4bef-a14b-77596993f922": {
+      "type": "spacing",
+      "settings": {
+        "divider_spacing": 50
+      }
+    },
+    "219535f5-91ce-4cde-9faf-b82b9c55743e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16790093267200__219535f5-91ce-4cde-9faf-b82b9c55743e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Keepers, Real Results",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16790093267200__219535f5-91ce-4cde-9faf-b82b9c55743e-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "168395684063af75d0": {
+      "type": "apps",
+      "blocks": {
+        "c540e3e4-c959-4d64-a162-583d72bdb535": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-testimonial-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "maxWidth": 1100,
+            "desktopFontSize": 32,
+            "mobileFontSize": 20,
+            "maxNumberOfCharacters": 100,
+            "quoteMarkIcon": "none",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "starsColor": "",
+            "quotesIconColor": "#eaeaea",
+            "arrows_iconColor": "#000000",
+            "arrows_hideOnMobile": true,
+            "pagination_active": true,
+            "pagination_selectedDotColor": "#000000",
+            "pagination_dotColor": "#000000",
+            "autoplay_active": false,
+            "autoplay_duration": 2,
+            "productIds": ""
+          }
+        },
+        "4f8bf3cb-6436-494a-b313-ab48c4d69416": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-card-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "maxWidth": 1100,
+            "borderRadius": 8,
+            "itemsPerView": 4,
+            "maxNumberOfCharacters": 100,
+            "imageRatio": "0.72",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "itemBackgroundColor": "#ffffff",
+            "starsColor": "",
+            "starsBackgroundColor": "#ffffff",
+            "arrows_backgroundColor": "#ffffff",
+            "arrows_iconColor": "#9a9a9a",
+            "shadow": "offset-dark",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": ""
+          }
+        }
+      },
+      "block_order": [
+        "c540e3e4-c959-4d64-a162-583d72bdb535",
+        "4f8bf3cb-6436-494a-b313-ab48c4d69416"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "720a3189-a196-4c31-9971-2e858ac7ac06": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16790093267200__720a3189-a196-4c31-9971-2e858ac7ac06-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "TRY THE SENTINEL",
+            "button_link_2": "#lp-p",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16790093267200__720a3189-a196-4c31-9971-2e858ac7ac06-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "8a4ddf08-2b63-496e-afab-6b53ba2d61d7": {
+      "type": "spacing",
+      "settings": {
+        "divider_spacing": 20
+      }
+    },
+    "c0889407-593d-42d4-b1ab-d451f05b2eae": {
+      "type": "landing-content",
+      "settings": {
+        "l-c-h1": "Why Over 4,000 Keepers Trust The Sentinel",
+        "l-c-h11": "Unrivalled Stickiness",
+        "l-c-block1-img": "shopify://shop_images/DSC7917_1.png",
+        "l-c-block1-heading": "The Stickiest Gloves You’ll Use",
+        "l-c-block1-text": "<p>Through years of collaboration with leading material researchers around the world, we have successfully integrated science with comfort to create the Sentinel gloves.</p><p>Our innovative design offers an unparalleled level of grip, giving you the sensation of having glue on your hands. With our pro-grade construction, you can enjoy a secure and comfortable fit that lets you concentrate on your game, without the worry of gloves that wear out quickly.<br/><br/></p>",
+        "l-c-block1-b1": "TRY THE SENTINEL",
+        "l-c-block1-url": "#lp-p",
+        "l-c-block1-color": "",
+        "l-c-block2-img": "shopify://shop_images/MPH01460_1.png",
+        "l-c-block2-heading": "More Games, Less Money",
+        "l-c-block2-text": "<p>When rolling out the Sentinel, they were vigorously tested across all surfaces and weather conditions to perfect that balance between grip & durability. The Sentinel will take your yearly glove spend down to double digits due to the longevity features they possess.</p>",
+        "l-c-block2-b1": "TRY THE SENTINEL",
+        "l-c-block2-url": "#lp-p",
+        "l-c-block2-color": "",
+        "l-c-block3-img": "shopify://shop_images/Mask_group11.png",
+        "l-c-block3-heading": "10 Game Guarantee",
+        "l-c-block3-text": "<p>Before launching the Sentinel gloves, we conducted rigorous testing across all surfaces and weather conditions to achieve the perfect balance between grip and durability. This ensures that our gloves perform at their best no matter the situation.</p><p>Our Sentinel gloves are engineered with longevity in mind, meaning they are built to last and can significantly reduce your annual glove expenses to only double digits.<br/><br/></p>",
+        "l-c-block3-b1": "TRY THE SENTINEL",
+        "l-c-block3-url": "#lp-p",
+        "l-c-block3-color": "",
+        "l-c-b2": "TRY THE SENTINEL",
+        "l-c-b2-url": "#lp-p",
+        "l-c-b2-color": "",
+        "l-c-features-img-desktop": "shopify://shop_images/grap-des.png",
+        "l-c-features-img-mobile": "shopify://shop_images/grap-mbl_1.png",
+        "l-c-h2": "We’re Different"
+      }
+    },
+    "ae4e4f77-f11e-4f1b-94fc-78802579dbe4": {
+      "type": "try-product",
+      "blocks": {
+        "98a11131-1818-49bd-ad76-563a2cc31054": {
+          "type": "title",
+          "settings": {}
+        },
+        "bc725b80-b556-4ea7-afe4-a82ecc1303f0": {
+          "type": "price",
+          "settings": {}
+        },
+        "99f7d44d-6015-45d0-b766-12964541282f": {
+          "type": "text",
+          "settings": {
+            "text": "Ergo Cut",
+            "text_style": "uppercase"
+          }
+        },
+        "fa3ce1c6-2aea-4751-890b-f1ee7b5b7001": {
+          "type": "description",
+          "settings": {}
+        },
+        "e69e11d9-fc4a-4545-a469-f475d93c9241": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"main_class_p\">\n<h3 class=\"l-c-h1\">SELECT COLOR </h3>\n<ul class=\"product-list product_two\">\n    <li class=\"product-item\">\n      <a href=\"https://thehundredglove.com/products/sentinel\">\n        <img  style=\"width:100%;\" src=\"https://thehundredglove.com/cdn/shop/files/redimage_24.png?v=1689151662\">\n      </a>\n</li>\n<li class=\"product-item\">\n      <a href=\"\">\n        <img  style=\"width:100%;\" src=\"https://xz5d084ej02up5ol-66758770944.shopifypreview.com/cdn/shop/files/redimage_28.png?v=1689942313\">\n      </a>\n    </li>\n</ul>\n</div>"
+          }
+        },
+        "c877fb69-0929-4410-b220-c376f5dd7f37": {
+          "type": "popup",
+          "settings": {
+            "text": "Help Me Choose",
+            "page": "sizing-guide"
+          }
+        },
+        "576d8082-1882-4a16-8de4-bfe7f61f8d4a": {
+          "type": "popup",
+          "settings": {
+            "text": "Help Me Choose",
+            "page": "glove-size-img"
+          }
+        },
+        "f0020c20-9028-4b33-b051-70c0fc8dd263": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "51819247-237e-4614-9851-3c8e435a96ee": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "e77e89b2-2b7a-4a2d-8cd8-8a787f005f0b": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
+        "6285d098-1e21-4f61-b39a-f4b510ca9344": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wash & Care",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
+        "a031419c-1602-4fad-a5b3-db14a7da6558": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "98a11131-1818-49bd-ad76-563a2cc31054",
+        "bc725b80-b556-4ea7-afe4-a82ecc1303f0",
+        "99f7d44d-6015-45d0-b766-12964541282f",
+        "fa3ce1c6-2aea-4751-890b-f1ee7b5b7001",
+        "e69e11d9-fc4a-4545-a469-f475d93c9241",
+        "c877fb69-0929-4410-b220-c376f5dd7f37",
+        "576d8082-1882-4a16-8de4-bfe7f61f8d4a",
+        "f0020c20-9028-4b33-b051-70c0fc8dd263",
+        "51819247-237e-4614-9851-3c8e435a96ee",
+        "e77e89b2-2b7a-4a2d-8cd8-8a787f005f0b",
+        "6285d098-1e21-4f61-b39a-f4b510ca9344",
+        "a031419c-1602-4fad-a5b3-db14a7da6558"
+      ],
+      "settings": {
+        "product": "sentinel",
+        "enable_sticky_info": false,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 24,
+        "text_1": "ERGO CUT"
+      }
+    },
+    "2873c039-ba48-47ec-a509-cc1fae200784": {
+      "type": "section-brand",
+      "settings": {
+        "heading": "10 Game Guarantee",
+        "first-image": "shopify://shop_images/Group_16.png",
+        "first-image-text": "10 Game Guarantee",
+        "two-image": "shopify://shop_images/Vector.png",
+        "two-image-text": "Gloves Built With Science",
+        "three-image": "shopify://shop_images/Group_16.png",
+        "three-image-text": "Ultra Lightweight Build"
+      }
+    },
+    "2329efd9-5a10-49db-8572-d8644d787de5": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16790093267200__2329efd9-5a10-49db-8572-d8644d787de5-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ARE ALL OF YOUR GLOVES DURABLE?",
+            "icon": "none",
+            "row_content": "<p>Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear.</p>",
+            "page": ""
+          }
+        },
+        "template--16790093267200__2329efd9-5a10-49db-8572-d8644d787de5-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO YOU ENSURE BOTH OUTSTANDING GRIP + DURABILITY?",
+            "icon": "none",
+            "row_content": "<p>We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability.</p>",
+            "page": ""
+          }
+        },
+        "template--16790093267200__2329efd9-5a10-49db-8572-d8644d787de5-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW LONG IS THE RISK FREE GUARANTEE?",
+            "icon": "none",
+            "row_content": "<p>Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked.</p>",
+            "page": ""
+          }
+        },
+        "template--16790093267200__2329efd9-5a10-49db-8572-d8644d787de5-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "DO ALL OF YOUR GLOVES FIT TRUE TO SIZE?",
+            "icon": "none",
+            "row_content": "<p>They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16790093267200__2329efd9-5a10-49db-8572-d8644d787de5-collapsible_row-1",
+        "template--16790093267200__2329efd9-5a10-49db-8572-d8644d787de5-collapsible_row-2",
+        "template--16790093267200__2329efd9-5a10-49db-8572-d8644d787de5-collapsible_row-3",
+        "template--16790093267200__2329efd9-5a10-49db-8572-d8644d787de5-collapsible_row-4"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ'S",
+        "heading_size": "h15",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_border": true
+      }
+    },
+    "a1ecf026-8dc0-4e9e-bd5d-4db7fd38bacb": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16790093267200__a1ecf026-8dc0-4e9e-bd5d-4db7fd38bacb-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "NEED MORE REASON TO BUY?",
+            "heading_size": "h15"
+          }
+        }
+      },
+      "block_order": [
+        "template--16790093267200__a1ecf026-8dc0-4e9e-bd5d-4db7fd38bacb-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "1684236683be74ecf9": {
+      "type": "apps",
+      "blocks": {
+        "ec7e785b-6ae6-442c-b8da-e1957c2c923a": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "ec7e785b-6ae6-442c-b8da-e1957c2c923a"
+      ],
+      "custom_css": [
+        ".grid-wrap {}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a9ce5628-a8b1-4d19-9d08-cc8a6ff7128d",
+    "60c99dd4-fb19-4997-83c4-29b40790164b",
+    "ecdd5567-efbb-4a81-aca3-f070e6afb4c4",
+    "0c169a1f-95ac-4bef-a14b-77596993f922",
+    "219535f5-91ce-4cde-9faf-b82b9c55743e",
+    "168395684063af75d0",
+    "720a3189-a196-4c31-9971-2e858ac7ac06",
+    "8a4ddf08-2b63-496e-afab-6b53ba2d61d7",
+    "c0889407-593d-42d4-b1ab-d451f05b2eae",
+    "ae4e4f77-f11e-4f1b-94fc-78802579dbe4",
+    "2873c039-ba48-47ec-a509-cc1fae200784",
+    "2329efd9-5a10-49db-8572-d8644d787de5",
+    "a1ecf026-8dc0-4e9e-bd5d-4db7fd38bacb",
+    "1684236683be74ecf9"
+  ]
+}

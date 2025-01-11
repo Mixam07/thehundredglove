@@ -1,0 +1,132 @@
+.discount-promo{
+    margin-bottom: 70px;
+}
+
+.discount-promo__wrapper{
+    background-color: #F4F4F4;
+    border: 1px #000 dashed;
+    padding: 25px;
+}
+
+.discount-promo__title,
+.discount-promo__selected{
+    font-size: 30px;
+    font-family: "Anton" !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.discount-promo__selected{
+    background-color: #C8202F;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}
+
+.discount-promo__title{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+h2.discount-promo__subtitle{
+    font-family: "Arial" !important;
+    text-transform: none;
+    font-size: 16px;
+    max-width: 475px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.discount-promo__button{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #D75555;
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: "Anton" !important;
+    padding: 15px 95px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.discount-promo__wrap{
+    display: flex;
+    justify-content: center;
+}
+
+.discount-promo__caption,
+.discount-promo__bold{
+    font-family: "Arial" !important;
+    text-transform: none;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.discount-promo__bold{
+    font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+    .discount-promo{
+        margin-bottom: 60px;
+    }
+}
+  
+@media (max-width: 992px) {
+    .discount-promo{
+        margin-bottom: 50px;
+    }
+
+    .discount-promo__wrapper{
+        padding: 20px;
+    }
+
+    .discount-promo__title,
+    .discount-promo__selected{
+        font-size: 27px;
+    }
+
+    .discount-promo__title{
+        margin-bottom: 10px;
+    }
+
+    h2.discount-promo__subtitle{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .discount-promo__button{
+        margin-bottom: 10px;
+        font-size: 19px;
+        padding: 10px 75px;
+    }
+}
+  
+@media (max-width: 762px) {
+    .discount-promo{
+        margin-bottom: 40px;
+    }
+}
+  
+@media (max-width: 576px) {
+    .discount-promo{
+        margin-bottom: 30px;
+    }
+
+    .discount-promo__title,
+    .discount-promo__selected{
+        font-size: 24px;
+    }
+
+    h2.discount-promo__subtitle{
+        font-size: 11px;
+    }
+
+    .discount-promo__button{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,151 @@
+{{ 'section-discount-footer.css' | asset_url | stylesheet_tag }}
+
+<div class="discount-footer__container container main">
+    <div class="discount-footer__wrapper">
+        <h1 class="discount-footer__title">{{ section.settings.slogan-discount-footer }}</h1>
+        <div class="discount-footer__info">
+            <div class="discount-footer__image">
+                <img src="{{ section.settings.photo-discount-footer | img_url: 'original' }}" alt="photo">
+            </div>
+            <div class="discount-footer__envelope">
+                <h2 class="discount-footer__description">{{ section.settings.caption-discount-footer }}</h2>
+                <h3 class="discount-footer__information"><span class="discount-footer__highlighted">up to {{ section.settings.discount-discount-footer }} off</span> {{ section.settings.information-discount-footer }}</h3>
+                <h4 class="discount-footer__desc">{{ section.settings.description-discount-footer }}</h4>
+                <a href="{{ section.settings.link-discount-footer }}" class="discount-footer__button">
+                    get {{ section.settings.discount-discount-footer }} off 
+                    <img src="{{ 'arrow.svg' | asset_url }}" alt="arrow">
+                </a>
+                <p class="discount-footer__timer">DEAL ENDING IN: <span class="discount-footer__time">00:00:00</span></p>
+                <div class="discount-footer__wrap">
+                    <p class="discount-footer__text">Sell-Out Risk: <span class="discount-footer__red">High</span></p>
+                    <p class="discount-footer__text"><span class="discount-footer__bold">FREE</span> Shipping</p>
+                </div>
+                <p class="discount-footer__caption">Try it today with <span class="discount-footer__bold">{{ section.settings.offer-discount-footer }}</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sticky-button">
+    <a href="{{ section.settings.link-discount-footer }}" class="sticky-button__button">
+        get {{ section.settings.discount-discount-footer }} off 
+        <img src="{{ 'arrow.svg' | asset_url }}" alt="arrow">
+    </a>
+    <p class="sticky-button__text">OUR LOWEST PRICE EVER</p>
+</div>
+
+<script>
+    const sticky_button = document.querySelector(".sticky-button");
+    const timerHTML = document.querySelector(".discount-footer__time");
+
+    const updateCountdown = () => {
+        const now = new Date();
+
+        const nowInUK = new Date(
+            now.toLocaleString("en-US", { timeZone: "Europe/London" })
+        );
+
+        const midnightInUK = new Date(
+            nowInUK.getFullYear(),
+            nowInUK.getMonth(),
+            nowInUK.getDate() + 1,
+            0, 0, 0
+        );
+
+        const diff = midnightInUK - nowInUK;
+
+        if (diff > 0) {
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`.trim();
+
+            timerHTML.textContent = formattedTime;
+        } else {
+            timerHTML.textContent = "00:00:00"
+        }
+
+        setTimeout(updateCountdown, 1000);
+    }
+
+    const countScroll = () => {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+        
+        const scrollPercent = (scrollTop / (docHeight - windowHeight)) * 100;
+        
+        if(scrollPercent > 15 && scrollPercent < 75){
+            sticky_button.classList.add("active");
+        }else{
+            sticky_button.classList.remove("active");
+        }
+    }
+
+    window.addEventListener('scroll', countScroll);
+    countScroll();
+    updateCountdown();
+</script>
+
+{% schema %}
+{
+    "name": "section-discount-footer",
+    "tag": "section",
+    "class": "discount-footer",
+    "settings": [
+        {
+            "id" : "photo-discount-footer",
+            "type" : "image_picker",
+            "label" : "Main photo" 
+        },
+        {
+            "id" : "slogan-discount-footer",
+            "type" : "text",
+            "label" : "Slogan",
+            "default":"NEW YEAR, NEW GLOVES - best price ever"
+        },
+        {
+            "id" : "caption-discount-footer",
+            "type" : "text",
+            "label" : "Caption" ,
+            "default": "FREE GIFTS WITH YOUR ORDER"
+        },
+        {
+            "id" : "discount-discount-footer",
+            "type" : "text",
+            "label" : "Discount" ,
+            "default": "53%"
+        },
+        {
+            "id" : "information-discount-footer",
+            "type" : "text",
+            "label" : "Information" ,
+            "default": "for a limited time only!"
+        },
+        {
+            "id" : "description-discount-footer",
+            "type" : "text",
+            "label" : "Description" ,
+            "default": "This limited-time deal is in high demand and stock keeps selling out."
+        },
+        {
+            "id" : "offer-discount-footer",
+            "type" : "text",
+            "label" : "Offer" ,
+            "default":"30-Day Money Back Guarantee!"
+        },
+        {
+            "id": "link-discount-footer",
+            "type": "url",
+            "label": "Link"
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-discount-footer",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

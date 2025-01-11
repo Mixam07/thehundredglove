@@ -1,0 +1,79 @@
+
+
+<h2 class="l-c-h1">{{ section.settings.l-c-h1}} </h2>
+
+<ul class="product-list product_two">
+    <li class="product-item">
+      <a href="{{ section.settings.l-c-b2-url }}">
+        <img  style="width:100%;" src="{{ section.settings.l-c-block1-img | img_url : 'master' }}">
+      </a>
+      <a href="{{ section.settings.l-c-b3-url }}">
+        <img  style="width:100%;" src="{{ section.settings.l-c-block2-img2 | img_url : 'master' }}">
+      </a>
+    </li>
+</ul>
+
+{% schema %}
+  {
+    "name": "product_two2",
+    "settings": [
+        {
+  "id" : "l-c-h1",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"SELECT COLOR"
+  
+  
+},
+
+ {
+  "id" : "l-c-b1-ur2",
+  "type" : "url",
+  "label" : "Enter URL"
+  
+} ,
+
+      {
+  "id" : "l-c-block1-img",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+},
+
+       {
+  "id" : "l-c-b1-ur3",
+  "type" : "url",
+  "label" : "Enter URL"
+  
+} ,
+
+       {
+  "id" : "l-c-block1-img2",
+  "type" : "image_picker",
+  "label" : "Image"
+   
+}
+      
+    ],
+
+
+
+
+
+    
+
+    "presets" : [
+{
+  "name" : "product_two2",
+  "category" : "Custom"
+ 
+  }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

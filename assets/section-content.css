@@ -1,0 +1,126 @@
+.section-content{
+    margin-bottom: 90px;
+}
+
+.section-content__list{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 65px;
+}
+
+.section-content__item{
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.section-content__image{
+    width: 75%;
+    height: 300px;
+}
+
+.section-content__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.section-content__wrapper{
+    width: 100%;
+}
+
+.section-content__item:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.section-content__title{
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "Anton";
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.section-content__description{
+    font-family: "Arial" !important;
+    text-transform: none;
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+@media (max-width: 1200px) {
+    .section-content__list{
+        row-gap: 60px;
+    }
+}
+  
+@media (max-width: 992px) {
+    .section-content{
+        margin-bottom: 80px;
+    }
+
+    .section-content__title{
+        margin-bottom: 10px;
+        font-size: 27px;
+    }
+
+    .section-content__description{
+        font-size: 17px;
+        line-height: 26px;
+    }
+
+    .section-content__list{
+        row-gap: 50px;
+    }
+}
+  
+@media (max-width: 762px) {
+    .section-content{
+        margin-bottom: 70px;
+    }
+
+    .section-content__list{
+        row-gap: 40px;
+    }
+
+    .section-content__item,
+    .section-content__item:nth-child(even){
+        flex-direction: column;
+    }
+
+    .section-content__image{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .section-content__title,
+    .section-content__description{
+        text-align: center;
+    }
+}
+  
+@media (max-width: 576px) {
+    .section-content__image{
+        width: 100%;
+    }
+
+    .section-content{
+        margin-bottom: 60px;
+    }
+
+    .section-content__title{
+        font-size: 24px;
+    }
+
+    .section-content__description{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .contanet__list{
+        row-gap: 30px;
+    }
+}

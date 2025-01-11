@@ -1,0 +1,389 @@
+{{ 'section-bundle-products.css' | asset_url | stylesheet_tag }}
+{{ 'personalization.css' | asset_url | stylesheet_tag }}
+
+<script src="https://cdn.tailwindcss.com"></script>
+{% assign url_path = request.path %}
+{% assign segments = url_path | split: '/' %}
+{% assign last_index = segments.size | minus: 1 %}
+{% assign box_size = segments[last_index] %}
+
+{% assign box = shop.metaobjects.box_products[box_size] %}
+{%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+<style>
+    .header,
+    .footer{
+        display: none;
+    }
+</style>
+
+<div class="page-width py-[15px] md:pt-[20px] md:mb-[24px] relative">
+    <div class="md:mb-[30px] mb-[20px] flex justify-center md:pb-[30px] pb-[15px]">
+        <div class="flex gap-x-36 relative before:absolute before:content-[''] before:top-2/4 before:left-2/4 before:w-[95%] before:h-[1px]
+            before:bg-black before:z-[-1] before:translate-y-[-50%] before:translate-x-[-50%]">
+            <a href="{{ section.settings.bundle-prevpage }}" class="w-[20px] h-[20px] bg-black rounded-full flex justify-center items-center text-white font-bold text-[10px] relative">
+                1
+                <span class="absolute md:bottom-[-10px] bottom-0 left-2/4 translate-x-[-50%] text-black 
+                    leading-[20px] translate-y-full md:text-[12px] text-[10px] font-bold text-nowrap tracking-tighter">Select Bundle Size</span>
+            </a>
+            <span class="w-[20px] h-[20px] bg-[#D75555] rounded-full flex justify-center items-center text-white font-bold text-[10px] relative
+                before:content-[''] before:absolute before:top-2/4 before:left-2/4 before:w-[26px] before:h-[26px] before:translate-y-[-50%]
+                before:translate-x-[-50%] before:z-[-1] before:rounded-full before:border-[#D75555] before:border-solid before:border-[0.5px]">
+                2
+                <span class="absolute md:bottom-[-10px] bottom-0 left-2/4 translate-x-[-50%] text-[#D75555] 
+                    leading-[20px] translate-y-full md:text-[12px] text-[10px] font-bold text-nowrap tracking-tighter">Select Gloves</span>
+            </span>
+            <span class="w-[20px] h-[20px] bg-black rounded-full flex justify-center items-center text-white font-bold text-[10px] relative">
+                3
+                <span class="absolute md:bottom-[-10px] bottom-0 left-2/4 translate-x-[-50%] text-black 
+                    leading-[20px] translate-y-full md:text-[12px] text-[10px] font-bold text-nowrap tracking-tighter">Checkout</span>
+            </span>
+        </div>
+    </div>
+
+    <div class="md:grid grid-cols-2 gap-x-[75px]">
+        <div class="w-full md:mb-[40px]">
+            <div class="md:mb-[30px] mb-[15px]">
+                <h1 class="text-[14px] md:text-[18px] leading-[16px] mb-[10px] md:mb-[15px] font-arial normal-case"><span class="font-bold">{{ section.settings.bundle-title-bold }}</span> {{ section.settings.bundle-title }}</h1>
+                <div class="mb-[10px] md:mb-[20px] flex gap-x-[5px] md:gap-x-[10px]">
+                    <div>
+                        <img src="{{ 'fire-glove.svg' | asset_url }}" alt="fire">
+                    </div>
+                    <p class="text-[#C8202F] text-[12px] md:text-[16px]">{{ section.settings.bundle-caption }}</p>
+                </div>
+                <div class="flex bg-[#FBEFF0] py-[10px] md:px-[20px] px-[15px] rounded-[5px] max-w-[400px] mx-auto mb-[15px] md:mb-0">
+                    <div class="w-full flex flex-col items-center relative before:content-[''] before:top-2/4 before:right-0 before:h-[75%]
+                        before:w-[1px] before:bg-black before:absolute before:translate-x-2/4 before:translate-y-[-50%]">
+                        <p class="text-[10px] md:text-[12px] leading-[20px]">NEW Gloves Restocked</p>
+                        <p data-products-restocked class="text-[14px] md:text-[15px] leading-[20px] font-bold"></p>
+                    </div>
+                    <div class="w-full flex flex-col items-center">
+                        <p class="text-[10px] md:text-[12px] leading-[20px]">Est. Sell-Out Date</p>
+                        <p data-products-sell-out class="text-[14px] md:text-[15px] leading-[20px] font-bold text-[#C8202F]"></p>
+                    </div>
+                </div>
+                <div class="text-[14px] font-bold text-center md:hidden">Choose Your Gloves</div>
+            </div>
+            <div class="my-sticky" id="fixedpart">
+                <h4 class="text-[24px] text-[#000000] font-bold text-center mb-[15px] md:block hidden font-arial normal-case">Your Bundle</h4>
+                <div
+                    id="bundle-products"
+                    class="bundle-products flex gap-x-[5px] md:gap-x-[20px] mb-[40px] w-full"
+                ></div>
+                <div class="flex flex-col gap-[8px]">
+                    <button
+                        id="add-to-cart-button"
+                        class="bg-[#D75555] opacity-75 rounded-[6px] text-white md:text-[22px] text-[16px] md:py-[20px] md:px-[5px] max-w-[400px] text-nowrap
+                        w-full mx-auto uppercase mb-[5px] font-anton"
+                    >
+                    </button>
+                    <div class="flex align-center justify-center gap-[5px] md:flex hidden">
+                        <img src="{{ 'verified-gray.svg' | asset_url }}" alt="verified">
+                        <span class="text-[#121212] text-[10px]">TRY 100% RISK FREE WITH OUR 10 GAME GUARANTEE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:gap-[20px] gap-[5px] md:row-start-1 md:row-end-4 md:col-start-2 md:col-end-3
+            md:mb-0 mb-[20px]">
+            {% for product in section.settings.collection.products %}
+                {% assign has_available_variant = false %}
+                {% assign product_name = product.title | split: ' (' | first %}
+
+                {% for variant in product.variants %}
+                    {% if variant.available %}
+                        {% assign has_available_variant = true %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+        
+                {% if has_available_variant %}
+                    <div class="product-container border-solid border-[1px] border-[#B9B9B9] rounded-[5px] md:p-[10px] p-[5px]"
+                        id="product-{{ product.id }}">
+                        <div class="glove">
+                            <div class="bg-[#F0F0F0] mb-[5px] md:h-auto h-[100px]">
+                                <img
+                                    class="w-full h-full object-contain"
+                                    alt="{{ product.title }}"
+                                    src="{{ product.images.first | img_url: 'master' }}"
+                                >
+                            </div>
+                            <button
+                                class="open-modal bg-[#D75555] rounded-[5px] outline-none w-full product-button text-white md:text-[14px] text-[12px] p-[5px] mb-[5px] font-arial"
+                                data-modal="#PopupModal-{{ product.id }}"
+                            >
+                                ADD +
+                            </button>
+                            <h2 class="font-anton md:text-[16px] text-[12px] titleproductcard uppercase mb-[5px] overflow-hidden text-ellipsis whitespace-nowrap">{{ product.title }}</h2>
+                            <h3 class="font-bold md:text-[12px] text-[10px] text-[#3A3A3A] uppercase mb-[5px] tracking-tighter font-arial">{{ product.metafields.custom.glove_type }}</h3>
+                            <div class="variant-price md:text-[16px] text-[12px] font-bold">{{ product.price | money }}</div>
+                        </div>
+            
+                        <div
+                            id="PopupModal-{{ product.id }}"
+                            class="popup-modal hidden bg-black/50"
+                        >
+                            <div class="bg-white p-[20px] rounded-lg shadow-lg popup-content relative">
+                                <div class="popup-images">
+                                    {% for image in product.images %}
+                                        <img
+                                            src="{{ image | img_url: 'master' }}"
+                                            alt="Product image {{ forloop.index }}"
+                                            class="popup-image"
+                                        >
+                                    {% endfor %}
+                                </div>
+                                <div class="stars">
+                                    {% for _ in (1..5) %}
+                                        <img src="{{ 'star-yellow.svg' | asset_url }}" alt="star">
+                                    {% endfor %}
+                                </div>
+                                <div class="mb-[5px] pt-4 w-full flex items-center justify-between">
+                                    <h2 class="font-anton text-[18px] md:text-[20px] uppercase">{{ product.title }}</h3>
+                                    <span class="text-[9px] md:text-[11px] font-bold">
+                                        NEGATIVE CUT
+                                    </span>
+                                </div>
+                                <h3 class="mb-[12px] md:text-[15px] font-bold variant-price tracking-tight">{{ product.price | money }}</h3>
+                                <h4 class="text-[12px] md:text-[14px] mb-[5px] font-bold leading-[24px] font-arial">COLOUR :</h4>
+                                <ul class="product-list gap-x-[5px] product-pink md:mb-[20px] mb-[15px]">
+                                    {% for product in section.settings.collection.products %}
+                                        {% assign glove_name = product.title | split: ' (' | first %}
+                                        {% if glove_name == product_name %}
+                                            <li class="product-item {% if product.url == request.path %}active{% endif %}">
+                                                <button data-id="#PopupModal-{{ product.id }}" class="button-color w-full h-full">
+                                                    <img
+                                                        src="{{ product.featured_image.src | img_url: 'medium' }}"
+                                                        class="product-image"
+                                                        alt="{{ product.featured_image.alt }}"
+                                                    >
+                                                </button>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                                <div class="flex justify-between items-center mb-[5px]">
+                                    <h4 class="md:text-[14px] text-[12px] font-extrabold font-arial">
+                                        SIZE: <span id="selected-size" class="md:text-[14px] text-[12px] font-extrabold"></span>
+                                    </h4>
+                                    <button
+                                        id="ProductPopup-{{ forloop.index }}"
+                                        class="product-popup-modal__button open-help-choose underline md:text-[15px] text-[11px] text-[#536872] font-bold font-arial"
+                                        type="button"
+                                        data-modal="#HelpChoose-{{ forloop.index }}"
+                                    >
+                                        HELP ME CHOOSE
+                                    </button>
+                                    <div id="HelpChoose-{{ forloop.index }}" class="hidden absolute top-0 left-0 help-choose z-[50000000] w-full h-full bg-black/50
+                                        flex items-center justify-center">
+                                        <div class="max-w-[600px] w-full bg-white sm:rounded-[10px] p-[5px] help-content relative">
+                                            <button
+                                                data-modal="#HelpChoose-{{ forloop.index }}"
+                                                class="w-[20px] close-help-choose absolute md:right-[10px] right-[20px] top-[10px] text-black"
+                                            >
+                                                {% render 'icon-close' %}
+                                            </button>
+                                            <h1 class="text-center font-anton text-[24px] my-[10px]">Size Guide</h1>
+                                            {{ section.settings.page.content }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex md:gap-[10px] gap-x-[5px] md:mb-[20px] mb-[15px]">
+                                    {% for variant in product.variants %}
+                                        {% if variant.available %}
+                                            <button
+                                                class="size-option p-4 flex-1 text-[14.82px] border-solid border-[1px] border-[#B2B2B2] rounded-[5px] transition-colors duration-200 font-arial"
+                                                data-variant-id="{{ variant.id }}"
+                                                onclick="selectSize(this, '{{ variant.option1 }}', '{{ forloop.index }}')"
+                                            >
+                                                {{ variant.option1 }}
+                                            </button>
+                                        {% else %}
+                                            <button
+                                                class="size-option p-4 flex-1 text-[14.82px] border-solid border-[1px] border-[#B2B2B2] rounded-[5px] transition-colors duration-200 font-arial
+                                                    relative before:absolute before:content-[''] before:top-0 before:left-0 before:w-full before:h-full before:bg-black/10 after:absolute
+                                                    after:content-[''] after:top-2/4 after:left-2/4 after:translate-x-[-50%] after:translate-y-[-50%] after:w-[20px] after:h-[1px]
+                                                    after:bg-black"
+                                                disabled
+                                            >
+                                                {{ variant.option1 }}
+                                            </button>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="personalization-box  mb-[25px]">
+                                    <div class="personalization-box__container">
+                                        <div class="toggle">
+                                            <div class="personalization-box__wrap">
+                                                <img class="w-[25px]" src="{{ 'edit.svg' | asset_url }}" alt="edit">
+                                                <span class="md:text-[12px] text-[10px]">ADD PERSONALISATION</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personalization-box personalization-drawer hidden">
+                                        <form>
+                                            <div class="pt-[10px]">
+                                                <div class="flex justify-between items-center mb-[5px]">
+                                                    <div class="flex items-center gap-x-[15px]">
+                                                        <label for="personalization">Name and number printed</label>
+                                                        <span>£7</span>
+                                                    </div>
+                                                    <div data-close-icon class="close-icon flex items-center justify-center">
+                                                        <svg
+                                                            width="28"
+                                                            height="28"
+                                                            viewBox="0 0 28 28"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <mask id="mask0_44_569" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+                                                                <rect width="28" height="28" fill="#D9D9D9"/>
+                                                            </mask>
+                                                            <g mask="url(#mask0_44_569)">
+                                                                <path d="M7.46671 22.1667L5.83337 20.5334L12.3667 14L5.83337 7.46671L7.46671 5.83337L14 12.3667L20.5334 5.83337L22.1667 7.46671L15.6334 14L22.1667 20.5334L20.5334 22.1667L14 15.6334L7.46671 22.1667Z" fill="#1C1B1F"/>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="personalization-box__column">
+                                                    <input
+                                                        required
+                                                        type="text"
+                                                        data-personalization
+                                                        maxlength="12"
+                                                        form="{{ product_form_id }}"
+                                                        name="properties[Name and number printed]"
+                                                        placeholder="12 characters only"
+                                                    >
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="flex gap-x-[10px]">
+                                    <select
+                                        id="quantity-selector"
+                                        class="quantity-selector min-w-[60px] h-[50px] p-2 text-center border-solid border-[1px] border-[#3A3A3A] rounded-[5px]"
+                                    >
+                                        {% for i in (1..10) %}
+                                            <option value="{{ i }}">{{ i }}</option>
+                                        {% endfor %}
+                                    </select>
+                
+                                    <button
+                                        class="add-in-bundle add-to-cart-button bg-[#D75555] text-white p-[15px] rounded-[5px] w-full text-center
+                                        uppercase font-anton"
+                                        data-variant-id="{{ product.variants.first.id }}"
+                                        data-product-id="{{ product.id }}"
+                                        data-product-title="{{ product.title }}"
+                                        data-product-type="{{ product.metafields.custom.glove_type }}"
+                                        data-product-image="{{ product.images.first | img_url: 'master' }}"
+                                    >
+                                        Add to Bundle
+                                    </button>
+                                </div>
+                                <button class="absolute top-[10px] right-[15px] close-popup-modal bg-black/10 rounded-full p-[7px] block">
+                                    {% render 'icon-close' %}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-2">
+            <div class="border-dashed border-[1px] border-[#F0BF3F] md:py-[20px] p-[15px] rounded-[15px] flex gap-x-[15px] items-center
+                max-w-[400px] mx-auto">
+                <div class="min-w-[82px]">
+                    <img class="w-[82px]" src="{{ 'recommend.svg' | asset_url }}" alt="recommend">
+                </div>
+                <div>
+                    <h3 class="text-[#ECB31D] text-[11px] md:text-[13px] mb-[5px] font-arial normal-case">Your order is protected by</h3>
+                    <h4 class="font-bold md:text-[16px] text-[14px] mb-[5px] font-arial normal-case">10-Game Money Back Guarantee</h4>
+                    <p class="text-[11px] md:text-[13px]">If for any reason you don’t like our glove, you can return it and receive a full refund.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-popup-image class="data-popup-image opacity-0 pointer-events-none">
+        <button data-prev class="absolute top-2/4 translate-y-[-50%] left-[5px] text-white prev">
+            <img class="rotate-180" src="{{ 'arrow-black.svg' | asset_url }}" alt="">
+        </button>
+        <img id="image" src="" alt="">
+        <button data-next class="absolute top-2/4 translate-y-[-50%] right-[5px] text-white next">
+            <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
+        </button>
+    </div>
+
+    <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset absolute md:top-[20px] top-[5px] md:right-[50px] right-[15px]" id="cart-icon-bubble">
+        {%- liquid
+        if cart == empty
+            render 'icon-cart-empty'
+        else
+            render 'icon-cart'
+        endif
+        -%}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}
+        <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+            <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+        </div>
+        {%- endif -%}
+    </a>
+</div>
+
+{{ 'section-bundle-products.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+    "name": "section-bundle-products",
+    "tag": "section",
+    "class": "j-box-builder-section bundle-product",
+    "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+        },
+        {
+            "id": "page",
+            "type": "page",
+            "label": "t:sections.main-product.blocks.popup.settings.page.label"
+        },
+        {
+            "id": "bundle-caption",
+            "type": "text",
+            "label": "Caption",
+            "default": "Goalkeepers are raving. NEW Gloves selling fast!"
+        },
+        {
+            "id": "bundle-title-bold",
+            "type": "text",
+            "label": "Title bold",
+            "default": "HOLIDAY SPECIAL:"
+        },
+        {
+            "id": "bundle-title",
+            "type": "text",
+            "label": "Title",
+            "default": "Big saving and FREE gifts on your 3 pair gloves"
+        },
+        {
+            "id": "bundle-prevpage",
+            "type": "url",
+            "label": "Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "section-bundle-products"
+        }
+    ]
+}
+{% endschema %}

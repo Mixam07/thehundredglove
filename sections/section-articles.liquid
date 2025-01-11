@@ -1,0 +1,57 @@
+{{ 'section-articles.css' | asset_url | stylesheet_tag }}
+
+<div class="articles__container container main">
+    <ul class="articles__list">
+        {% for block in section.blocks %}
+            {% if block.type == 'row' %}
+                <li class="articles__item">
+                    <div class="articles__photo">
+                        <img src="{{ block.settings['information-image'] | img_url: 'original' }}" alt="photo">
+                    </div>
+                    <h3 class="articles__description">{{ block.settings['information-title'] }}</h3>
+                    <h4 class="articles__caption">{{ block.settings['information-description'] }}</h4>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+{% schema %}
+{
+    "name": "section-articles",
+    "tag": "section",
+    "class": "articles",
+    "blocks": [
+    {
+        "type": "row",
+        "name": "Information",
+        "settings": 
+            [
+                {
+                    "id": "information-title",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "Title"
+                },
+                {
+                    "id": "information-description",
+                    "type": "textarea",
+                    "label": "Description",
+                    "default": "Description"
+                },
+                {
+                    "id": "information-image",
+                    "type": "image_picker",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-articles",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

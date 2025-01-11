@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "290db41a-b299-4ebe-ab0f-afdfe4486fec": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/MPH01810_1_e42cbbae-b228-4b29-9044-7c2961611b28.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "top-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "ce4be585-0653-402d-ac20-f179fec8be7a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16702637080832__ce4be585-0653-402d-ac20-f179fec8be7a-1674026213e07b9817-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE HUNDRED CLUB",
+            "heading_size": "h1"
+          }
+        },
+        "template--16702637080832__ce4be585-0653-402d-ac20-f179fec8be7a-1674026213e07b9817-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every pair of our gloves has a unique QR code that grants you access to our private club of elite goalkeepers that you can connect to and learn with.<br/><br/>This is an all-access pass to the Home of Goalkeepers.<br/><br/>We’ve got everything you need from music to get you pumped up, to the save of the week to inspire you to greatness.<br/><br/>It takes a certain type of person to become a goalkeeper, that’s exactly why having a supportive community is so important.<br/><br/>Nobody reached the top by themselves, that’s why this isn’t a journey you should attempt to do alone. So no matter what level you’re playing at, having the support of your fellow ‘keeper can be the difference.<br/><br/>Having access to this hub gives you valuable insights and information on what it takes to become an elite goalkeeper.<br/><br/>It offers a place where goalkeepers can unite and come together as one.<br/><br/>This is what it means to be part of the Hundred Club.<br/><br/>Any place, any time, any game.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16702637080832__ce4be585-0653-402d-ac20-f179fec8be7a-1674026213e07b9817-0",
+        "template--16702637080832__ce4be585-0653-402d-ac20-f179fec8be7a-1674026213e07b9817-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "290db41a-b299-4ebe-ab0f-afdfe4486fec",
+    "main",
+    "ce4be585-0653-402d-ac20-f179fec8be7a"
+  ]
+}

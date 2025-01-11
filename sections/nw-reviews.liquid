@@ -1,0 +1,529 @@
+<style>
+  .section-{{ section.id }}{
+    {% if section.settings.bgColor != blank %}
+      background-color: {{section.settings.bgColor}};
+    {% endif %}
+    padding-top: {{section.settings.pdTop}}px;
+    padding-bottom: {{section.settings.pdBottom}}px;
+  }
+
+  @media(max-width: 999px){
+    .section-{{ section.id }}{
+      padding-top: {{section.settings.pdTopMob}}px;
+      padding-bottom: {{section.settings.pdBottomMob}}px;
+    }
+  }
+  .nwReviewsWrapTitle p{
+    margin: 0;
+  }
+ .nwReviewsWrapTitle p {
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+       font-weight: 200;
+    line-height: normal;
+    text-transform: uppercase;
+    font-family: 'Anton' !important;
+  
+}
+  .nwReviewsWrapSwiperSliderTopWrapTop {
+    text-align: center;
+    align-items: center;
+    display: flex
+;
+    flex-direction: column;
+}
+  .nwReviewsWrap{
+  }
+  .nwReviewsWrapSwiper{
+    padding: 60px 0!important;
+  }
+  .nwReviewsWrapSwiper .swiper-slide{
+    width: 323px;
+    box-sizing:border-box;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.10);
+    height: auto;
+  }
+  .nwReviewsWrapSwiperSliderTop{
+    padding: 35px 25px 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 70px);
+    text-align:center;
+  }
+  .nwReviewsWrapSwiperSliderBottom{
+    padding: 8px;
+    background: rgba(0,0,0,0.1);
+    border-radius:0 0 8px 8px;
+    
+  }
+  .nwReviewsWrapSwiperSliderBottomMiddle{
+    color: #151515;
+    text-align: center;
+  
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7; /* 171.429% */
+  }
+  .nwReviewsWrapSwiperSliderTopTitle{
+  margin-top: 15px;
+    color: #000;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+  }
+  .nwReviewsWrapSwiperSliderTopWrapTop>svg{
+    display:block;
+    margin: auto;
+  }
+  .nwReviewsWrapSwiperSliderTopText{
+    margin-top: 12px;
+    color: #151515;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+  }
+  .nwReviewsWrapSwiperSliderTopName{
+    color: #000;
+    text-align: center;
+    text-transform:uppercase;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.87; /* 187.5% */
+    margin-top: 10px;
+    letter-spacing: -0.32px;
+  }
+  .nwReviewsWrapSwiperSliderTopVerif{
+    color: #151515;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7; /* 171.429% */
+    display:flex;
+    align-items:center;
+    gap: 4px;
+    justify-content:center;
+  }
+  .nwReviewsWrapSwiperSliderBottomRightBtn{
+    display:block;
+    width: 54px;
+    height: 54px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .nwReviewsWrapSwiperSliderBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .nwReviewsWrapSwiperSliderBottomLeft{
+    display:block;
+    width: 54px;
+    height: 54px;
+  }
+  .nwReviewsWrapSwiperSliderBottomLeft{
+    display:block;
+    height: 54px;
+    width: auto;
+  }
+  .nwReviewsWrapSwiperSliderOne{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media(max-width: 999px){
+    .nwReviewsWrapTitle{
+      color: #000;
+      text-align: center;
+    
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.16; /* 116.667% */
+      letter-spacing: -0.48px;
+    }
+    .nwReviewsWrapSwiperSliderTop{
+      padding: 23px 20px 10px 20px;
+      height: calc(100% - 58px);
+    }
+    .nwReviewsWrapSwiperSliderTopTitle {
+      color: #000;
+      text-align: center;
+      font-size: 18.555px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 23.193px; /* 125% */
+      
+    }
+    .nwReviewsWrapSwiperSliderTopText{
+      color: #151515;
+      text-align: center;
+    
+      font-size: 12.37px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18.555px; /* 150% */
+    }
+    .nwReviewsWrapSwiper .swiper-slide{
+      width: 250px;
+      border-radius: 6.185px;
+      background: #FFF;
+      box-shadow: 0px 3.09244px 37.10925px 0px rgba(0, 0, 0, 0.10);
+    }
+    .nwReviewsWrapSwiperSliderBottom{
+      border-radius: 0 0 6.185px 6.185px;
+    }
+    .nwReviewsWrapSwiperSliderBottomLeft{
+      width: 41.748px;
+      height: 41.748px;
+    }
+    .nwReviewsWrapSwiperSliderBottomLeft img{
+      height: 100%;
+      width: auto;
+    }
+    .nwReviewsWrapSwiperSliderBottomRightBtn{
+      width: 41.748px;
+      height: 41.748px;
+    }
+    .nwReviewsWrapSwiperSliderTopName{
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    .nwReviewsWrapSwiperSliderTopVerif{
+      font-size: 10px;
+    }
+    .nwReviewsWrapSwiperSliderTopVerif svg{
+      width: 15px;
+      height: 15px;
+    }
+    .nwReviewsWrapSwiperSliderTopWrapTop svg{
+      height: 18px;
+    }
+    .nwReviewsWrapSwiperSliderBottomMiddle{
+      font-size: 11px;
+    }
+    .nwReviewsWrapSwiper{
+      padding: 40px 0!important;
+    }
+  }
+
+  /** reviews css **/
+  .section-{{ section.id }} .page-width {
+      max-width: 1920px;
+      padding-right: 0;
+      padding-left: 16px;
+  }
+
+  @media (min-width: 641px) {
+    .section-{{ section.id }} .page-width {
+      padding-left: 63px;
+    }
+  }
+  
+  .section-{{ section.id }} .page-width .nwReviewsWrap .nwReviewsWrapSwiperSliderTopWrapTop svg path,
+  .section-{{ section.id }} .page-width .nwReviewsWrap .nwReviewsWrapSwiperSliderTopVerif svg path {
+      fill: #D75555;
+  }
+  
+  .section-{{ section.id }} .page-width .nwReviewsWrap .nwReviewsQuote {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .section-{{ section.id }} .page-width .nwReviewsWrap .nwReviewsQuote svg {
+      width: 60px;
+      height: 60px;
+      margin-top: -30px;
+  }
+  
+  .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSlider {
+      border-radius: 16px;
+  }
+  @media (min-width: 641px) {
+    .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSlider {
+        border-radius: 23px;
+    }
+  }
+
+  .section-{{ section.id }} .page-width .swiper-wrapper {
+    padding-left: 15px;
+  }
+
+  .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderOne {
+    background-color: #F0F0F0;
+    border-radius: 16px;
+  }
+  @media (min-width: 641px) {
+    .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderOne {
+      background-color: #F0F0F0;
+      border-radius: 23px;
+    }
+  }
+  .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderBottom {
+    background-color: #DBD9D9;
+  }
+
+  .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderBottomRightBtn img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-{{ section.id }} .page-width .nwReviewsWrapSwiper .swiper-slide {
+    box-shadow: 0px 0px 5px 0px #514D4D;
+  }
+  @media (max-width: 640px) {
+    .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderTopText {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderTopName {
+      font-size: 14px;
+    }
+    .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderTopVerif {
+      font-size: 14px;
+    }
+    .section-{{ section.id }} .page-width .swiper-wrapper {
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+    .section-{{ section.id }} .page-width .nwReviewsWrapSwiper {
+      padding-left: 15px !important;
+    }
+  }
+</style>
+<!-- Link Swiper's CSS -->
+
+  
+<section class="nwReviews section-{{ section.id }}">
+  <div class="page-width">
+    
+    <div class="nwReviewsWrapTitle">
+      <h3>
+      {{ section.settings.title }}</h3>
+    </div>
+    <div class="nwReviewsWrap">
+      <div class="swiper nwReviewsWrapSwiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+          <div class="swiper-slide nwReviewsWrapSwiperSlider">
+            <div class="nwReviewsWrapSwiperSliderOne" >
+              <div class="nwReviewsQuote">
+                <svg version="1.1" id="svg2" width="109.57249" height="112.40822" viewBox="0 0 109.57249 112.40822" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                  <defs id="defs6" />
+                  <g id="g8" transform="translate(11.150452,-1.9624602)">
+                    <path style="fill:#d75757;stroke:none;stroke-width:1.33333" d="M 34.537011,2.8069936 C -35.293916,15.150384 -20.850306,124.54015 49.203677,113.60335 61.56461,111.67348 73.322343,106.77148 82.412476,97.957211 119.88767,61.620277 86.508342,-6.3795224 34.537011,2.8069936 m 5.333333,32.7150174 v 9.333333 c -7.497866,1.5172 -11.158533,5.782 -12,13.333333 h 9.333333 V 80.855344 H 13.203678 c 0,-21.429333 -1.1256,-45.100267 26.666666,-45.333333 m 31.999999,0 v 9.333333 c -7.3952,1.936 -11.142933,5.643867 -12,13.333333 h 9.333334 v 22.666667 h -24 c 0,-21.180267 -0.574133,-44.768 26.666666,-45.333333 z" id="path172" />
+                    <path style="fill:#000000;stroke-width:1.33333" id="path116" d="" />
+                  </g>
+                </svg>
+              </div>
+              <div class="nwReviewsWrapSwiperSliderTop">
+                <div class="nwReviewsWrapSwiperSliderTopWrapTop">
+                  {% render "stars-svg" %}
+  
+                  <div class="nwReviewsWrapSwiperSliderTopTitle">
+                    {{ block.settings.title }}
+                  </div>
+                  
+                  <div class="nwReviewsWrapSwiperSliderTopText">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+  
+                <div class="nwReviewsWrapSwiperSliderTopWrap">
+                  <div class="nwReviewsWrapSwiperSliderTopName">
+                    {{ block.settings.name }}
+                  </div>
+    
+                  <div class="nwReviewsWrapSwiperSliderTopVerif">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_21_310)">
+                    <path d="M10.0085 1.67578C10.6567 1.67582 11.2826 1.91192 11.7693 2.33995L11.8977 2.46078L12.4793 3.04245C12.639 3.20104 12.8474 3.30116 13.071 3.32661L13.1835 3.33328H14.0168C14.6979 3.33324 15.3531 3.59376 15.8482 4.0614C16.3432 4.52904 16.6406 5.16837 16.6793 5.84828L16.6835 5.99995V6.83328C16.6835 7.05828 16.7602 7.27745 16.8985 7.45245L16.9735 7.53578L17.5543 8.11745C18.0358 8.59616 18.3165 9.24046 18.3393 9.91901C18.362 10.5975 18.1251 11.2592 17.6768 11.7691L17.556 11.8974L16.9743 12.4791C16.8158 12.6388 16.7156 12.8472 16.6902 13.0708L16.6835 13.1833V14.0166C16.6835 14.6976 16.423 15.3529 15.9554 15.8479C15.4878 16.343 14.8484 16.6404 14.1685 16.6791L14.0168 16.6833H13.1835C12.9588 16.6834 12.7407 16.7591 12.5643 16.8983L12.481 16.9733L11.8993 17.5541C11.4206 18.0355 10.7763 18.3163 10.0978 18.339C9.41925 18.3618 8.75757 18.1249 8.24768 17.6766L8.11935 17.5558L7.53768 16.9741C7.37805 16.8155 7.16959 16.7154 6.94601 16.6899L6.83351 16.6833H6.00018C5.31916 16.6833 4.66394 16.4228 4.16887 15.9552C3.67381 15.4875 3.37641 14.8482 3.33768 14.1683L3.33351 14.0166V13.1833C3.33344 12.9586 3.2577 12.7405 3.11851 12.5641L3.04351 12.4808L2.46268 11.8991C1.98125 11.4204 1.70053 10.7761 1.67777 10.0976C1.65501 9.41902 1.89191 8.75734 2.34018 8.24745L2.46101 8.11912L3.04268 7.53745C3.20127 7.37782 3.30139 7.16936 3.32685 6.94578L3.33351 6.83328V5.99995L3.33768 5.84828C3.37489 5.19449 3.65137 4.57724 4.11442 4.11419C4.57747 3.65114 5.19472 3.37466 5.84851 3.33745L6.00018 3.33328H6.83351C7.05819 3.33321 7.2763 3.25747 7.45268 3.11828L7.53601 3.04328L8.11768 2.46245C8.36546 2.21319 8.66007 2.01537 8.98457 1.88036C9.30907 1.74536 9.65705 1.67583 10.0085 1.67578ZM13.0893 7.74412C12.9331 7.58789 12.7211 7.50013 12.5002 7.50013C12.2792 7.50013 12.0673 7.58789 11.911 7.74412L9.16685 10.4874L8.08935 9.41078L8.01101 9.34162C7.84352 9.21211 7.63301 9.15121 7.42224 9.17128C7.21147 9.19136 7.01625 9.29091 6.87622 9.44972C6.73619 9.60852 6.66186 9.81467 6.66832 10.0263C6.67478 10.2379 6.76156 10.4392 6.91101 10.5891L8.57768 12.2558L8.65601 12.3249C8.81635 12.4493 9.01656 12.5109 9.21908 12.4982C9.4216 12.4855 9.61252 12.3993 9.75601 12.2558L13.0893 8.92245L13.1585 8.84412C13.2829 8.68378 13.3445 8.48357 13.3318 8.28105C13.319 8.07853 13.2328 7.88761 13.0893 7.74412Z" fill="#00B67A"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_21_310">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+    
+                    Verified Reviewer
+                  </div>
+                </div>
+              </div>
+
+              <div class="nwReviewsWrapSwiperSliderBottom">
+                <div class="nwReviewsWrapSwiperSliderBottomLeft">
+                  <img data-src="{{ block.settings.product.featured_image | img_url:'x54' }}" alt="img" class="lazy2 lazy3" loading="lazy">
+                </div>
+                <div class="nwReviewsWrapSwiperSliderBottomMiddle">
+                  {{ block.settings.product.title }}
+                </div>
+                <div class="nwReviewsWrapSwiperSliderBottomRight">
+                  <a class="nwReviewsWrapSwiperSliderBottomRightBtn" href="{{ block.settings.product.url }}">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.99983 22H14.9998C19.0198 22 19.7398 20.39 19.9498 18.43L20.6998 12.43C20.9698 9.99 20.2698 8 15.9998 8H7.99983C3.72983 8 3.02983 9.99 3.29983 12.43L4.04983 18.43C4.25983 20.39 4.97983 22 8.99983 22Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.4955 12H15.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.49451 12H8.50349" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <!--<img src="{{ 'icon-car-png.png' | asset_url }}" alt=“Add to cart icon“ width="80" height="80">-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+  <script>
+    var nwReviewsWrapSwiper = new Swiper(".nwReviewsWrapSwiper", {
+      //slidesPerView: "auto",
+      //centeredSlides: true,
+      /*calculateHeight:true,*/
+      loop: true,
+      spaceBetween: 40,
+      // creando breakpoints
+      breakpoints: {
+        0: {
+          slidesPerView: 1.5,
+          spaceBetween: 24
+        },
+        640: {
+          slidesPerView: 2.5,
+          spaceBetween: 24
+        },
+        992: {
+          slidesPerView: 3.5,
+          spaceBetween: 40
+        }
+      }
+    });
+  </script>
+
+{% schema %}
+{
+  "name": "NW Reviews",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section main settings"
+    },
+    {
+      "type": "color_background",
+      "id": "bgColor",
+      "label": "Section background"
+    },
+    {
+      "type": "range",
+      "id": "pdTop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-top",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "pdBottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-bottom",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "pdTopMob",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-top (mobile)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "pdBottomMob",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-bottom (mobile)",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Section content settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Item",
+       "type": "item",
+       "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+         {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          },
+         {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          },
+         {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }
+
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "NW Reviews"
+    }
+  ]
+}
+{% endschema %}

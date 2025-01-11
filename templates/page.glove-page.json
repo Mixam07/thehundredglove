@@ -1,0 +1,369 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_glove_yDLPCJ": {
+      "type": "section-glove",
+      "settings": {
+        "glove-photo-0": "shopify://shop_images/03e946f6df21968671f77f40f94a903b.png",
+        "glove-photo-1": "shopify://shop_images/bc3f12fe6e16c44e3df3297d1feb8ef0.png",
+        "glove-photo-2": "shopify://shop_images/07c54408d8892e6660942cc6a9d42049.png",
+        "glove-photo-3": "shopify://shop_images/2ce5bff86ea8b4f7b9f3910706582dfc.png",
+        "glove-photo-4": "shopify://shop_images/e75cadfca9034320fbd5cabb7df13b32.png",
+        "glove-photo-5": "shopify://shop_images/fb0aee172859954d657fdba6a77f5323.png",
+        "glove-photo-author": "shopify://shop_images/3673bac34eaecad6c0061dc0370d898a.jpg",
+        "glove-name-author": "Christian N",
+        "glove-review-author": "Best gloves I’ve ever used",
+        "glove-description-author": "Bought a pair of spectra personalised pink gloves and have worn them over 20 times now in both training and matches. Best gloves I’ve ever used for both comfort and quality.",
+        "glove-mark": "4.5/5",
+        "glove-evaluation": "“Excellent”",
+        "glove-reviews": "100+ Reviews",
+        "glove-title": "save up to 53% today + 3 free gifts",
+        "glove-subtitle": "With Todays Bundle & Save Off",
+        "glove-1-pair-photo": "shopify://shop_images/pair-1.png",
+        "glove-1-pair-price": "£52.99",
+        "glove-1-pair-discount": "",
+        "glove-2-pair-photo": "shopify://shop_images/pair-2.png",
+        "glove-2-pair-price": "£90",
+        "glove-2-pair-discount": "SAVE 25%",
+        "glove-3-pair-photo": "shopify://shop_images/pair-3.png",
+        "glove-3-pair-price": "£120",
+        "glove-3-pair-discount": "SAVE 53%",
+        "glove-1-gift-photo": "shopify://shop_images/photo_1.png",
+        "glove-1-gift-title": "Free Shipping",
+        "glove-1-gift-subtitle": "You saved £7.00",
+        "glove-2-gift-photo": "shopify://shop_images/photo_2.png",
+        "glove-2-gift-title": "Free Gift",
+        "glove-2-gift-subtitle": "You saved £19.99",
+        "glove-3-gift-photo": "shopify://shop_images/photo_3.png",
+        "glove-3-gift-title": "Goalkeeper Woау...",
+        "glove-3-gift-subtitle": "You saved £9.99",
+        "glove-discount": "Bundle & Save - Save 53%",
+        "glove-link": "shopify://pages/select-gloves"
+      }
+    },
+    "marquee_sec_hDnGpy": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_content_8WGyrA": {
+      "type": "section-content",
+      "blocks": {
+        "row_BghjxE": {
+          "type": "row",
+          "settings": {
+            "content-title": "Unbeatable Grip  in Every Condition",
+            "content-description": "When it’s pouring rain or the pitch is slick, you need gloves you can trust. The Hundred Glove’s pro-grade latex delivers unbeatable grip on wet grass, muddy fields, and hard turf—so you can hold onto every shot, every time.",
+            "content-image": "shopify://shop_images/2638f0e42c218f920293fc2444678180.jpg"
+          }
+        },
+        "row_KRDQnR": {
+          "type": "row",
+          "settings": {
+            "content-title": "Gloves That Won’t Tear Under Pressure",
+            "content-description": "Cheap gloves wear out fast, but not these. Reinforced stitching and premium materials mean The Hundred Glove can handle the hardest dives, toughest saves, and endless training sessions—game after game.",
+            "content-image": "shopify://shop_images/122c2b79198d44cc41971ee3093ab257.jpg"
+          }
+        },
+        "row_Df8W6W": {
+          "type": "row",
+          "settings": {
+            "content-title": "A Fit That Feels Like a Second Skin",
+            "content-description": "Bulky gloves slow you down. The Hundred Glove is designed for a secure, natural fit that moves with your hand. Stay comfortable, stay flexible, and stay ready for every save—right to the final whistle.",
+            "content-image": "shopify://shop_images/00543b3c247eb425635c70e3ebb02a18.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "row_BghjxE",
+        "row_KRDQnR",
+        "row_Df8W6W"
+      ],
+      "custom_css": [
+        ".section-content {padding-top: 70px;}",
+        "@media (max-width: 762px) {.section-content {padding-top: 30px; }}"
+      ],
+      "settings": {}
+    },
+    "section_advantages_zBDQBK": {
+      "type": "section-advantages",
+      "blocks": {
+        "row_y3BHAy": {
+          "type": "row",
+          "settings": {
+            "advantages-title": "Extended Playtime",
+            "advantages-description": "Built to last, our gloves handle the toughest matches and training—game after game.",
+            "advantages-image": "shopify://shop_images/time-add_3914258_1.svg"
+          }
+        },
+        "row_Fk66EH": {
+          "type": "row",
+          "settings": {
+            "advantages-title": "Confidence Boost",
+            "advantages-description": "Gloves you can trust mean saves you can count on—every shot, every time.",
+            "advantages-image": "shopify://shop_images/Vector_5ccbec1c-aa28-4917-a5d4-03254272ac60.svg"
+          }
+        },
+        "row_9BYtjK": {
+          "type": "row",
+          "settings": {
+            "advantages-title": "Unparalleled Grip",
+            "advantages-description": "Elite latex delivers unbeatable grip in any condition—wet, dry, or muddy.",
+            "advantages-image": "shopify://shop_images/Vector_1.svg"
+          }
+        },
+        "row_6Eyig3": {
+          "type": "row",
+          "settings": {
+            "advantages-title": "Multi-Surface Performance",
+            "advantages-description": "Engineered to perform on every pitch, wherever the game takes you.",
+            "advantages-image": "shopify://shop_images/Layer_2.svg"
+          }
+        },
+        "row_8k6Rxy": {
+          "type": "row",
+          "settings": {
+            "advantages-title": "Maximum Comfort",
+            "advantages-description": "Snug, flexible fit that reduces hand fatigue and feels just right.",
+            "advantages-image": "shopify://shop_images/Frame_573.svg"
+          }
+        },
+        "row_3M9cp4": {
+          "type": "row",
+          "settings": {
+            "advantages-title": "Breathable Design",
+            "advantages-description": "Ventilated design keeps your hands cool, dry, and ready to perform.",
+            "advantages-image": "shopify://shop_images/Layer_3.svg"
+          }
+        },
+        "row_Fd4nDz": {
+          "type": "row",
+          "settings": {
+            "advantages-title": "Internal Grip Technology",
+            "advantages-description": "Internal grip tech keeps your hands secure for precision saves.",
+            "advantages-image": "shopify://shop_images/Vector_1.svg"
+          }
+        },
+        "row_HexLnP": {
+          "type": "row",
+          "settings": {
+            "advantages-title": "Trusted by 20,000+ Goalkeepers Worldwide",
+            "advantages-description": "Join the thousands of keepers who rely on The Hundred Glove for performance.",
+            "advantages-image": "shopify://shop_images/Vector_2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "row_y3BHAy",
+        "row_Fk66EH",
+        "row_9BYtjK",
+        "row_6Eyig3",
+        "row_8k6Rxy",
+        "row_3M9cp4",
+        "row_Fd4nDz",
+        "row_HexLnP"
+      ],
+      "settings": {
+        "advantages-title": "What Makes THE HUNDRED GLOVE Ultimate GLOVE for Your MATCH?"
+      }
+    },
+    "section_tips_77idAc": {
+      "type": "section-tips",
+      "settings": {
+        "tips-title": "Save Your Wallet Too",
+        "tips-photo": "shopify://shop_images/schedule.jpg",
+        "tips-text": "<p class=\"section-tips_text\">Most keepers spend hundreds replacing cheap gloves that tear or overpaying for overpriced 'elite' gloves. <span class=\"section-tips__bold\">With The Hundred Glove, you get pro-level performance and durability for less.</span></p><p class=\"section-tips__caption\">Here’s what you get:</p><ul class=\"section-tips__list\">\n<li class=\"section-tips__item section-tips__bold\">Premium gloves that last longer—saving you money and hassle.</li>\n<li class=\"section-tips__item section-tips__bold\">Pro performance at £49–£54 (not £80+ like other brands).</li>\n<li class=\"section-tips__item section-tips__bold\">Quality that keeps up, match after match—no compromises.</li>\n</ul><p class=\"section-tips__text\">Stop overpaying for gloves that don’t deliver. Upgrade to The Hundred Glove and save your game and your wallet.</p>"
+      }
+    },
+    "nw_reviews_kWDw73": {
+      "type": "nw-reviews",
+      "blocks": {
+        "item_UYVhyP": {
+          "type": "item",
+          "settings": {
+            "title": "Holding Up Great",
+            "text": "I’ve used my 100 gloves in five match’s so far and they are holding up great. Fit, finish, durability, and grip have been great. \n\nAll the best",
+            "name": "Dr Keith Ingram",
+            "product": "the-hundred-glove-obscure-white"
+          }
+        },
+        "item_LjfLHb": {
+          "type": "item",
+          "settings": {
+            "title": "Amazing Quality",
+            "text": "Amazing quality, my son trains 3-4 times a week on grass and Astro turf at a very high level, very impressive piece of kit, now his go to pair of gloves, ergo cut fits great, was a negative cut glove before! Shall be back buying more.",
+            "name": "Emma Dibb",
+            "product": "sentinel"
+          }
+        },
+        "item_wjzJDi": {
+          "type": "item",
+          "settings": {
+            "title": "Son Loved Them",
+            "text": "My son loved them as soon as he caught the first ball,seem very durable  and nice stick palm surface,will be buying again 5 star rating from my son and me",
+            "name": "Mark Binns",
+            "product": "the-hundred-glove"
+          }
+        },
+        "item_acVPBx": {
+          "type": "item",
+          "settings": {
+            "title": "Better Than Other Brands",
+            "text": "My Son is really impressed with the quality much better than the other brands of gloves he’s had before.\n\nWe will be buying some more when the season starts.",
+            "name": "Serena Pardoe",
+            "product": "the-hundred-glove-obscure-white"
+          }
+        },
+        "item_eiWbi8": {
+          "type": "item",
+          "settings": {
+            "title": "Fit is Sublime",
+            "text": "Being an academy GK the glove has really helped my handling and self belief - the fit is sublime and comfort the best ever",
+            "name": "Philip Wilcock",
+            "product": "the-hundred-glove-obscure-red-white"
+          }
+        }
+      },
+      "block_order": [
+        "item_UYVhyP",
+        "item_LjfLHb",
+        "item_wjzJDi",
+        "item_acVPBx",
+        "item_eiWbi8"
+      ],
+      "custom_css": [
+        "@media (max-width: 762px) {.nwReviewsWrapTitle {max-width: 275px; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "bgColor": "",
+        "pdTop": 0,
+        "pdBottom": 50,
+        "pdTopMob": 0,
+        "pdBottomMob": 10,
+        "title": "Why Hundreds Of Keepers Love Our Gloves",
+        "text": ""
+      }
+    },
+    "nw_faq_section_BxiXMg": {
+      "type": "nw-faq-section",
+      "blocks": {
+        "slide_J3r86V": {
+          "type": "slide",
+          "settings": {
+            "title": "Are all of your gloves durable?",
+            "text": ""
+          }
+        },
+        "slide_dykAVe": {
+          "type": "slide",
+          "settings": {
+            "title": "How do you ensure both outstanding grip + durability?",
+            "text": ""
+          }
+        },
+        "slide_GLp6E4": {
+          "type": "slide",
+          "settings": {
+            "title": "How long is the risk free guarantee?",
+            "text": ""
+          }
+        },
+        "slide_nCrrYg": {
+          "type": "slide",
+          "settings": {
+            "title": "Do all of your gloves fit true to size?",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_J3r86V",
+        "slide_dykAVe",
+        "slide_GLp6E4",
+        "slide_nCrrYg"
+      ],
+      "settings": {
+        "title": "FAQ's"
+      }
+    },
+    "173619537828a9299d": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_mPWfrT": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_mPWfrT"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "guarantee_EnzCHM": {
+      "type": "guarantee",
+      "custom_css": [
+        ".nwGuaranteeBottom {display: none;}",
+        ".nwGuaranteeTitle p {font-family: \"Anton\" !important;}"
+      ],
+      "settings": {
+        "image_background": "shopify://shop_images/cdd491068e7bdcb97827d8547640c55a-photoaidcom-darken.jpg",
+        "title": "<p>10 Game Guarantee</p>",
+        "text": "<p>We’re all about delivering gloves that perform as hard as you do. At The Hundred Glove, we back our gear with a 10 Game Guarantee because we believe in the quality and durability of our gloves.</p><p>No fluff, no nonsense—just gloves built to help you make every save count. If they don’t meet your expectations within the first 10 games, we’ve got you covered.</p>"
+      }
+    },
+    "section_footer_LN4DDd": {
+      "type": "section-footer",
+      "settings": {
+        "footer-terms-conditions": "",
+        "footer-privacy-policy": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_glove_yDLPCJ",
+    "marquee_sec_hDnGpy",
+    "section_content_8WGyrA",
+    "section_advantages_zBDQBK",
+    "section_tips_77idAc",
+    "nw_reviews_kWDw73",
+    "nw_faq_section_BxiXMg",
+    "173619537828a9299d",
+    "guarantee_EnzCHM",
+    "section_footer_LN4DDd"
+  ]
+}

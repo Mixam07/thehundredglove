@@ -1,0 +1,57 @@
+{{ 'section-discount-promo.css' | asset_url | stylesheet_tag }}
+
+<div class="discount-promo__container container main">
+    <div class="discount-promo__wrapper">
+        <h1 class="discount-promo__title"><span class="discount-promo__selected">{{ section.settings.discount-discount-promo }}</span> {{ section.settings.title-discount-promo }}</h1>
+        <h2 class="discount-promo__subtitle">{{ section.settings.subtitle-discount-promo }}</h2>
+        <div class="discount-promo__wrap">
+            <a href="{{ section.settings.link-discount-promo }}" class="discount-promo__button">claim offer</a>
+        </div>
+        <h3 class="discount-promo__caption">Try it today with <span class="discount-promo__bold">{{ section.settings.offer-discount-promo }}</span></h3>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "section-discount-promo",
+    "tag": "section",
+    "class": "discount-promo",
+    "settings": [
+        {
+            "id" : "discount-discount-promo",
+            "type" : "text",
+            "label" : "Discount",
+            "default":"SAVE UP TO 53%"
+        },
+        {
+            "id" : "title-discount-promo",
+            "type" : "text",
+            "label" : "Title" ,
+            "default":"WHEN YOU BUNDLE UP"
+        },
+        {
+            "id" : "subtitle-discount-promo",
+            "type" : "text",
+            "label" : "Subtitle" ,
+            "default":"For a limited time you can save 53% on The Hundred Glove Holiday Sale. This limited-time deal is in high demand and stock keeps selling out"
+        },
+        {
+            "id" : "offer-discount-promo",
+            "type" : "text",
+            "label" : "Offer" ,
+            "default":"30-Day Money Back Guarantee!"
+        },
+        {
+            "id": "link-discount-promo",
+            "type": "url",
+            "label": "Link"
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-discount-promo",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

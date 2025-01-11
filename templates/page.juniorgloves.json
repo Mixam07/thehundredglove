@@ -1,0 +1,684 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "47b7ebb5-8bae-4d41-9638-fa41a3e5c177": {
+      "type": "leftimgsecjunior",
+      "settings": {
+        "l-c-h112": "",
+        "l-c-block1-imggg": "shopify://shop_images/logo_1.png",
+        "l-c-block1-img": "shopify://shop_images/Header-img.png",
+        "l-c-block1-heading": "5 Reasons Why The Hundred Glove is Perfect for Young Goalkeepers",
+        "l-c-block1-text": "Emulate the pro’s with the stickiest goalkeeper gloves your little one will ever use, GUARANTEED.",
+        "l-c-b2": "I WANT THE BEST FOR MY KID",
+        "l-c-b2-url": "#lp-p",
+        "l-c-b2-color": "#d75555"
+      }
+    },
+    "9cbb7666-a1c4-45cc-a635-cb0a139777c2": {
+      "type": "juniorcustom",
+      "settings": {
+        "l-c-b1": "",
+        "l-c-b1-url": "",
+        "l-c-b1-color": "",
+        "l-c-h1": "Here’s What You Can Expect With The Hundred Glove",
+        "l-c-h11": "Durable Performance",
+        "l-c-h111": "Amazing gloves you can feel the quality",
+        "l-c-h112": "Anthony Banham, United Kingdom",
+        "l-c-block1-imgg": "shopify://shop_images/arrow.svg",
+        "l-c-block1-imggg": "shopify://shop_images/star.png",
+        "l-c-block1-img": "shopify://shop_images/img1_c3413f8b-cedb-439a-b1c0-c2c1fd84d08c.png",
+        "l-c-block1-heading": "",
+        "l-c-block1-text": "Fed up with goalkeeper gloves that wear away quickly? Our gloves are built to last, ensuring durability and performance even with minimal use.",
+        "l-c-block112-text": "Amazing gloves you can feel the quality in them and the grip is really what the videos show my 13 year old loves them and since having them has given him extra confidence and has improved his game by miles",
+        "l-c-block2-heading": "More Games, Less Money",
+        "l-c-block2-text": "Text Block Two",
+        "l-c-block3-heading": "",
+        "l-c-block3-text": "",
+        "l-c-b2": "ADD TO KIT BAG",
+        "l-c-b2-url": "#lp-p",
+        "l-c-b2-color": "#d75555",
+        "l-c-h2": "We’re Different"
+      }
+    },
+    "168395684063af75d0": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "8650cf28-5e37-4931-beaa-85eb89370076": {
+      "type": "juniortwocolumn",
+      "settings": {
+        "l-c-b1-url": "",
+        "l-c-b1-color": "",
+        "l-c-h1": "",
+        "l-c-h11": "enter-heading",
+        "l-c-h111": "Worn the gloves once & already fallen ...",
+        "l-c-h112": "Rob, United Kingdom",
+        "l-c-block1-imggg": "shopify://shop_images/star.png",
+        "l-c-block1-img": "shopify://shop_images/image-1.jpg",
+        "l-c-block1-heading": "Conquer Any Weather",
+        "l-c-block1-text": "Our meticulously crafted gloves go beyond durability, excelling in both wet and dry conditions. With superior grip and unwavering confidence, you'll perform at the highest level, unaffected by unpredictable weather.",
+        "l-c-block112-text": "Worn the gloves once & already fallen in love with them, the grip on them Is unbelievable. Would definitely recommend",
+        "l-c-block2-heading": "More Games, Less Money",
+        "l-c-block2-text": "Text Block Two",
+        "l-c-b2": "ADD TO KIT BAG",
+        "l-c-b2-url": "#lp-p",
+        "l-c-b2-color": "#d75555"
+      }
+    },
+    "4137661a-c8ee-4015-9984-4ea615d8ec66": {
+      "type": "juniorcustom",
+      "settings": {
+        "l-c-b1": "",
+        "l-c-b1-url": "",
+        "l-c-b1-color": "",
+        "l-c-h1": "",
+        "l-c-h11": "Unrivalled Stickiness",
+        "l-c-h111": "Great gloves",
+        "l-c-h112": "Sarah Brooks, Isle of Man",
+        "l-c-block1-imgg": "shopify://shop_images/arrow.svg",
+        "l-c-block1-imggg": "shopify://shop_images/star.png",
+        "l-c-block1-img": "shopify://shop_images/image2.jpg",
+        "l-c-block1-heading": "",
+        "l-c-block1-text": "With their advanced adhesive technology, these goalkeeper gloves offer an even longer-lasting and stickier grip than any other gloves you've ever used. Guaranteed.",
+        "l-c-block112-text": "Great gloves, ive bought for the 2nd time now for my son and they last so much better than my other ones. I had an issue with the postage but the help from customer services was so nice and got my issue sorted immediately. Would recommend",
+        "l-c-block2-heading": "More Games, Less Money",
+        "l-c-block2-text": "Text Block Two",
+        "l-c-block3-heading": "",
+        "l-c-block3-text": "",
+        "l-c-b2": "ADD TO KIT BAG",
+        "l-c-b2-url": "#lp-p",
+        "l-c-b2-color": "#d75555",
+        "l-c-h2": ""
+      }
+    },
+    "67036da9-769f-4b34-9969-63c38260a95f": {
+      "type": "juniortwocolumn",
+      "settings": {
+        "l-c-b1-url": "",
+        "l-c-b1-color": "",
+        "l-c-h1": "",
+        "l-c-h11": "enter-heading",
+        "l-c-h111": "Best gloves ever.",
+        "l-c-h112": "Sarah, United Kingdom",
+        "l-c-block1-imggg": "shopify://shop_images/star.png",
+        "l-c-block1-img": "shopify://shop_images/image3.jpg",
+        "l-c-block1-heading": "Trust & Reliability",
+        "l-c-block1-text": "Our productions are meticulously crafted in our Hundred Technology Lab, with extensive research and testing. No stone has been left unturned to create the most competent glove on the market.",
+        "l-c-block112-text": "My son has a pair of these - and he absolutely loves them. They’re slightly tighter than others the same size but they’re the best he has ever had and that shows in his confidence. They really are incredibly sticky! Now he wants more!",
+        "l-c-block2-heading": "More Games, Less Money",
+        "l-c-block2-text": "Text Block Two",
+        "l-c-b2": "ADD TO KIT BAG",
+        "l-c-b2-url": "#lp-p",
+        "l-c-b2-color": "#d75555"
+      }
+    },
+    "c4f0677f-0b58-47dc-8391-d4897a31eaf2": {
+      "type": "juniorcustom",
+      "settings": {
+        "l-c-b1": "",
+        "l-c-b1-url": "",
+        "l-c-b1-color": "",
+        "l-c-h1": "",
+        "l-c-h11": "10 Game Guarantee",
+        "l-c-h111": "Great Product",
+        "l-c-h112": "Samantha, United Kingdom",
+        "l-c-block1-imgg": "shopify://shop_images/arrow.svg",
+        "l-c-block1-imggg": "shopify://shop_images/star.png",
+        "l-c-block1-img": "shopify://shop_images/image4.jpg",
+        "l-c-block1-heading": "",
+        "l-c-block1-text": "All of our gloves are backed by our 10 game guarantee. We’re so confident you’ll love our gloves after 10 games, that if you don’t,  you can send them back for a full refund. No questions asked.",
+        "l-c-block112-text": "Fast delivery. My son is U8 GK and trains and plays up to 4 times a week.These are very high quality, have a great grip and true to sizeWe will be purchasing a second pair",
+        "l-c-block2-heading": "More Games, Less Money",
+        "l-c-block2-text": "Text Block Two",
+        "l-c-block3-heading": "",
+        "l-c-block3-text": "",
+        "l-c-b2": "ADD TO KIT BAG",
+        "l-c-b2-url": "#lp-p",
+        "l-c-b2-color": "#d75555",
+        "l-c-h2": ""
+      }
+    },
+    "ba21d4e5-aea4-4ba0-96a6-8e60d96cde52": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<center>\n<span class=\"inverse-coll\"><h1 class=\"head-1\">In Customer Testing, Keepers Were Shown To Love The <span>Hundred Glove</span></h1>\n</center>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "69de5aab-5ec6-44c1-a062-8bcde61d506d": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16781268943104__69de5aab-5ec6-44c1-a062-8bcde61d506d-1685710102560e190b-0": {
+          "type": "column",
+          "settings": {
+            "title": "96%",
+            "text": "<p>of goalkeepers said our gloves outlasted others they've used</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "2edfe9ad-c261-41a6-a1e2-a9765df82a6d": {
+          "type": "column",
+          "settings": {
+            "title": "94%",
+            "text": "<p>of goalkeepers said they preferred the fit of our gloves</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "e42042ae-33f0-448c-8d27-4b87d08d54a3": {
+          "type": "column",
+          "settings": {
+            "title": "99%",
+            "text": "<p>of goalkeepers said they feel more confident wearing our gloves</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16781268943104__69de5aab-5ec6-44c1-a062-8bcde61d506d-1685710102560e190b-0",
+        "2edfe9ad-c261-41a6-a1e2-a9765df82a6d",
+        "e42042ae-33f0-448c-8d27-4b87d08d54a3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "18622d1b-d935-4c5a-8d15-7b86152199a7": {
+      "type": "black-product",
+      "blocks": {
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-2": {
+          "type": "price",
+          "settings": {}
+        },
+        "2d4b898b-9823-4773-8eb7-c78419e13e1c": {
+          "type": "description",
+          "settings": {}
+        },
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-4": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-6": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-0",
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-1",
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-2",
+        "2d4b898b-9823-4773-8eb7-c78419e13e1c",
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-3",
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-4",
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-5",
+        "template--16771245932800__18622d1b-d935-4c5a-8d15-7b86152199a7-16845084715acaba11-6"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "product": "the-hundred-glove",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "text_1": "",
+        "back_show": false,
+        "t_txt_2": "",
+        "showconten": false,
+        "review": "<svg width=\"164\" height=\"28\" viewbox=\"0 0 164 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M15.6622 4.55133L17.5334 8.17258C17.7673 8.75665 18.352 9.1071 18.9367 9.22391L22.9129 9.80799C24.4332 10.0416 25.018 11.9106 23.9655 12.962L21.0418 15.6487C20.574 16.116 20.3401 16.7 20.4571 17.2841L21.1587 21.139C21.3926 22.6576 19.8723 23.8257 18.469 23.1248L14.8436 21.2558C14.2589 21.0222 13.6741 21.0222 13.0894 21.2558L9.46406 23.1248C8.0607 23.8257 6.54039 22.6576 6.77428 21.139L7.47596 17.2841C7.59291 16.7 7.35902 15.9992 6.89123 15.6487L4.08451 12.8452C2.91504 11.7938 3.61672 9.9248 5.13703 9.69117L9.11322 9.1071C9.69795 8.99028 10.2827 8.63984 10.5166 8.17258L12.2708 4.55133C13.0894 3.14956 14.9606 3.14956 15.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M83.6622 4.55133L85.5334 8.17258C85.7673 8.75665 86.352 9.1071 86.9367 9.22391L90.9129 9.80799C92.4332 10.0416 93.018 11.9106 91.9655 12.962L89.0418 15.6487C88.574 16.116 88.3401 16.7 88.4571 17.2841L89.1587 21.139C89.3926 22.6576 87.8723 23.8257 86.469 23.1248L82.8436 21.2558C82.2589 21.0222 81.6741 21.0222 81.0894 21.2558L77.4641 23.1248C76.0607 23.8257 74.5404 22.6576 74.7743 21.139L75.476 17.2841C75.5929 16.7 75.359 15.9992 74.8912 15.6487L72.0845 12.8452C70.915 11.7938 71.6167 9.9248 73.137 9.69117L77.1132 9.1071C77.698 8.99028 78.2827 8.63984 78.5166 8.17258L80.2708 4.55133C81.0894 3.14956 82.9606 3.14956 83.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M49.6622 4.55133L51.5334 8.17258C51.7673 8.75665 52.352 9.1071 52.9367 9.22391L56.9129 9.80799C58.4332 10.0416 59.018 11.9106 57.9655 12.962L55.0418 15.6487C54.574 16.116 54.3401 16.7 54.4571 17.2841L55.1587 21.139C55.3926 22.6576 53.8723 23.8257 52.469 23.1248L48.8436 21.2558C48.2589 21.0222 47.6741 21.0222 47.0894 21.2558L43.4641 23.1248C42.0607 23.8257 40.5404 22.6576 40.7743 21.139L41.476 17.2841C41.5929 16.7 41.359 15.9992 40.8912 15.6487L38.0845 12.8452C36.915 11.7938 37.6167 9.9248 39.137 9.69117L43.1132 9.1071C43.698 8.99028 44.2827 8.63984 44.5166 8.17258L46.2708 4.55133C47.0894 3.14956 48.9606 3.14956 49.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M117.662 4.55133L119.533 8.17258C119.767 8.75665 120.352 9.1071 120.937 9.22391L124.913 9.80799C126.433 10.0416 127.018 11.9106 125.965 12.962L123.042 15.6487C122.574 16.116 122.34 16.7 122.457 17.2841L123.159 21.139C123.393 22.6576 121.872 23.8257 120.469 23.1248L116.844 21.2558C116.259 21.0222 115.674 21.0222 115.089 21.2558L111.464 23.1248C110.061 23.8257 108.54 22.6576 108.774 21.139L109.476 17.2841C109.593 16.7 109.359 15.9992 108.891 15.6487L106.085 12.8452C104.915 11.7938 105.617 9.9248 107.137 9.69117L111.113 9.1071C111.698 8.99028 112.283 8.63984 112.517 8.17258L114.271 4.55133C115.089 3.14956 116.961 3.14956 117.662 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M151.662 4.55133L153.533 8.17258C153.767 8.75665 154.352 9.1071 154.937 9.22391L158.913 9.80799C160.433 10.0416 161.018 11.9106 159.965 12.962L157.042 15.6487C156.574 16.116 156.34 16.7 156.457 17.2841L157.159 21.139C157.393 22.6576 155.872 23.8257 154.469 23.1248L150.844 21.2558C150.259 21.0222 149.674 21.0222 149.089 21.2558L145.464 23.1248C144.061 23.8257 142.54 22.6576 142.774 21.139L143.476 17.2841C143.593 16.7 143.359 15.9992 142.891 15.6487L140.085 12.8452C138.915 11.7938 139.617 9.9248 141.137 9.69117L145.113 9.1071C145.698 8.99028 146.283 8.63984 146.517 8.17258L148.271 4.55133C149.089 3.14956 150.961 3.14956 151.662 4.55133Z\" fill=\"#F7CE72\"></path>\n</svg>",
+        "txt": "",
+        "size_image": "shopify://shop_images/size-chart.webp",
+        "s_txt": "",
+        "t_txt": "",
+        "t_txt_size": "Help Me Choose",
+        "view-btn-link": ""
+      }
+    },
+    "5f0c6cab-3897-4bef-b7a3-56f8babff71c": {
+      "type": "white-product",
+      "blocks": {
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-2": {
+          "type": "price",
+          "settings": {}
+        },
+        "ddaf92b1-bfda-417e-af5a-c755d1b05e9b": {
+          "type": "description",
+          "settings": {}
+        },
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-4": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-6": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-0",
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-1",
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-2",
+        "ddaf92b1-bfda-417e-af5a-c755d1b05e9b",
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-3",
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-4",
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-5",
+        "template--16781268943104__5f0c6cab-3897-4bef-b7a3-56f8babff71c-1685951334e567009e-6"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "product": "the-hundred-glove-obscure-white",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "text_1": "",
+        "back_show": false,
+        "t_txt_2": "",
+        "showconten": false,
+        "review": "<svg width=\"164\" height=\"28\" viewbox=\"0 0 164 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M15.6622 4.55133L17.5334 8.17258C17.7673 8.75665 18.352 9.1071 18.9367 9.22391L22.9129 9.80799C24.4332 10.0416 25.018 11.9106 23.9655 12.962L21.0418 15.6487C20.574 16.116 20.3401 16.7 20.4571 17.2841L21.1587 21.139C21.3926 22.6576 19.8723 23.8257 18.469 23.1248L14.8436 21.2558C14.2589 21.0222 13.6741 21.0222 13.0894 21.2558L9.46406 23.1248C8.0607 23.8257 6.54039 22.6576 6.77428 21.139L7.47596 17.2841C7.59291 16.7 7.35902 15.9992 6.89123 15.6487L4.08451 12.8452C2.91504 11.7938 3.61672 9.9248 5.13703 9.69117L9.11322 9.1071C9.69795 8.99028 10.2827 8.63984 10.5166 8.17258L12.2708 4.55133C13.0894 3.14956 14.9606 3.14956 15.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M83.6622 4.55133L85.5334 8.17258C85.7673 8.75665 86.352 9.1071 86.9367 9.22391L90.9129 9.80799C92.4332 10.0416 93.018 11.9106 91.9655 12.962L89.0418 15.6487C88.574 16.116 88.3401 16.7 88.4571 17.2841L89.1587 21.139C89.3926 22.6576 87.8723 23.8257 86.469 23.1248L82.8436 21.2558C82.2589 21.0222 81.6741 21.0222 81.0894 21.2558L77.4641 23.1248C76.0607 23.8257 74.5404 22.6576 74.7743 21.139L75.476 17.2841C75.5929 16.7 75.359 15.9992 74.8912 15.6487L72.0845 12.8452C70.915 11.7938 71.6167 9.9248 73.137 9.69117L77.1132 9.1071C77.698 8.99028 78.2827 8.63984 78.5166 8.17258L80.2708 4.55133C81.0894 3.14956 82.9606 3.14956 83.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M49.6622 4.55133L51.5334 8.17258C51.7673 8.75665 52.352 9.1071 52.9367 9.22391L56.9129 9.80799C58.4332 10.0416 59.018 11.9106 57.9655 12.962L55.0418 15.6487C54.574 16.116 54.3401 16.7 54.4571 17.2841L55.1587 21.139C55.3926 22.6576 53.8723 23.8257 52.469 23.1248L48.8436 21.2558C48.2589 21.0222 47.6741 21.0222 47.0894 21.2558L43.4641 23.1248C42.0607 23.8257 40.5404 22.6576 40.7743 21.139L41.476 17.2841C41.5929 16.7 41.359 15.9992 40.8912 15.6487L38.0845 12.8452C36.915 11.7938 37.6167 9.9248 39.137 9.69117L43.1132 9.1071C43.698 8.99028 44.2827 8.63984 44.5166 8.17258L46.2708 4.55133C47.0894 3.14956 48.9606 3.14956 49.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M117.662 4.55133L119.533 8.17258C119.767 8.75665 120.352 9.1071 120.937 9.22391L124.913 9.80799C126.433 10.0416 127.018 11.9106 125.965 12.962L123.042 15.6487C122.574 16.116 122.34 16.7 122.457 17.2841L123.159 21.139C123.393 22.6576 121.872 23.8257 120.469 23.1248L116.844 21.2558C116.259 21.0222 115.674 21.0222 115.089 21.2558L111.464 23.1248C110.061 23.8257 108.54 22.6576 108.774 21.139L109.476 17.2841C109.593 16.7 109.359 15.9992 108.891 15.6487L106.085 12.8452C104.915 11.7938 105.617 9.9248 107.137 9.69117L111.113 9.1071C111.698 8.99028 112.283 8.63984 112.517 8.17258L114.271 4.55133C115.089 3.14956 116.961 3.14956 117.662 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M151.662 4.55133L153.533 8.17258C153.767 8.75665 154.352 9.1071 154.937 9.22391L158.913 9.80799C160.433 10.0416 161.018 11.9106 159.965 12.962L157.042 15.6487C156.574 16.116 156.34 16.7 156.457 17.2841L157.159 21.139C157.393 22.6576 155.872 23.8257 154.469 23.1248L150.844 21.2558C150.259 21.0222 149.674 21.0222 149.089 21.2558L145.464 23.1248C144.061 23.8257 142.54 22.6576 142.774 21.139L143.476 17.2841C143.593 16.7 143.359 15.9992 142.891 15.6487L140.085 12.8452C138.915 11.7938 139.617 9.9248 141.137 9.69117L145.113 9.1071C145.698 8.99028 146.283 8.63984 146.517 8.17258L148.271 4.55133C149.089 3.14956 150.961 3.14956 151.662 4.55133Z\" fill=\"#F7CE72\"></path>\n</svg>",
+        "txt": "",
+        "size_image": "shopify://shop_images/Glove_Chart.svg",
+        "s_txt": "",
+        "t_txt": "",
+        "t_txt_size": "Help Me Choose",
+        "view-btn-link": ""
+      }
+    },
+    "6732295d-0e8d-4f9e-836d-e926c98e6431": {
+      "type": "Navy-product",
+      "blocks": {
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-2": {
+          "type": "price",
+          "settings": {}
+        },
+        "94168997-3e95-4079-b70e-6ed2cefa8492": {
+          "type": "description",
+          "settings": {}
+        },
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-4": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-6": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-0",
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-1",
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-2",
+        "94168997-3e95-4079-b70e-6ed2cefa8492",
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-3",
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-4",
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-5",
+        "template--16781268943104__6732295d-0e8d-4f9e-836d-e926c98e6431-1685951786dcfb074c-6"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "product": "the-hundred-glove-obscure-navy-white",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "text_1": "",
+        "back_show": false,
+        "t_txt_2": "",
+        "showconten": false,
+        "review": "<svg width=\"164\" height=\"28\" viewbox=\"0 0 164 28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M15.6622 4.55133L17.5334 8.17258C17.7673 8.75665 18.352 9.1071 18.9367 9.22391L22.9129 9.80799C24.4332 10.0416 25.018 11.9106 23.9655 12.962L21.0418 15.6487C20.574 16.116 20.3401 16.7 20.4571 17.2841L21.1587 21.139C21.3926 22.6576 19.8723 23.8257 18.469 23.1248L14.8436 21.2558C14.2589 21.0222 13.6741 21.0222 13.0894 21.2558L9.46406 23.1248C8.0607 23.8257 6.54039 22.6576 6.77428 21.139L7.47596 17.2841C7.59291 16.7 7.35902 15.9992 6.89123 15.6487L4.08451 12.8452C2.91504 11.7938 3.61672 9.9248 5.13703 9.69117L9.11322 9.1071C9.69795 8.99028 10.2827 8.63984 10.5166 8.17258L12.2708 4.55133C13.0894 3.14956 14.9606 3.14956 15.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M83.6622 4.55133L85.5334 8.17258C85.7673 8.75665 86.352 9.1071 86.9367 9.22391L90.9129 9.80799C92.4332 10.0416 93.018 11.9106 91.9655 12.962L89.0418 15.6487C88.574 16.116 88.3401 16.7 88.4571 17.2841L89.1587 21.139C89.3926 22.6576 87.8723 23.8257 86.469 23.1248L82.8436 21.2558C82.2589 21.0222 81.6741 21.0222 81.0894 21.2558L77.4641 23.1248C76.0607 23.8257 74.5404 22.6576 74.7743 21.139L75.476 17.2841C75.5929 16.7 75.359 15.9992 74.8912 15.6487L72.0845 12.8452C70.915 11.7938 71.6167 9.9248 73.137 9.69117L77.1132 9.1071C77.698 8.99028 78.2827 8.63984 78.5166 8.17258L80.2708 4.55133C81.0894 3.14956 82.9606 3.14956 83.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M49.6622 4.55133L51.5334 8.17258C51.7673 8.75665 52.352 9.1071 52.9367 9.22391L56.9129 9.80799C58.4332 10.0416 59.018 11.9106 57.9655 12.962L55.0418 15.6487C54.574 16.116 54.3401 16.7 54.4571 17.2841L55.1587 21.139C55.3926 22.6576 53.8723 23.8257 52.469 23.1248L48.8436 21.2558C48.2589 21.0222 47.6741 21.0222 47.0894 21.2558L43.4641 23.1248C42.0607 23.8257 40.5404 22.6576 40.7743 21.139L41.476 17.2841C41.5929 16.7 41.359 15.9992 40.8912 15.6487L38.0845 12.8452C36.915 11.7938 37.6167 9.9248 39.137 9.69117L43.1132 9.1071C43.698 8.99028 44.2827 8.63984 44.5166 8.17258L46.2708 4.55133C47.0894 3.14956 48.9606 3.14956 49.6622 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M117.662 4.55133L119.533 8.17258C119.767 8.75665 120.352 9.1071 120.937 9.22391L124.913 9.80799C126.433 10.0416 127.018 11.9106 125.965 12.962L123.042 15.6487C122.574 16.116 122.34 16.7 122.457 17.2841L123.159 21.139C123.393 22.6576 121.872 23.8257 120.469 23.1248L116.844 21.2558C116.259 21.0222 115.674 21.0222 115.089 21.2558L111.464 23.1248C110.061 23.8257 108.54 22.6576 108.774 21.139L109.476 17.2841C109.593 16.7 109.359 15.9992 108.891 15.6487L106.085 12.8452C104.915 11.7938 105.617 9.9248 107.137 9.69117L111.113 9.1071C111.698 8.99028 112.283 8.63984 112.517 8.17258L114.271 4.55133C115.089 3.14956 116.961 3.14956 117.662 4.55133Z\" fill=\"#F7CE72\"></path>\n<path d=\"M151.662 4.55133L153.533 8.17258C153.767 8.75665 154.352 9.1071 154.937 9.22391L158.913 9.80799C160.433 10.0416 161.018 11.9106 159.965 12.962L157.042 15.6487C156.574 16.116 156.34 16.7 156.457 17.2841L157.159 21.139C157.393 22.6576 155.872 23.8257 154.469 23.1248L150.844 21.2558C150.259 21.0222 149.674 21.0222 149.089 21.2558L145.464 23.1248C144.061 23.8257 142.54 22.6576 142.774 21.139L143.476 17.2841C143.593 16.7 143.359 15.9992 142.891 15.6487L140.085 12.8452C138.915 11.7938 139.617 9.9248 141.137 9.69117L145.113 9.1071C145.698 8.99028 146.283 8.63984 146.517 8.17258L148.271 4.55133C149.089 3.14956 150.961 3.14956 151.662 4.55133Z\" fill=\"#F7CE72\"></path>\n</svg>",
+        "txt": "",
+        "size_image": "shopify://shop_images/Glove_Chart.svg",
+        "s_txt": "",
+        "t_txt": "",
+        "t_txt_size": "Help Me Choose",
+        "view-btn-link": ""
+      }
+    },
+    "36730e0c-797c-4ac3-83b8-45139716f812": {
+      "type": "Red-product",
+      "blocks": {
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-1": {
+          "type": "title",
+          "settings": {}
+        },
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-2": {
+          "type": "price",
+          "settings": {}
+        },
+        "a24a920b-87f0-4ff5-abf0-b62d2ee130ab": {
+          "type": "description",
+          "settings": {}
+        },
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-4": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-6": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-0",
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-1",
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-2",
+        "a24a920b-87f0-4ff5-abf0-b62d2ee130ab",
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-3",
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-4",
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-5",
+        "template--16771245932800__36730e0c-797c-4ac3-83b8-45139716f812-16845104961500dfe3-6"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "product": "the-hundred-glove-obscure-red-white",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "text_1": "",
+        "back_show": false,
+        "t_txt_2": "",
+        "showconten": false,
+        "review": "",
+        "txt": "",
+        "size_image": "shopify://shop_images/size-chart.webp",
+        "s_txt": "",
+        "t_txt": "",
+        "t_txt_size": "Help Me Choose",
+        "view-btn-link": ""
+      }
+    },
+    "11511b35-68ff-4be9-ace6-51264de85049": {
+      "type": "juniorworking",
+      "settings": {
+        "l-c-h1": "Why Over 4,000 Keepers Trust The Obscure",
+        "l-c-block1-heading": "We’re Different",
+        "l-c-features-img-desktop": "shopify://shop_images/Group_27_a546707d-01c1-474f-a962-779162113d1b.png",
+        "l-c-features-img-mobile": "shopify://shop_images/Group-44_b7faf3c3-cb09-4914-bad9-0b2474b61f57.png"
+      }
+    },
+    "bcd7315a-48cc-4bbb-b018-a962e025c835": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--16781268943104__bcd7315a-48cc-4bbb-b018-a962e025c835-1685708832c168e243-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ARE ALL OF YOUR GLOVES DURABLE?",
+            "icon": "none",
+            "row_content": "<p>Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear.</p>",
+            "page": ""
+          }
+        },
+        "template--16781268943104__bcd7315a-48cc-4bbb-b018-a962e025c835-1685708832c168e243-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO YOU ENSURE BOTH OUTSTANDING GRIP + DURABILITY?",
+            "icon": "none",
+            "row_content": "<p>We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability.</p>",
+            "page": ""
+          }
+        },
+        "template--16781268943104__bcd7315a-48cc-4bbb-b018-a962e025c835-1685708832c168e243-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW LONG IS THE RISK FREE GUARANTEE?",
+            "icon": "none",
+            "row_content": "<p>Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked.</p>",
+            "page": ""
+          }
+        },
+        "template--16781268943104__bcd7315a-48cc-4bbb-b018-a962e025c835-1685708832c168e243-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "DO ALL OF YOUR GLOVES FIT TRUE TO SIZE?",
+            "icon": "none",
+            "row_content": "<p>They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16781268943104__bcd7315a-48cc-4bbb-b018-a962e025c835-1685708832c168e243-0",
+        "template--16781268943104__bcd7315a-48cc-4bbb-b018-a962e025c835-1685708832c168e243-1",
+        "template--16781268943104__bcd7315a-48cc-4bbb-b018-a962e025c835-1685708832c168e243-2",
+        "template--16781268943104__bcd7315a-48cc-4bbb-b018-a962e025c835-1685708832c168e243-3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "40a8aefd-8fed-47c6-b9eb-84c5b455fa09": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16781268943104__40a8aefd-8fed-47c6-b9eb-84c5b455fa09-168596462853ff3aa2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need more reasons to buy",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--16781268943104__40a8aefd-8fed-47c6-b9eb-84c5b455fa09-168596462853ff3aa2-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1684236683be74ecf9": {
+      "type": "apps",
+      "blocks": {
+        "ec7e785b-6ae6-442c-b8da-e1957c2c923a": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "ec7e785b-6ae6-442c-b8da-e1957c2c923a"
+      ],
+      "custom_css": [
+        ".grid-wrap {}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "47b7ebb5-8bae-4d41-9638-fa41a3e5c177",
+    "9cbb7666-a1c4-45cc-a635-cb0a139777c2",
+    "168395684063af75d0",
+    "8650cf28-5e37-4931-beaa-85eb89370076",
+    "4137661a-c8ee-4015-9984-4ea615d8ec66",
+    "67036da9-769f-4b34-9969-63c38260a95f",
+    "c4f0677f-0b58-47dc-8391-d4897a31eaf2",
+    "ba21d4e5-aea4-4ba0-96a6-8e60d96cde52",
+    "69de5aab-5ec6-44c1-a062-8bcde61d506d",
+    "18622d1b-d935-4c5a-8d15-7b86152199a7",
+    "5f0c6cab-3897-4bef-b7a3-56f8babff71c",
+    "6732295d-0e8d-4f9e-836d-e926c98e6431",
+    "36730e0c-797c-4ac3-83b8-45139716f812",
+    "11511b35-68ff-4be9-ace6-51264de85049",
+    "bcd7315a-48cc-4bbb-b018-a962e025c835",
+    "40a8aefd-8fed-47c6-b9eb-84c5b455fa09",
+    "1684236683be74ecf9"
+  ]
+}

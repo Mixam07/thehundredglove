@@ -1,0 +1,96 @@
+{% if page.url == '/pages/juniorgloves' %}
+     <style>
+       .footer__blocks-wrapper div:nth-child(2) {
+    display: none;
+     
+}
+           hr{
+     display: none  !important;
+}
+       .col-2 h2 {
+    margin: 0px 0px;
+}
+       .col-2 p {
+    line-height: 27px;
+    color: #424242;
+}
+       .l-c-block-flex {
+    margin: 2em 0 !important;
+}
+      
+     </style>
+{% endif %}
+
+{{ 'landing-content.css' | asset_url | stylesheet_tag }}
+<div class="container page-width landing-content-container">
+ <div class="row l-c-block-flex l-c-block1">
+  <div class="column l-c-block-flex-item col-12" >
+     <h2>{{ section.settings.l-c-block1-heading }}</h2>
+      <img  style="width:100%;" src="{{ section.settings.l-c-features-img-desktop | img_url : 'master' }}" class="features-img-desktop"> 
+      <img  style="width:100%;" src="{{ section.settings.l-c-features-img-mobile | img_url : 'master' }}"  class="features-img-mobile"> 
+  </div>  
+ 
+</div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "juniorisworking",
+    "settings": [
+      
+      
+        {
+  "id" : "l-c-h1",
+  "type" : "text",
+  "label" : "Heading",
+  "default":"Why Over 4,000 Keepers Trust The Obscure"
+  
+  
+},
+       {
+  "id" : "l-c-block1-heading",
+  "type" : "text",
+  "label" : "Heading" ,
+   "default":"Gloves Built With Science"
+} ,
+         {
+  "id" : "l-c-features-img-desktop",
+  "type" : "image_picker",
+  "label" : "Features Image ( Desktop Only ) "
+   
+},
+    
+          {
+  "id" : "l-c-features-img-mobile",
+  "type" : "image_picker",
+  "label" : "Features Image ( Mobile Only ) "
+   
+}
+    
+    ],
+
+
+
+
+
+    
+
+    "presets" : [
+{
+  "name" : "juniorisworking",
+  "category" : "Custom"
+ 
+  }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

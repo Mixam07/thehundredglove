@@ -1,0 +1,52 @@
+h1.banner__heading.inline-richtext.h2 {
+  font-size: 70px !important;
+  line-height: 110px !important;
+  font-weight: 100;
+}
+.nwGuaranteeTitle p,
+.nwTextImageWrapLeftTitle p,
+h2.title.inline-richtext.h1,
+.nwReviewsWrapTitle h3,
+h2.collapsible-content__heading.inline-richtext.h1 {
+  font-size: 40px !important;
+  line-height: 50px !important;
+  font-weight: 100;
+  font-family: Anton, sans-serif !important;
+  text-transform: uppercase;
+}
+.banner__content .banner__box .banner__text p,
+.nwGuaranteeText p,
+.nwTextImageWrapLeftText p {
+  font-size: 16px !important;
+  line-height: 30px !important;
+}
+@media (max-width: 768px) {
+  h1.banner__heading.inline-richtext.h2 {
+    font-size: 60px !important;
+    line-height: 70px !important;
+  }
+  .banner__content .banner__box .banner__text p,
+  .nwGuaranteeText p,
+  .nwTextImageWrapLeftText p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    padding: 5px 0;
+  }
+  .nwGuaranteeTitle p,
+  .nwTextImageWrapLeftTitle p,
+  h2.title.inline-richtext.h1,
+  .nwReviewsWrapTitle h3,
+  h2.collapsible-content__heading.inline-richtext.h1 {
+    font-size: 25px !important;
+    line-height: normal !important;
+  }
+}
+.nwReviewsWrapTitle {
+  text-align: center;
+}
+a.button.button--primary,
+button.add_in-bundle {
+  text-transform: uppercase;
+  font-family: arial !important;
+  font-weight: 600;
+}

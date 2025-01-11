@@ -1,0 +1,129 @@
+{{ 'four-column.css' | asset_url | stylesheet_tag }}
+
+<div class="container page-width">
+  <h2 class="h1 fourcolumn-h2"><span>{{ section.settings.heading }}</span> </h2>
+
+   <div class="row grid grid--1-col grid--2-col-tablet grid--4-col-desktop grid-custom " id="grid-custom-main">	
+     <div class="grid__item center imgBoxSmallScreen grid-custom-img"> 
+      <img src="{{ section.settings.first-image | img_url : 'master' }}"> 
+      <h3 class="">{{ section.settings.first-image-text }}</h3>
+    
+    </div> 
+	<div class="grid__item center imgBoxSmallScreen grid-custom-img "> 
+      <img src="{{ section.settings.two-image | img_url : 'master' }}"> 
+      <h3 class="">{{ section.settings.two-image-text }}</h3>
+    
+    </div> 
+	<div class="grid__item center imgBoxSmallScreen grid-custom-img"> 
+      <img src="{{ section.settings.three-image | img_url : 'master' }}"> 
+      <h3 class="">{{ section.settings.three-image-text }}</h3>
+    
+    </div> 
+	<div class="grid__item center imgBoxSmallScreen grid-custom-img"> 
+      <img src="{{ section.settings.four-image | img_url : 'master' }}"> 
+      <h3 class="">{{ section.settings.four-image-text }}</h3>
+    
+    </div> 
+</div>
+
+  <div class="four_btn">
+     <a href="{{ section.settings.l-c-b1-url }}" class="button button--secondary l-c-b1" style="background-color: {{ section.settings.l-c-b1-color}}">{{ section.settings.l-c-b1 }}<span class="icon-wrap">&nbsp;<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+</path></svg>
+</span></a>
+  </div>
+  
+</div>
+
+
+{% schema %}
+{
+"name": "Four Block",
+"settings": [
+{
+  "id" : "heading",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "ABC"
+},
+  {
+  "id" : "first-image",
+  "type" : "image_picker",
+  "label" : "First image"
+  
+},
+   {
+  "id" : "first-image-text",
+  "type" : "text",
+  "label" : "First image Text",
+   "default" : "Authentic Performance Technology"
+  
+},
+  {
+  "id" : "two-image",
+  "type" : "image_picker",
+  "label" : "two image"
+  
+},
+   {
+  "id" : "two-image-text",
+  "type" : "text",
+  "label" : "Two image Text",
+   "default" : "Unmatched Stickiness & Grip"
+  
+},
+  {
+  "id" : "three-image",
+  "type" : "image_picker",
+  "label" : "Three image"
+  
+},
+   {
+  "id" : "three-image-text",
+  "type" : "text",
+  "label" : "Three Image Text",
+   "default" : "Ultra Lightweight Build"
+  
+},
+  {
+  "id" : "four-image",
+  "type" : "image_picker",
+  "label" : "Four image"
+  
+},
+   {
+  "id" : "four-image-text",
+  "type" : "text",
+  "label" : "Four image Text",
+   "default" : "25+ Match Gameplay"
+  
+},
+        {
+  "id" : "l-c-b1",
+  "type" : "text",
+  "label" : "Heading",
+  "default" : "TRY THE OBSCURE"
+} , 
+       {
+  "id" : "l-c-b1-url",
+  "type" : "url",
+  "label" : "Enter Button URL"
+  
+} ,
+        {
+  "id" : "l-c-b1-color",
+  "type" : "color",
+  "label" : "Button color"
+  
+} 
+],
+
+"presets" : [
+{
+  "name" : "My Four Column",
+  "category" : "Custom"
+ 
+  }
+]
+}
+{% endschema %}

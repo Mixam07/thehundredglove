@@ -1,0 +1,151 @@
+.section-tips{
+    margin-bottom: 70px;
+}
+
+.section-tips__wrapper{
+    padding: 50px;
+    background-color: #F6F6F6;
+    border: 1px #000 dashed;
+    border-radius: 40px;
+}
+
+.section-tips__title{
+    margin: 0;
+    font-size: 40px;
+    line-height: 50px;
+    font-family: "Anton";
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.section-tips__photo{
+    width: 85%;
+}
+
+.section-tips__information{
+    width: 100%;
+}
+
+.section-tips__photo img{
+    width: 100%;
+}
+
+.section-tips__wrap{
+    column-gap: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.section-tips__information *{
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+}
+
+.section-tips_text{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.section-tips__bold{
+    font-weight: 700;
+}
+
+.section-tips__caption{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.section-tips__text{
+    margin: 0;
+}
+
+.section-tips__list{
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.section-tips__item{
+    list-style-type: disc;
+}
+
+@media (max-width: 1200px) {
+    .section-tips{
+        margin-bottom: 60px;
+    }
+}
+  
+@media (max-width: 992px) {
+    .section-tips{
+        margin-bottom: 50px;
+    }
+
+    .section-tips__wrapper{
+        padding: 45px;
+    }
+
+    .section-tips__title{
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 35px;
+    }
+
+    .section-tips__information *{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .section-tips__caption{
+        margin-bottom: 5px;
+    }
+}
+  
+@media (max-width: 762px) {
+    .section-tips{
+        margin-bottom: 40px;
+    }
+
+    .section-tips__wrapper{
+        padding: 35px;
+    }
+
+    .section-tips__title{
+        margin-bottom: 25px;
+    }
+
+    .section-tips__wrap{
+        flex-direction: column;
+    }
+
+    .section-tips__photo{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+  
+@media (max-width: 576px) {
+    .section-tips{
+        margin-bottom: 30px;
+    }
+
+    .section-tips__wrapper{
+        padding: 25px;
+    }
+
+    .section-tips__title{
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .section-tips__information *{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .section-tips__caption{
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,249 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "d5224125-ecb2-40fb-baca-24e2713b17c3": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16791829905664__d5224125-ecb2-40fb-baca-24e2713b17c3-1687520661cd2f44e2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Support Hub",
+            "heading_size": "h1"
+          }
+        },
+        "template--16791829905664__d5224125-ecb2-40fb-baca-24e2713b17c3-1687520661cd2f44e2-1": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "template--16791829905664__d5224125-ecb2-40fb-baca-24e2713b17c3-1687520661cd2f44e2-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16791829905664__d5224125-ecb2-40fb-baca-24e2713b17c3-1687520661cd2f44e2-0",
+        "template--16791829905664__d5224125-ecb2-40fb-baca-24e2713b17c3-1687520661cd2f44e2-1",
+        "template--16791829905664__d5224125-ecb2-40fb-baca-24e2713b17c3-1687520661cd2f44e2-2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/support.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4941ad48-5d78-467b-a95c-5b4b49397b5c",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "31d8b1e4-3f59-4c21-a29f-a877fd8c3755": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16791829905664__31d8b1e4-3f59-4c21-a29f-a877fd8c3755-1687520142f7ed3438-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Removing-film.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "REMOVING FILM",
+            "link": "https://thehundredglove.com/pages/peeling-the-plastic-protective-film"
+          }
+        },
+        "template--16791829905664__31d8b1e4-3f59-4c21-a29f-a877fd8c3755-1687520142f7ed3438-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Glove-Size-guide.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "GLOVE SIZE GUIDE",
+            "link": "https://thehundredglove.com/pages/glove-size"
+          }
+        },
+        "097a02b3-dd7d-4ae1-abb6-03d8dfa4e0c4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Glove_Care.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "GLOVE CARE",
+            "link": "https://thehundredglove.com/pages/glove-care-instructions"
+          }
+        }
+      },
+      "block_order": [
+        "template--16791829905664__31d8b1e4-3f59-4c21-a29f-a877fd8c3755-1687520142f7ed3438-0",
+        "template--16791829905664__31d8b1e4-3f59-4c21-a29f-a877fd8c3755-1687520142f7ed3438-1",
+        "097a02b3-dd7d-4ae1-abb6-03d8dfa4e0c4"
+      ],
+      "settings": {
+        "title": "Goalkeeper Gloves",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 72,
+        "padding_bottom": 28
+      }
+    },
+    "d4fd2a39-1de1-4c39-ae3b-f91e4bce845c": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16791829905664__d4fd2a39-1de1-4c39-ae3b-f91e4bce845c-1687520142f7ed3438-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Washing-Guide.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "WASHING GUIDE - T’s",
+            "link": "https://thehundredglove.com/pages/washing-guide"
+          }
+        },
+        "template--16791829905664__d4fd2a39-1de1-4c39-ae3b-f91e4bce845c-1687520142f7ed3438-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/washing-shorts.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "WASHING GUIDE - SHORTS",
+            "link": "https://thehundredglove.com/pages/washing-guide"
+          }
+        }
+      },
+      "block_order": [
+        "template--16791829905664__d4fd2a39-1de1-4c39-ae3b-f91e4bce845c-1687520142f7ed3438-0",
+        "template--16791829905664__d4fd2a39-1de1-4c39-ae3b-f91e4bce845c-1687520142f7ed3438-1"
+      ],
+      "settings": {
+        "title": "Sportswear | Technical Apparel",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "680cc725-11ed-4975-973d-bf51a9026ba4": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16791829905664__680cc725-11ed-4975-973d-bf51a9026ba4-168786309834340ea9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow Our Journey",
+            "heading_size": "h1"
+          }
+        },
+        "template--16791829905664__680cc725-11ed-4975-973d-bf51a9026ba4-168786309834340ea9-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "template--16791829905664__680cc725-11ed-4975-973d-bf51a9026ba4-168786309834340ea9-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16791829905664__680cc725-11ed-4975-973d-bf51a9026ba4-168786309834340ea9-0",
+        "template--16791829905664__680cc725-11ed-4975-973d-bf51a9026ba4-168786309834340ea9-1",
+        "template--16791829905664__680cc725-11ed-4975-973d-bf51a9026ba4-168786309834340ea9-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "e631eaab-62e7-4622-a8dd-b77dbb9fc740": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<p class=\"instafeed_p\">TAG YOUR POST WITH <a href=\"\">@THEHUNDREDGLOVE</a> TO BE FEATURED</p>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 8
+      }
+    },
+    "1687863064eca55e4b": {
+      "type": "apps",
+      "blocks": {
+        "fd9ed884-c6cc-40d5-b55e-23017a574787": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "fd9ed884-c6cc-40d5-b55e-23017a574787"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d5224125-ecb2-40fb-baca-24e2713b17c3",
+    "31d8b1e4-3f59-4c21-a29f-a877fd8c3755",
+    "d4fd2a39-1de1-4c39-ae3b-f91e4bce845c",
+    "680cc725-11ed-4975-973d-bf51a9026ba4",
+    "e631eaab-62e7-4622-a8dd-b77dbb9fc740",
+    "1687863064eca55e4b"
+  ]
+}
