@@ -1,0 +1,34 @@
+<div class="section__items">
+    <p class="section__item">{{ product.metafields.custom.glove_type }}</p>
+    <p class="section__item">Ultra Lightweight</p>
+    <p class="section__item">Breathable</p>
+</div>
+
+<style>
+    .section__items{
+        display: flex;
+        column-gap: 10px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    .section__item{
+        padding: 0 10px;
+        display: block;
+        margin: 0;
+        color: #fff;
+        border-radius: 5px;
+        background-color: rgba(215, 85, 85, 1);
+        font-size: 12px;
+    }
+
+    @media (max-width: 750px) {
+        .section__items{
+            margin-top: -5px;
+        }
+
+        .section__item{
+            font-size: 10px;
+        }
+    }
+</style>

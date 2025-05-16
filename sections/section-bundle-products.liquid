@@ -85,7 +85,7 @@
             </div>
         </div>
     
-        <div class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:gap-[20px] gap-[5px] md:row-start-1 md:row-end-4 md:col-start-2 md:col-end-3
+        <div class="w-full grid grid-cols-2 md:grid-cols-3 md:gap-[20px] gap-[5px] md:row-start-1 md:row-end-4 md:col-start-2 md:col-end-3
             md:mb-0 mb-[20px]">
             {% for product in section.settings.collection.products %}
                 {% assign has_available_variant = false %}
@@ -142,7 +142,7 @@
                                 <div class="mb-[5px] pt-4 w-full flex items-center justify-between">
                                     <h2 class="font-anton text-[18px] md:text-[20px] uppercase">{{ product.title }}</h3>
                                     <span class="text-[9px] md:text-[11px] font-bold">
-                                        NEGATIVE CUT
+                                        {{ product.metafields.custom.glove_type }}
                                     </span>
                                 </div>
                                 <h3 class="mb-[12px] md:text-[15px] font-bold variant-price tracking-tight">{{ product.price | money }}</h3>
@@ -189,7 +189,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex md:gap-[10px] gap-x-[5px] md:mb-[20px] mb-[15px]">
+                                <div class="flex md:gap-[10px] gap-x-[5px] md:mb-[20px] mb-[15px] data-sizes">
                                     {% for variant in product.variants %}
                                         {% if variant.available %}
                                             <button

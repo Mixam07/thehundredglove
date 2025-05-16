@@ -1,0 +1,294 @@
+{{ 'section-pack.css' | asset_url | stylesheet_tag }}
+
+<div class="pack__container container bundle">
+    <div class="pack__wrapper">
+        <div class="pack__images">
+            <button class="pack__prev">
+                <img src="{{ 'arrow_images.svg' | asset_url }}" alt="">
+            </button>
+            <div class="pack__main-image">
+                <img src="{{ product.images.first | img_url: 'master' }}" alt="image" />
+            </div>
+            <div class="pack__items">
+                {% for image in product.images %}
+                    <img src="{{ image | img_url: 'master' }}" alt="image" />
+                {% endfor %}
+            </div>
+            <button class="pack__next">
+                <img src="{{ 'arrow_images.svg' | asset_url }}" alt="">
+            </button>
+        </div>
+        <div class="pack__information">
+            <div class="pack__stars">
+                <img src="{{ 'star-orange.svg' | asset_url }}" alt="star" />
+                <img src="{{ 'star-orange.svg' | asset_url }}" alt="star" />
+                <img src="{{ 'star-orange.svg' | asset_url }}" alt="star" />
+                <img src="{{ 'star-orange.svg' | asset_url }}" alt="star" />
+                <img src="{{ 'star-orange.svg' | asset_url }}" alt="star" />
+            </div>
+            <h1 class="pack__title">{{ product.title }}</h1>
+            <div class="pack__prices">
+                <p class="pack__price">{{ product.price | money }}</p>
+                <p class="pack__prevprice"></p>
+                <p class="pack__discount"></p>
+            </div>
+            <div class="pack__list">
+                {% for option in product.options %}
+                    {% assign product_title = option | replace: " -", "" | split: " (" | first %}
+                    {% assign product_handle = product_title | downcase | replace: " ", "-" %}
+                    {% assign product_option = all_products[product_handle] %}
+
+                    <div class="pack__item">
+                        <div class="pack__image">
+                            <img src="{{ product_option.images.first | img_url: 'master' }}" alt="photo">
+                        </div>
+                        <div class="pack__info">
+                            <p class="pack__caption">{{ product_option.title }}</p>
+                            <p class="pack__color">Color: <span>Black</span></p>
+                            <div class="pack__wrap">
+                                <p class="pack__size">Size: <span></span></p>
+                                <a href="/pages/sizing-guide" class="pack__href">SIZE GUIDE</a>
+                            </div>
+                            <div class="pack__sizes">
+                                {% for variant in product_option.variants %}
+                                    <button data-id="{{ variant.id }}" {% if variant.available == false %}disabled{% endif %} class="pack__elem">{{ variant.title  }}</button>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="custom-shipping-container">
+              <div class="custom-shipping-item">
+                <svg class="green-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13" fill="none">
+                  <circle cx="6" cy="6.5" r="6" fill="#D75555"></circle>
+                </svg>
+                <div class="text-block-shipping section-product__lettering">Ships by <span id="shipping-date" class="shipping-date section-product__bold">Mon, Jun 24</span></div>
+              </div>
+              <div class="custom-shipping-item">
+                <p id="locationinfop" class="section-product__lettering">🇺🇸 <span style=" color: black;font-weight:bold;">Fast </span>US Shipping</p>
+              </div>
+            </div>
+            <button class="pack__submit">ADD TO CART</button>
+            <div class="bundle__cart-advantages">
+                <div class="bundle__cart-elem">
+                    <svg class="bundle__cart-icon" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.875 23.25a2.625 2.625 0 1 0 0-5.25 2.625 2.625 0 0 0 0 5.25ZM7 23.25A2.625 2.625 0 1 0 7 18a2.625 2.625 0 0 0 0 5.25Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M4.375 20.625H3.5A2.625 2.625 0 0 1 .875 18V4A2.625 2.625 0 0 1 3.5 1.375H14A2.625 2.625 0 0 1 16.625 4v16.625h-7m9.625 0h-2.625V8.375h6.125l4.375 5.396V18a2.625 2.625 0 0 1-2.625 2.625m2.625-7h-10.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                    <p class="bundle__cart-text">Fast Shipping</p>
+                </div>
+                <div class="bundle__cart-elem">
+                    <svg class="bundle__cart-icon" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.625 24.5A2.625 2.625 0 0 1 25 27.125H4A2.625 2.625 0 0 1 1.375 24.5V8.75A2.625 2.625 0 0 1 4 6.125h21a2.625 2.625 0 0 1 2.625 2.625zM4 6.125 15.083.948M25 6.125l-5.76-4.01" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M19.75 6.125v8.75L18 14l-1.75.875L14.5 14l-1.75.875L11 14l-1.75.875v-8.75M5.75 19.25h7m-7 3.5h3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                    <p class="bundle__cart-text">30-Days Returns</p>
+                </div>
+                <div class="bundle__cart-elem">
+                    <svg class="bundle__cart-icon" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 27.125S1.125 22.313 1.125 17.5V6.125c0-2.023 1.02-3.19 2.625-3.5L12.5.875l8.75 1.75c1.605.31 2.625 1.477 2.625 3.5V17.5c0 4.813-11.375 9.625-11.375 9.625Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="m7.444 14.3 4.075 4.075 6.037-6.037M1.125 9.625c0-2.023 1.02-3.19 2.625-3.5l8.75-1.75 8.75 1.75c1.605.31 2.625 1.477 2.625 3.5M12.5.875v3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                    <p class="bundle__cart-text">Satisfaction Guarantee</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var daysAfterToday = 2; // Set this to the number of days after today that the item will ship
+        var today = new Date();
+        var shipDate = new Date(today);
+        var options = { weekday: 'short', month: 'short', day: 'numeric' };
+
+        // Function to skip Sundays
+        function calculateShippingDate(date, daysToAdd) {
+            date.setDate(date.getDate() + daysToAdd);
+
+            // If the calculated shipping date is a Sunday, add one more day
+            if (date.getDay() === 0) {
+                date.setDate(date.getDate() + 1);
+            }
+
+            return date;
+        }
+
+        // Calculate the shipping date
+        shipDate = calculateShippingDate(shipDate, daysAfterToday);
+        var formattedDate = shipDate.toLocaleDateString('en-US', options);
+
+        // Update the shipping date in the HTML
+        document.getElementById('shipping-date').textContent = formattedDate;
+    });
+    
+    // A mapping of country codes to flag emojis
+    const countryFlags = {
+        'US': 'https://flagpedia.net/data/flags/h80/us.png',
+        'CA': 'https://flagpedia.net/data/flags/h80/ca.png',
+        'FR': 'https://flagpedia.net/data/flags/h80/fr.png',
+        'NL': 'https://flagpedia.net/data/flags/h80/nl.png',
+        'DE': 'https://flagpedia.net/data/flags/h80/de.png',
+        'GB': 'https://flagpedia.net/data/flags/h80/gb.png',
+        'IT': 'https://flagpedia.net/data/flags/h80/it.png',
+        'ES': 'https://flagpedia.net/data/flags/h80/es.png',
+        'CN': 'https://flagpedia.net/data/flags/h80/cn.png',
+        'JP': 'https://flagpedia.net/data/flags/h80/jp.png',
+        'BR': 'https://flagpedia.net/data/flags/h80/br.png',
+        'IN': 'https://flagpedia.net/data/flags/h80/in.png',
+        'RU': 'https://flagpedia.net/data/flags/h80/ru.png',
+        'ZA': 'https://flagpedia.net/data/flags/h80/za.png',
+        'AU': 'https://flagpedia.net/data/flags/h80/au.png',
+        'NZ': 'https://flagpedia.net/data/flags/h80/nz.png',
+        'MX': 'https://flagpedia.net/data/flags/h80/mx.png',
+        'AR': 'https://flagpedia.net/data/flags/h80/ar.png',
+        'CL': 'https://flagpedia.net/data/flags/h80/cl.png',
+        'CO': 'https://flagpedia.net/data/flags/h80/co.png',
+        'PE': 'https://flagpedia.net/data/flags/h80/pe.png',
+        'VE': 'https://flagpedia.net/data/flags/h80/ve.png',
+        'EC': 'https://flagpedia.net/data/flags/h80/ec.png',
+        'GT': 'https://flagpedia.net/data/flags/h80/gt.png',
+        'HN': 'https://flagpedia.net/data/flags/h80/hn.png',
+        'SA': 'https://flagpedia.net/data/flags/h80/sa.png',
+        'AE': 'https://flagpedia.net/data/flags/h80/ae.png',
+        'TR': 'https://flagpedia.net/data/flags/h80/tr.png',
+        'TH': 'https://flagpedia.net/data/flags/h80/th.png',
+        'MY': 'https://flagpedia.net/data/flags/h80/my.png',
+        'SG': 'https://flagpedia.net/data/flags/h80/sg.png',
+        'ID': 'https://flagpedia.net/data/flags/h80/id.png',
+        'PH': 'https://flagpedia.net/data/flags/h80/ph.png',
+        'VN': 'https://flagpedia.net/data/flags/h80/vn.png',
+        'KR': 'https://flagpedia.net/data/flags/h80/kr.png',
+        'KP': 'https://flagpedia.net/data/flags/h80/kp.png',
+        'SE': 'https://flagpedia.net/data/flags/h80/se.png',
+        'NO': 'https://flagpedia.net/data/flags/h80/no.png',
+        'FI': 'https://flagpedia.net/data/flags/h80/fi.png',
+        'DK': 'https://flagpedia.net/data/flags/h80/dk.png',
+        'IS': 'https://flagpedia.net/data/flags/h80/is.png',
+        'IE': 'https://flagpedia.net/data/flags/h80/ie.png',
+        'CH': 'https://flagpedia.net/data/flags/h80/ch.png',
+        'PT': 'https://flagpedia.net/data/flags/h80/pt.png',
+        'BE': 'https://flagpedia.net/data/flags/h80/be.png',
+        'LU': 'https://flagpedia.net/data/flags/h80/lu.png',
+        'PL': 'https://flagpedia.net/data/flags/h80/pl.png',
+        'CZ': 'https://flagpedia.net/data/flags/h80/cz.png',
+        'SK': 'https://flagpedia.net/data/flags/h80/sk.png',
+        'HU': 'https://flagpedia.net/data/flags/h80/hu.png',
+        'AT': 'https://flagpedia.net/data/flags/h80/at.png',
+        'LI': 'https://flagpedia.net/data/flags/h80/li.png',
+        'GR': 'https://flagpedia.net/data/flags/h80/gr.png',
+        'BG': 'https://flagpedia.net/data/flags/h80/bg.png',
+        'RO': 'https://flagpedia.net/data/flags/h80/ro.png',
+        'UA': 'https://flagpedia.net/data/flags/h80/ua.png',
+        'BY': 'https://flagpedia.net/data/flags/h80/by.png',
+        'LT': 'https://flagpedia.net/data/flags/h80/lt.png',
+        'LV': 'https://flagpedia.net/data/flags/h80/lv.png',
+        'EE': 'https://flagpedia.net/data/flags/h80/ee.png',
+        'MD': 'https://flagpedia.net/data/flags/h80/md.png',
+        'AM': 'https://flagpedia.net/data/flags/h80/am.png',
+        'GE': 'https://flagpedia.net/data/flags/h80/ge.png',
+        'AZ': 'https://flagpedia.net/data/flags/h80/az.png',
+        'IR': 'https://flagpedia.net/data/flags/h80/ir.png',
+        'IQ': 'https://flagpedia.net/data/flags/h80/iq.png',
+        'SY': 'https://flagpedia.net/data/flags/h80/sy.png',
+        'LB': 'https://flagpedia.net/data/flags/h80/lb.png',
+        'JO': 'https://flagpedia.net/data/flags/h80/jo.png',
+        'IL': 'https://flagpedia.net/data/flags/h80/il.png',
+        'EG': 'https://flagpedia.net/data/flags/h80/eg.png',
+        'MA': 'https://flagpedia.net/data/flags/h80/ma.png',
+        'DZ': 'https://flagpedia.net/data/flags/h80/dz.png',
+        'TN': 'https://flagpedia.net/data/flags/h80/tn.png',
+        'LY': 'https://flagpedia.net/data/flags/h80/ly.png',
+        'GM': 'https://flagpedia.net/data/flags/h80/gm.png',
+        'SN': 'https://flagpedia.net/data/flags/h80/sn.png',
+        'MR': 'https://flagpedia.net/data/flags/h80/mr.png',
+        'ML': 'https://flagpedia.net/data/flags/h80/ml.png',
+        'GN': 'https://flagpedia.net/data/flags/h80/gn.png',
+        'CI': 'https://flagpedia.net/data/flags/h80/ci.png',
+        'BF': 'https://flagpedia.net/data/flags/h80/bf.png',
+        'NE': 'https://flagpedia.net/data/flags/h80/ne.png',
+        'TG': 'https://flagpedia.net/data/flags/h80/tg.png',
+        'BJ': 'https://flagpedia.net/data/flags/h80/bj.png',
+        'NG': 'https://flagpedia.net/data/flags/h80/ng.png',
+        'CM': 'https://flagpedia.net/data/flags/h80/cm.png',
+        'GA': 'https://flagpedia.net/data/flags/h80/ga.png',
+        'CG': 'https://flagpedia.net/data/flags/h80/cg.png',
+        'CD': 'https://flagpedia.net/data/flags/h80/cd.png',
+        'AO': 'https://flagpedia.net/data/flags/h80/ao.png',
+        'GW': 'https://flagpedia.net/data/flags/h80/gw.png',
+        'SC': 'https://flagpedia.net/data/flags/h80/sc.png',
+        'SD': 'https://flagpedia.net/data/flags/h80/sd.png',
+        'RW': 'https://flagpedia.net/data/flags/h80/rw.png',
+        'ET': 'https://flagpedia.net/data/flags/h80/et.png',
+        'SO': 'https://flagpedia.net/data/flags/h80/so.png',
+        'DJ': 'https://flagpedia.net/data/flags/h80/dj.png',
+        'KE': 'https://flagpedia.net/data/flags/h80/ke.png',
+        'TZ': 'https://flagpedia.net/data/flags/h80/tz.png',
+        'UG': 'https://flagpedia.net/data/flags/h80/ug.png',
+        'BI': 'https://flagpedia.net/data/flags/h80/bi.png',
+        'MZ': 'https://flagpedia.net/data/flags/h80/mz.png',
+        'ZM': 'https://flagpedia.net/data/flags/h80/zm.png',
+        'MW': 'https://flagpedia.net/data/flags/h80/mw.png',
+        'LS': 'https://flagpedia.net/data/flags/h80/ls.png',
+        'BW': 'https://flagpedia.net/data/flags/h80/bw.png',
+        'NA': 'https://flagpedia.net/data/flags/h80/na.png',
+        'ZA': 'https://flagpedia.net/data/flags/h80/za.png',
+        'SZ': 'https://flagpedia.net/data/flags/h80/sz.png',
+        // Add more mappings as necessary
+    };
+    
+    
+    // This function will be called to update the content of the #locationinfop p tag
+    function setLocationInfo(countryCode, countryName) {
+        const flagEmoji = countryFlags[countryCode]; // Get the flag emoji using the country code
+        const locationInfoP = document.getElementById('locationinfop');
+        
+        if (locationInfoP) {
+            // Check if the flagEmoji exists. If it does, prepend it to the message
+            const shippingMessage = flagEmoji
+            ? `<img src="${flagEmoji}" alt="" /> <span style=" color: black;font-weight:bold;">Fast </span>${countryCode} Shipping`
+            : `📦 <span style=" color: black;font-weight:bold;">Fast </span>${countryCode} Shipping`; // Use a default package emoji if no flag is available
+        
+            locationInfoP.innerHTML = shippingMessage;
+            
+        }
+        }
+        
+        // This function fetches the browsing context suggestions and updates the p tag
+        async function fetchLocationInfo() {
+        try {
+            const response = await fetch('/browsing_context_suggestions.json');
+            const data = await response.json();
+            // Use the detected country code and country name from the response
+            const countryCode = data.detected_values.country.handle;
+            const countryName = data.detected_values.country.name;
+            
+            // Update the location info p tag with the country name and flag emoji
+            setLocationInfo(countryCode, countryName);
+        } catch (error) {
+            console.error('Error fetching location info:', error);
+        }
+        }
+        
+        // Call the function to fetch location info on DOM content load
+        document.addEventListener('DOMContentLoaded', (event) => {
+        fetchLocationInfo();
+    });
+</script>
+
+{{ 'section-pack.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+    "name": "section-pack",
+    "tag": "section",
+    "class": "pack",
+    "settings": [
+    ],
+    "presets" : [
+        {
+            "name" : "section-pack",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

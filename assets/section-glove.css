@@ -229,7 +229,7 @@
 .section-product__title{
     margin: 0;
     font-size: 35px;
-    font-family: "Anton";
+    font-family: "Anton" !important;
     line-height: 40px;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -308,7 +308,7 @@
     transform: translate(-50%, -50%);
     text-wrap: nowrap;
     font-size: 12px;
-    font-family: "Anton";
+    font-family: "Anton" !important;
     padding: 5px;
     color: #fff;
 }
@@ -536,7 +536,8 @@
     }
 
     .section-product__item-discount{
-        font-size: 7px;
+        font-size: 9px;
+        line-height: 12px;
     }
 
     .section-product__products{
@@ -646,6 +647,10 @@
     .section-product__photo{
         width: 55px;
         height: 55px;
+    }
+
+    .section-product__item-wrapper{
+        column-gap: 5px;
     }
 }
   

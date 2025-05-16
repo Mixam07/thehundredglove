@@ -38,7 +38,7 @@
 .section-content__title{
     text-transform: uppercase;
     margin: 0;
-    font-family: "Anton";
+    font-family: "Anton" !important;
     font-size: 30px;
     margin-bottom: 15px;
 }

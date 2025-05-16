@@ -9,7 +9,7 @@
     margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
-    font-family: "Anton";
+    font-family: "Anton" !important;
     font-size: 40px;
     line-height: 50px;
     margin-bottom: 60px;

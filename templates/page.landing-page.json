@@ -14,6 +14,7 @@
       "blocks": {
         "gsc_countdown_timer_countdown_qiECB8": {
           "type": "shopify://apps/gsc-countdown-timer/blocks/countdown/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+          "disabled": true,
           "settings": {
             "widget_id": "GSC-BAR-lqDmHCFahgJo"
           }
@@ -105,7 +106,8 @@
         "icon_with_text_HXw8dy"
       ],
       "custom_css": [
-        "@media (max-width: 749px) {.banner__box h1.banner__heading {color: #ffffff !important; font-size: 30px; max-width: 100%; margin: 0 auto; }}"
+        "@media (max-width: 749px) {.banner__box h1.banner__heading {color: #ffffff !important; font-size: 30px; max-width: 100%; margin: 0 auto; }}",
+        ".banner__text {margin: 1rem 0 0 0 !important;}"
       ],
       "settings": {
         "customClass": "",
@@ -273,7 +275,25 @@
       "settings": {
         "title": "Create Your Ultimate Glove Bundle",
         "collection": "gloves",
-        "page": "glove-size-img"
+        "page": "glove-size-img",
+        "glove-1-pair-photo": "shopify://shop_images/pair-1.png",
+        "glove-1-pair-price": "£52.99",
+        "glove-1-pair-discount": "",
+        "glove-2-pair-photo": "shopify://shop_images/pair-2.png",
+        "glove-2-pair-price": "£90",
+        "glove-2-pair-discount": "SAVE 25%",
+        "glove-3-pair-photo": "shopify://shop_images/pair-3.png",
+        "glove-3-pair-price": "£120",
+        "glove-3-pair-discount": "SAVE 53%",
+        "glove-1-gift-photo": "shopify://shop_images/photo_1.png",
+        "glove-1-gift-title": "Free Shipping",
+        "glove-1-gift-subtitle": "You saved £7.00",
+        "glove-2-gift-photo": "shopify://shop_images/photo_2.png",
+        "glove-2-gift-title": "Free Gift",
+        "glove-2-gift-subtitle": "You saved £19.99",
+        "glove-3-gift-photo": "shopify://shop_images/photo_3.png",
+        "glove-3-gift-title": "Training Plan",
+        "glove-3-gift-subtitle": "You saved £9.99"
       }
     },
     "nw_reviews_w3NhMQ": {
@@ -547,76 +567,46 @@
         "show_text_below": false
       }
     },
-    "collapsible_content_9LprtQ": {
-      "type": "collapsible-content",
+    "nw_faq_section_E3FxJH": {
+      "type": "nw-faq-section",
       "blocks": {
-        "collapsible_row_N3yq8P": {
-          "type": "collapsible_row",
+        "slide_XtgB7L": {
+          "type": "slide",
           "settings": {
-            "heading": "What sizes are available for your gloves?",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
+            "title": "Are all of your gloves durable?",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
           }
         },
-        "collapsible_row_9mhYr3": {
-          "type": "collapsible_row",
+        "slide_cj6Hm6": {
+          "type": "slide",
           "settings": {
-            "heading": "How do I care for my gloves?",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
+            "title": "How do you ensure both outstanding grip + durability?",
+            "text": "We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability."
           }
         },
-        "collapsible_row_NdKq8M": {
-          "type": "collapsible_row",
+        "slide_kGnE7z": {
+          "type": "slide",
           "settings": {
-            "heading": "What is your return policy?",
-            "icon": "none",
-            "row_content": "<p>We offer a 30-day return policy for unused products. If you're not satisfied with your purchase, you can return it within 30 days for a full refund.</p>",
-            "page": ""
+            "title": "How long is the risk free guarantee?",
+            "text": "Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked."
           }
         },
-        "collapsible_row_PFQQab": {
-          "type": "collapsible_row",
+        "slide_aPpca6": {
+          "type": "slide",
           "settings": {
-            "heading": "Can I customize my gloves?",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_D9rqjh": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do you offer international shipping?",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
+            "title": "Do all of your gloves fit true to size?",
+            "text": "They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available."
           }
         }
       },
       "block_order": [
-        "collapsible_row_N3yq8P",
-        "collapsible_row_9mhYr3",
-        "collapsible_row_NdKq8M",
-        "collapsible_row_PFQQab",
-        "collapsible_row_D9rqjh"
+        "slide_XtgB7L",
+        "slide_cj6Hm6",
+        "slide_kGnE7z",
+        "slide_aPpca6"
       ],
       "settings": {
-        "caption": "",
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "show_border": false
+        "title": ""
       }
     },
     "guarantee_anKzdL": {
@@ -706,7 +696,7 @@
     "multicolumn_EjaxJj",
     "landing_slider_images_kQVFLf",
     "image_banner_tBegLG",
-    "collapsible_content_9LprtQ",
+    "nw_faq_section_E3FxJH",
     "guarantee_anKzdL",
     "image_banner_gAEDJc",
     "custom_liquid_MPmBiV"

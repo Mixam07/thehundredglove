@@ -1,0 +1,194 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_banner_xDaBYJ": {
+      "type": "section-banner",
+      "settings": {
+        "banner-background-photo": "shopify://shop_images/733ae205649abf9f3d067a85dd661c8f.png",
+        "banner-photo": "shopify://shop_images/banner_photo.png"
+      }
+    },
+    "marquee_sec_MiKAf3": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_bundle_mz7bpQ": {
+      "type": "section-bundle",
+      "settings": {
+        "collection_1": "gloves",
+        "collection_2": "clothings",
+        "collection_3": "accessories",
+        "page_1": "glove-size-img",
+        "page_2": "short-size",
+        "page_3": "top-size",
+        "page_4": "trouser-size",
+        "link": "shopify://pages/pack"
+      }
+    },
+    "nw_reviews_TapJj9": {
+      "type": "nw-reviews",
+      "blocks": {
+        "item_8GeE9J": {
+          "type": "item",
+          "settings": {
+            "title": "Holding Up Great",
+            "text": "I’ve used my 100 gloves in five match’s so far and they are holding up great. Fit, finish, durability, and grip have been great. \n\nAll the best",
+            "name": "Dr Keith Ingram",
+            "product": "the-hundred-glove-obscure-white"
+          }
+        },
+        "item_6e9tV4": {
+          "type": "item",
+          "settings": {
+            "title": "Amazing Quality",
+            "text": "Amazing quality, my son trains 3-4 times a week on grass and Astro turf at a very high level, very impressive piece of kit, now his go to pair of gloves, ergo cut fits great, was a negative cut glove before! Shall be back buying more.",
+            "name": "Emma Dibb",
+            "product": "sentinel"
+          }
+        },
+        "item_HkADJz": {
+          "type": "item",
+          "settings": {
+            "title": "Son Loved Them",
+            "text": "My son loved them as soon as he caught the first ball,seem very durable  and nice stick palm surface,will be buying again 5 star rating from my son and me",
+            "name": "Mark Binns",
+            "product": "the-hundred-glove"
+          }
+        },
+        "item_wAq6Va": {
+          "type": "item",
+          "settings": {
+            "title": "Better Than Other Brands",
+            "text": "My Son is really impressed with the quality much better than the other brands of gloves he’s had before.\n\nWe will be buying some more when the season starts.",
+            "name": "Serena Pardoe",
+            "product": "the-hundred-glove-obscure-white"
+          }
+        },
+        "item_QbNhbH": {
+          "type": "item",
+          "settings": {
+            "title": "Fit is Sublime",
+            "text": "Being an academy GK the glove has really helped my handling and self belief - the fit is sublime and comfort the best ever",
+            "name": "Philip Wilcock",
+            "product": "the-hundred-glove-obscure-red-white"
+          }
+        }
+      },
+      "block_order": [
+        "item_8GeE9J",
+        "item_6e9tV4",
+        "item_HkADJz",
+        "item_wAq6Va",
+        "item_QbNhbH"
+      ],
+      "settings": {
+        "bgColor": "",
+        "pdTop": 0,
+        "pdBottom": 50,
+        "pdTopMob": 0,
+        "pdBottomMob": 10,
+        "title": "Why Hundreds Of Keepers Love Our Gloves",
+        "text": ""
+      }
+    },
+    "nw_faq_section_gyW86m": {
+      "type": "nw-faq-section",
+      "blocks": {
+        "slide_TTCPQ4": {
+          "type": "slide",
+          "settings": {
+            "title": "Are all of your gloves durable?",
+            "text": ""
+          }
+        },
+        "slide_zQt73D": {
+          "type": "slide",
+          "settings": {
+            "title": "How do you ensure both outstanding grip + durability?",
+            "text": ""
+          }
+        },
+        "slide_p8fiay": {
+          "type": "slide",
+          "settings": {
+            "title": "How long is the risk free guarantee?",
+            "text": ""
+          }
+        },
+        "slide_49FWaj": {
+          "type": "slide",
+          "settings": {
+            "title": "Do all of your gloves fit true to size?",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_TTCPQ4",
+        "slide_zQt73D",
+        "slide_p8fiay",
+        "slide_49FWaj"
+      ],
+      "settings": {
+        "title": "FAQ's"
+      }
+    },
+    "1737747484b3804b1d": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_zP8rmi": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_zP8rmi"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_banner_xDaBYJ",
+    "marquee_sec_MiKAf3",
+    "section_bundle_mz7bpQ",
+    "nw_reviews_TapJj9",
+    "nw_faq_section_gyW86m",
+    "1737747484b3804b1d"
+  ]
+}

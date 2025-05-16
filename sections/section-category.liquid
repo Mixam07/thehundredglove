@@ -1,0 +1,54 @@
+{{ 'section-category.css' | asset_url | stylesheet_tag }}
+
+<div class="category__container page-width">
+    <h1 class="category__title">Shop by category</h1>
+    <div class="category__list">
+        {% for block in section.blocks %}
+            {% if block.type == 'row' %}
+                <a href="{{ block.settings['content-link'] }}" class="category__item">
+                    <img src="{{ block.settings['content-image'] | img_url: 'original' }}" alt="photo">
+                    <h3 class="category__caption">{{ block.settings['content-title'] }}</h3>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "section-category",
+    "tag": "section",
+    "class": "category",
+    "blocks": [
+    {
+        "type": "row",
+        "name": "Category",
+        "settings": 
+            [
+                {
+                    "id": "content-title",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "Title"
+                },
+                {
+                    "id": "content-image",
+                    "type": "image_picker",
+                    "label": "Image"
+                },
+                {
+                    "id": "content-link",
+                    "type": "url",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-category",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

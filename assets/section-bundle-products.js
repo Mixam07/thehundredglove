@@ -111,42 +111,43 @@ document.querySelectorAll("[data-close-icon]").forEach((btn, i) => {
 
 document.querySelectorAll('.add-in-bundle').forEach((button, i) => {
   button.addEventListener('click', (e) => {
-    const productId = button.getAttribute('data-product-id');
-    const productTitle = button.getAttribute('data-product-title');
-    const productImage = button.getAttribute('data-product-image');
-    const variantId = button.getAttribute('data-variant-id');
-    const selectedSize = button.getAttribute('data-selected-size');
-    const productType = button.getAttribute('data-product-type');
-    const personalization = document.querySelectorAll('[data-personalization]')[i].value || null;
-    const quantity = +document.querySelectorAll(".quantity-selector")[i].value;
-    
-    if (!selectedSize)
-      return console.error("Please select a size before adding to the bundle!");
+      const activeSize = document.querySelectorAll(".data-sizes")[i].querySelector(".selected");
+      const productId = button.getAttribute('data-product-id');
+      const productTitle = button.getAttribute('data-product-title');
+      const productImage = button.getAttribute('data-product-image');
+      const variantId = activeSize?.getAttribute("data-variant-id");
+      const selectedSize = activeSize?.innerHTML || null;
+      const productType = button.getAttribute('data-product-type');
+      const personalization = document.querySelectorAll('[data-personalization]')[i].value || null;
+      const quantity = +document.querySelectorAll(".quantity-selector")[i].value;
+      
+      if (!selectedSize)
+        return console.error("Please select a size before adding to the bundle!");
 
-    const productToAdd = {
-      id: productId,
-      title: productTitle,
-      image: productImage,
-      variantId: variantId,
-      size: selectedSize,
-      type: productType,
-      personalization: personalization,
-      quantity: quantity
-    };
+      const productToAdd = {
+        id: productId,
+        title: productTitle,
+        image: productImage,
+        variantId: variantId,
+        size: selectedSize,
+        type: productType,
+        personalization: personalization,
+        quantity: quantity
+      };
 
-    const existingProductIndex = bundle.findIndex(product => product.id === productId && product.size === selectedSize);
-    if (existingProductIndex === -1 && bundle.length < pairs) {
-      bundle.push(productToAdd); // Agregar el producto al bundle
+      const existingProductIndex = bundle.findIndex(product => product.id === productId && product.size === selectedSize);
+      if (existingProductIndex === -1 && bundle.length < pairs) {
+        bundle.push(productToAdd); // Agregar el producto al bundle
 
-      // Actualizar la interfaz
-      updateBundleUI();
-    }
+        // Actualizar la interfaz
+        updateBundleUI();
+      }
 
-    // Cerrar el modal después de agregar el producto
-    const modal = document.querySelector(`#PopupModal-${productId}`);
-    if (modal) {
-      modal.classList.add('hidden');
-    }
+      // Cerrar el modal después de agregar el producto
+      const modal = document.querySelector(`#PopupModal-${productId}`);
+      if (modal) {
+        modal.classList.add('hidden');
+      }
   });
 });
 
@@ -354,10 +355,9 @@ function updateBundleUI() {
   
   bundleProductsContainer.innerHTML = ''; // Limpiar productos existentes
 
-  // Recorrer el array de productos y agregar cada uno al contenedor
   bundle.forEach(product => {
     bundleProductsContainer.innerHTML += `
-      <div class="relative bundle-product_item flex flex-col gap-[12px] mb-[10px]">
+      <div class="gap-[12px] mb-[-10px] relative flex flex-col w-[60px] sm:w-[100px] md:w-full">
         <div class="relative pt-[97.77%] border border-[#B2B2B2] rounded-[6px] bundle_bg before:content-['${i+1}']">
           <img
             alt="${product.title}"
@@ -382,12 +382,12 @@ function updateBundleUI() {
     if (i < pairs) {
       if (i >= bundleProductsContainer.children.length) {
         bundleProductsContainer.innerHTML += `
-            <div class="bundle-product_item flex flex-col gap-[12px] md:pb-[36px]">
+            <div class="gap-[12px] md:pb-[36px] relative flex flex-col w-[60px] sm:w-[100px] md:w-full">
               <div class="relative pt-[97.77%] border border-[#B2B2B2] rounded-[6px] bundle_bg before:content-['${i+1}']"></div>
             </div>`;
       }
     } else {
-      bundleProductsContainer.innerHTML += `<div class="bundle-product_item flex flex-col gap-[12px] md:pb-[36px]"></div>`;
+      bundleProductsContainer.innerHTML += `<div class="gap-[12px] md:pb-[36px] relative flex flex-col w-[60px] sm:w-[100px] md:w-full"></div>`;
     }
   }
 

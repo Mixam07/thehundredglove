@@ -1,0 +1,242 @@
+<style>
+  .pack__item{
+    padding: 30px 0;
+    position: relative;
+    display: flex;
+    column-gap: 25px;
+  }
+
+  .pack__item::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #B9B9B9;
+  }
+
+  .pack__item:first-child::before{
+    display: none;
+  }
+
+  .pack__image{
+    min-width: 150px;
+    height: 150px;
+  }
+
+  .pack__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #D9D9D9;
+  }
+
+  .pack__info{
+    width: 100%;
+  }
+
+  .pack__caption{
+    margin: 0;
+    font-family: "Anton" !important;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+
+  .pack__color{
+    line-height: 14px;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .pack__color span{
+    font-weight: 700;
+  }
+
+  .pack__size{
+    line-height: 14px;
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .pack__size span{
+    font-weight: 700;
+  }
+
+  .pack__wrap{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pack__sizes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .pack__elem{
+    font-family: "Arial" !important;
+    background-color: transparent;
+    padding: 10px;
+    border: .5px solid #B2B2B2;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 12px;
+    transition: .5s all;
+  }
+
+  .pack__elem:disabled{
+    text-decoration: line-through;
+    background-color: rgba(0, 0, 0, .25);
+  }
+
+  .pack__href{
+    line-height: 13px;
+    color: #B2B2B2;
+    font-size: 12px;
+  }
+
+  .pack__elem.active{
+    background-color: #D75555;
+    border-color: #D75555;
+    color: #fff;
+  }
+
+  .product-popup-modal__opener{
+    display: none;
+  }
+
+  @media (max-width: 992px) {
+    .pack__item{
+        column-gap: 20px;
+        padding: 20px 0;
+    }
+
+    .pack__image{
+        min-width: 125px;
+        height: 125px;
+    }
+
+    .pack__elem{
+        font-size: 10px;
+    }
+
+    .pack__href{
+        font-size: 10px;
+    }
+  }
+
+  @media (max-width: 762px) {
+    .pack__color,
+    .pack__size{
+        font-size: 12px;
+    }
+
+    .pack__elem{
+        padding: 8px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .pack__item{
+        column-gap: 15px;
+        padding: 15px 0;
+    }
+
+    .pack__image{
+        min-width: 100px;
+        height: 100px;
+    }
+
+    .pack__caption{
+        font-size: 18px;
+    }
+
+    .pack__elem{
+        font-size: 8px;
+    }
+
+    .pack__href{
+        font-size: 8px;
+    }
+  }
+</style>
+
+{% if product.options.size > 1 %}
+  <div class="pack__list">
+    {% for option in product.options %}
+        {% assign product_title = option | replace: " -", "" | split: " (" | first %}
+        {% assign product_handle = product_title | downcase | replace: " ", "-" %}
+        {% assign product_option = all_products[product_handle] %}
+        <div class="pack__item">
+          <input class="product-variant-id" type="text" name="id" value="" />
+            <div class="pack__image">
+                <img src="{{ product_option.images.first | img_url: 'master' }}" alt="photo">
+            </div>
+            <div class="pack__info">
+                <p class="pack__caption">{{ product_option.title }}</p>
+                <p class="pack__color">Color: <span>Black</span></p>
+                <div class="pack__wrap">
+                    <p class="pack__size">Size: <span></span></p>
+                    <a href="#" class="pack__href">SIZE GUIDE</a>
+                </div>
+                <div data-sizes class="pack__sizes">
+                    {% for variant in product_option.variants %}
+                        <button data-price="{{ value.price | money }}" data-id="{{ variant.id }}" {% if variant.available == false %}disabled{% endif %} class="pack__elem">{{ variant.title  }}</button>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <variant-radios id="variant-radios-template--{{ product.id }}__main" class="no-js-hidden" data-section="template--{{ product.id }}__main" data-url="/products/vanguard-black-yellow">
+    <fieldset class="js product-form__input">
+      <legend class="form__label">Size: <span></span> </legend>
+
+      <input style="display: none;" class="product-variant-id" type="text" name="id" value="" />
+            
+      <div data-sizes>
+        {% for variant in product.variants %}
+          <input type="radio" id="template--{{ variant.id }}__main-1-0" name="Size" value="{{ variant.id }}" form="product-form-template--{{ variant.id }}__main" {% unless variant.available %}class="disabled"{% endunless %} >
+          <label class="label" data-id="{{ variant.id }}" for="template--{{ variant.id }}__main-1-0">
+            {{ variant.title }}<span class="visually-hidden">Variant sold out or unavailable</span>
+          </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+  </variant-radios>
+{% endif %}
+
+<script>
+  document.querySelectorAll("fieldset.product-form__input, [data-sizes]").forEach((wrapper, i) => {
+    wrapper.addEventListener("click", (e) => {
+      if (e.target.classList.contains("pack__elem") || e.target.classList.contains("label")) {
+        const variant = e.target.getAttribute("data-id");
+
+        wrapper.querySelectorAll(".pack__elem").forEach(item => {
+          item.classList.remove("active");
+        });
+
+        e.target.classList.add("active");
+
+        document.querySelectorAll(".product-variant-id")[i].value = variant
+      }
+    });
+  });
+
+  document.querySelectorAll(".pack__href").forEach(href => {
+    href.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.querySelector(".product-popup-modal__opener button").click()
+    });
+  });
+</script>

@@ -199,7 +199,7 @@ body.product-kaching-black-glove
   input[type="radio"]
   + label,
 body .product-form__input input[type="radio"] + label {
-  width: 67px;
+  min-width: 67px;
   height: 44px;
   padding: 5px;
   display: inline-flex;
@@ -350,7 +350,7 @@ klarna-placement .container {
     input[type="radio"]
     + label,
   body .product-form__input input[type="radio"] + label {
-    width: 36px;
+    min-width: 36px;
     height: 32px;
     padding: 5px !important;
   }
@@ -915,9 +915,6 @@ a.product__text {
 
   .product:not(.product--columns)
     .product__media-list
-    .product__media-item:first-child,
-  .product:not(.product--columns)
-    .product__media-list
     .product__media-item--full {
     width: 100%;
     max-width: 100%;
@@ -1170,14 +1167,12 @@ a.product__text {
   border-radius: var(--popup-corner-radius);
   background-color: rgb(var(--color-background));
   overflow: auto;
-  height: 80%;
   margin: 0 auto;
   left: 50%;
-  transform: translateX(-50%);
-  margin-top: 5rem;
+  transform: translate(-50%, -50%);
   width: 92%;
   position: absolute;
-  top: 0;
+  top: 50%;
   padding: 0 1.5rem 0 3rem;
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
   border-style: solid;
@@ -1206,9 +1201,8 @@ a.product__text {
 @media screen and (min-width: 750px) {
   .product-popup-modal__content {
     padding-right: 1.5rem;
-    margin-top: 10rem;
     width: 70%;
-    padding: 0 3rem;
+    padding: 0 3rem 3rem 3rem;
   }
 
   .product-media-modal__dialog .global-media-settings--no-shadow {
@@ -2144,12 +2138,12 @@ li.product-item {
   }
 
   .product__info-wrapper .product__title h1 {
-    font-size: 24px !important;
-    line-height: 28px !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
   }
 
   div.price--large {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 32px;
   }

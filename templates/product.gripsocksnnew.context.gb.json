@@ -1,0 +1,98 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.gripsocksnnew.json",
+  "context": {
+    "market": "gb"
+  },
+  "sections": {
+    "f4f14b8d-6bd4-4443-9261-276ff4a523a5": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "ff62d68c-ec6a-433f-9cc4-02e662559940": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {
+        "642ccf53-261f-4299-958a-50207a39bba8": {
+          "settings": {
+            "image": "shopify://shop_images/CopyofUntitledDesign_1_d9e5d0fb-1127-4704-8070-e6a15185a1fa.png",
+            "title": "Lightweight & Breathable",
+            "text": "Built for keepers who move. These socks keep your feet cool and comfortable during long sessions - without compromising grip or feel."
+          }
+        },
+        "a0fd88f1-83f6-41fd-9252-e522c0a1e0d2": {
+          "settings": {
+            "image": "shopify://shop_images/CopyofUntitledDesign_2_-min.png",
+            "title": "LOCKED IN GRIP",
+            "text": "The anti-slip sole keeps your foot locked in place - reducing in-boot movement so you can stay sharp, explosive, and in full control."
+          }
+        },
+        "d5bc2f41-7645-4ed0-91e8-d59eacafd5a3": {
+          "settings": {
+            "image": "shopify://shop_images/CopyofUntitledDesign_3_-min.png",
+            "title": "BUILT FOR KEEPERS",
+            "text": "Engineered specifically for goalkeepers, with targeted grip and snug fit in both adult and junior sizes to match the demands of your position."
+          }
+        }
+      }
+    },
+    "466888da-5c94-4d94-aeef-1ac40866f37f": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "main": {
+      "settings": {},
+      "blocks": {
+        "icon_with_text_9gBUiy": {
+          "settings": {
+            "heading_1": "Grip That Won't Slip",
+            "heading_2": "Made For Keepers",
+            "heading_3": "Lightweight & Breathable"
+          }
+        }
+      }
+    },
+    "29656bfb-4786-4e29-a573-c96116ceabcf": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "5a36a3bf-fac9-45ec-a438-65763b169e21": {
+      "settings": {},
+      "blocks": {
+        "299dd84c-93bb-4ba5-bbe1-473b5b979693": {
+          "settings": {
+            "title": "What sizes are available?",
+            "text": "We offer two options — Junior (Age 7–12) and Adult (UK6–UK11) for the perfect fit on and off the pitch."
+          }
+        },
+        "c2b6c3b7-2bb2-41de-8a40-4f4193670446": {
+          "settings": {
+            "text": "Machine wash cold with similar colours. Avoid tumble drying to maintain performance grip."
+          }
+        },
+        "2149961b-85f9-4f8e-b80f-8393e9468619": {
+          "settings": {
+            "title": "Do they help with blisters or slipping?",
+            "text": "Yes — the grip tech helps prevent slipping in your boots, which can reduce friction and help prevent blisters."
+          }
+        },
+        "8be22145-6e9b-47c4-a45a-82d73aca025c": {
+          "settings": {
+            "text": "Yes - every order includes a left and right sock (1 pair)."
+          }
+        }
+      }
+    }
+  }
+}

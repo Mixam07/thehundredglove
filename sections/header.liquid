@@ -95,7 +95,8 @@
 </style>
 
 {%- style -%}
-  .header {
+  .header__icons,
+  .header__heading {
     padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
@@ -112,7 +113,8 @@
   }
 
   @media screen and (min-width: 990px) {
-    .header {
+    .header__icons,
+    .header__heading {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
@@ -167,6 +169,283 @@
       assign localization_forms = true
     endif
   -%}
+
+  <div class="header-menu">
+    <div class="page-width">
+      <div class="header-menu__wrapper">
+        {% for link in section.settings.menu.links %}
+          {% if forloop.index == 1 %}
+            <div data-tab class="header-menu__href">
+              <p class="header-menu__text">{{ link.title | escape }}</p>
+              <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 9L9.5 1L1 9" stroke="#3A3A3A" stroke-width="0.986842" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="header-menu__content">
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  Gloves
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="/collections/gloves" class="header-menu__caption">All Goalkeeper Gloves</a>
+                    <a href="/collections/all-goalkeeper-gloves" class="header-menu__caption">Adult Goalkeeper Gloves</a>
+                    <a href="/collections/junior-gloves" class="header-menu__caption">Junior Goalkeeper Gloves</a>
+                  </div>
+                  <div class="header-menu__element">
+                    <div class="header-menu__wrap">
+                      <h4 class="header-menu__headline">By Type</h4>
+                      <div class="header-menu__items">
+                        <a href="/collections/negative-cut" class="header-menu__item">Negative Cut</a>
+                        <a href="/collections/hybrid-cut" class="header-menu__item">Hybrid Cut</a>
+                        <a href="/collections/finger-protection" class="header-menu__item">Finger Protection</a>
+                      </div>
+                    </div>
+                    <div class="header-menu__wrap">
+                      <h4 class="header-menu__headline">By Surface</h4>
+                      <div class="header-menu__items">
+                        <a href="#" class="header-menu__item">All Surfaces</a>
+                        <a href="#" class="header-menu__item">Astro/4G</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  CLOTHING
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="/collections/clothings" class="header-menu__caption">Shop All Clothing</a>
+                    <a href="/collections/adult-clothing" class="header-menu__caption">Adult Clothing</a>
+                    <a href="/collections/junior-clothin" class="header-menu__caption">Junior Clothing</a>
+                  </div>
+                  <div class="header-menu__element">
+                    <div class="header-menu__wrap">
+                      <h4 class="header-menu__headline">By Product</h4>
+                      <div class="header-menu__items">
+                        <a href="#" class="header-menu__item">Shorts</a>
+                        <a href="#" class="header-menu__item">Top</a>
+                        <a href="#" class="header-menu__item">Trousers</a>
+                        <a href="#" class="header-menu__item">1/4 Zip</a>
+                      </div>
+                    </div>
+                    <div class="header-menu__wrap">
+                      <h4 class="header-menu__headline">By Type</h4>
+                      <div class="header-menu__items">
+                        <a href="#" class="header-menu__item">Padded</a>
+                        <a href="#" class="header-menu__item">Unpadded</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  ACCESSORIES
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="/collections/accessories" class="header-menu__caption">Shop All Accessories</a>
+                  </div>
+                  <h4 class="header-menu__headline">By Product</h4>
+                  <div class="header-menu__items">
+                    <a href="/products/mini-shin-pads" class="header-menu__item">Shin Pads</a>
+                    <a href="/collections/finger-tape" class="header-menu__item">Finger Protect Tape</a>
+                    <a href="/products/goalkeeper-cap-black-white" class="header-menu__item">Goalkeeper Cap</a>
+                    <a href="/products/grip-socks" class="header-menu__item">Grip Socks</a>
+                    <a href="/products/water-bottle" class="header-menu__item">Water Bottle</a>
+                    <a href="/products/glove-wallet" class="header-menu__item">Glove Wallet</a>
+                    <a href="/products/gripcharge" class="header-menu__item">Grip Charge</a>
+                    <a href="/products/glove-towel" class="header-menu__item">Glove Towel</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  BUNDLES
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="/collections/bundle" class="header-menu__caption">Shop All Bundles</a>
+                  </div>
+                  <h4 class="header-menu__headline">By Product</h4>
+                  <div class="header-menu__items">
+                    <a href="/products/core-skin-combo-bundle" class="header-menu__item">Core Skin - Combo Bundle</a>
+                    <a href="/pages/academy-pack" class="header-menu__item">Academy Pack</a>
+                    <a href="/apps/bundles/bundle/146719" class="header-menu__item">2x Pro Glove Bundle</a>
+                    <a href="/apps/bundles/bundle/153564" class="header-menu__item">3x Pro Glove Bundle</a>
+                    <a href="/products/match-day-add-on-kit" class="header-menu__item">Match Day Add-On Kit</a>
+                    <a href="/products/full-protection-kit" class="header-menu__item">Full Protection Kit</a>
+                    <a href="/products/3-padded-items" class="header-menu__item">3 padded items</a>
+                    <a href="/products/3-core-skin-items" class="header-menu__item">3 Core Skin items</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% elsif forloop.index == 2 %}
+            <div data-tab class="header-menu__href other">
+              <p class="header-menu__text">{{ link.title | escape }}</p>
+              <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 9L9.5 1L1 9" stroke="#3A3A3A" stroke-width="0.986842" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="header-menu__content other">
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  HELP ME CHOOSE
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="#" class="header-menu__caption">Glove Finder Quiz</a>
+                    <a href="#" class="header-menu__caption">Which Cut Should I Choose?</a>
+                    <a href="#" class="header-menu__caption">Glove Size Guide</a>
+                    <a href="#" class="header-menu__caption">Best Gloves for Training</a>
+                    <a href="#" class="header-menu__caption">Best Gloves for Matches</a>
+                    <a href="#" class="header-menu__caption">Best Gloves for Turf</a>
+                    <a href="#" class="header-menu__caption">Best Gloves for Wet Weather</a>
+                    <a href="#" class="header-menu__caption">Parent Zone</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  CARE & MAINTENANCE
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="#" class="header-menu__caption">Washing Instructions</a>
+                    <a href="#" class="header-menu__caption">Latex Types & Grip Guide</a>
+                    <a href="#" class="header-menu__caption">How to Remove Palm Plastic</a>
+                    <a href="#" class="header-menu__caption">How to Extend Glove Lifespan</a>
+                    <a href="#" class="header-menu__caption">Wet Weather Tips</a>
+                    <a href="#" class="header-menu__caption">Turf Surface Tips</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  GET HELP
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="#" class="header-menu__caption">Contact Support</a>
+                    <a href="#" class="header-menu__caption">Make a Return</a>
+                    <a href="#" class="header-menu__caption">FAQ Hub</a>
+                    <a href="#" class="header-menu__caption">Restock Notifications</a>
+                    <a href="#" class="header-menu__caption">10-Game Guarantee</a>
+                    <a href="#" class="header-menu__caption">Contact Support</a>
+                    <a href="#" class="header-menu__caption">Is This Normal Glove Wear?</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  EXTRAS
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="#" class="header-menu__caption">Glove Personalisation</a>
+                    <a href="#" class="header-menu__caption">Gift Cards</a>
+                    <a href="#" class="header-menu__caption">Wholesale & Academy Enquiries</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% elsif forloop.index == 3 %}
+            <div data-tab class="header-menu__href">
+              <p class="header-menu__text">{{ link.title | escape }}</p>
+              <svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 9L9.5 1L1 9" stroke="#3A3A3A" stroke-width="0.986842" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="header-menu__content other">
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  ABOUT US
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="#" class="header-menu__caption">Our Story</a>
+                    <a href="#" class="header-menu__caption">What Makes Us Different</a>
+                    <a href="#" class="header-menu__caption">The Hundred Club</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  BLOG
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="#" class="header-menu__caption">Glove Guides</a>
+                    <a href="#" class="header-menu__caption">Keeper Tips & Training</a>
+                    <a href="#" class="header-menu__caption">Product Updates</a>
+                    <a href="#" class="header-menu__caption">View All Posts</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  PARENT ZONE
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="#" class="header-menu__caption">Buying Gloves for Your Child</a>
+                    <a href="#" class="header-menu__caption">Glove Size Help for Kids</a>
+                    <a href="#" class="header-menu__caption">FAQs for First-Time GK Parents</a>
+                    <a href="#" class="header-menu__caption">How to Make Gloves Last Longer</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-menu__elem">
+                <h3 class="header-menu__title">
+                  SOCIAL MEDIA
+                  <span class="plus">+</span>
+                  <span class="minus">-</span>
+                </h3>
+                <div class="header-menu__block">
+                  <div class="header-menu__list">
+                    <a href="https://www.instagram.com/thehundredglove/" class="header-menu__caption">Instagram</a>
+                    <a href="https://www.tiktok.com/@thehundredglove" class="header-menu__caption">TikTok</a>
+                    <a href="https://www.youtube.com/@thehundredglove3485/featured" class="header-menu__caption">YouTube</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% else %}
+            <a href="{{ link.url }}" class="header-menu__href">
+              <p class="header-menu__text">{{ link.title | escape }}</p>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
       if section.settings.menu != blank
@@ -367,6 +646,330 @@
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 <style>
+  .header-menu{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0;
+    z-index: -1;
+    width: 100%;
+    transition: .5s all;
+  }
+
+  .header-menu:hover{
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  
+  .header-menu.active{
+    transform: translateY(100%);
+    opacity: 1;
+  }
+
+  .header-menu__wrapper{
+    padding: 30px 0;
+  }
+
+  .header-menu__content{
+    justify-content: space-between;
+  }
+
+  .header-menu__title{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    font-family: "Arial" !important;
+    margin-bottom: 15px;
+  }
+
+  .header-menu__caption{
+    display: block;
+    margin: 0;
+    font-weight: 700;
+    font-style: italic;
+    color: #404040;
+    text-decoration: none;
+    transition: .5s all;
+  }
+
+  .header-menu__caption:hover{
+    color: #000;
+  }
+
+  .header-menu__list{
+    margin-bottom: 20px;
+  }
+
+  .header-menu__headline{
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
+    color: #404040;
+    margin: 0;
+    font-family: "Arial" !important;
+  }
+
+  .header-menu__element{
+    column-gap: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-menu__item{
+    display: block;
+    font-size: 14px;
+    color: #8D8D8D;
+    text-decoration: none;
+    transition: .5s all;
+  }
+
+  .header-menu__item:hover{
+    color: #000;
+  }
+
+  .header__menu-item:first-child span{
+    text-decoration: none !important;
+  }
+
+  .header-menu__href{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .header-menu__href svg{
+    transition: .5s all;
+  }
+
+  .header-menu__href.active svg{
+    transform: rotate(180deg);
+  }
+
+  .header-menu__text{
+    margin: 0;
+  }
+
+  .header-menu__href:before{
+    content: "";
+    position: absolute;
+    background-color: #B4B4B4;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .header-menu__title span{
+    display: none;
+  }
+
+  .header-menu__content{
+    display: none;
+  }
+
+  .header-menu__content.active{
+    display: flex;
+  }
+
+  .other .header-menu__caption{
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .header-menu__caption,
+  .header-menu__headline,
+  .header-menu__item{
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 750px) {
+    .header-menu__item{
+      margin-bottom: 8px;
+    }
+
+    .header-menu{
+      height: 100vh;
+    }
+
+    .header-menu__content{
+      padding-left: 5px;
+    }
+
+    .header-menu__element{
+      column-gap: 65px;
+      justify-content: flex-start;
+    }
+
+    .header-menu{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      transform: translateX(-100%);
+      overflow: auto;
+      padding-top: 75px;
+    }
+
+    .header-menu.active ~ .header{
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .header-menu.active{
+      opacity: 1;
+      transform: none;
+    }
+
+    .header-menu__content{
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+    }
+
+    .header-menu__content:before{
+      content: "";
+      position: absolute;
+      background-color: #B4B4B4;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+    }
+
+    .header-menu__content.active{
+      display: block;
+    }
+
+    .header-menu__href{
+      display: flex;
+    }
+
+    .header-menu__wrapper{
+      padding: 30px 15px;
+    }
+
+    .header-menu__title.active .minus{
+      display: block;
+    }
+
+    .header-menu__title.active .plus{
+      display: none;
+    }
+
+    .header-menu__title .plus{
+      display: block;
+    }
+
+    .header-menu__title{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-menu__caption{
+      font-weight: 400;
+    }
+
+    .header-menu__elem{
+      margin-bottom: 45px;
+    }
+
+    .header-menu__elem:last-child{
+      margin: 0;
+    }
+
+    .header-menu__block{
+      display: none;
+    }
+
+    .header-menu__title.active ~ .header-menu__block{
+      display: block;
+    }
+
+    .header-menu__title{
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .header-menu__block{
+      margin-top: 20px;
+    }
+
+    .header-menu__text,
+    .header-menu__caption{
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script>
+  const contents = document.querySelectorAll(".header-menu__content");
+  const menu = document.querySelector(".header-menu");
+
+  document.querySelectorAll(".header__menu-item").forEach((nav, i) => {
+    nav.addEventListener('mouseenter', () => {
+      document.querySelector('.header-menu').classList.add('active');
+
+      contents.forEach(item => {
+        item.classList.remove("active");
+      });
+
+      contents[i].classList.add("active");
+    });
+
+    nav.addEventListener('mouseleave', () => {
+      document.querySelector('.header-menu').classList.remove('active');
+    });
+  });
+
+  document.querySelector(".button-menu").addEventListener("click", (e) => {
+    document.querySelector(".header-menu").classList.toggle("active");
+  });
+
+  document.addEventListener("click", (e) => {
+    if(!e.target.closest(".header-wrapper")) {
+      document.querySelector(".header-menu").classList.remove("active");
+    }
+  });
+
+  document.querySelectorAll("[data-tab]").forEach((elem, i) => {
+    elem.addEventListener("click", (e) => {
+      elem.classList.toggle("active");
+      document.querySelectorAll(".header-menu__content")[i].classList.toggle("active");
+    });
+  });
+
+  document.querySelectorAll(".header-menu__title").forEach(item => {
+    item.addEventListener("click", (e) => {
+      item.classList.toggle("active");
+    });
+  });
+
+  function toggleActiveByWidth() {
+    if (window.innerWidth < 750) {
+      contents.forEach(el => el.classList.add('active'));
+      document.querySelectorAll(".header-menu__title").forEach(el => el.classList.add('active'));
+    } else {
+      contents.forEach(el => el.classList.remove('active'));
+      document.querySelectorAll(".header-menu__title").forEach(el => el.classList.remove('active'));
+    }
+  }
+
+  toggleActiveByWidth();
+
+  window.addEventListener('resize', toggleActiveByWidth);
+</script>
+
+<style>
     .button-menu{
       padding: 0;
       border: 0;
@@ -546,6 +1149,13 @@
     firstScript.parentNode.insertBefore(script, firstScript);
   })();
 </script>
+
+
+
+
+
+
+
   
 {% schema %}
 {

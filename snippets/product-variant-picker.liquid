@@ -9,6 +9,173 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+<style>
+  .pack__item{
+    padding: 30px 0;
+    position: relative;
+    display: flex;
+    column-gap: 25px;
+  }
+
+  .pack__item::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #B9B9B9;
+  }
+
+  .pack__item:first-child::before{
+    display: none;
+  }
+
+  .pack__image{
+    min-width: 150px;
+    height: 150px;
+  }
+
+  .pack__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #D9D9D9;
+  }
+
+  .pack__info{
+    width: 100%;
+  }
+
+  .pack__caption{
+    margin: 0;
+    font-family: "Anton" !important;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+
+  .pack__color{
+    line-height: 14px;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .pack__color span{
+    font-weight: 700;
+  }
+
+  .pack__size{
+    line-height: 14px;
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .pack__size span{
+    font-weight: 700;
+  }
+
+  .pack__wrap{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .pack__sizes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .pack__elem{
+    font-family: "Arial" !important;
+    background-color: transparent;
+    padding: 10px;
+    border: .5px solid #B2B2B2;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 12px;
+    transition: .5s all;
+  }
+
+  .pack__elem:disabled{
+    text-decoration: line-through;
+    background-color: rgba(0, 0, 0, .25);
+  }
+
+  .pack__href{
+    line-height: 13px;
+    color: #B2B2B2;
+    font-size: 12px;
+  }
+
+  .pack__elem.active{
+    background-color: #D75555;
+    border-color: #D75555;
+    color: #fff;
+  }
+
+  @media (max-width: 992px) {
+    .pack__item{
+        column-gap: 20px;
+        padding: 20px 0;
+    }
+
+    .pack__image{
+        min-width: 125px;
+        height: 125px;
+    }
+
+    .pack__elem{
+        font-size: 10px;
+    }
+
+    .pack__href{
+        font-size: 10px;
+    }
+  }
+
+  @media (max-width: 762px) {
+    .pack__color,
+    .pack__size{
+        font-size: 12px;
+    }
+
+    .pack__elem{
+        padding: 8px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .pack__item{
+        column-gap: 15px;
+        padding: 15px 0;
+    }
+
+    .pack__image{
+        min-width: 100px;
+        height: 100px;
+    }
+
+    .pack__caption{
+        font-size: 18px;
+    }
+
+    .pack__elem{
+        font-size: 8px;
+    }
+
+    .pack__href{
+        font-size: 8px;
+    }
+  }
+</style>
+
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
     <variant-radios
@@ -22,7 +189,7 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <fieldset class="js product-form__input">
+        <fieldset data-sizes class="js product-form__input">
           <legend class="form__label">{{ option.name }}: <span>{{ product.selected_or_first_available_variant.title }}</span> </legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
@@ -120,3 +287,32 @@
     </div>
   </div>
 </noscript>
+
+<script>
+  document.querySelectorAll("[data-sizes]").forEach((wrapper, i) => {
+    wrapper.addEventListener("click", (e) => {
+      if (e.target.classList.contains("pack__elem") || e.target.classList.contains("label")) {
+        const variant = e.target.getAttribute("data-id");
+        const price = e.target.getAttribute("data-price");
+
+        document.querySelector(".price-item").innerHTML = price;
+        
+        wrapper.querySelectorAll(".pack__elem").forEach(item => {
+          item.classList.remove("active");
+        });
+
+        e.target.classList.add("active");
+
+        document.querySelectorAll(".product-variant-id")[i].value = variant
+      }
+    });
+  });
+
+  document.querySelectorAll(".pack__href").forEach(href => {
+    href.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.querySelector(".product-popup-modal__opener button").click()
+    });
+  });
+</script>

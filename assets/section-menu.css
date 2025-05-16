@@ -318,7 +318,7 @@
 
 .section-popup__bundles-title{
     margin: 0;
-    font-family: "Anton";
+    font-family: "Anton" !important;
     font-size: 20px;
     color: #B2B2B2;
     margin-bottom: 25px;

@@ -68,35 +68,30 @@
        
        </div>
      
-     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      {% render 'product-media-gallery', variant_images: variant_images %}
-
-       <div class="desktopTabs">
-         {% for block in section.blocks %}
-          {%- case block.type -%}
-           {%- when 'collapsible_tab' -%}
-                
-            <div class="product__accordion  accordion quick-add-hidden" {{ block.shopify_attributes }}>
-              <details id="Details-{{ block.id }}-{{ section.id }}">
-                <summary>
-                  <div class="summary__title">
-                    
-                    {% render 'icon-accordion', icon: block.settings.icon %}
-                    <h2 class="h4 accordion__title inline-richtext">
-                      {{ block.settings.heading | default: block.settings.page.title }}
-                    </h2>
+    <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+      {% render 'product-media-gallery', variant_images: variant_images  %}
+      {% if section.settings.desktopTabs %}
+        <div class="desktop-tabs desc">
+          <div class="desktop-tabs__wrapper">
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+              {%- when 'collapsible_tab' -%}
+  
+                <div class="desktop-tabs__item">
+                  {{ block.settings.heading | default: block.settings.page.title }}
+                  <div data-content>
+                    {{ block.settings.content }}
+                    {{ block.settings.page.content }}
                   </div>
-                  {% render 'icon-caret' %}
-                </summary>
-                <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                  {{ block.settings.content }}
-                  {{ block.settings.page.content }}
                 </div>
-              </details>
-            </div>
-          {% endcase %}
-         {% endfor %}
-       </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+          <div class="desktop-tabs__content">
+            <div></div>
+          </div>
+        </div>
+      {% endif %}
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <product-info
@@ -121,38 +116,30 @@
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
                 <h1>{{ product.title | escape }}</h1>
-                <a href="{{ product.url }}" class="product__title">
-                  <h2 class="h1">
-                    {{ product.title | escape }}
-                  </h2>
-                </a>
-              </div>
-            {%- when 'price' -%}
-              <div class="no-js-hidden " id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                {%- render 'price',
-                  product: product,
-                  use_variant: true,
-                  show_badges: true,
-                  price_class: 'price--large'
-                -%}
-              </div>
-           
-              {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                <div class="product__tax caption rte">
-                  {%- if cart.taxes_included -%}
-                    {{ 'products.product.include_taxes' | t }}
-                  {%- endif -%}
-                  {%- if shop.shipping_policy.body != blank -%}
-                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                  {%- endif -%}
+                <div class="no-js-hidden " id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                  {%- render 'price',
+                    product: product,
+                    use_variant: true,
+                    show_badges: true,
+                    price_class: 'price--large'
+                  -%}
                 </div>
-              {%- endif -%}
-              <div {{ block.shopify_attributes }}>
-                {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            
+                {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+                  <div class="product__tax caption rte">
+                    {%- if cart.taxes_included -%}
+                      {{ 'products.product.include_taxes' | t }}
+                    {%- endif -%}
+                    {%- if shop.shipping_policy.body != blank -%}
+                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+                <div {{ block.shopify_attributes }}>
+                  {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+                  <input data-varianfirstid type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                   {{ form | payment_terms }}
-                {%- endform -%}
+                </div>
               </div>
             {%- when 'inventory' -%}
               <p
@@ -255,164 +242,162 @@
         
                 // Update the shipping date in the HTML
                 document.getElementById('shipping-date').textContent = formattedDate;
-            });
-              
-            // A mapping of country codes to flag emojis
-            const countryFlags = {
-              'US': 'https://flagpedia.net/data/flags/h80/us.png',
-              'CA': 'https://flagpedia.net/data/flags/h80/ca.png',
-              'FR': 'https://flagpedia.net/data/flags/h80/fr.png',
-              'NL': 'https://flagpedia.net/data/flags/h80/nl.png',
-              'DE': 'https://flagpedia.net/data/flags/h80/de.png',
-              'GB': 'https://flagpedia.net/data/flags/h80/gb.png',
-              'IT': 'https://flagpedia.net/data/flags/h80/it.png',
-              'ES': 'https://flagpedia.net/data/flags/h80/es.png',
-              'CN': 'https://flagpedia.net/data/flags/h80/cn.png',
-              'JP': 'https://flagpedia.net/data/flags/h80/jp.png',
-              'BR': 'https://flagpedia.net/data/flags/h80/br.png',
-              'IN': 'https://flagpedia.net/data/flags/h80/in.png',
-              'RU': 'https://flagpedia.net/data/flags/h80/ru.png',
-              'ZA': 'https://flagpedia.net/data/flags/h80/za.png',
-              'AU': 'https://flagpedia.net/data/flags/h80/au.png',
-              'NZ': 'https://flagpedia.net/data/flags/h80/nz.png',
-              'MX': 'https://flagpedia.net/data/flags/h80/mx.png',
-              'AR': 'https://flagpedia.net/data/flags/h80/ar.png',
-              'CL': 'https://flagpedia.net/data/flags/h80/cl.png',
-              'CO': 'https://flagpedia.net/data/flags/h80/co.png',
-              'PE': 'https://flagpedia.net/data/flags/h80/pe.png',
-              'VE': 'https://flagpedia.net/data/flags/h80/ve.png',
-              'EC': 'https://flagpedia.net/data/flags/h80/ec.png',
-              'GT': 'https://flagpedia.net/data/flags/h80/gt.png',
-              'HN': 'https://flagpedia.net/data/flags/h80/hn.png',
-              'SA': 'https://flagpedia.net/data/flags/h80/sa.png',
-              'AE': 'https://flagpedia.net/data/flags/h80/ae.png',
-              'TR': 'https://flagpedia.net/data/flags/h80/tr.png',
-              'TH': 'https://flagpedia.net/data/flags/h80/th.png',
-              'MY': 'https://flagpedia.net/data/flags/h80/my.png',
-              'SG': 'https://flagpedia.net/data/flags/h80/sg.png',
-              'ID': 'https://flagpedia.net/data/flags/h80/id.png',
-              'PH': 'https://flagpedia.net/data/flags/h80/ph.png',
-              'VN': 'https://flagpedia.net/data/flags/h80/vn.png',
-              'KR': 'https://flagpedia.net/data/flags/h80/kr.png',
-              'KP': 'https://flagpedia.net/data/flags/h80/kp.png',
-              'SE': 'https://flagpedia.net/data/flags/h80/se.png',
-              'NO': 'https://flagpedia.net/data/flags/h80/no.png',
-              'FI': 'https://flagpedia.net/data/flags/h80/fi.png',
-              'DK': 'https://flagpedia.net/data/flags/h80/dk.png',
-              'IS': 'https://flagpedia.net/data/flags/h80/is.png',
-              'IE': 'https://flagpedia.net/data/flags/h80/ie.png',
-              'CH': 'https://flagpedia.net/data/flags/h80/ch.png',
-              'PT': 'https://flagpedia.net/data/flags/h80/pt.png',
-              'BE': 'https://flagpedia.net/data/flags/h80/be.png',
-              'LU': 'https://flagpedia.net/data/flags/h80/lu.png',
-              'PL': 'https://flagpedia.net/data/flags/h80/pl.png',
-              'CZ': 'https://flagpedia.net/data/flags/h80/cz.png',
-              'SK': 'https://flagpedia.net/data/flags/h80/sk.png',
-              'HU': 'https://flagpedia.net/data/flags/h80/hu.png',
-              'AT': 'https://flagpedia.net/data/flags/h80/at.png',
-              'LI': 'https://flagpedia.net/data/flags/h80/li.png',
-              'GR': 'https://flagpedia.net/data/flags/h80/gr.png',
-              'BG': 'https://flagpedia.net/data/flags/h80/bg.png',
-              'RO': 'https://flagpedia.net/data/flags/h80/ro.png',
-              'UA': 'https://flagpedia.net/data/flags/h80/ua.png',
-              'BY': 'https://flagpedia.net/data/flags/h80/by.png',
-              'LT': 'https://flagpedia.net/data/flags/h80/lt.png',
-              'LV': 'https://flagpedia.net/data/flags/h80/lv.png',
-              'EE': 'https://flagpedia.net/data/flags/h80/ee.png',
-              'MD': 'https://flagpedia.net/data/flags/h80/md.png',
-              'AM': 'https://flagpedia.net/data/flags/h80/am.png',
-              'GE': 'https://flagpedia.net/data/flags/h80/ge.png',
-              'AZ': 'https://flagpedia.net/data/flags/h80/az.png',
-              'IR': 'https://flagpedia.net/data/flags/h80/ir.png',
-              'IQ': 'https://flagpedia.net/data/flags/h80/iq.png',
-              'SY': 'https://flagpedia.net/data/flags/h80/sy.png',
-              'LB': 'https://flagpedia.net/data/flags/h80/lb.png',
-              'JO': 'https://flagpedia.net/data/flags/h80/jo.png',
-              'IL': 'https://flagpedia.net/data/flags/h80/il.png',
-              'EG': 'https://flagpedia.net/data/flags/h80/eg.png',
-              'MA': 'https://flagpedia.net/data/flags/h80/ma.png',
-              'DZ': 'https://flagpedia.net/data/flags/h80/dz.png',
-              'TN': 'https://flagpedia.net/data/flags/h80/tn.png',
-              'LY': 'https://flagpedia.net/data/flags/h80/ly.png',
-              'GM': 'https://flagpedia.net/data/flags/h80/gm.png',
-              'SN': 'https://flagpedia.net/data/flags/h80/sn.png',
-              'MR': 'https://flagpedia.net/data/flags/h80/mr.png',
-              'ML': 'https://flagpedia.net/data/flags/h80/ml.png',
-              'GN': 'https://flagpedia.net/data/flags/h80/gn.png',
-              'CI': 'https://flagpedia.net/data/flags/h80/ci.png',
-              'BF': 'https://flagpedia.net/data/flags/h80/bf.png',
-              'NE': 'https://flagpedia.net/data/flags/h80/ne.png',
-              'TG': 'https://flagpedia.net/data/flags/h80/tg.png',
-              'BJ': 'https://flagpedia.net/data/flags/h80/bj.png',
-              'NG': 'https://flagpedia.net/data/flags/h80/ng.png',
-              'CM': 'https://flagpedia.net/data/flags/h80/cm.png',
-              'GA': 'https://flagpedia.net/data/flags/h80/ga.png',
-              'CG': 'https://flagpedia.net/data/flags/h80/cg.png',
-              'CD': 'https://flagpedia.net/data/flags/h80/cd.png',
-              'AO': 'https://flagpedia.net/data/flags/h80/ao.png',
-              'GW': 'https://flagpedia.net/data/flags/h80/gw.png',
-              'SC': 'https://flagpedia.net/data/flags/h80/sc.png',
-              'SD': 'https://flagpedia.net/data/flags/h80/sd.png',
-              'RW': 'https://flagpedia.net/data/flags/h80/rw.png',
-              'ET': 'https://flagpedia.net/data/flags/h80/et.png',
-              'SO': 'https://flagpedia.net/data/flags/h80/so.png',
-              'DJ': 'https://flagpedia.net/data/flags/h80/dj.png',
-              'KE': 'https://flagpedia.net/data/flags/h80/ke.png',
-              'TZ': 'https://flagpedia.net/data/flags/h80/tz.png',
-              'UG': 'https://flagpedia.net/data/flags/h80/ug.png',
-              'BI': 'https://flagpedia.net/data/flags/h80/bi.png',
-              'MZ': 'https://flagpedia.net/data/flags/h80/mz.png',
-              'ZM': 'https://flagpedia.net/data/flags/h80/zm.png',
-              'MW': 'https://flagpedia.net/data/flags/h80/mw.png',
-              'LS': 'https://flagpedia.net/data/flags/h80/ls.png',
-              'BW': 'https://flagpedia.net/data/flags/h80/bw.png',
-              'NA': 'https://flagpedia.net/data/flags/h80/na.png',
-              'ZA': 'https://flagpedia.net/data/flags/h80/za.png',
-              'SZ': 'https://flagpedia.net/data/flags/h80/sz.png',
-              // Add more mappings as necessary
-            };
-            
-            
-            // This function will be called to update the content of the #locationinfop p tag
-            function setLocationInfo(countryCode, countryName) {
-              const flagEmoji = countryFlags[countryCode]; // Get the flag emoji using the country code
-              const locationInfoP = document.getElementById('locationinfop');
-              
-              if (locationInfoP) {
-                // Check if the flagEmoji exists. If it does, prepend it to the message
-                const shippingMessage = flagEmoji
-                  ? `<img src="${flagEmoji}" alt="" /> <span style=" color: black;font-weight:bold;">Fast </span>${countryCode} Shipping`
-                  : `📦 <span style=" color: black;font-weight:bold;">Fast </span>${countryCode} Shipping`; // Use a default package emoji if no flag is available
-              
-                locationInfoP.innerHTML = shippingMessage;
-                 
-              }
-            }
-            
-            // This function fetches the browsing context suggestions and updates the p tag
-            async function fetchLocationInfo() {
-              try {
-                const response = await fetch('/browsing_context_suggestions.json');
-                const data = await response.json();
-                // Use the detected country code and country name from the response
-                const countryCode = data.detected_values.country.handle;
-                const countryName = data.detected_values.country.name;
-            
-                console.log(countryCode);
+              });
                 
-                // Update the location info p tag with the country name and flag emoji
-                setLocationInfo(countryCode, countryName);
-              } catch (error) {
-                console.error('Error fetching location info:', error);
+              // A mapping of country codes to flag emojis
+              const countryFlags = {
+                'US': 'https://flagpedia.net/data/flags/h80/us.png',
+                'CA': 'https://flagpedia.net/data/flags/h80/ca.png',
+                'FR': 'https://flagpedia.net/data/flags/h80/fr.png',
+                'NL': 'https://flagpedia.net/data/flags/h80/nl.png',
+                'DE': 'https://flagpedia.net/data/flags/h80/de.png',
+                'GB': 'https://flagpedia.net/data/flags/h80/gb.png',
+                'IT': 'https://flagpedia.net/data/flags/h80/it.png',
+                'ES': 'https://flagpedia.net/data/flags/h80/es.png',
+                'CN': 'https://flagpedia.net/data/flags/h80/cn.png',
+                'JP': 'https://flagpedia.net/data/flags/h80/jp.png',
+                'BR': 'https://flagpedia.net/data/flags/h80/br.png',
+                'IN': 'https://flagpedia.net/data/flags/h80/in.png',
+                'RU': 'https://flagpedia.net/data/flags/h80/ru.png',
+                'ZA': 'https://flagpedia.net/data/flags/h80/za.png',
+                'AU': 'https://flagpedia.net/data/flags/h80/au.png',
+                'NZ': 'https://flagpedia.net/data/flags/h80/nz.png',
+                'MX': 'https://flagpedia.net/data/flags/h80/mx.png',
+                'AR': 'https://flagpedia.net/data/flags/h80/ar.png',
+                'CL': 'https://flagpedia.net/data/flags/h80/cl.png',
+                'CO': 'https://flagpedia.net/data/flags/h80/co.png',
+                'PE': 'https://flagpedia.net/data/flags/h80/pe.png',
+                'VE': 'https://flagpedia.net/data/flags/h80/ve.png',
+                'EC': 'https://flagpedia.net/data/flags/h80/ec.png',
+                'GT': 'https://flagpedia.net/data/flags/h80/gt.png',
+                'HN': 'https://flagpedia.net/data/flags/h80/hn.png',
+                'SA': 'https://flagpedia.net/data/flags/h80/sa.png',
+                'AE': 'https://flagpedia.net/data/flags/h80/ae.png',
+                'TR': 'https://flagpedia.net/data/flags/h80/tr.png',
+                'TH': 'https://flagpedia.net/data/flags/h80/th.png',
+                'MY': 'https://flagpedia.net/data/flags/h80/my.png',
+                'SG': 'https://flagpedia.net/data/flags/h80/sg.png',
+                'ID': 'https://flagpedia.net/data/flags/h80/id.png',
+                'PH': 'https://flagpedia.net/data/flags/h80/ph.png',
+                'VN': 'https://flagpedia.net/data/flags/h80/vn.png',
+                'KR': 'https://flagpedia.net/data/flags/h80/kr.png',
+                'KP': 'https://flagpedia.net/data/flags/h80/kp.png',
+                'SE': 'https://flagpedia.net/data/flags/h80/se.png',
+                'NO': 'https://flagpedia.net/data/flags/h80/no.png',
+                'FI': 'https://flagpedia.net/data/flags/h80/fi.png',
+                'DK': 'https://flagpedia.net/data/flags/h80/dk.png',
+                'IS': 'https://flagpedia.net/data/flags/h80/is.png',
+                'IE': 'https://flagpedia.net/data/flags/h80/ie.png',
+                'CH': 'https://flagpedia.net/data/flags/h80/ch.png',
+                'PT': 'https://flagpedia.net/data/flags/h80/pt.png',
+                'BE': 'https://flagpedia.net/data/flags/h80/be.png',
+                'LU': 'https://flagpedia.net/data/flags/h80/lu.png',
+                'PL': 'https://flagpedia.net/data/flags/h80/pl.png',
+                'CZ': 'https://flagpedia.net/data/flags/h80/cz.png',
+                'SK': 'https://flagpedia.net/data/flags/h80/sk.png',
+                'HU': 'https://flagpedia.net/data/flags/h80/hu.png',
+                'AT': 'https://flagpedia.net/data/flags/h80/at.png',
+                'LI': 'https://flagpedia.net/data/flags/h80/li.png',
+                'GR': 'https://flagpedia.net/data/flags/h80/gr.png',
+                'BG': 'https://flagpedia.net/data/flags/h80/bg.png',
+                'RO': 'https://flagpedia.net/data/flags/h80/ro.png',
+                'UA': 'https://flagpedia.net/data/flags/h80/ua.png',
+                'BY': 'https://flagpedia.net/data/flags/h80/by.png',
+                'LT': 'https://flagpedia.net/data/flags/h80/lt.png',
+                'LV': 'https://flagpedia.net/data/flags/h80/lv.png',
+                'EE': 'https://flagpedia.net/data/flags/h80/ee.png',
+                'MD': 'https://flagpedia.net/data/flags/h80/md.png',
+                'AM': 'https://flagpedia.net/data/flags/h80/am.png',
+                'GE': 'https://flagpedia.net/data/flags/h80/ge.png',
+                'AZ': 'https://flagpedia.net/data/flags/h80/az.png',
+                'IR': 'https://flagpedia.net/data/flags/h80/ir.png',
+                'IQ': 'https://flagpedia.net/data/flags/h80/iq.png',
+                'SY': 'https://flagpedia.net/data/flags/h80/sy.png',
+                'LB': 'https://flagpedia.net/data/flags/h80/lb.png',
+                'JO': 'https://flagpedia.net/data/flags/h80/jo.png',
+                'IL': 'https://flagpedia.net/data/flags/h80/il.png',
+                'EG': 'https://flagpedia.net/data/flags/h80/eg.png',
+                'MA': 'https://flagpedia.net/data/flags/h80/ma.png',
+                'DZ': 'https://flagpedia.net/data/flags/h80/dz.png',
+                'TN': 'https://flagpedia.net/data/flags/h80/tn.png',
+                'LY': 'https://flagpedia.net/data/flags/h80/ly.png',
+                'GM': 'https://flagpedia.net/data/flags/h80/gm.png',
+                'SN': 'https://flagpedia.net/data/flags/h80/sn.png',
+                'MR': 'https://flagpedia.net/data/flags/h80/mr.png',
+                'ML': 'https://flagpedia.net/data/flags/h80/ml.png',
+                'GN': 'https://flagpedia.net/data/flags/h80/gn.png',
+                'CI': 'https://flagpedia.net/data/flags/h80/ci.png',
+                'BF': 'https://flagpedia.net/data/flags/h80/bf.png',
+                'NE': 'https://flagpedia.net/data/flags/h80/ne.png',
+                'TG': 'https://flagpedia.net/data/flags/h80/tg.png',
+                'BJ': 'https://flagpedia.net/data/flags/h80/bj.png',
+                'NG': 'https://flagpedia.net/data/flags/h80/ng.png',
+                'CM': 'https://flagpedia.net/data/flags/h80/cm.png',
+                'GA': 'https://flagpedia.net/data/flags/h80/ga.png',
+                'CG': 'https://flagpedia.net/data/flags/h80/cg.png',
+                'CD': 'https://flagpedia.net/data/flags/h80/cd.png',
+                'AO': 'https://flagpedia.net/data/flags/h80/ao.png',
+                'GW': 'https://flagpedia.net/data/flags/h80/gw.png',
+                'SC': 'https://flagpedia.net/data/flags/h80/sc.png',
+                'SD': 'https://flagpedia.net/data/flags/h80/sd.png',
+                'RW': 'https://flagpedia.net/data/flags/h80/rw.png',
+                'ET': 'https://flagpedia.net/data/flags/h80/et.png',
+                'SO': 'https://flagpedia.net/data/flags/h80/so.png',
+                'DJ': 'https://flagpedia.net/data/flags/h80/dj.png',
+                'KE': 'https://flagpedia.net/data/flags/h80/ke.png',
+                'TZ': 'https://flagpedia.net/data/flags/h80/tz.png',
+                'UG': 'https://flagpedia.net/data/flags/h80/ug.png',
+                'BI': 'https://flagpedia.net/data/flags/h80/bi.png',
+                'MZ': 'https://flagpedia.net/data/flags/h80/mz.png',
+                'ZM': 'https://flagpedia.net/data/flags/h80/zm.png',
+                'MW': 'https://flagpedia.net/data/flags/h80/mw.png',
+                'LS': 'https://flagpedia.net/data/flags/h80/ls.png',
+                'BW': 'https://flagpedia.net/data/flags/h80/bw.png',
+                'NA': 'https://flagpedia.net/data/flags/h80/na.png',
+                'ZA': 'https://flagpedia.net/data/flags/h80/za.png',
+                'SZ': 'https://flagpedia.net/data/flags/h80/sz.png',
+                // Add more mappings as necessary
+              };
+              
+              
+              // This function will be called to update the content of the #locationinfop p tag
+              function setLocationInfo(countryCode, countryName) {
+                const flagEmoji = countryFlags[countryCode]; // Get the flag emoji using the country code
+                const locationInfoP = document.getElementById('locationinfop');
+                
+                if (locationInfoP) {
+                  // Check if the flagEmoji exists. If it does, prepend it to the message
+                  const shippingMessage = flagEmoji
+                    ? `<img src="${flagEmoji}" alt="" /> <span style=" color: black;font-weight:bold;">Fast </span>${countryCode} Shipping`
+                    : `📦 <span style=" color: black;font-weight:bold;">Fast </span>${countryCode} Shipping`; // Use a default package emoji if no flag is available
+                
+                  locationInfoP.innerHTML = shippingMessage;
+                  
+                }
               }
-            }
-            
-            // Call the function to fetch location info on DOM content load
-            document.addEventListener('DOMContentLoaded', (event) => {
-              fetchLocationInfo();
-            });
-            
-            
+              
+              // This function fetches the browsing context suggestions and updates the p tag
+              async function fetchLocationInfo() {
+                try {
+                  const response = await fetch('/browsing_context_suggestions.json');
+                  const data = await response.json();
+                  // Use the detected country code and country name from the response
+                  const countryCode = data.detected_values.country.handle;
+                  const countryName = data.detected_values.country.name;
+              
+                  console.log(countryCode);
+                  
+                  // Update the location info p tag with the country name and flag emoji
+                  setLocationInfo(countryCode, countryName);
+                } catch (error) {
+                  console.error('Error fetching location info:', error);
+                }
+              }
+              
+              // Call the function to fetch location info on DOM content load
+              document.addEventListener('DOMContentLoaded', (event) => {
+                fetchLocationInfo();
+              });
             </script>
             {%- when 'why_choose' -%}
               <div class="wdwc">
@@ -626,8 +611,62 @@
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
             {%- when 'buy_buttons' -%}
-              {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
-              <div class="essential-banners-default-placement"></div>
+              {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true, bundle: section.settings.bundle -%}
+              <div class="banners">
+                <div class="banners__item">
+                  <img src="{{ 'icon-1.svg' | asset_url }}" alt="icon" />
+                  <p class="banners__text">Fast Shipping</p>
+                </div>
+                <div class="banners__item">
+                  <img src="{{ 'icon-2.svg' | asset_url }}" alt="icon" />
+                  <p class="banners__text">Money-Back Guarantee</p>
+                </div>
+                <div class="banners__item">
+                  <img src="{{ 'icon-3.svg' | asset_url }}" alt="icon" />
+                  <p class="banners__text">Trusted by Pro Players</p>
+                </div>
+                <div class="banners__item">
+                  <img src="{{ 'icon-4.svg' | asset_url }}" alt="icon" />
+                  <p class="banners__text">20,000+ Satisfied Keepers</p>
+                </div>
+              </div>
+
+              <style>
+                .banners{
+                  margin-bottom: 20px;
+                  padding: 25px 40px;
+                  border-top: 1px solid #C4C4C4;
+                  border-bottom: 1px solid #C4C4C4;
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 10px 30px;
+                }
+
+                .banners__item{
+                  display: flex;
+                  align-items: center;
+                  column-gap: 10px;
+                }
+
+                .banners__text{
+                  margin: 0;
+                  font-size: 14px;
+                }
+
+                .product__media-list li.product__media-item{
+                  padding: 0 !important;
+                }
+
+                @media screen and (max-width: 750px) {
+                  .banners{
+                    padding: 5px 10px;
+                  }
+
+                  .banners__text{
+                    font-size: 12px;
+                  }
+                }
+              </style>
             {%- when 'rating' -%}
               {%- if product.metafields.reviews.rating.value != blank -%}
                 {% liquid
@@ -755,7 +794,221 @@
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
         </a>
+        {% if section.settings.desktopTabs == false %}
+          <div class="desktop-tabs">
+            <div class="desktop-tabs__wrapper">
+              {% for block in section.blocks %}
+                {%- case block.type -%}
+                {%- when 'collapsible_tab' -%}
+
+                  <div class="desktop-tabs__item">
+                    {{ block.settings.heading | default: block.settings.page.title }}
+                    <div data-content>
+                      {{ block.settings.content }}
+                      {{ block.settings.page.content }}
+                    </div>
+                  </div>
+                {% endcase %}
+              {% endfor %}
+            </div>
+            <div class="desktop-tabs__content">
+              <div></div>
+            </div>
+          </div>
+        {% endif %}
       </product-info>
+      <style>
+        .product__info-container .desktop-tabs{
+          width: 100%;
+        }
+
+        .product__accordion{
+          display: none;
+        }
+
+        .desktop-tabs{
+          margin-top: 20px;
+          float: right;
+          width: 80%;
+        }
+
+        .desktop-tabs__wrapper{
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-evenly;
+          column-gap: 5px;
+        }
+
+        .desktop-tabs__item{
+          cursor: pointer;
+          padding: 10px 20px;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 12px;
+          border-radius: 5px;
+          transition: .5s all;
+        }
+
+        .desktop-tabs__item div{
+          display: none;
+        }
+
+        .desktop-tabs__item.active{
+          background-color: #000;
+          color: #fff;
+        }
+
+        .desktop-tabs__content{
+          border: 1px #C4C4C4 solid;
+          border-radius: 15px;
+          padding: 15px 15px 20px 15px;
+          position: relative;
+        }
+
+        .desktop-tabs__content div{
+          max-height: 240px;
+          margin-top: -2px;
+          overflow: hidden;
+        }
+
+        .desktop-tabs__content div p:first-child{
+          margin-top: 0;
+        }
+
+        .desktop-tabs__content div.active{
+          max-height: 100%;
+        }
+
+        .desktop-tabs__content *{
+          font-size: 12px;
+        }
+
+        .nm-portal{
+          display: none;
+        }
+
+        .mobile{
+          display: none;
+        }
+
+        .desktop-tabs__more{
+          font-family: "Arial" !important;
+          font-weight: 700;
+          position: absolute;
+          bottom: 5px;
+          left: 15px;
+          background-color: transparent;
+          border: none;
+          text-decoration: underline;
+          text-transform: none;
+          padding: 0;
+          font-family: "Arial";
+          color: #000;
+        }
+        
+        @media screen and (max-width: 750px) {
+          .desktop-tabs{
+            width: 100%;
+            margin-bottom: 30px;
+          }
+
+          .desktop-tabs__item{
+            font-size: 10px;
+            padding: 5px 10px;
+          }
+
+          .mobile{
+            display: block;
+          }
+
+          .desc{
+            display: none;
+          }
+        }
+      </style>
+      {% if section.settings.desktopTabs %}
+        <div class="desktop-tabs mobile">
+          <div class="desktop-tabs__wrapper">
+            {% for block in section.blocks %}
+              {%- case block.type -%}
+              {%- when 'collapsible_tab' -%}
+  
+                <div class="desktop-tabs__item">
+                  {{ block.settings.heading | default: block.settings.page.title }}
+                  <div data-content>
+                    {{ block.settings.content }}
+                    {{ block.settings.page.content }}
+                  </div>
+                </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+          <div class="desktop-tabs__content">
+            <div></div>
+          </div>
+        </div>
+      {% endif %}
+      <script>
+          const wrappers = document.querySelectorAll(".desktop-tabs");
+  
+          const addReadMore = (wrapper) => {
+            const content = wrapper.querySelector(".desktop-tabs__content div");
+            const clientHeight = content.clientHeight;
+            const scrollHeight = content.scrollHeight;
+            const contentWrapper = wrapper.querySelector(".desktop-tabs__content");
+
+            if(scrollHeight > clientHeight) {
+              contentWrapper.innerHTML += "<button class='desktop-tabs__more'>Read more</button>";
+
+              document.querySelector(".desktop-tabs__more").addEventListener("click", (e) => {
+                contentWrapper.innerHTML = `<div>${wrapper.querySelector(".desktop-tabs__content div").innerHTML}</div>`;
+
+                wrapper.querySelector(".desktop-tabs__content div").classList.add("active");
+              });
+            }
+          }
+
+          wrappers.forEach(wrapper => {
+            const tags = wrapper.querySelectorAll(".desktop-tabs__item");
+            const content = wrapper.querySelector(".desktop-tabs__content div");
+    
+            tags.forEach((tag, i) => {
+              tag.addEventListener("click", (e) => {
+                const newContent = tag.querySelector("[data-content]").innerHTML;
+
+                wrappers.forEach(wrap => {
+                  const tags = wrap.querySelectorAll(".desktop-tabs__item");
+                  const content = wrap.querySelector(".desktop-tabs__content div");
+
+                  content.classList.remove("active");
+
+                  tags.forEach(item => {
+                    item.classList.remove("active");
+                  });
+
+                  tags[i].classList.add("active");
+                  wrapper.querySelector(".desktop-tabs__content").innerHTML = `<div>${newContent}</div>`;
+
+                  addReadMore(wrapper);
+                });
+              });
+            });
+          });
+
+          wrappers.forEach(wrap => {
+            const tags = wrap.querySelectorAll(".desktop-tabs__item");
+            const content = wrap.querySelector(".desktop-tabs__content div");
+
+            tags.forEach(item => {
+              item.classList.remove("active");
+            });
+
+            tags[0].classList.add("active");
+            content.innerHTML = tags[0].querySelector("[data-content]").innerHTML;
+
+            addReadMore(wrap);
+          });
+        </script>
     </div>
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
@@ -887,6 +1140,141 @@
     }
   </script>
 </section>
+
+<div data-popup-image class="bundle__image">
+    <button data-prev class="bundle__image-prev">
+        <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
+    </button>
+    <div id="image">
+
+    </div>
+    <button data-next class="bundle__image-next">
+        <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
+    </button>
+</div>
+
+<style>
+  .bundle__image{
+      opacity: 0;
+      pointer-events: none;
+      transition: .5s all;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+      z-index: 1000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .bundle__image #image{
+      max-width: 600px;
+      width: 100%;
+      object-fit: contain;
+      background-color: #f2f2f2;
+  }
+
+  #image .product__media,
+  #image .product__media img,
+  #image .product__modal-opener,
+  #image .product-media-container{
+    width: 100%;
+  }
+
+  #image .loading-overlay__spinner{
+        display: none !important;
+  }
+
+  .bundle__image-prev,
+  .bundle__image-next{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, .5);
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      z-index: 5;
+  }
+
+  .bundle__image-prev{
+      left: 5px;
+  }
+
+  .bundle__image-prev img{
+      transform: rotate(180deg);
+  }
+
+  .bundle__image-next{
+      right: 5px;
+  }
+
+  .bundle__image.active{
+      opacity: 1;
+      pointer-events: all;
+  }
+    
+  @media (max-width: 576px) {
+      .bundle__image #image{
+          width: 100%;
+          height: auto;
+          max-width: 400px;
+          max-height: 75%;
+      }
+  }
+
+  .product__title{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+
+<script>
+  const images = document.querySelectorAll(".product__media-item");
+  const popup_image = document.querySelector("[data-popup-image]");
+  const image = popup_image.querySelector("#image");
+  let index = -1;
+
+  images.forEach((img, i) => {
+    img.addEventListener("click", (e) => {
+      popup_image.classList.add("active");
+      
+      index = i;
+      image.innerHTML = img.innerHTML;
+    });
+  });
+
+  document.querySelector("[data-next]").addEventListener("click", (e) => {
+    index += 1;
+
+    if (index > images.length - 1) index = 0;
+      
+    image.innerHTML = images[index].innerHTML;
+  });
+
+  document.querySelector("[data-prev]").addEventListener("click", (e) => {
+    index -= 1;
+
+    if (index < 0) index = images.length - 1;
+
+    image.innerHTML = images[index].innerHTML;
+  });
+
+  popup_image.addEventListener("click", (e) => {
+    if (e.target.classList.contains("bundle__image")) {
+      popup_image.classList.remove("active");
+    }
+  });
+</script>
 
 {% schema %}
 {
@@ -2257,6 +2645,17 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "desktopTabs",
+      "default": false,
+      "label": "Desctop Tabs Position"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle",
+      "label": "Bundle"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",

@@ -1,0 +1,250 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "loox_reviews_loox_rating_Fq8i7X": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "title_QePXHM": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_UiAhpj": {
+          "type": "price",
+          "settings": {}
+        },
+        "klarna_on_site_messaging_app_block_aaRnnY": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-auto-size",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "icon_with_text_wHL4xG": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "heart",
+            "image_1": "shopify://shop_images/red_background-checkbox-min.png",
+            "heading_1": "Elite Level Goalkeeper Glove",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/red_background-checkbox-min.png",
+            "heading_2": "Unmatched Grip",
+            "icon_3": "truck",
+            "image_3": "shopify://shop_images/red_background-checkbox-min.png",
+            "heading_3": "10 Game Guarantee"
+          }
+        },
+        "popup_JJgxfC": {
+          "type": "popup",
+          "settings": {
+            "text": "size guid",
+            "page": "sizing-guide"
+          }
+        },
+        "custom_liquid_Dp86T3": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  .pack__item{\n    padding: 30px 0;\n    position: relative;\n    display: flex;\n    column-gap: 25px;\n  }\n\n  .pack__item::before{\n    position: absolute;\n    content: \"\";\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 1px;\n    background-color: #B9B9B9;\n  }\n\n  .pack__item:first-child::before{\n    display: none;\n  }\n\n  .pack__image{\n    min-width: 150px;\n    height: 150px;\n  }\n\n  .pack__image img{\n    width: 100%;\n    height: 100%;\n    object-fit: contain;\n    background-color: #D9D9D9;\n  }\n\n  .pack__info{\n    width: 100%;\n  }\n\n  .pack__caption{\n    margin: 0;\n    font-family: \"Anton\" !important;\n    font-size: 20px;\n    text-transform: uppercase;\n    margin-bottom: 10px;\n    line-height: 20px;\n  }\n\n  .pack__color{\n    line-height: 14px;\n    font-size: 14px;\n    margin: 0;\n    margin-bottom: 10px;\n    text-transform: uppercase;\n  }\n\n  .pack__color span{\n    font-weight: 700;\n  }\n\n  .pack__size{\n    line-height: 14px;\n    font-size: 14px;\n    margin: 0;\n    text-transform: uppercase;\n  }\n\n  .pack__size span{\n    font-weight: 700;\n  }\n\n  .pack__wrap{\n    margin-bottom: 10px;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n  }\n\n  .pack__sizes{\n    display: flex;\n    flex-wrap: wrap;\n    gap: 5px;\n  }\n\n  .pack__elem{\n    font-family: \"Arial\" !important;\n    background-color: transparent;\n    padding: 10px;\n    border: .5px solid #B2B2B2;\n    border-radius: 5px;\n    font-size: 12px;\n    line-height: 12px;\n    transition: .5s all;\n  }\n\n  .pack__elem:disabled{\n    text-decoration: line-through;\n    background-color: rgba(0, 0, 0, .5);\n  }\n\n  .pack__href{\n    line-height: 13px;\n    color: #B2B2B2;\n    font-size: 12px;\n  }\n\n  .pack__elem.active{\n    background-color: #D75555;\n    border-color: #D75555;\n    color: #fff;\n  }\n\n  .product-popup-modal__opener{\n    display: none;\n  }\n\n  @media (max-width: 992px) {\n    .pack__item{\n        column-gap: 20px;\n        padding: 20px 0;\n    }\n\n    .pack__image{\n        min-width: 125px;\n        height: 125px;\n    }\n\n    .pack__elem{\n        font-size: 10px;\n    }\n\n    .pack__href{\n        font-size: 10px;\n    }\n  }\n\n  @media (max-width: 762px) {\n    .pack__color,\n    .pack__size{\n        font-size: 12px;\n    }\n\n    .pack__elem{\n        padding: 8px;\n    }\n  }\n\n  @media (max-width: 576px) {\n    .pack__item{\n        column-gap: 15px;\n        padding: 15px 0;\n    }\n\n    .pack__image{\n        min-width: 100px;\n        height: 100px;\n    }\n\n    .pack__caption{\n        font-size: 18px;\n    }\n\n    .pack__elem{\n        font-size: 8px;\n    }\n\n    .pack__href{\n        font-size: 8px;\n    }\n  }\n</style>\n\n<div class=\"pack__list\">\n  {% for option in product.options %}\n      {% assign product_title = option | replace: \" -\", \"\" | split: \" (\" | first %}\n      {% assign product_handle = product_title | downcase | replace: \" \", \"-\" %}\n      {% assign product_option = all_products[product_handle] %}\n      <div class=\"pack__item\">\n        <input style=\"display: none;\" class=\"product-variant-id\" type=\"text\" name=\"id\" value=\"\" />\n          <div class=\"pack__image\">\n              <img src=\"{{ product_option.images.first | img_url: 'master' }}\" alt=\"photo\">\n          </div>\n          <div class=\"pack__info\">\n              <p class=\"pack__caption\">{{ product_option.title }}</p>\n              <p class=\"pack__color\">Color: <span>Black</span></p>\n              <div class=\"pack__wrap\">\n                  <p class=\"pack__size\">Size: <span></span></p>\n                  <a href=\"#\" class=\"pack__href\">SIZE GUIDE</a>\n              </div>\n              <div data-sizes class=\"pack__sizes\">\n                  {% for variant in product_option.variants %}\n                      <button data-id=\"{{ variant.id }}\" {% if variant.available == false %}disabled{% endif %} class=\"pack__elem\">{{ variant.title  }}</button>\n                  {% endfor %}\n              </div>\n          </div>\n      </div>\n  {% endfor %}\n</div>\n\n<script>\n  document.querySelectorAll(\"[data-sizes]\").forEach((wrapper, i) => {\n    wrapper.addEventListener(\"click\", (e) => {\n      if (e.target.classList.contains(\"pack__elem\")) {\n        const variant = e.target.getAttribute(\"data-id\");\n\n        wrapper.querySelectorAll(\".pack__elem\").forEach(item => {\n          item.classList.remove(\"active\");\n        });\n\n        e.target.classList.add(\"active\");\n\n        document.querySelectorAll(\".product-variant-id\")[i].value = variant\n      }\n    });\n  });\n\n  document.querySelectorAll(\".pack__href\").forEach(href => {\n    href.addEventListener(\"click\", (e) => {\n      e.preventDefault();\n\n      document.querySelector(\".product-popup-modal__opener button\").click()\n    });\n  });\n</script>"
+          }
+        },
+        "buy_buttons_QGMTLa": {
+          "type": "buy_buttons",
+          "settings": {
+            "personalisation": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "collapsible_tab_K9zgRD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "icon": "none",
+            "content": "<p>-  Elite-Level Goalkeeper Glove<br/><br/>-  4mm CENT+innal Latex - The stickiest latex you’ll ever use, guaranteed.<br/><br/>-   Negative Cut<br/><br/>-   Removable Strap<br/><br/>-   Zephyr+ Backhand - Ultimate balance between lightweight construction and exceptional breathability<br/><br/>-   Internal Grip System</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_GBxiTx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wash & Care",
+            "icon": "none",
+            "content": "<p>- Adult models are equipped with a plastic protective film, whereas junior models are not.<br/><br/>- Fill a sink or basin with lukewarm water and add mild detergent.<br/><br/>- Immerse the gloves and gently rub them to remove dirt and sweat.<br/><br/>- Rinse the gloves thoroughly with clean water.<br/><br/>- Squeeze out excess water and pat dry with a towel.<br/><br/>- Air dry the gloves away from direct sunlight or heat sources.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_jNzxPh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "none",
+            "content": "<p>UK (& NORTHERN IRELAND): Enjoy complimentary shipping on orders over £100, dispatched from our London base through Royal Mail. For orders below £100, a standard shipping fee of £5.00 applies, while next-day delivery is available at £7.00.<br/><br/>USA: Choose our Standard Untracked option for £5.00, or upgrade to Premium Tracked shipping for £10.00.<br/><br/>EUROPE & IRELAND: Choose our Standard Untracked option for £5.00, or upgrade to Premium Tracked shipping for £10.00.<br/><br/>We post nearly every order within 24 hours. If you order before noon - we will try to ship the same day. Average shipping time is about 2-3 days, and we charge a nominal fee which covers shipping and handling.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Cw77CR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fit & Grip",
+            "icon": "none",
+            "content": "<p>- Perfectly fitted and true to size. For half sizes, round up to the next whole size.<br/><br/>- Before using, make sure to remove the plastic protective film, which is applied to preserve stickiness during transit.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_rating_Fq8i7X",
+        "title_QePXHM",
+        "price_UiAhpj",
+        "klarna_on_site_messaging_app_block_aaRnnY",
+        "icon_with_text_wHL4xG",
+        "popup_JJgxfC",
+        "custom_liquid_Dp86T3",
+        "buy_buttons_QGMTLa",
+        "collapsible_tab_K9zgRD",
+        "collapsible_tab_GBxiTx",
+        "collapsible_tab_jNzxPh",
+        "collapsible_tab_Cw77CR"
+      ],
+      "custom_css": [
+        ".product__info-wrapper .product-form__input {justify-content: flex-start;}"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 24,
+        "text_1": "ERGO CUT"
+      }
+    },
+    "product_track_ArMhca": {
+      "type": "product-track",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "nw_pdp_content_cBf6ix": {
+      "type": "nw-pdp-content",
+      "blocks": {
+        "slide_HqmCRA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Group_39387.jpg",
+            "title": "Unmatched Flexibility & Fit",
+            "text": "Designed for goalkeepers who demand unrestricted movement, these padded shorts feature a stretch-enhanced fit that adapts to every dive, save, and reaction.",
+            "reverse": false
+          }
+        },
+        "slide_QGT6yW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Group_39388.jpg",
+            "title": "Targeted Protection Where It Matters",
+            "text": "Strategic high-impact padding in key areas absorbs impact from hard landings, keeping you protected without restricting mobility.",
+            "reverse": true
+          }
+        },
+        "slide_3w4t6A": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Group_39389.jpg",
+            "title": "Lightweight & Breathable Performance",
+            "text": "Crafted with a premium blend of 85% polyester and 15% elastane, these shorts offer the perfect balance of durability, breathability, and comfort for game-changing performance.",
+            "reverse": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_HqmCRA",
+        "slide_QGT6yW",
+        "slide_3w4t6A"
+      ],
+      "settings": {
+        "text_field": ""
+      }
+    },
+    "1675412991975636fd": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_cq9UhT": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 20,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_cq9UhT"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 2,
+        "columns_desktop": 5,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_track_ArMhca",
+    "nw_pdp_content_cBf6ix",
+    "1675412991975636fd",
+    "related-products"
+  ]
+}

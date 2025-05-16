@@ -1,0 +1,132 @@
+.category{
+    padding: 50px 0 70px 0;
+}
+
+.category__title{
+    margin: 0;
+    font-family: "Anton";
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 45px;
+}
+
+.category__list{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.category__item{
+    width: 100%;
+    height: 325px;
+    position: relative;
+}
+
+.category__item img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category__caption{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    margin: 0;
+    font-family: "Anton";
+    width: 90%;
+    text-align: center;
+    font-size: 36px;
+}
+
+.category__item::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+    content: "";
+}
+
+@media (max-width: 1200px) {
+    .category__item{
+        height: 275px;
+    }
+
+    .category__caption{
+        font-size: 32px;
+    }
+
+    .category__title{
+        font-size: 33px;
+    }
+}
+  
+@media (max-width: 992px) {
+    .category__list{
+        gap: 20px;
+    }
+
+    .category__item{
+        height: 250px;
+    }
+
+    .category__caption{
+        font-size: 28px;
+    }
+
+    .category__title{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .category{
+        padding: 45px 0 55px 0;
+    }
+}
+  
+@media (max-width: 762px) {
+    .category__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .category__item{
+        height: 225px;
+    }
+
+    .category__caption{
+        font-size: 24px;
+    }
+
+    .category__title{
+        font-size: 27px;
+    }
+}
+  
+@media (max-width: 576px) {
+    .category__list{
+        gap: 15px;
+    }
+
+    .category__item{
+        height: 200px;
+    }
+
+    .category__caption{
+        font-size: 20px;
+    }
+
+    .category__title{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .category{
+        padding: 40px 0;
+    }
+}

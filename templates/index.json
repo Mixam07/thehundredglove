@@ -108,7 +108,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 0
       }
     },
     "f83b6b96-36cd-45b0-b7d4-898890fc0c56": {
@@ -150,6 +150,7 @@
         "template--16790092677376__f83b6b96-36cd-45b0-b7d4-898890fc0c56-16873308894afd46e0-1",
         "template--16790092677376__f83b6b96-36cd-45b0-b7d4-898890fc0c56-16873308894afd46e0-2"
       ],
+      "disabled": true,
       "custom_css": [
         ".grid {gap: 0 !important; justify-content: space-between;}",
         "@media (min-width: 999px) {.grid--3-col-desktop .grid__item {width: 33.333%; max-width: 33.333%; }}",
@@ -174,8 +175,55 @@
         "padding_bottom": 20
       }
     },
+    "section_category_AAXPaQ": {
+      "type": "section-category",
+      "blocks": {
+        "row_VqnVTF": {
+          "type": "row",
+          "settings": {
+            "content-title": "Gloves",
+            "content-image": "shopify://shop_images/column-image-1.jpg",
+            "content-link": "shopify://collections/gloves"
+          }
+        },
+        "row_Egbqiq": {
+          "type": "row",
+          "settings": {
+            "content-title": "Clothing",
+            "content-image": "shopify://shop_images/column-image-3.jpg",
+            "content-link": "shopify://collections/clothings"
+          }
+        },
+        "row_p9wBX8": {
+          "type": "row",
+          "settings": {
+            "content-title": "accessories",
+            "content-image": "shopify://shop_images/column-image-2.jpg",
+            "content-link": "shopify://collections/accessories"
+          }
+        },
+        "row_cTNJjB": {
+          "type": "row",
+          "settings": {
+            "content-title": "Bundles",
+            "content-image": "shopify://shop_images/Untitled_design_24.png",
+            "content-link": "shopify://collections/bundle"
+          }
+        }
+      },
+      "block_order": [
+        "row_VqnVTF",
+        "row_Egbqiq",
+        "row_p9wBX8",
+        "row_cTNJjB"
+      ],
+      "settings": {}
+    },
     "46e54b38-38b9-4d23-a389-40a835204ffa": {
       "type": "collection-tab",
+      "custom_css": [
+        "a.view_all_col {background: #d75555; padding: 10px 15px; color: #fff; border-radius: 5px;}"
+      ],
       "settings": {
         "titlesmall": "",
         "button1": "Gloves",
@@ -217,6 +265,7 @@
         "text_CQx3fm",
         "buttons_h8rEPi"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 750px) {.banner__content.banner__content--middle-left {margin-bottom: 300px !important; } .banner__box {text-align: center; align-items: center; } .banner__box h1 {text-align: center; }}"
       ],
@@ -518,6 +567,7 @@
     "custom_liquid_UDqQNm",
     "featured_collection",
     "f83b6b96-36cd-45b0-b7d4-898890fc0c56",
+    "section_category_AAXPaQ",
     "46e54b38-38b9-4d23-a389-40a835204ffa",
     "image_banner_epWtCR",
     "11a8ffd1-6b0e-4f7c-bf86-acafbfdca859",

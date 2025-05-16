@@ -688,5 +688,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".banner__content svg,.bannerTrustBadge{margin: 0;}"
+    ]
   }
 }

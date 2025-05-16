@@ -1,0 +1,156 @@
+<span data-prid="{{ product.variants.first.id }}"></span>
+
+<style>
+  .pack__list{
+    padding-top: 30px;
+  }
+  
+  .pack__list-wrapper{
+    margin-bottom: 30px;
+  }
+
+  .pack__list-title{
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "Arial" !important;
+  }
+
+  .pack__list-variants{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  .pack__list-photo{
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    transition: .5s all;
+  }
+
+  .pack__list-photo.active{
+    border: 1px #D75555 solid;
+  }
+
+  .pack__list-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .pack__list-item{
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #B2B2B2;
+    transition: .5s all;
+  }
+
+  .pack__list-item.unactive{
+    text-decoration: line-through;
+  }
+
+  .pack__list-item.unactive{
+    opacity: .6;
+    background-color: rgba(178, 178,178, .5);
+  }
+
+  .pack__list-item.active{
+    color: #fff;
+    background-color: #D75555;
+  }
+
+  @media (max-width: 750px) {
+    .pack__list-title,
+    .pack__list-item{
+      font-size: 12px;
+    }
+
+    .pack__list-variants{
+      gap: 5px;
+    }
+
+    .pack__list-wrapper{
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<style>
+  .product-popup-modal__opener{
+    display: none;
+  }
+</style>
+<div class="pack__list">
+  <div class="pack__list-wrapper">
+    <h3 class="pack__list-title">Core Skin - Shorts size:</h3>
+    {% assign product = all_products['core-skin-shorts'] %}
+    <ul class="pack__list-variants">
+      {% for variant in product.variants %}
+        <li 
+          data-value="{{ variant.id }}" 
+          class="pack__list-item
+            {% if forloop.first %}active{% endif %}
+            {% unless variant.available %} unactive{% endunless %}
+          ">
+          {{ variant.title }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="pack__list-wrapper">
+    <h3 class="pack__list-title">Core Skin - Top size:</h3>
+    {% assign product = all_products['core-skin-top'] %}
+    <ul class="pack__list-variants">
+      {% for variant in product.variants %}
+        <li 
+          data-value="{{ variant.id }}" 
+          class="pack__list-item
+            {% if forloop.first %}active{% endif %}
+            {% unless variant.available %} unactive{% endunless %}
+          ">
+          {{ variant.title }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="pack__list-wrapper">
+    <h3 class="pack__list-title">Core Skin - Trousers size:</h3>
+    {% assign product = all_products['core-skin-trousers'] %}
+    <ul class="pack__list-variants">
+      {% for variant in product.variants %}
+        <li 
+          data-value="{{ variant.id }}" 
+          class="pack__list-item
+            {% if forloop.first %}active{% endif %}
+            {% unless variant.available %} unactive{% endunless %}
+          ">
+          {{ variant.title }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll(".pack__list-variants").forEach(variant => {
+    const items = variant.querySelectorAll("[data-value]");
+    items.forEach(item => {
+      item.addEventListener("click", (e) => {
+        items.forEach(elem => {
+          elem.classList.remove("active");
+        });
+
+        item.classList.add("active");
+      });
+    });
+  });
+</script>
