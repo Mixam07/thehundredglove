@@ -49,6 +49,16 @@
             "custom_liquid": "<div class=\"section__items\">\n    <p class=\"section__item\">Ultra Lightweight</p>\n    <p class=\"section__item\">Breathable</p>\n</div>\n\n<style>\n    .section__items{\n        display: flex;\n        column-gap: 10px;\n        margin-top: -10px;\n        margin-bottom: 10px;\n    }\n\n    .section__item{\n        padding: 0 10px;\n        display: block;\n        margin: 0;\n        color: #fff;\n        border-radius: 5px;\n        background-color: rgba(215, 85, 85, 1);\n        font-size: 12px;\n    }\n\n    @media (max-width: 750px) {\n        .section__items{\n            margin-top: -5px;\n        }\n\n        .section__item{\n            font-size: 10px;\n        }\n    }\n</style>"
           }
         },
+        "klarna_on_site_messaging_app_block_3hw7bF": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-auto-size",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
         "35aa0611-bd3c-422c-b045-7dd6f7e352a4": {
           "type": "shopify://apps/clearpay-on-site-messaging/blocks/payments-messaging/5d763983-d3e6-4888-9966-4e1170b26ae9",
           "disabled": true,
@@ -120,16 +130,6 @@
             "show_gift_card_recipient": false
           }
         },
-        "klarna_on_site_messaging_app_block_3hw7bF": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "credit-promotion-auto-size",
-            "theme": "default",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
-        },
         "9cc0f50e-9e5f-4b8f-917a-affe813bc3e2": {
           "type": "collapsible_tab",
           "settings": {
@@ -174,6 +174,7 @@
         "vendor",
         "price",
         "custom_liquid_hxb3eA",
+        "klarna_on_site_messaging_app_block_3hw7bF",
         "35aa0611-bd3c-422c-b045-7dd6f7e352a4",
         "description",
         "0707389e-4c9f-4b51-89de-e4a495ccc229",
@@ -182,7 +183,6 @@
         "5cd2e0dc-0e50-437a-919f-fa031b44ab0e",
         "f7992867-6105-4855-8a49-206fd637e3c1",
         "buy_buttons",
-        "klarna_on_site_messaging_app_block_3hw7bF",
         "9cc0f50e-9e5f-4b8f-917a-affe813bc3e2",
         "a92343d5-1bb0-45fa-b15b-fcc04f5aa014",
         "d15fdf10-1e93-405f-bada-e280b9e2fab0",

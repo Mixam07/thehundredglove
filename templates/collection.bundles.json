@@ -11,10 +11,18 @@
   "sections": {
     "7a0458a4-18e1-4a5c-8479-d4d3ee669f25": {
       "type": "nw-collection-banner",
+      "disabled": true,
       "settings": {
         "title": "The Hundred Glove",
         "text": "We embody goalkeeping expertise. Unlike some brands that prioritise style over substance, we focus on what truly matters. Our gloves are designed for your comfort, excellent performance, and the unwavering confidence they instill in your hands.",
         "image": "shopify://shop_images/Rectangle_37.png"
+      }
+    },
+    "section_bundle_banner_tAaE3V": {
+      "type": "section-bundle-banner",
+      "name": "section-bundle-banner",
+      "settings": {
+        "collection": ""
       }
     },
     "c4139915-ba9e-4b13-8d8a-cd978e4feba1": {
@@ -67,6 +75,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
@@ -75,6 +84,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 3,
@@ -90,6 +100,13 @@
         "columns_mobile": "2",
         "padding_top": 0,
         "padding_bottom": 32
+      }
+    },
+    "section_search_bundle_x4KaUb": {
+      "type": "section-search-bundle",
+      "name": "section-search-bundle",
+      "settings": {
+        "collection": "bundle"
       }
     },
     "cdc040e1-da21-4b49-b720-fb4d67b3470a": {
@@ -155,7 +172,16 @@
           "settings": {
             "title": "",
             "title_color": "",
+            "title_size_v2": 0,
             "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
             "html_area": ""
           }
         }
@@ -214,9 +240,11 @@
   },
   "order": [
     "7a0458a4-18e1-4a5c-8479-d4d3ee669f25",
+    "section_bundle_banner_tAaE3V",
     "c4139915-ba9e-4b13-8d8a-cd978e4feba1",
     "banner",
     "product-grid",
+    "section_search_bundle_x4KaUb",
     "cdc040e1-da21-4b49-b720-fb4d67b3470a",
     "0d15bfd6-ed1b-48a5-87df-161a18ed783a",
     "1687863215d0f1e416",

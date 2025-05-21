@@ -56,7 +56,8 @@
         "features_8PPQFQ"
       ],
       "custom_css": [
-        "@media (min-width: 750px) {.banner--medium.banner--desktop-transparent .banner__box {padding-left: 0; padding-right: 0; } .banner--medium.banner--desktop-transparent .banner__box h2 {} .banner__text p {max-width: 450px; margin: auto; } .banner__box > * + .banner__buttons {margin-top: 4rem; }}",
+        "@media (min-width: 750px) {.banner__text p {max-width: 450px; margin: auto; } .banner__box > * + .banner__buttons {margin-top: 4rem; }}",
+        "@media (max-width: 750px) {.banner__content .banner__box .banner__text p {font-size: 12px !important; line-height: 17px !important; } .banner__box h1 {font-size: 32px !important; line-height: 46px !important; } .banner__content .banner__box .banner__text {margin: 5px 0 !important; } .feature p {font-size: 10px !important; }}",
         ".bannerTrustBadge {margin: 0;}"
       ],
       "settings": {
@@ -89,6 +90,13 @@
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "section_search_wTTVwT": {
+      "type": "section-search",
+      "name": "section-search",
+      "settings": {
+        "collection": "all"
       }
     },
     "c4139915-ba9e-4b13-8d8a-cd978e4feba1": {
@@ -125,6 +133,7 @@
         "7398d056-79c4-40a1-9f69-95e590823ad4",
         "template--16790092644608__c4139915-ba9e-4b13-8d8a-cd978e4feba1-1687518394fa4a8d70-0"
       ],
+      "disabled": true,
       "custom_css": [
         ".card__information {position: relative;}",
         "ul#Slider-template--24315719549308__c4139915-ba9e-4b13-8d8a-cd978e4feba1 {justify-content: space-around; padding: 20px; border: 1px solid #000; border-radius: 10px; max-width: 800px; margin: 20px auto; background: #fff;}",
@@ -148,6 +157,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
@@ -156,6 +166,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
@@ -236,7 +247,14 @@
           "settings": {
             "title": "",
             "title_color": "",
+            "title_size_v2": 0,
             "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
             "background_color": "",
             "feed_id": "",
             "html_area": ""
@@ -299,6 +317,7 @@
     "7a0458a4-18e1-4a5c-8479-d4d3ee669f25",
     "image_banner_jViTYX",
     "custom_liquid_CWPCNR",
+    "section_search_wTTVwT",
     "c4139915-ba9e-4b13-8d8a-cd978e4feba1",
     "banner",
     "product-grid",

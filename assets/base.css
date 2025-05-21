@@ -3475,3 +3475,38 @@ form.installment.caption-large{
 .loading-overlay__spinner{
   display: none !important;
 }
+
+.button-menu svg{
+  color: #000;
+}
+
+/*
+@media (min-width: 750px) {
+  .banner__text p {
+    max-width: 450px;
+    margin: auto;
+  }
+  .banner__box > * + .banner__buttons {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 750px) {
+  .banner__content .banner__box .banner__text p {
+    font-size: 12px !important;
+    line-height: 17px !important;
+  }
+  .banner__box h1 {
+    font-size: 32px !important;
+    line-height: 46px !important;
+  }
+  .banner__content .banner__box .banner__text {
+    margin: 5px 0 !important;
+  }
+  .feature p {
+    font-size: 10px !important;
+  }
+}
+.bannerTrustBadge {
+  margin: 0;
+}
+*/

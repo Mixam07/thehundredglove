@@ -192,7 +192,7 @@ const addEvent = () => {
                     });
     
                     if (type_bundle.length == numbers[type] - 1 && active !== 2) {
-                        popupEnd.classList.add("active");
+                        changeActivePage(active + 1);
                     }
                 }
     
@@ -238,7 +238,7 @@ const addEvent = () => {
     })
 }
 
-const changeActivePage = (i) => {
+function changeActivePage(i) {
     active = i;
     const titles = ["step 1 - choose your glove (1 pair)", "step 2 - Choose Your Clothing Size (3 items)", "step 3 - Choose Your Accessory (1 item)"];
     const classes = ["glove", "clothing", "accessory"]
@@ -536,11 +536,6 @@ popupEnd.addEventListener("click", (e) => {
     if (e.target.classList.contains("bundle__end")) {
         popupEnd.classList.remove("active");
     }
-});
-
-document.querySelector(".bundle__end-button").addEventListener("click", (e) => {
-    changeActivePage(active + 1);
-    popupEnd.classList.remove("active");
 });
 
 document.querySelector(".bundle__cart-submit").addEventListener("click", async (e) => {

@@ -231,6 +231,13 @@
         "button3": "Accessories"
       }
     },
+    "section_bundle_list_icxNJj": {
+      "type": "section-bundle-list",
+      "name": "section-bundle-list",
+      "settings": {
+        "collection": ""
+      }
+    },
     "image_banner_epWtCR": {
       "type": "image-banner",
       "blocks": {
@@ -547,7 +554,14 @@
           "settings": {
             "title": "",
             "title_color": "",
+            "title_size_v2": 0,
             "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
             "background_color": "",
             "feed_id": "",
             "html_area": ""
@@ -569,6 +583,7 @@
     "f83b6b96-36cd-45b0-b7d4-898890fc0c56",
     "section_category_AAXPaQ",
     "46e54b38-38b9-4d23-a389-40a835204ffa",
+    "section_bundle_list_icxNJj",
     "image_banner_epWtCR",
     "11a8ffd1-6b0e-4f7c-bf86-acafbfdca859",
     "ccacf7fd-9395-445a-8026-9b4062af5a06",
