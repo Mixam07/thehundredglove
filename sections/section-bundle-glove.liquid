@@ -1,0 +1,335 @@
+{{ 'section-bundle.css' | asset_url | stylesheet_tag }}
+{{ 'section-popup.css' | asset_url | stylesheet_tag }}
+{{ 'section-bundle-glove.css' | asset_url | stylesheet_tag }}
+
+<div class="section-banner__wrapper">
+    <div class="section-banner__wrap">
+        <h2 class="section-banner__title">Build your own glove bundle</h2>
+        <div class="section-banner__items">
+            <div class="section-banner__item">
+                <p class="section-banner__pair">2 Pair</p>
+                <div class="section-banner__prices">
+                    <p class="section-banner__prevprice">£109.89</p>
+                    <p class="section-banner__price">£90.00</p>
+                </div>
+                <p class="section-banner__description">Most Popular</p>
+                <div class="section-banner__discount">Save 25%</div>
+            </div>
+            <div class="section-banner__item active">
+                <p class="section-banner__pair">3 Pair</p>
+                <div class="section-banner__prices">
+                    <p class="section-banner__prevprice">£158.97</p>
+                    <p class="section-banner__price">£120.00</p>
+                </div>
+                <p class="section-banner__description">Best Value</p>
+                <div class="section-banner__discount">Save 53%</div>
+            </div>
+            <div class="section-banner__item">
+                <p class="section-banner__pair">4 Pair</p>
+                <div class="section-banner__prices">
+                    <p class="section-banner__prevprice">£219.96</p>
+                    <p class="section-banner__price">£150.00</p>
+                </div>
+                <p class="section-banner__description">Best Deal</p>
+                <div class="section-banner__discount">Save 62%</div>
+            </div>
+        </div>
+    </div>
+    <div class="section-banner__image">
+        <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/MPH00194.jpg?v=1747936137" alt="photo">
+    </div>
+</div>
+
+<div class="page-width">
+    <div class="section-glove__wrapper">
+        <div class="section-glove__items">
+            {% for product in collections['gloves'].products %}
+                <div class="bundle__products-item">
+                    <div class="bundle__products-image">
+                        <img src="{{ product.images[0] | img_url: 'medium' }}" alt="{{ product.title }}" />
+                        {% if product.tags contains 'fingersave' %}
+                            <span class="card-top-badge">Fingersave</span>
+                        {% elsif product.tags contains 'best-seller' %}
+                            <span class="card-top-badge">Best Seller</span>
+                        {% elsif product.tags contains 'new-in' %}
+                            <span class="card-top-badge">New In</span>
+                        {% endif %}
+                    </div>
+                    <button data-buttonPopup="{{ product.id }}" class="bundle__products-button">
+                        Add
+                        <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.42857 4H0V3H3.42857V0H4.57143V3H8V4H4.57143V7H3.42857V4Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <p class="bundle__products-title">{{ product.title }}</p>
+                    <p class="bundle__products-subtitle">{{ product.metafields.custom.glove_type }}</p>
+                    <p class="bundle__products-price">{{ product.price | money }}</p>
+                    <div id="popup-{{ product.id }}" class="popup special">
+                        <div class="popup__content relative special">
+                            <div class="popup__images">
+                                {% for image in product.images %}
+                                    <img
+                                        src="{{ image | img_url: 'medium' }}"
+                                        alt="Product image"
+                                        class="popup__image"
+                                    >
+                                {% endfor %}
+                            </div>
+                            <div class="popup__stars">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
+                                </svg>
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
+                                </svg>
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
+                                </svg>
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
+                                </svg>
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
+                                </svg>
+                            </div>
+                            <div class="popup__wrapper">
+                                <h2 class="popup__title">{{ product.title }}</h3>
+                                <span class="popup__subtitle">{{ product.metafields.custom.glove_type }}</span>
+                            </div>
+                            <h3 class="popup__price">{{ product.price | money }}</h3>
+                            <h4 class="popup__color">COLOUR :</h4>
+                            <ul class="popup__list">
+                                {% for related_product in collections.all.products %}
+                                    {% assign first_word = related_product.title | split: ' ' | first %}
+                                    {% assign current_word = product.title | split: ' ' | first %}
+                                    {% if first_word == current_word and related_product.id != product.id %}
+                                    <li class="popup__item">
+                                        <button data-productId="{{ related_product.id }}" class="popup__button">
+                                            <img
+                                                src="{{ related_product.featured_image | img_url: '300x' }}"
+                                                alt="photo"
+                                            >
+                                        </button>
+                                    </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                            <div class="popup__wrap">
+                                <h4 class="popup__size">
+                                    SIZE: <span class="selected-size"></span>
+                                </h4>
+                                <button
+                                    class="popup__modal-button"
+                                    data-modal="{{ product.id }}"
+                                >
+                                    HELP ME CHOOSE
+                                </button>
+                                <div id="helpchoose-${item.id}" class="popup__help">
+                                    <div class="popup__help-content">
+                                        <button
+                                            data-modal="{{ product.id }}"
+                                            class="popup__help-close"
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+                                                <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                            <h1 class="popup__help-title">Size Guide</h1>
+                                            info
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup__sizes">
+                                {% for variant in product.variants %}
+                                    {% if variant.available %}
+                                        <button
+                                            class="popup__btn"
+                                            data-variant-id="{{ variant.id }}"
+                                        >
+                                            {{ variant.option1 }}
+                                        </button>
+                                    {% else %}
+                                        <button
+                                            class="popup__btn"
+                                            disabled
+                                        >
+                                            {{ variant.option1 }}
+                                        </button>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="popup__box">
+                                <div class="popup__box-wrapper">
+                                    <svg
+                                        width="18"
+                                        viewBox="0 0 56 56"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <circle cx="28" cy="28" r="28" fill="black"/>
+                                        <mask id="mask0_701_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="14" y="14" width="28" height="28">
+                                            <rect x="14" y="14" width="28" height="28" fill="#D9D9D9"/>
+                                        </mask>
+                                        <g mask="url(#mask0_701_2)">
+                                            <path d="M19.8333 36.1668H21.4667L31.5292 26.1043L29.8958 24.471L19.8333 34.5335V36.1668ZM36.5167 24.4127L31.5583 19.5127L33.1917 17.8793C33.6389 17.4321 34.1882 17.2085 34.8396 17.2085C35.491 17.2085 36.0403 17.4321 36.4875 17.8793L38.1208 19.5127C38.5681 19.9599 38.8014 20.4995 38.8208 21.1314C38.8403 21.7634 38.6264 22.3029 38.1792 22.7502L36.5167 24.4127ZM34.825 26.1335L22.4583 38.5002H17.5V33.5418L29.8667 21.1752L34.825 26.1335Z" fill="white"/>
+                                        </g>
+                                    </svg>
+                                    <span class="text-[10px]">ADD PERSONALISATION</span>
+                                </div>
+                                <div class="popup__box-container">
+                                    <div class="popup__box-wrap">
+                                        <div class="popup__box-info">
+                                            <label for="personalization">Name and number printed</label>
+                                            <span>£7</span>
+                                        </div>
+                                        <div data-close-icon>
+                                            <svg
+                                                width="28"
+                                                height="28"
+                                                viewBox="0 0 28 28"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <mask id="mask0_44_569" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+                                                    <rect width="28" height="28" fill="#D9D9D9"/>
+                                                </mask>
+                                                <g mask="url(#mask0_44_569)">
+                                                    <path d="M7.46671 22.1667L5.83337 20.5334L12.3667 14L5.83337 7.46671L7.46671 5.83337L14 12.3667L20.5334 5.83337L22.1667 7.46671L15.6334 14L22.1667 20.5334L20.5334 22.1667L14 15.6334L7.46671 22.1667Z" fill="#1C1B1F"/>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <input
+                                        required
+                                        type="text"
+                                        data-personalization
+                                        maxlength="12"
+                                        form="{{ product_form_id }}"
+                                        name="properties[Name and number printed]"
+                                        placeholder="12 characters only"
+                                    >
+                                </div>
+                            </div>
+                            <div class="popup__container">
+                                <select
+                                    class="popup__quantity-selector"
+                                >
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+            
+                                <button
+                                    class="popup__submit"
+                                    data-variant-id="${item.variants[0].id}"
+                                    data-product-id="${item.id}"
+                                    data-product-title="${item.title}"
+                                    data-product-type="${item.type}"
+                                    data-product-price="${item.price}"
+                                    data-product-description="${item.glove_type}"
+                                    data-product-image="${item.images[0]}"
+                                >
+                                    Add to Bundle
+                                </button>
+                            </div>
+                            <button class="popup__close">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+                                    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="section-glove__wrap">
+            <div class="section-glove__bundle">
+                <h1 class="section-glove__title">Your bundle</h1>
+                <div class="section-glove__content">
+                    <div class="section-glove__list">
+                        <div class="section-glove__element empty">
+                            <div class="section-glove__photo"><p>GLOVE </p><span>1</span></div>
+                        </div>
+                        <div class="section-glove__element empty">
+                            <div class="section-glove__photo"><p>GLOVE </p><span>2</span></div>
+                        </div>
+                        <div class="section-glove__element empty">
+                            <div class="section-glove__photo"><p>GLOVE </p><span>3</span></div>
+                        </div>
+                        <div class="section-glove__element empty">
+                            <div class="section-glove__photo"><p>GLOVE </p><span>4</span></div>
+                        </div>
+                    </div>
+                    <div class="section-glove__footer">
+                        <div class="section-glove__info">
+                            <p class="section-glove__caption">Total Price</p>
+                            <div class="section-glove__prices">
+                                <p class="section-glove__cost">
+                                    {% if cart.currency.iso_code == "USD" %}
+                                        $170.00
+                                    {% elsif cart.currency.iso_code == "EUR" %}
+                                        €155.00
+                                    {% else %}
+                                        £120.00
+                                    {% endif %}
+                                </p>
+                                <p class="section-glove__prevcost">
+                                    {% if cart.currency.iso_code == "USD" %}
+                                        $254.52
+                                    {% elsif cart.currency.iso_code == "EUR" %}
+                                        €228,64
+                                    {% else %}
+                                        £202.95
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </div>
+                        <button disabled class="section-glove__submit">submit bundle</button>
+                        <img class="section-glove__img" src="{{ 'payment.svg' | asset_url }}" alt="payment">
+                    </div>
+                </div>
+            </div>
+            <div class="banners">
+                <div class="banners__item">
+                  <img src="{{ 'icon-1.svg' | asset_url }}" alt="icon" />
+                  <p class="banners__text">Fast Shipping</p>
+                </div>
+                <div class="banners__item">
+                  <img src="{{ 'icon-2.svg' | asset_url }}" alt="icon" />
+                  <p class="banners__text">Money-Back Guarantee</p>
+                </div>
+                <div class="banners__item">
+                  <img src="{{ 'icon-3.svg' | asset_url }}" alt="icon" />
+                  <p class="banners__text">Trusted by Pro Players</p>
+                </div>
+                <div class="banners__item">
+                  <img src="{{ 'icon-4.svg' | asset_url }}" alt="icon" />
+                  <p class="banners__text">20,000+ Satisfied Keepers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ 'section-bundle-glove.js' | asset_url | script_tag }}
+
+{% schema %}
+    {
+        "name": "section-bundle-glove",
+        "tag": "section",
+        "class": "section-bundle-glove",
+        "settings": [
+        ],
+        "presets" : [
+            {
+                "name" : "section-bundle-glove",
+                "category" : "Custom"
+            }
+        ]
+    }
+{% endschema %}

@@ -9,33 +9,28 @@
  */
 {
   "sections": {
-    "1728910141cd7d7a33": {
-      "type": "apps",
-      "blocks": {
-        "gsc_countdown_timer_countdown_qiECB8": {
-          "type": "shopify://apps/gsc-countdown-timer/blocks/countdown/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
-          "disabled": true,
-          "settings": {
-            "widget_id": "GSC-BAR-lqDmHCFahgJo"
-          }
-        }
-      },
-      "block_order": [
-        "gsc_countdown_timer_countdown_qiECB8"
-      ],
-      "custom_css": [
-        ".essential_annoucement_bar_wrapper {display: none;}"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "section_bundle_glove_d7RVe6": {
+      "type": "section-bundle-glove",
+      "custom_css": [
+        ".section-bundle-glove {margin-bottom: 70px;}"
+      ],
+      "name": "section-bundle-glove",
+      "settings": {}
+    },
+    "product_track_93KQk8": {
+      "type": "product-track",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
       }
     },
     "image_banner_NbiQwE": {
@@ -105,6 +100,7 @@
         "buttons_aELMzH",
         "icon_with_text_HXw8dy"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 749px) {.banner__box h1.banner__heading {color: #ffffff !important; font-size: 30px; max-width: 100%; margin: 0 auto; }}",
         ".banner__text {margin: 1rem 0 0 0 !important;}"
@@ -173,6 +169,7 @@
         "image_content_WgkxQh",
         "image_content_bUAW7C"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 999px) {.image-with-text__content {display: grid; grid-template-columns: 1fr 1fr; padding-left: 0; padding-right: 0; gap: 10px; padding-bottom: 0; } .image_content-wrap div h5 {text-align: center; } .image-with-text__content--mobile-center > * {align-self: auto; margin-top: 0; } .image-with-text__media-item {display: none; }}"
       ],
@@ -269,6 +266,7 @@
     },
     "bundle_products_9yKUnB": {
       "type": "bundle-products",
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 999px) {.reviewpart {display: none; }}"
       ],
@@ -360,14 +358,6 @@
         "pdBottomMob": 15,
         "title": "Why Hundreds Of Keepers Love Our Gloves",
         "text": ""
-      }
-    },
-    "product_track_93KQk8": {
-      "type": "product-track",
-      "settings": {
-        "text_field": "ELEVATE YOUR GAME",
-        "text_field2": "ELEVATE YOUR GAME",
-        "text_field3": "ELEVATE YOUR GAME"
       }
     },
     "multicolumn_EjaxJj": {
@@ -487,6 +477,7 @@
         "item_9ckiFR",
         "item_9VN9XJ"
       ],
+      "disabled": true,
       "settings": {
         "bgColor": "#F0F0F0",
         "pdTop": 50,
@@ -542,6 +533,7 @@
         "richtext_eNFcRd",
         "buttons_V83aJg"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 999px) {.banner:not(.banner--mobile-bottom) .banner__box {background: #fff; color: #121212; margin-top: 500px; } .banner__heading {color: #121212 !important; text-align: center; } .banner__text p {color: #121212 !important; } .media > img {object-position: top center; height: auto; }}"
       ],
@@ -611,6 +603,7 @@
     },
     "guarantee_anKzdL": {
       "type": "guarantee",
+      "disabled": true,
       "settings": {
         "image_background": "shopify://shop_images/Group_65.png",
         "title": "<p>10 Game Guarantee</p>",
@@ -674,6 +667,40 @@
         "show_text_below": false
       }
     },
+    "1728910141cd7d7a33": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_fJt9ei": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        },
+        "gsc_countdown_timer_countdown_qiECB8": {
+          "type": "shopify://apps/gsc-countdown-timer/blocks/countdown/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+          "disabled": true,
+          "settings": {
+            "widget_id": "GSC-BAR-lqDmHCFahgJo"
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_fJt9ei",
+        "gsc_countdown_timer_countdown_qiECB8"
+      ],
+      "custom_css": [
+        ".essential_annoucement_bar_wrapper {display: none;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "custom_liquid_MPmBiV": {
       "type": "custom-liquid",
       "settings": {
@@ -685,20 +712,21 @@
     }
   },
   "order": [
-    "1728910141cd7d7a33",
     "main",
+    "section_bundle_glove_d7RVe6",
+    "product_track_93KQk8",
     "image_banner_NbiQwE",
     "image_with_text_FDbqjR",
     "multicolumn_hHHdMa",
     "bundle_products_9yKUnB",
     "nw_reviews_w3NhMQ",
-    "product_track_93KQk8",
     "multicolumn_EjaxJj",
     "landing_slider_images_kQVFLf",
     "image_banner_tBegLG",
     "nw_faq_section_E3FxJH",
     "guarantee_anKzdL",
     "image_banner_gAEDJc",
+    "1728910141cd7d7a33",
     "custom_liquid_MPmBiV"
   ]
 }
