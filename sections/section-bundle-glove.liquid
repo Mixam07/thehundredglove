@@ -15,7 +15,7 @@
                 <p class="section-banner__description">Most Popular</p>
                 <div class="section-banner__discount">Save 25%</div>
             </div>
-            <div class="section-banner__item active">
+            <div class="section-banner__item">
                 <p class="section-banner__pair">3 Pair</p>
                 <div class="section-banner__prices">
                     <p class="section-banner__prevprice">£158.97</p>
@@ -24,7 +24,7 @@
                 <p class="section-banner__description">Best Value</p>
                 <div class="section-banner__discount">Save 53%</div>
             </div>
-            <div class="section-banner__item">
+            <div class="section-banner__item active">
                 <p class="section-banner__pair">4 Pair</p>
                 <div class="section-banner__prices">
                     <p class="section-banner__prevprice">£219.96</p>
@@ -37,6 +37,7 @@
     </div>
     <div class="section-banner__image">
         <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/MPH00194.jpg?v=1747936137" alt="photo">
+        <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/MPH00189.jpg?v=1748090341" alt="photo">
     </div>
 </div>
 
@@ -69,48 +70,44 @@
                             <div class="popup__images">
                                 {% for image in product.images %}
                                     <img
-                                        src="{{ image | img_url: 'medium' }}"
+                                        src="{{ image | img_url: 'master' }}"
                                         alt="Product image"
                                         class="popup__image"
                                     >
                                 {% endfor %}
                             </div>
                             <div class="popup__stars">
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
+                                <div data-reviews="{{ product.id }}">
+                                    <div class="loox-rating"
+                                        data-id="{{ product.id }}"
+                                        data-rating="{{ product.metafields.loox.avg_rating }}"
+                                        data-raters="{{ product.metafields.loox.num_reviews }}">
+                                    </div>
+                                </div>
                             </div>
                             <div class="popup__wrapper">
                                 <h2 class="popup__title">{{ product.title }}</h3>
-                                <span class="popup__subtitle">{{ product.metafields.custom.glove_type }}</span>
+                                <h3 class="popup__price">{{ product.price | money }}</h3>
                             </div>
-                            <h3 class="popup__price">{{ product.price | money }}</h3>
+                            <div class="popup__tags">
+                                <div class="popup__tag">Fingersaves</div>
+                                <div class="popup__tag">Ultra Lightweight</div>
+                                <div class="popup__tag">{{ product.metafields.custom.glove_type }}</div>
+                            </div>
                             <h4 class="popup__color">COLOUR :</h4>
                             <ul class="popup__list">
                                 {% for related_product in collections.all.products %}
                                     {% assign first_word = related_product.title | split: ' ' | first %}
                                     {% assign current_word = product.title | split: ' ' | first %}
-                                    {% if first_word == current_word and related_product.id != product.id %}
-                                    <li class="popup__item">
-                                        <button data-productId="{{ related_product.id }}" class="popup__button">
-                                            <img
-                                                src="{{ related_product.featured_image | img_url: '300x' }}"
-                                                alt="photo"
-                                            >
-                                        </button>
-                                    </li>
+                                    {% if first_word == current_word %}
+                                        <li class="popup__item">
+                                            <button data-productId="{{ related_product.id }}" class="popup__button">
+                                                <img
+                                                    src="{{ related_product.featured_image | img_url: '300x' }}"
+                                                    alt="photo"
+                                                >
+                                            </button>
+                                        </li>
                                     {% endif %}
                                 {% endfor %}
                             </ul>
@@ -124,7 +121,7 @@
                                 >
                                     HELP ME CHOOSE
                                 </button>
-                                <div id="helpchoose-${item.id}" class="popup__help">
+                                <div id="helpchoose-{{ product.id }}" class="popup__help">
                                     <div class="popup__help-content">
                                         <button
                                             data-modal="{{ product.id }}"
@@ -135,8 +132,7 @@
                                                 </path>
                                             </svg>
                                         </button>
-                                            <h1 class="popup__help-title">Size Guide</h1>
-                                            info
+                                        {{ section.settings.page.content }}
                                     </div>
                                 </div>
                             </div>
@@ -233,7 +229,7 @@
                                     data-product-description="${item.glove_type}"
                                     data-product-image="${item.images[0]}"
                                 >
-                                    Add to Bundle
+                                    ADD to cart
                                 </button>
                             </div>
                             <button class="popup__close">
@@ -316,6 +312,16 @@
     </div>
 </div>
 
+<div data-popup-image class="bundle__image">
+    <button data-prev class="bundle__image-prev">
+        <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
+    </button>
+    <img id="image" src="" alt="">
+    <button data-next class="bundle__image-next">
+        <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
+    </button>
+</div>
+
 {{ 'section-bundle-glove.js' | asset_url | script_tag }}
 
 {% schema %}
@@ -324,6 +330,11 @@
         "tag": "section",
         "class": "section-bundle-glove",
         "settings": [
+            {
+                "id": "page",
+                "type": "page",
+                "label": "Page"
+            }
         ],
         "presets" : [
             {

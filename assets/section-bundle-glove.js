@@ -1,7 +1,9 @@
 const submit = document.querySelector(".section-glove__submit");
+const numbers = document.querySelectorAll(".section-banner__item");
 
 let number = 4;
 let bundle = [];
+const bundles = ["44616385888512", "54825255174524", "55365367955836"];
 
 const changeBundle = () => {
     const wrapper = document.querySelector(".section-glove__list");
@@ -74,6 +76,17 @@ const changeBundle = () => {
     });
 }
 
+const changeActiveNumber = () => {
+    numbers.forEach(item => {
+        item.classList.remove("active");
+    });
+
+    const index = number === 2 ? 0:
+                number === 3? 1: 2;
+
+    numbers[index].classList.add("active");
+}
+
 document.querySelectorAll("[data-buttonPopup]").forEach(button => {
     button.addEventListener("click", (e) => {
         const id = button.getAttribute("data-buttonPopup");
@@ -108,24 +121,26 @@ document.querySelectorAll(".popup").forEach(popup => {
         const price = popup.querySelector(".popup__price")?.innerHTML;
         const image = popup.querySelector(".popup__images img")?.src;
 
-        popup.querySelectorAll("[data-variant-id]").forEach(size => {
-            size.classList.remove("active");
-        });
-        
-        if(bundle.length < number) {
-            bundle.push({
-                personalization,
-                variantId,
-                title,
-                size,
-                image,
-                price
+        if(size) {
+            popup.querySelectorAll("[data-variant-id]").forEach(size => {
+                size.classList.remove("active");
             });
+            
+            if(bundle.length < number) {
+                bundle.push({
+                    personalization,
+                    variantId,
+                    title,
+                    size,
+                    image,
+                    price
+                });
+            }
+
+            changeBundle();
+
+            popup.classList.remove("active");
         }
-
-        changeBundle();
-
-        popup.classList.remove("active");
     });
 });
 
@@ -153,6 +168,22 @@ document.querySelectorAll("[data-close-icon]").forEach((close, i) => {
     });
 });
 
+document.querySelectorAll("[data-modal]").forEach(item => {
+    item.addEventListener("click", (e) => {
+        const id = item.getAttribute("data-modal");
+
+        document.querySelector("#helpchoose-" + id).classList.add("active");
+    });
+});
+
+document.querySelectorAll(".popup__help").forEach(item => {
+    item.addEventListener("click", (e) => {
+        if(e.target.classList.contains("popup__help") || e.target.closest(".popup__help-close")){
+            item.classList.remove("active");
+        }
+    });
+});
+
 submit.addEventListener("click", async (e) => {
     const list = [...bundle.map(item => {
         return {
@@ -160,18 +191,22 @@ submit.addEventListener("click", async (e) => {
             quantity: 1
         }
     })];
-    let number = 0;
+    let num = 0;
 
     bundle.forEach(product => {
         if (product.personalization?.length > 0) {
-            number += 1;
+            num += 1;
         }
     });
 
     list.push({
         variantId: "44030822383872",
-        quantity: number
+        quantity: num
+    }, {
+        variantId: bundles[number - 2],
+        quantity: 1
     });
+
 
     const formData = {
         items: list.map(item => ({
@@ -208,3 +243,48 @@ submit.addEventListener("click", async (e) => {
     bundle = [];
     changeBundle();
 });
+
+numbers.forEach((item, i) => {
+    item.addEventListener("click", (e) => {
+        number = i === 0 ? 2: i === 1? 3: 4;
+
+        bundle = bundle.slice(0, number);
+        
+        changeActiveNumber();
+        changeBundle();
+    });
+});
+
+document.querySelector(".bundle__image").addEventListener("click", (e) => {
+    if (e.target.classList.contains("bundle__image")) {
+        e.target.classList.remove("active");
+    }
+});
+
+const addEventArrow = (childNodes, i, img) => {
+    let activeId = i;
+    document.querySelector("[data-next]").addEventListener("click", (e) => {
+        activeId = activeId == childNodes.length - 1 ? 0 : activeId + 1;
+        img.src = childNodes[activeId].src;
+    });
+    document.querySelector("[data-prev]").addEventListener("click", (e) => {
+        activeId = activeId == 0 ? childNodes.length - 1 : activeId - 1;
+        img.src = childNodes[activeId].src;
+    });
+}
+
+document.querySelectorAll(".popup__images").forEach(images => {
+    images.querySelectorAll("img").forEach((image, i) => {
+        image.addEventListener("click", (e) => {
+            const popup = document.querySelector("[data-popup-image]");
+
+            popup.classList.add("active")
+            popup.querySelector("#image").src = image.src;
+    
+            addEventArrow(images.querySelectorAll("img"), i, popup.querySelector("#image"));
+        });
+    })
+});
+
+changeActiveNumber();
+changeBundle();

@@ -866,8 +866,8 @@
         }
 
         .desktop-tabs__content div{
-          max-height: 240px;
-          margin-top: -2px;
+          /*max-height: 240px;*/
+          margin: -5px 0 -15px 0;
           overflow: hidden;
         }
 
@@ -951,6 +951,7 @@
       <script>
           const wrappers = document.querySelectorAll(".desktop-tabs");
   
+          /*
           const addReadMore = (wrapper) => {
             const content = wrapper.querySelector(".desktop-tabs__content div");
             const clientHeight = content.clientHeight;
@@ -967,6 +968,7 @@
               });
             }
           }
+            */
 
           wrappers.forEach(wrapper => {
             const tags = wrapper.querySelectorAll(".desktop-tabs__item");
@@ -989,7 +991,7 @@
                   tags[i].classList.add("active");
                   wrapper.querySelector(".desktop-tabs__content").innerHTML = `<div>${newContent}</div>`;
 
-                  addReadMore(wrapper);
+                  //addReadMore(wrapper);
                 });
               });
             });
@@ -1006,7 +1008,7 @@
             tags[0].classList.add("active");
             content.innerHTML = tags[0].querySelector("[data-content]").innerHTML;
 
-            addReadMore(wrap);
+            //addReadMore(wrap);
           });
         </script>
     </div>

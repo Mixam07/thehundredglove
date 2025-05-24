@@ -231,8 +231,37 @@
         "button3": "Accessories"
       }
     },
+    "featured_collection_NY7tyg": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Curated bundles",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bundle",
+        "products_to_show": 11,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
     "section_bundle_list_icxNJj": {
       "type": "section-bundle-list",
+      "disabled": true,
       "name": "section-bundle-list",
       "settings": {
         "collection": ""
@@ -583,6 +612,7 @@
     "f83b6b96-36cd-45b0-b7d4-898890fc0c56",
     "section_category_AAXPaQ",
     "46e54b38-38b9-4d23-a389-40a835204ffa",
+    "featured_collection_NY7tyg",
     "section_bundle_list_icxNJj",
     "image_banner_epWtCR",
     "11a8ffd1-6b0e-4f7c-bf86-acafbfdca859",

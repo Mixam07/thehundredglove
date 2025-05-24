@@ -24,9 +24,15 @@ try{
     const outStock = params.get('out-stock');
 
     if(handle == "gloves") {
-        document.querySelector("[data-features-list]").style.display = "block";
+        document.querySelector("[data-features-gloves]").style.display = "block";
     } else {
-        document.querySelector("[data-features-list]").style.display = "none";
+        document.querySelector("[data-features-gloves]").style.display = "none";
+    }
+
+    if(handle == "clothings") {
+        document.querySelector("[data-features-clothing]").style.display = "block";
+    } else {
+        document.querySelector("[data-features-clothing]").style.display = "none";
     }
 
     if ([...params].length !== 0) {
@@ -121,7 +127,7 @@ try{
         data.forEach((product, i) => {
             const match = product.price.match(/£([\d.]+)/);
             const price = parseFloat(match[1]);
-          
+ 
             if (!(product.collections.some(collection => collection == handle || !handle))) return;
             if (!(product.collections.some(collection => collection == features || !features))) return;
             if (!(inStock !== "true" && outStock !== "true") && (!(inStock == "true" && product.available) && outStock !== "true")) return;
@@ -257,8 +263,8 @@ try{
     const changeTags = () => {
         const url = new URL(window.location.href);
         const params = url.searchParams;
-        const handle = params.get('handle');
-        const features = params.get("features");
+        const handle = params.get('handle')?.replace("-", " ");
+        const features = params.get("features")?.replace("-", " ");
         const inStock = params.get('in-stock');
         const outStock = params.get('out-stock');
         const date = params.get('date');
@@ -345,9 +351,15 @@ try{
             const handle = button.getAttribute("data-handle");
 
             if(handle == "gloves") {
-                document.querySelector("[data-features-list]").style.display = "block";
+                document.querySelector("[data-features-gloves]").style.display = "block";
             } else {
-                document.querySelector("[data-features-list]").style.display = "none";
+                document.querySelector("[data-features-gloves]").style.display = "none";
+            }
+
+            if(handle == "clothings") {
+                document.querySelector("[data-features-clothing]").style.display = "block";
+            } else {
+                document.querySelector("[data-features-clothing]").style.display = "none";
             }
 
             updateOutStockParam("handle", handle);

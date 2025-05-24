@@ -3479,37 +3479,3 @@ form.installment.caption-large{
 .button-menu svg{
   color: #000;
 }
-
-/*
-@media (min-width: 750px) {
-  .banner__text p {
-    max-width: 450px;
-    margin: auto;
-  }
-  .banner__box > * + .banner__buttons {
-    margin-top: 4rem;
-  }
-}
-@media (max-width: 750px) {
-  .banner__content .banner__box .banner__text p {
-    font-size: 10px !important;
-    line-height: 14px !important;
-  }
-  .banner__box h1 {
-    font-size: 32px !important;
-    line-height: 46px !important;
-  }
-  .banner__content .banner__box .banner__text {
-    margin: 5px 0 !important;
-  }
-  .feature p {
-    font-size: 10px !important;
-  }
-  .banner__media {
-    height: 500px !important;
-  }
-}
-.bannerTrustBadge {
-  margin: 0;
-}
-*/
