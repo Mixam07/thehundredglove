@@ -43,6 +43,7 @@
         "template--16790092677376__83042eb1-6a0d-4bac-9b91-131997bd6195-16872475337cd37911-1",
         "template--16790092677376__83042eb1-6a0d-4bac-9b91-131997bd6195-16872475337cd37911-2"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (max-width: 750px) {.banner__text p {text-align: start; max-width: 150px; } .banner__text {margin: 2rem 0 !important; margin-bottom: -78px !important; } .banner__buttons {margin-top: 15rem !important; margin: 0 auto; } .banner__box {text-align: start; align-items: start; padding: 8rem 2rem !important; } .banner__box h1 {font-size: 50px !important; line-height: 60px !important; margin: 0; max-width: 80%; } .banner__buttons a {letter-spacing: 0px; font-size: 17px !important; padding: 10px 30px; } .banner__media {height: 55rem !important; }}"
       ],
@@ -66,6 +67,13 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
+      }
+    },
+    "section_main_banner_gzE3LM": {
+      "type": "section-main-banner",
+      "name": "section-main-banner",
+      "settings": {
+        "collection": ""
       }
     },
     "custom_liquid_UDqQNm": {
@@ -611,6 +619,7 @@
   },
   "order": [
     "83042eb1-6a0d-4bac-9b91-131997bd6195",
+    "section_main_banner_gzE3LM",
     "custom_liquid_UDqQNm",
     "featured_collection",
     "f83b6b96-36cd-45b0-b7d4-898890fc0c56",

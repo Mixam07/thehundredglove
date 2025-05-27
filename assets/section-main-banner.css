@@ -1,15 +1,20 @@
-.section-bundle-banner{
+.section-main-banner{
     display: flex;
     justify-content: center;
     padding: 120px 0;
-    background: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/82c9b3f1c8729b165ea3da156d265a9eb5bd15b9.png?v=1747833687") center center no-repeat;
+    background: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/55227d49a64edff52ff2a87445719752219349c8.png?v=1748366907") center center no-repeat;
     background-size: cover;
+}
+
+.page-width{
+    width: 100%;
 }
 
 .section-bundle-wrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    align-items: flex-start;
 }
 
 .section-bundle-caption{
@@ -20,7 +25,6 @@
     font-weight: 700;
     margin: 0;
     margin-bottom: 20px;
-    justify-content: center;
 }
 
 .section-bundle-title{
@@ -28,7 +32,6 @@
     color: #fff;
     margin: 0;
     margin-bottom: 20px;
-    max-width: 450px;
     text-align: center;
 }
 
@@ -37,25 +40,38 @@
     font-family: "Arial" !important;
     font-size: 16px;
     text-align: center;
-    max-width: 500px;
     margin: 0;
     margin-bottom: 25px;
     color: #fff;
 }
 
 .section-bundle-text{
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    column-gap: 5px;
     font-size: 14px;
-    font-weight: 700;
-    background-color: rgba(254, 231, 41, 1);
-    padding: 5px 15px;
-    border-radius: 15px;
     margin: 0;
 }
 
+.section-bundle-button{
+    display: block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: rgba(215, 85, 85, 1);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 750px) {
-    .section-bundle-banner{
-        background-image: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/c4846c59984919438cc5d91eed274033e7f8aef6.png?v=1747833687");
+    .section-main-banner{
+        background-image: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/15e15d26c0118559964c722d3247e10562856b7d.png?v=1748366907");
         padding-top: 325px;
         padding-bottom: 45px;
     }
@@ -65,8 +81,8 @@
         margin-bottom: 10px;
     }
 
-    .section-bundle-caption path{
-        height: 15px;
+    .section-bundle-caption svg{
+        width: 75px;
     }
 
     .section-bundle-title{
@@ -84,5 +100,15 @@
     .section-bundle-text{
         font-size: 12px;
         padding: 3px 10px;
+    }
+
+    .section-bundle-wrapper{
+        align-items: center;
+    }
+
+    .section-bundle-button{
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-bottom: 5px;
     }
 }
