@@ -1,5 +1,7 @@
 const submit = document.querySelector(".section-glove__submit");
 const numbers = document.querySelectorAll(".section-banner__item");
+const cost = document.querySelector(".section-glove__cost");
+const prevcost = document.querySelector(".section-glove__prevcost");
 
 let number = 4;
 let bundle = [];
@@ -84,12 +86,19 @@ const changeActiveNumber = () => {
     const index = number === 2 ? 0:
                 number === 3? 1: 2;
 
+    const price = numbers[index].querySelector(".section-banner__price").innerHTML;
+    const prevprice = numbers[index].querySelector(".section-banner__prevprice").innerHTML;
+
+    cost.innerHTML = price;
+    prevcost.innerHTML = prevprice;
+
     numbers[index].classList.add("active");
 }
 
 document.querySelectorAll("[data-buttonPopup]").forEach(button => {
     button.addEventListener("click", (e) => {
         const id = button.getAttribute("data-buttonPopup");
+        document.querySelector("body").style.overflow = "hidden";
 
         document.querySelector("#popup-" + id).classList.add("active");
     });
@@ -99,6 +108,7 @@ document.querySelectorAll(".popup").forEach(popup => {
     popup.addEventListener("click", (e) => {
         if(e.target.classList.contains("popup") || e.target.closest(".popup__close")){
             popup.classList.remove("active");
+            document.querySelector("body").style.overflow = "auto";
         }
     });
 
@@ -114,7 +124,6 @@ document.querySelectorAll(".popup").forEach(popup => {
     });
 
     popup.querySelector(".popup__submit").addEventListener("click", (e) => {
-        const personalization = popup.querySelector("[data-personalization]")?.value;
         const size = popup.querySelector(".selected-size")?.innerHTML?.trim();
         const variantId = popup.querySelector("[data-variant-id].active")?.getAttribute("data-variant-id");
         const title = popup.querySelector(".popup__title")?.innerHTML;
@@ -128,7 +137,6 @@ document.querySelectorAll(".popup").forEach(popup => {
             
             if(bundle.length < number) {
                 bundle.push({
-                    personalization,
                     variantId,
                     title,
                     size,
@@ -156,18 +164,6 @@ document.querySelectorAll("[data-productId]").forEach(button => {
     });
 });
 
-document.querySelectorAll(".popup__box-wrapper").forEach((button, i) => {
-    button.addEventListener("click", (e) => {
-        document.querySelectorAll(".popup__box-container")[i].classList.toggle("active");
-    });
-});
-
-document.querySelectorAll("[data-close-icon]").forEach((close, i) => {
-    close.addEventListener("click", (e) => {
-        document.querySelectorAll(".popup__box-container")[i].classList.toggle("active");
-    });
-});
-
 document.querySelectorAll("[data-modal]").forEach(item => {
     item.addEventListener("click", (e) => {
         const id = item.getAttribute("data-modal");
@@ -192,12 +188,6 @@ submit.addEventListener("click", async (e) => {
         }
     })];
     let num = 0;
-
-    bundle.forEach(product => {
-        if (product.personalization?.length > 0) {
-            num += 1;
-        }
-    });
 
     list.push({
         variantId: "44030822383872",

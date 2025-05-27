@@ -153,6 +153,11 @@
     margin-bottom: 20px;
 }
 
+.special .popup__sizes{
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
 .popup__btn{
     max-width: 150px;
     color: #000;
@@ -223,6 +228,7 @@
 .popup__container{
     display: flex;
     column-gap: 10px;
+    width: 100%;
 }
 
 .popup__quantity-selector{

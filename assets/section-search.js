@@ -16,6 +16,7 @@ try{
     const filterBtn = document.querySelector(".collection-hero__filter");
     const filter = document.querySelector(".collection-filters");
     const filterClose = document.querySelector(".filters-sidebar__close");
+    const sizesButtons = document.querySelectorAll("[data-sizes]");
 
     const url = new URL(window.location.href);
     const params = url.searchParams;
@@ -24,15 +25,23 @@ try{
     const outStock = params.get('out-stock');
 
     if(handle == "gloves") {
-        document.querySelector("[data-features-gloves]").style.display = "block";
+        document.querySelectorAll("[data-features-gloves]").forEach(item => {
+            item.style.display = "block";
+        });
     } else {
-        document.querySelector("[data-features-gloves]").style.display = "none";
+        document.querySelectorAll("[data-features-gloves]").forEach(item => {
+            item.style.display = "none";
+        });
     }
 
     if(handle == "clothings") {
-        document.querySelector("[data-features-clothing]").style.display = "block";
+        document.querySelectorAll("[data-features-clothing]").forEach(item => {
+            item.style.display = "block";
+        });
     } else {
-        document.querySelector("[data-features-clothing]").style.display = "none";
+        document.querySelectorAll("[data-features-clothing]").forEach(item => {
+            item.style.display = "none";
+        });
     }
 
     if ([...params].length !== 0) {
@@ -116,6 +125,7 @@ try{
         const features = params.get('features');
         const inStock = params.get('in-stock');
         const outStock = params.get('out-stock');
+        const size = params.get('sizes');
         const max = params.get('max') ? +params.get("max"): 500;
         const min = params.get('min') ? +params.get("min"): 5;
         const sortDescending = params.get('date') == "new-to-old"? true: false
@@ -128,6 +138,7 @@ try{
             const match = product.price.match(/£([\d.]+)/);
             const price = parseFloat(match[1]);
  
+            if (size && !(product.variants.some(item => item.title.toLocaleLowerCase() == size && item.available))) return
             if (!(product.collections.some(collection => collection == handle || !handle))) return;
             if (!(product.collections.some(collection => collection == features || !features))) return;
             if (!(inStock !== "true" && outStock !== "true") && (!(inStock == "true" && product.available) && outStock !== "true")) return;
@@ -216,6 +227,7 @@ try{
         const params = url.searchParams;
         const handle = params.get('handle');
         const features = params.get('features');
+        const sizes = params.get('sizes');
         const radioParam = params.get('date');
 
         collectionButtons.forEach(button => {
@@ -232,6 +244,16 @@ try{
             const data = button.getAttribute("data-features");
 
             if (features == data) {
+                button.classList.add("active");
+            } else {
+                button.classList.remove("active");
+            }
+        });
+
+        sizesButtons.forEach(button => {
+            const data = button.getAttribute("data-sizes");
+
+            if (sizes == data) {
                 button.classList.add("active");
             } else {
                 button.classList.remove("active");
@@ -351,19 +373,28 @@ try{
             const handle = button.getAttribute("data-handle");
 
             if(handle == "gloves") {
-                document.querySelector("[data-features-gloves]").style.display = "block";
+                document.querySelectorAll("[data-features-gloves]").forEach(item => {
+                    item.style.display = "block";
+                });
             } else {
-                document.querySelector("[data-features-gloves]").style.display = "none";
+                document.querySelectorAll("[data-features-gloves]").forEach(item => {
+                    item.style.display = "none";
+                });
             }
 
             if(handle == "clothings") {
-                document.querySelector("[data-features-clothing]").style.display = "block";
+                document.querySelectorAll("[data-features-clothing]").forEach(item => {
+                    item.style.display = "block";
+                });
             } else {
-                document.querySelector("[data-features-clothing]").style.display = "none";
+                document.querySelectorAll("[data-features-clothing]").forEach(item => {
+                    item.style.display = "none";
+                });
             }
 
             updateOutStockParam("handle", handle);
             updateOutStockParam("features", null);
+            updateOutStockParam("sizes", null);
         });
     });
 
@@ -375,6 +406,13 @@ try{
         });
     });
 
+    sizesButtons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            const sizes = button.getAttribute("data-sizes");
+
+            updateOutStockParam("sizes", sizes);
+        });
+    })
 
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("click", (e) => {

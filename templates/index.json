@@ -233,6 +233,10 @@
     },
     "featured_collection_NY7tyg": {
       "type": "featured-collection",
+      "custom_css": [
+        "@media (max-width: 749px) {.title {margin: 0; } .grid--peek .grid__item, .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {width: calc(65% - var(--grid-mobile-horizontal-spacing) - 3rem); max-width: 100%; }}",
+        "ul#Slider-template--23836371845500__featured_collection {gap: 20px;}"
+      ],
       "settings": {
         "title": "Curated bundles",
         "heading_size": "h2",

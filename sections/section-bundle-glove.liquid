@@ -4,31 +4,89 @@
 
 <div class="section-banner__wrapper">
     <div class="section-banner__wrap">
+        <p class="section-banner__caption">
+            <svg xmlns="http://www.w3.org/2000/svg" width="104" height="19" viewBox="0 0 104 19" fill="none">
+                <path d="M10.3736 0.124023L12.7026 6.49131H20.2394L14.142 10.4265L16.471 16.7938L10.3736 12.8586L4.27614 16.7938L6.60515 10.4265L0.507718 6.49131H8.04456L10.3736 0.124023Z" fill="white"/>
+                <path d="M31.1206 0.124023L33.4496 6.49131H40.9865L34.8891 10.4265L37.2181 16.7938L31.1206 12.8586L25.0232 16.7938L27.3522 10.4265L21.2548 6.49131H28.7916L31.1206 0.124023Z" fill="white"/>
+                <path d="M51.8677 0.124023L54.1967 6.49131H61.7336L55.6361 10.4265L57.9651 16.7938L51.8677 12.8586L45.7703 16.7938L48.0993 10.4265L42.0019 6.49131H49.5387L51.8677 0.124023Z" fill="white"/>
+                <path d="M72.6148 0.124023L74.9438 6.49131H82.4806L76.3832 10.4265L78.7122 16.7938L72.6148 12.8586L66.5173 16.7938L68.8464 10.4265L62.7489 6.49131H70.2858L72.6148 0.124023Z" fill="white"/>
+                <path d="M93.3618 0.124023L95.6909 6.49131H103.228L97.1303 10.4265L99.4593 16.7938L93.3618 12.8586L87.2644 16.7938L89.5934 10.4265L83.496 6.49131H91.0328L93.3618 0.124023Z" fill="white"/>
+            </svg>
+            Trusted by 20,000+ Keepers
+        </p>
         <h2 class="section-banner__title">Build your own glove bundle</h2>
         <div class="section-banner__items">
             <div class="section-banner__item">
-                <p class="section-banner__pair">2 Pair</p>
+                <p class="section-banner__pair">2 Pairs</p>
                 <div class="section-banner__prices">
-                    <p class="section-banner__prevprice">£109.89</p>
-                    <p class="section-banner__price">£90.00</p>
+                    <p class="section-banner__prevprice">
+                        {% if cart.currency.iso_code == "USD" %}
+                            $148.75
+                        {% elsif cart.currency.iso_code == "EUR" %}
+                            €130.87
+                        {% else %}
+                            £109.89
+                        {% endif %}
+                    </p>
+                    <p class="section-banner__price">
+                        {% if cart.currency.iso_code == "USD" %}
+                            $121.82
+                        {% elsif cart.currency.iso_code == "EUR" %}
+                            €107.18
+                        {% else %}
+                            £90.00
+                        {% endif %}
+                    </p>
                 </div>
                 <p class="section-banner__description">Most Popular</p>
                 <div class="section-banner__discount">Save 25%</div>
             </div>
             <div class="section-banner__item">
-                <p class="section-banner__pair">3 Pair</p>
+                <p class="section-banner__pair">3 Pairs</p>
                 <div class="section-banner__prices">
-                    <p class="section-banner__prevprice">£158.97</p>
-                    <p class="section-banner__price">£120.00</p>
+                    <p class="section-banner__prevprice">
+                        {% if cart.currency.iso_code == "USD" %}
+                            $274.71
+                        {% elsif cart.currency.iso_code == "EUR" %}
+                            €241.69
+                        {% else %}
+                            £202.95
+                        {% endif %}
+                    </p>
+                    <p class="section-banner__price">
+                        {% if cart.currency.iso_code == "USD" %}
+                            $162.43
+                        {% elsif cart.currency.iso_code == "EUR" %}
+                            €142.91
+                        {% else %}
+                            £120.00
+                        {% endif %}
+                    </p>
                 </div>
                 <p class="section-banner__description">Best Value</p>
                 <div class="section-banner__discount">Save 53%</div>
             </div>
             <div class="section-banner__item active">
-                <p class="section-banner__pair">4 Pair</p>
+                <p class="section-banner__pair">4 Pairs</p>
                 <div class="section-banner__prices">
-                    <p class="section-banner__prevprice">£219.96</p>
-                    <p class="section-banner__price">£150.00</p>
+                    <p class="section-banner__prevprice">
+                        {% if cart.currency.iso_code == "USD" %}
+                            $297.74
+                        {% elsif cart.currency.iso_code == "EUR" %}
+                            €261.95
+                        {% else %}
+                            £219.96
+                        {% endif %}
+                    </p>
+                    <p class="section-banner__price">
+                        {% if cart.currency.iso_code == "USD" %}
+                            $203.04
+                        {% elsif cart.currency.iso_code == "EUR" %}
+                            €178.64
+                        {% else %}
+                            £150.00
+                        {% endif %}
+                    </p>
                 </div>
                 <p class="section-banner__description">Best Deal</p>
                 <div class="section-banner__discount">Save 62%</div>
@@ -155,56 +213,56 @@
                                     {% endif %}
                                 {% endfor %}
                             </div>
-                            <div class="popup__box">
-                                <div class="popup__box-wrapper">
-                                    <svg
-                                        width="18"
-                                        viewBox="0 0 56 56"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <circle cx="28" cy="28" r="28" fill="black"/>
-                                        <mask id="mask0_701_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="14" y="14" width="28" height="28">
-                                            <rect x="14" y="14" width="28" height="28" fill="#D9D9D9"/>
-                                        </mask>
-                                        <g mask="url(#mask0_701_2)">
-                                            <path d="M19.8333 36.1668H21.4667L31.5292 26.1043L29.8958 24.471L19.8333 34.5335V36.1668ZM36.5167 24.4127L31.5583 19.5127L33.1917 17.8793C33.6389 17.4321 34.1882 17.2085 34.8396 17.2085C35.491 17.2085 36.0403 17.4321 36.4875 17.8793L38.1208 19.5127C38.5681 19.9599 38.8014 20.4995 38.8208 21.1314C38.8403 21.7634 38.6264 22.3029 38.1792 22.7502L36.5167 24.4127ZM34.825 26.1335L22.4583 38.5002H17.5V33.5418L29.8667 21.1752L34.825 26.1335Z" fill="white"/>
-                                        </g>
-                                    </svg>
-                                    <span class="text-[10px]">ADD PERSONALISATION</span>
-                                </div>
-                                <div class="popup__box-container">
-                                    <div class="popup__box-wrap">
-                                        <div class="popup__box-info">
-                                            <label for="personalization">Name and number printed</label>
-                                            <span>£7</span>
-                                        </div>
-                                        <div data-close-icon>
-                                            <svg
-                                                width="28"
-                                                height="28"
-                                                viewBox="0 0 28 28"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <mask id="mask0_44_569" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
-                                                    <rect width="28" height="28" fill="#D9D9D9"/>
-                                                </mask>
-                                                <g mask="url(#mask0_44_569)">
-                                                    <path d="M7.46671 22.1667L5.83337 20.5334L12.3667 14L5.83337 7.46671L7.46671 5.83337L14 12.3667L20.5334 5.83337L22.1667 7.46671L15.6334 14L22.1667 20.5334L20.5334 22.1667L14 15.6334L7.46671 22.1667Z" fill="#1C1B1F"/>
-                                                </g>
-                                            </svg>
-                                        </div>
+                            <div class="desktop-tabs">
+                                <div class="desktop-tabs__item">
+                                    <span class="desktop-tabs__title" data-title>
+                                        DETAILS
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <div data-content>
+                                        <h1>Details</h1>
+                                        <p>Our first-ever Fingersave model - built for keepers who want more support without sacrificing feel.</p><p>Finished in a <strong>negative cut</strong> for that close, second-skin fit, with <strong>removable Fingersave spines</strong> so you can choose the level of protection you want. Extra reinforcement when you need it, full flexibility when you don’t.</p><p>The <strong>3.5mm latex + 4mm foam palm</strong> gives you pro-level grip in all conditions, while the <strong>embossed latex backhand</strong> and <strong>8mm foam</strong> provide comfort and impact absorption, finished with <strong>mesh lamination</strong> for added breathability.</p><p>A <strong>latex strap with velcro closure</strong> and <strong>elasticated cuff</strong> keeps things locked in, and the <strong>mesh gussets</strong> allow airflow throughout the fingers.<br><br>Other details:<br><br><strong>- Velcro pocket</strong> under the backhand for spine access<br><br><strong>- Hanging loop</strong> for easy drying<br><br>- Comes in a premium <strong>zippered glove bag</strong></p>
                                     </div>
-                                    <input
-                                        required
-                                        type="text"
-                                        data-personalization
-                                        maxlength="12"
-                                        form="{{ product_form_id }}"
-                                        name="properties[Name and number printed]"
-                                        placeholder="12 characters only"
-                                    >
+                                </div>
+                                <div class="desktop-tabs__item">
+                                    <span class="desktop-tabs__title" data-title>
+                                        WASH & CARE
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <div data-content>
+                                        <h1>WASH & CARE</h1>
+                                        <p><span class="metafield-multi_line_text_field">- Fill a sink or basin with lukewarm water and add mild detergent.<br>
+                                        <br>
+                                        - Immerse the gloves and gently rub them to remove dirt and sweat.<br>
+                                        <br>
+                                        - Rinse the gloves thoroughly with clean water.<br>
+                                        <br>
+                                        - Squeeze out excess water and pat dry with a towel.<br>
+                                        <br>
+                                        - Air dry the gloves away from direct sunlight or heat sources.</span></p>
+                                    </div>
+                                </div>
+                                <div class="desktop-tabs__item">
+                                    <span class="desktop-tabs__title" data-title>
+                                        SHIPPING & RETURN
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <div data-content>
+                                        <h1>SHIPPING & RETURN</h1>
+                                        <p><span class="metafield-multi_line_text_field">UK (&amp; NORTHERN IRELAND): Enjoy complimentary shipping on orders over £100, dispatched from our London base through Royal Mail. For orders below £100, a standard shipping fee of £5.00 applies, while next-day delivery is available at £7.00.<br>
+                                        <br>
+                                        USA: Choose our Standard Untracked option for £5.00, or upgrade to Premium Tracked shipping for £10.00.<br>
+                                        <br>
+                                        EUROPE &amp; IRELAND: Choose our Standard Untracked option for £5.00, or upgrade to Premium Tracked shipping for £10.00.<br>
+                                        <br>
+                                        We post nearly every order within 24 hours. If you order before noon - we will try to ship the same day. Average shipping time is about 2-3 days, and we charge a nominal fee which covers shipping and handling.</span></p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="popup__container">
@@ -219,18 +277,7 @@
                                     <option value="6">6</option>
                                 </select>
             
-                                <button
-                                    class="popup__submit"
-                                    data-variant-id="${item.variants[0].id}"
-                                    data-product-id="${item.id}"
-                                    data-product-title="${item.title}"
-                                    data-product-type="${item.type}"
-                                    data-product-price="${item.price}"
-                                    data-product-description="${item.glove_type}"
-                                    data-product-image="${item.images[0]}"
-                                >
-                                    ADD to cart
-                                </button>
+                                <button class="popup__submit">ADD to cart</button>
                             </div>
                             <button class="popup__close">
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
@@ -267,20 +314,20 @@
                             <div class="section-glove__prices">
                                 <p class="section-glove__cost">
                                     {% if cart.currency.iso_code == "USD" %}
-                                        $170.00
+                                        $203.04
                                     {% elsif cart.currency.iso_code == "EUR" %}
-                                        €155.00
+                                        €178.64
                                     {% else %}
-                                        £120.00
+                                        £150.00
                                     {% endif %}
                                 </p>
                                 <p class="section-glove__prevcost">
                                     {% if cart.currency.iso_code == "USD" %}
-                                        $254.52
+                                        $297.74
                                     {% elsif cart.currency.iso_code == "EUR" %}
-                                        €228,64
+                                        €261.95
                                     {% else %}
-                                        £202.95
+                                        £219.96
                                     {% endif %}
                                 </p>
                             </div>
@@ -321,6 +368,92 @@
         <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
     </button>
 </div>
+
+<style>
+    .bundle__products-title,
+    .bundle__products-subtitle,
+    .bundle__products-price{
+        text-align: center !important;
+    }
+</style>
+
+<style>
+    .desktop-tabs__item .desktop-tabs__title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 5px 15px;
+        border-top: .5px solid grey;
+        border-bottom: .5px solid grey;
+        cursor: pointer;
+    }
+
+    .desktop-tabs__item{
+        margin-bottom: 5px;
+    }
+
+    .desktop-tabs__item div{
+        display: none;
+        padding: 15px 0;
+    }
+
+    .desktop-tabs__item h1{
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .desktop-tabs__item p{
+        font-size: 10px;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .desktop-tabs__item.active div{
+        display: block;
+    }
+
+    .desktop-tabs__item.active svg{
+        transform: rotate(180deg);
+    }
+
+    .desktop-tabs{
+        margin-bottom: 15px;
+        margin-top: -5px;
+    }
+
+    @media (max-width: 750px) {
+        .desktop-tabs__content *{
+            font-size: 8px;
+            line-height: 10px;
+        }
+    }
+</style>
+
+<script>
+    const items = document.querySelectorAll(".desktop-tabs__item");
+    const tags = document.querySelectorAll(".desktop-tabs__item [data-title]");
+
+    tags.forEach((tag, i) => {
+        tag.addEventListener("click", (e) => {
+            const bool = items[i].classList.contains("active");
+
+            items.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            if(!bool)
+                items[i].classList.add("active");
+        });
+    });
+
+    items.forEach(item => {
+        item.classList.remove("active");
+    });
+</script>
 
 {{ 'section-bundle-glove.js' | asset_url | script_tag }}
 

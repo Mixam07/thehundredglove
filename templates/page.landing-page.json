@@ -23,7 +23,9 @@
         ".section-bundle-glove {margin-bottom: 70px;}"
       ],
       "name": "section-bundle-glove",
-      "settings": {}
+      "settings": {
+        "page": "glove-size-img"
+      }
     },
     "product_track_93KQk8": {
       "type": "product-track",

@@ -471,6 +471,15 @@
     background-color: #D75555;
     color: #fff;
 }
+
+.section-banner__caption{
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
   
 @media (max-width: 992px) {
     .section-banner__image{
@@ -494,7 +503,7 @@
         background: #191B1C;
 background: linear-gradient(0deg,rgba(25, 27, 28, 1) 25%, rgba(25, 27, 28, 0.5) 45%, rgba(0, 0, 0, 0) 65%);
         width: 100%;
-        padding-top: 250px;
+        padding-top: 275px;
         padding-bottom: 35px;
     }
 
@@ -530,6 +539,16 @@ background: linear-gradient(0deg,rgba(25, 27, 28, 1) 25%, rgba(25, 27, 28, 0.5) 
     .section-banner__discount{
         padding: 5px;
         font-size: 8px;
+    }
+
+    .section-banner__caption{
+        margin-bottom: 5px;
+        font-size: 12px;
+        column-gap: 5px;
+    }
+
+    .section-banner__caption svg{
+        width: 75px;
     }
 }
   
@@ -573,6 +592,14 @@ background: linear-gradient(0deg,rgba(25, 27, 28, 1) 25%, rgba(25, 27, 28, 0.5) 
     background-color: #D75555;
     border-radius: 5px;
     padding: 0 5px;
-    font-size: 8px;
+    font-size: 10px;
     color: #fff;
+}
+
+.loox-rating-content svg{
+    width: 10px;
+}
+
+.popup__price{
+    font-size: 14px;
 }

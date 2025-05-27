@@ -3479,3 +3479,8 @@ form.installment.caption-large{
 .button-menu svg{
   color: #000;
 }
+
+.personalization-box,
+.popup__box{
+  display: none !important;
+}
