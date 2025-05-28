@@ -1,0 +1,70 @@
+{{ 'section-help-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <div class="section-banner__wrapper {% if section.settings.center_desktop %}section-center{% endif %} {% if section.settings.align_bottom_mobile %}align-bottom-mobile{% endif %}">
+        <h1 class="section-banner__title">{{ section.settings.banner_heading }}</h1>
+        {{ section.settings.banner_text }}
+        
+        <!--<p class="section-banner__text"></p>-->
+    </div>
+</div>
+
+<style>
+  .section-help-banner {
+    background-image: url("{{ section.settings.desktop_image | img_url: 'master' }}");
+  }
+
+  @media (max-width: 750px) {
+    .section-help-banner {
+      background-image: url("{{ section.settings.mobile_image | img_url: 'master' }}");
+    }
+  }
+</style>
+
+{% schema %}
+    {
+        "name": "section-help-banner",
+        "tag": "section",
+        "class": "section-help-banner",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "center_desktop",
+                "label": "Center content on desktop",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "align_bottom_mobile",
+                "label": "Align content to bottom on mobile",
+                "default": false
+            },
+            {
+                "type": "image_picker",
+                "id": "desktop_image",
+                "label": "Desktop image"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile_image",
+                "label": "Mobile image"
+            },
+            {
+                "type": "text",
+                "id": "banner_heading",
+                "label": "Banner heading"
+            },
+            {
+                "type": "textarea",
+                "id": "banner_text",
+                "label": "Paragraphs"
+            }
+        ],
+        "presets" : [
+            {
+                "name" : "section-help-banner",
+                "category" : "Custom"
+            }
+        ]
+    }
+{% endschema %}

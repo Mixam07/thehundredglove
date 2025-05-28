@@ -1,0 +1,66 @@
+.section-help-banner{
+    background: center center no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.page-width{
+    height: 100%;
+}
+
+.section-banner__wrapper{
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-banner__wrapper.section-center{
+    margin: 0 auto;
+}
+
+.section-center .section-banner__title,
+.section-center .section-banner__text{
+    text-align: center;
+}
+
+.section-banner__title{
+    margin: 0;
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.section-banner__text{
+    margin: 0;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 750px) {
+    .section-help-banner{
+        padding: 30px 20px;
+    }
+
+    .section-banner__wrapper{
+        justify-content: flex-start;
+        margin: 0 auto;
+    }
+    
+    .section-banner__wrapper.align-bottom-mobile{
+        justify-content: flex-end;
+    }
+
+    .section-banner__title{
+        text-align: center;
+        font-size: 36px;
+        margin: 0;
+    }
+
+    .section-banner__text{
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+}

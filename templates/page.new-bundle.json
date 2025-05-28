@@ -17,17 +17,17 @@
         "padding_bottom": 28
       }
     },
-    "section_banner_xDaBYJ": {
-      "type": "section-banner",
+    "section_bundle_glove_kVRAhE": {
+      "type": "section-bundle-glove",
+      "name": "section-bundle-glove",
       "settings": {
-        "banner-background-photo": "shopify://shop_images/733ae205649abf9f3d067a85dd661c8f.png",
-        "banner-photo": "shopify://shop_images/banner_photo.png"
+        "page": "glove-size-img"
       }
     },
     "marquee_sec_MiKAf3": {
       "type": "marquee_sec",
       "custom_css": [
-        ".marquee {background: #000;}",
+        ".marquee {background: #000; margin-top: 40px;}",
         ".marquee .content span {color: #fff;}",
         ".marquee .content span::before {background: #fff;}"
       ],
@@ -35,19 +35,6 @@
         "text_field": "ELEVATE YOUR GAME",
         "text_field2": "ELEVATE YOUR GAME",
         "text_field3": "ELEVATE YOUR GAME"
-      }
-    },
-    "section_bundle_mz7bpQ": {
-      "type": "section-bundle",
-      "settings": {
-        "collection_1": "gloves",
-        "collection_2": "clothings",
-        "collection_3": "accessories",
-        "page_1": "glove-size-img",
-        "page_2": "short-size",
-        "page_3": "top-size",
-        "page_4": "trouser-size",
-        "link": "shopify://pages/pack"
       }
     },
     "nw_reviews_TapJj9": {
@@ -184,9 +171,8 @@
   },
   "order": [
     "main",
-    "section_banner_xDaBYJ",
+    "section_bundle_glove_kVRAhE",
     "marquee_sec_MiKAf3",
-    "section_bundle_mz7bpQ",
     "nw_reviews_TapJj9",
     "nw_faq_section_gyW86m",
     "1737747484b3804b1d"

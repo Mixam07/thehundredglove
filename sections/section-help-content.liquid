@@ -1,0 +1,65 @@
+{{ 'section-help-content.css' | asset_url | stylesheet_tag }}
+
+{% for block in section.blocks %}
+    {% if block.type == 'row' %}
+        <div class="section-content__item">
+            <div class="page-width">
+                <div class="section-content__wrap">
+                    <div class="section-content__image">
+                        <img src="{{ block.settings['content-image'] | img_url: 'original' }}" alt="photo">
+                    </div>
+                    <div class="section-content__wrapper">
+                        <h3 class="section-content__title">{{ block.settings['content-title'] }}</h3>
+                        <div class="section-content__description">{{ block.settings['content-description'] }}</div>
+                        <!--
+                            <p class="section-content__text"></p>
+                            <ul class="section-content__list">
+                                <li class="section-content__elem"></li>
+                            </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% schema %}
+{
+    "name": "section-help-content",
+    "tag": "section",
+    "class": "section-help-content",
+    "blocks": [
+    {
+        "type": "row",
+        "name": "Content",
+        "settings": 
+            [
+                {
+                    "id": "content-title",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "Title"
+                },
+                {
+                    "id": "content-description",
+                    "type": "textarea",
+                    "label": "Description",
+                    "default": "Description"
+                },
+                {
+                    "id": "content-image",
+                    "type": "image_picker",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-help-content",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

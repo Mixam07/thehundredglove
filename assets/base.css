@@ -3484,3 +3484,48 @@ form.installment.caption-large{
 .popup__box{
   display: none !important;
 }
+
+.nwReviewsWrapSwiperSliderTopTitle{
+  font-family: "Anton" !important;
+  font-weight: 400 !important;
+}
+
+.nwTextImageWrapLeft .button{
+  box-shadow: none !important;
+  padding: 15px;
+  width: 100% !important;
+  max-width: 250px !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  filter: none !important;
+  font-size: 18px !important;
+}
+
+body .nwTextImageWrapLeft a.button-with-hover:hover{
+  box-shadow: none !important;
+  filter: none !important;
+  background: linear-gradient(180deg,#fec8f1e6 -22.92%,#fec8f100 26.73%),radial-gradient(109.99% 253.12% at 76.68% 66.67%,#d75555,#ff7575)!important;
+}
+
+.nwTextImageWrapLeftTextBottom{
+  max-width: 250px !important;
+}
+
+a.view_all_col.show-destkop{
+  font-size: 18px !important;
+}
+
+a.view_all_col.show-mobile{
+  font-size: 14px !important;
+  line-height: 18px !important;
+  max-width: 125px !important;
+}
+
+@media (max-width: 750px) {
+  .nwTextImageWrapLeft .button{
+    font-size: 16px !important;
+    padding: 10px !important;
+  }
+}
