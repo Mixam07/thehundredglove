@@ -1,0 +1,79 @@
+{{ 'section-help-faq.css' | asset_url | stylesheet_tag }}
+
+<div class="faq-wrapper">
+    <h2>FAQs</h2>
+
+    {% for block in section.blocks %}
+        <div class="faq-item">
+            <h3>
+                {{ block.settings.faq-title }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                    <path d="M21.0146 11.5254L11.5236 21.0164" stroke="#151515" stroke-width="1.84078" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.5234 11.5254L21.0144 21.0164" stroke="#151515" stroke-width="1.84078" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </h3>
+            <div class="faq-answer">
+                <p>{{ block.settings.faq-description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% javascript %}
+    document.addEventListener('DOMContentLoaded', function () {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const title = item.querySelector('h3');
+            const answer = item.querySelector('.faq-answer');
+
+            title.addEventListener('click', () => {
+                const isOpen = item.classList.contains('active');
+
+                faqItems.forEach(el => {
+                    el.classList.remove('active');
+                    const ans = el.querySelector('.faq-answer');
+                    ans.style.height = '0px';
+                });
+
+                if (!isOpen) {
+                    item.classList.add('active');
+                    answer.style.height = answer.scrollHeight + 'px';
+                }
+            });
+        });
+        });
+{% endjavascript %}
+
+{% schema %}
+{
+    "name": "section-help-faq",
+    "tag": "section",
+    "class": "section-help-faq",
+    "blocks": [
+    {
+        "type": "row",
+        "name": "Content",
+        "settings": 
+            [
+                {
+                    "id": "faq-title",
+                    "type": "text",
+                    "label": "Title"
+                },
+                {
+                    "id": "faq-description",
+                    "type": "text",
+                    "label": "Description"
+                }
+            ]
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-help-faq",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

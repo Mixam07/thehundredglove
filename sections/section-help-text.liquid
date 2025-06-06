@@ -1,0 +1,85 @@
+{{ 'section-help-text.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <div class="section-help-text__wrapper">
+        <h1 class="section-help-text__title">{{ section.settings.title }}</h1>
+        <div class="section-help-text__description">
+            {{ section.settings.description }}
+            <!--
+            <div class="questions-section">
+                <div class="question-card">
+                    <p class="question-text">“Why are the palms peeling?”</p>
+                </div>
+                <div class="question-card">
+                    <p class="question-text">“Is this a defect?”</p>
+                </div>
+                <div class="question-card">
+                    <p class="question-text">“They’ve only been used 3 times — is this normal?”</p>
+                </div>
+            </div>
+            <div class="section-help-text__items">
+                <div class="section-help-text__image img">
+                    <div class="section-help-text__item">
+                        <img src="" alt="">
+                        <p class="section-help-text__desc"></p>
+                    </div>
+                    <div class="section-help-text__item">
+                        <img src="" alt="">
+                        <p class="section-help-text__desc"></p>
+                    </div>
+                    <div class="section-help-text__item">
+                        <img src="" alt="">
+                        <p class="section-help-text__desc"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-help-text__items">
+                
+                <div class="section-help-text__image">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <span class="section-htlp-text__span">=</span>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <span class="section-htlp-text__span">=</span>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <p class="section-help-text__text"></p>
+            <span></span>
+            -->
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "section-help-text",
+    "tag": "section",
+    "class": "section-help-text",
+    "settings": [
+        {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "default": "Title"
+        },
+        {
+            "id": "description",
+            "type": "textarea",
+            "label": "Description",
+            "default": "Description"
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-help-text",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

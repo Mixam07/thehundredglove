@@ -1,0 +1,206 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_pMrURn": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": true,
+        "align_bottom_mobile": true,
+        "desktop_image": "shopify://shop_images/a439bd14ae1018feccfc6f7260f25591268d156b.png",
+        "mobile_image": "shopify://shop_images/79c3b61145e003b976159c27d7849cf86d64bfa7.png",
+        "banner_heading": "Best Goalkeeper Gloves for Training",
+        "banner_text": "<p class=\"section-banner__text\">Training sessions aren’t gentle — and your gloves feel it first.</p>\n<p class=\"section-banner__text\">More reps, more dives, more wear. If you’re using your match gloves every time you train, don’t be surprised when the grip disappears after a few sessions.</p>\n<p class=\"section-banner__text\">Here’s everything you need to know about choosing the right gloves for training — and why it matters.</p>"
+      }
+    },
+    "marquee_sec_YFpnHg": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_text_BXF7DW": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "What makes a good training glove?",
+        "description": "<p class=\"section-help-text__text\">Durability. Full stop.</p><p class=\"section-help-text__text\">You need gloves that can handle the grind — without falling apart after a week.</p>\n<p class=\"section-help-text__text\">That means:</p>\n<div class=\"section-help-text__items\">\n                <div class=\"section-help-text__image img\">\n                    <div class=\"section-help-text__item\">\n                        <img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/DSC7916.jpg?v=1749038777\" alt=\"\">\n                        <p class=\"section-help-text__desc\">Stronger, harder-wearing latex\n(not the soft stuff you’d wear in a match)</p>\n                    </div>\n                    <div class=\"section-help-text__item\">\n                        <img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/MPH01428.jpg?v=1749038778\" alt=\"\">\n                        <p class=\"section-help-text__desc\">Solid stitching that holds up under pressure</p>\n                    </div>\n                    <div class=\"section-help-text__item\">\n                        <img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/MPH-02589.jpg?v=1749038777\" alt=\"\">\n                        <p class=\"section-help-text__desc\">A cut and fit that lets you train freely, without babying your gear</p>\n                    </div>\n                </div>\n            </div>\n<p class=\"section-help-text__text\">Training gloves aren’t about flash. They’re about function.</p>\n<p class=\"section-help-text__text\">The goal is simple: protect your hands, keep your form sharp, and save your match gloves for where it counts.</p>"
+      }
+    },
+    "section_help_content_jYRpj8": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_NgmRRy": {
+          "type": "row",
+          "settings": {
+            "content-title": "Match gloves vs training gloves",
+            "content-description": "<p class=\"section-content__text\">Match gloves are built for grip.</p>\n<p class=\"section-content__text\">Training gloves are built to last.</p>\n<p class=\"section-content__text\">Match latex is usually softer, stickier, and more fragile. It’ll give you that elite-level feel — but if you use it every day in a muddy training session or on turf, don’t expect it to hold up.</p>\n<p class=\"section-content__text\">Training gloves use tougher latex that gives up a bit of grip for a lot more life. They won’t feel as “pro” out of the box — but they’ll still perform, and you won’t blow through a pair every 2 weeks.</p>",
+            "content-image": "shopify://shop_images/99f7ccbb2667d771b597df2fcba7c4337fbdc83a.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_bHt4nX": {
+          "type": "row",
+          "settings": {
+            "content-title": "So, should you have separate gloves for training and matches?",
+            "content-description": "<p class=\"section-content__text\">If you're training more than once a week, yes.</p>\n<p class=\"section-content__text\">One pair for training. One pair for game day. It’s that simple.</p>\n<p class=\"section-content__text\">You’ll save money, extend the lifespan of your match gloves, and always have a solid pair to fall back on.</p>",
+            "content-image": "shopify://shop_images/bc1861d4948b18d18db1079d5517ef48f85e398d.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_NgmRRy",
+        "row_bHt4nX"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": true
+      }
+    },
+    "section_help_other_C6eHEw": {
+      "type": "section-help-other",
+      "blocks": {
+        "row_3PDCtA": {
+          "type": "row",
+          "settings": {
+            "featured_product": "vanguard-black-yellow",
+            "other-title": "Vanguard Black Yellow",
+            "other-description": "Built with harder-wearing latex, perfect for artificial pitches or heavy training loads."
+          }
+        },
+        "row_KUVqC4": {
+          "type": "row",
+          "settings": {
+            "featured_product": "the-hundred-glove-obscure-navy-white",
+            "other-title": "Obscure",
+            "other-description": "Balanced feel with solid durability. Still plenty of grip, but made to last."
+          }
+        },
+        "row_GWceQi": {
+          "type": "row",
+          "settings": {
+            "featured_product": "sentinel-blue-yellow",
+            "other-title": "sentinel",
+            "other-description": "Hybrid performance for players training 3+ times a week who still want good handling."
+          }
+        }
+      },
+      "block_order": [
+        "row_3PDCtA",
+        "row_KUVqC4",
+        "row_GWceQi"
+      ],
+      "name": "section-help-other",
+      "settings": {
+        "main_title": "What gloves from Hundred are best for training?",
+        "subtitle": "We’ve built gloves that can take it — without breaking the bank.<br><br> If you need a recommendation, go for:",
+        "footer_text": "Not sure which to go for? Hit the chat. Tell us how often you train, what surface you play on, and we’ll tell you exactly what fits."
+      }
+    },
+    "section_help_content_GaVU9g": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_JJf6an": {
+          "type": "row",
+          "settings": {
+            "content-title": "Final word",
+            "content-description": "<p class=\"section-content__text\">Training gloves are workhorses — they’re not supposed to be pretty.</p>\n<p class=\"section-content__text\">They’re there to keep your hands protected, your grip sharp, and your match gloves untouched.</p>\n<p class=\"section-content__text\">Train smart. Gear up properly. And when you step into a game, your hands are ready.</p>",
+            "content-image": "shopify://shop_images/3de7095a2aee6f1d1f8f9320b1edcad72e07f228.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_JJf6an"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_faq_79hJFL": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_ezYxMn": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Do you sell separate gloves for training and matches?",
+            "faq-description": "No — and most serious brands don’t. The difference comes down to how you use them. Some gloves in our range are built with more durable latex and tougher construction, which makes them better suited to the demands of training."
+          }
+        },
+        "row_RVrzHM": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Which gloves are best for training?",
+            "faq-description": "Look for gloves with a slightly firmer latex and a more robust build. These will hold up better over repeated sessions, especially on turf or hard ground. If you’re unsure, check the product descriptions — we’ll tell you which ones can take a beating."
+          }
+        },
+        "row_nrVdJb": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Can I train in the same gloves I play in?",
+            "faq-description": "You can — but expect the grip to fade quicker. If you’re training more than once a week, you’ll want a second pair. One to train in. One to trust on matchday. That’s how most keepers do it."
+          }
+        },
+        "row_JUVrYF": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How do I make my gloves last longer in training?",
+            "faq-description": "Rinse them after every session. Never leave them wet in your bag. And stop dragging them on turf. The better you look after your gloves, the longer they hold up — even under heavy use."
+          }
+        },
+        "row_Mt9WAU": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Are all your gloves suitable for artificial pitches?",
+            "faq-description": "Yes — but some will last longer than others. Turf is tough on latex, so if you train on 3G regularly, go for gloves with stronger build quality. We’ll make it clear which ones are made for the grind."
+          }
+        }
+      },
+      "block_order": [
+        "row_ezYxMn",
+        "row_RVrzHM",
+        "row_nrVdJb",
+        "row_JUVrYF",
+        "row_Mt9WAU"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_pMrURn",
+    "marquee_sec_YFpnHg",
+    "section_help_text_BXF7DW",
+    "section_help_content_jYRpj8",
+    "section_help_other_C6eHEw",
+    "section_help_content_GaVU9g",
+    "section_help_faq_79hJFL"
+  ]
+}

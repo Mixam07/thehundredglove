@@ -1,0 +1,37 @@
+{{ 'section-help-promo.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <div class="section-help-promo__wrapper">
+        <div class="section-help-promo__information">
+            <h1 class="section-help-promo__title">How to Measure Your Hand</h1>
+            <p class="section-help-promo__text">If this is your first pair from Hundred, don’t worry — you can exchange them if the fit isn’t right.</p>
+            <ol class="section-help-promo__list">
+                <li class="section-help-promo__item">Measure Your Hand Length: Place a tape measure at the base of your palm and extend it to the tip of your middle finger.</li>
+                <li class="section-help-promo__item">Add 1cm: This accounts for the glove's thickness and ensures a snug fit without being too tight.</li>
+                <li class="section-help-promo__item">Consult the Size Chart: Match your measurement to the chart below.</li>
+            </ol>
+            <div class="section-help-promo__img">
+                <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Group_39763.png?v=1748961679" alt="">
+            </div>
+        </div>
+        <div class="section-help-promo__image">
+            <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/afda87a5385b26534a99f2ebaa220a2d3b02bf82.jpg?v=1748960926" alt="">
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "section-help-promo",
+    "tag": "section",
+    "class": "section-help-promo",
+    "settings": [
+    ],
+    "presets" : [
+        {
+            "name" : "section-help-promo",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

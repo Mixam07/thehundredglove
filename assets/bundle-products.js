@@ -252,9 +252,6 @@ submit.addEventListener("click", async (e) => {
                     id: bundleVariants[index - 1],
                     quantity: 1
                 }, {
-                    id: "44030822383872",
-                    quantity: number
-                }, {
                     id: "53598862836092",
                     quantity: index > 1 ? 1 : 0
                 },

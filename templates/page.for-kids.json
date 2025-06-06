@@ -1,0 +1,175 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_ThcynQ": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": false,
+        "desktop_image": "shopify://shop_images/17.jpg",
+        "mobile_image": "shopify://shop_images/17_1.jpg",
+        "banner_heading": "Goalkeeper Glove Size Help for Kids",
+        "banner_text": ""
+      }
+    },
+    "marquee_sec_nEQkkT": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_text_M6Widi": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Get the right fit. Boost their confidence. Stop the guesswork.",
+        "description": "<p class=\"section-help-text__text\">If you're buying gloves for your child, size is everything.</p>\n<p class=\"section-help-text__text\">Too small? They'll be uncomfortable, restrict hand movement, or split at the seams.</p>\n<p class=\"section-help-text__text\">Too big? They’ll struggle to catch, lose confidence, and the glove will do more harm than good.</p>\n<p class=\"section-help-text__text\">A proper fit means better handling, more control, and fewer mistakes.</p>\n<p class=\"section-help-text__text\">Here’s exactly how to get it right — no guesswork, no vague age-based sizing.</p>"
+      }
+    },
+    "section_help_content_pYec3t": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_m3tbYp": {
+          "type": "row",
+          "settings": {
+            "content-title": "How to measure your child’s hand",
+            "content-description": "<p class=\"section-content__text\">Forget age. Every kid is different — and sizing by age alone is one of the biggest mistakes parents make.</p>\n<p class=\"section-content__text\">To get the right glove size:.</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Take a tape measure (or ruler)</li>\n<li class=\"section-content__elem\">Measure from the base of the palm to the tip of the middle finger (in centimetres)</li>\n<li class=\"section-content__elem\">Add 1cm to that number</li>\n<li class=\"section-content__elem\">Round up to the nearest whole number — that’s your glove size</li>\n<li class=\"section-content__elem\">Example: 15.8cm + 1cm = 16.8cm → Size 7</li>\n<li class=\"section-content__elem\">Tip: If you're between sizes, go up one. A little extra room is fine. Too tight is a problem.</li>\n</ul>",
+            "content-image": "shopify://shop_images/Group_39681.jpg",
+            "content-isadaptive": true
+          }
+        }
+      },
+      "block_order": [
+        "row_m3tbYp"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": true
+      }
+    },
+    "section_help_text_fGmiJj": {
+      "type": "section-help-text",
+      "custom_css": [
+        ".section-help-text__image.img {grid-template-columns: 1fr 1fr 1fr 1fr; background-color: red;}"
+      ],
+      "name": "section-help-text",
+      "settings": {
+        "title": "Why the right fit matters so much",
+        "description": "<p class=\"section-help-text__text\">You wouldn’t buy them boots two sizes too big — gloves are no different.</p>\n<p class=\"section-help-text__text\">Poorly sized gloves affect:</p>\n<div class=\"section-help-text__items\">\n<div class=\"section-help-text__image img\">\n<div class=\"section-help-text__item\">\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/DSC08614.jpg?v=1749043352\" alt=\"\">\n<p class=\"section-help-text__desc\">Handling – The ball slips or feels “off”</p>\n</div>\n<div class=\"section-help-text__item\">\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/IMG_1965.jpg?v=1749043353\" alt=\"\">\n<p class=\"section-help-text__desc\">Confidence – They don’t trust their hands</p>\n</div>\n<div class=\"section-help-text__item\">\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/IMG_2398.png?v=1749043353\" alt=\"\">\n<p class=\"section-help-text__desc\">Durability – Oversized gloves wear down faster</p>\n</div>\n<div class=\"section-help-text__item\">\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/IMG_2522.jpg?v=1749043353\" alt=\"\">\n<p class=\"section-help-text__desc\">Technique – Bad habits creep in early</p>\n</div>\n</div>\n</div>\n<p class=\"section-help-text__text\">And no — they shouldn’t “grow into them.” That only slows their progress.</p>"
+      }
+    },
+    "section_help_content_LTQhJ9": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_pyBEdJ": {
+          "type": "row",
+          "settings": {
+            "content-title": "Built specifically for junior keepers",
+            "content-description": "<p class=\"section-content__text\">Our youth gloves aren’t just shrunk-down adult models. We redesign them from the ground up:</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Junior-specific cut – snug where it needs to be, with growing room</li>\n<li class=\"section-content__elem\">Durable Giga latex – more forgiving for developing technique</li>\n<li class=\"section-content__elem\">Secure wrist support – easy to pull on, tough to shake off</li>\n<li class=\"section-content__elem\">Reinforced stress points – built for repeat impact on turf or grass</li>\n</ul>\n<p class=\"section-content__text\">Because if they’re learning the hardest job on the pitch, they deserve proper gear — not just “good enough.”</p>",
+            "content-image": "shopify://shop_images/jojogonzalez_2014_.._goalkeeper_football_goalkeepertraining_soccer_goalkeepers_goalkeepergloves_goalkeepersaves_goalkeeperlife_portero_gk_goalie_goleiro_keeper_goalkeepercoach_goalkee.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_pyBEdJ"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_faq_Bq7xkU": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_UdNKj3": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What size goalkeeper gloves does my child need?",
+            "faq-description": "Measure from the base of their palm to the tip of their middle finger in cm, then add 1cm. Round up to the nearest whole number — that’s their size. Don’t guess based on age."
+          }
+        },
+        "row_jMwpkf": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Should I size up so they can grow into them?",
+            "faq-description": "No. Oversized gloves hurt their confidence and technique. A slightly snug glove that fits now is far better than one that feels like a boxing mitt."
+          }
+        },
+        "row_twHC48": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What if they're between sizes?",
+            "faq-description": "Go up one size. A little extra space is fine — too tight, and you’ll reduce performance and risk splitting."
+          }
+        },
+        "row_Am7F3e": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How should goalkeeper gloves feel when new?",
+            "faq-description": "Snug, but not restrictive. They should feel secure across the fingers and palm, with no gaps or dead space. Slight stretch in the materials is normal."
+          }
+        },
+        "row_piELgB": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Do your junior gloves fit differently than adult ones?",
+            "faq-description": "Yes — we design them specifically for youth hands. Our junior models have tighter entry points, tailored finger fit, and slightly adjusted proportions to suit smaller keepers."
+          }
+        },
+        "row_WngMRX": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What if I get the wrong size?",
+            "faq-description": "No stress — we accept size exchanges (as long as gloves are unworn). We're here to help you get the right fit first time."
+          }
+        }
+      },
+      "block_order": [
+        "row_UdNKj3",
+        "row_jMwpkf",
+        "row_twHC48",
+        "row_Am7F3e",
+        "row_piELgB",
+        "row_WngMRX"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_ThcynQ",
+    "marquee_sec_nEQkkT",
+    "section_help_text_M6Widi",
+    "section_help_content_pYec3t",
+    "section_help_text_fGmiJj",
+    "section_help_content_LTQhJ9",
+    "section_help_faq_Bq7xkU"
+  ]
+}

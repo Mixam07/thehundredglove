@@ -1,0 +1,110 @@
+.section-help-other {
+    padding: 60px 0;
+}
+
+.section-help-other__title {
+    font-size: 32px;
+    font-family: "Anton";
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000;
+}
+
+.section-help-other__subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #000;
+}
+
+.gloves-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 45px;
+}
+
+.glove-card {
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glove-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-color: rgba(240, 240, 240, 1);
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+}
+
+.glove-title{
+    font-size: 20px;
+    font-family: "Anton";
+    margin: 0;
+    text-align: center;
+}
+
+.glove-description {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.glove-button {
+    background-color: rgba(215, 85, 85, 1);
+    color: white;
+    padding: 8px 35px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.section-help-other__text{
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .section-help-other{
+        padding: 50px 0;
+    }
+
+    .section-help-other__title{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    .section-help-other__subtitle{
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .gloves-row{
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .glove-title{
+        font-size: 14px;
+    }
+
+    .glove-description{
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .glove-button{
+        font-size: 12px;
+        padding: 5px 20px;
+    }
+}

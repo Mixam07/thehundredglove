@@ -1,5 +1,4 @@
 {{ 'section-bundle.css' | asset_url | stylesheet_tag }}
-{{ 'section-popup.css' | asset_url | stylesheet_tag }}
 {{ 'section-bundle-glove.css' | asset_url | stylesheet_tag }}
 
 <div class="section-banner__wrapper">
@@ -103,189 +102,38 @@
     <div class="section-glove__wrapper">
         <div class="section-glove__items">
             {% for product in collections['gloves'].products %}
-                <div class="bundle__products-item">
-                    <div class="bundle__products-image">
+                <div class="section-glove__item">
+                    {% if product.tags contains 'fingersave' %}
+                        <span class="card-top-badge">Fingersave</span>
+                    {% elsif product.tags contains 'best-seller' %}
+                        <span class="card-top-badge">Best Seller</span>
+                    {% elsif product.tags contains 'new-in' %}
+                        <span class="card-top-badge">New In</span>
+                    {% endif %}
+                    <div class="section-glove__image">
                         <img src="{{ product.images[0] | img_url: 'medium' }}" alt="{{ product.title }}" />
-                        {% if product.tags contains 'fingersave' %}
-                            <span class="card-top-badge">Fingersave</span>
-                        {% elsif product.tags contains 'best-seller' %}
-                            <span class="card-top-badge">Best Seller</span>
-                        {% elsif product.tags contains 'new-in' %}
-                            <span class="card-top-badge">New In</span>
-                        {% endif %}
                     </div>
-                    <button data-buttonPopup="{{ product.id }}" class="bundle__products-button">
-                        Add
-                        <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.42857 4H0V3H3.42857V0H4.57143V3H8V4H4.57143V7H3.42857V4Z" fill="white"/>
-                        </svg>
-                    </button>
-                    <p class="bundle__products-title">{{ product.title }}</p>
-                    <p class="bundle__products-subtitle">{{ product.metafields.custom.glove_type }}</p>
-                    <p class="bundle__products-price">{{ product.price | money }}</p>
-                    <div id="popup-{{ product.id }}" class="popup special">
-                        <div class="popup__content relative special">
-                            <div class="popup__images">
-                                {% for image in product.images %}
-                                    <img
-                                        src="{{ image | img_url: 'master' }}"
-                                        alt="Product image"
-                                        class="popup__image"
-                                    >
-                                {% endfor %}
-                            </div>
-                            <div class="popup__stars">
-                                <div data-reviews="{{ product.id }}">
-                                    <div class="loox-rating"
-                                        data-id="{{ product.id }}"
-                                        data-rating="{{ product.metafields.loox.avg_rating }}"
-                                        data-raters="{{ product.metafields.loox.num_reviews }}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popup__wrapper">
-                                <h2 class="popup__title">{{ product.title }}</h3>
-                                <h3 class="popup__price">{{ product.price | money }}</h3>
-                            </div>
-                            <div class="popup__tags">
-                                <div class="popup__tag">Fingersaves</div>
-                                <div class="popup__tag">Ultra Lightweight</div>
-                                <div class="popup__tag">{{ product.metafields.custom.glove_type }}</div>
-                            </div>
-                            <h4 class="popup__color">COLOUR :</h4>
-                            <ul class="popup__list">
-                                {% for related_product in collections.all.products %}
-                                    {% assign first_word = related_product.title | split: ' ' | first %}
-                                    {% assign current_word = product.title | split: ' ' | first %}
-                                    {% if first_word == current_word %}
-                                        <li class="popup__item">
-                                            <button data-productId="{{ related_product.id }}" class="popup__button">
-                                                <img
-                                                    src="{{ related_product.featured_image | img_url: '300x' }}"
-                                                    alt="photo"
-                                                >
-                                            </button>
-                                        </li>
-                                    {% endif %}
-                                {% endfor %}
-                            </ul>
-                            <div class="popup__wrap">
-                                <h4 class="popup__size">
-                                    SIZE: <span class="selected-size"></span>
-                                </h4>
-                                <button
-                                    class="popup__modal-button"
-                                    data-modal="{{ product.id }}"
+                    <div class="loox-rating"
+                        data-id="{{ product.id }}"
+                        data-rating="{{ product.metafields.loox.avg_rating }}"
+                        data-raters="{{ product.metafields.loox.num_reviews }}">
+                    </div>
+                    <p class="section-glove__caption">{{ product.title }}</p>
+                    <p class="section-glove__type">{{ product.metafields.custom.glove_type }}</p>
+                    <div class="section-glove__wrapp">
+                        <select name="variant-id" class="section-glove__select">
+                            {% for variant in product.variants %}
+                                <option 
+                                    value="{{ variant.id }}" 
+                                    {% unless variant.available %}disabled{% endunless %}
                                 >
-                                    HELP ME CHOOSE
-                                </button>
-                                <div id="helpchoose-{{ product.id }}" class="popup__help">
-                                    <div class="popup__help-content">
-                                        <button
-                                            data-modal="{{ product.id }}"
-                                            class="popup__help-close"
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-                                                <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                        {{ section.settings.page.content }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popup__sizes">
-                                {% for variant in product.variants %}
-                                    {% if variant.available %}
-                                        <button
-                                            class="popup__btn"
-                                            data-variant-id="{{ variant.id }}"
-                                        >
-                                            {{ variant.option1 }}
-                                        </button>
-                                    {% else %}
-                                        <button
-                                            class="popup__btn"
-                                            disabled
-                                        >
-                                            {{ variant.option1 }}
-                                        </button>
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
-                            <div class="desktop-tabs">
-                                <div class="desktop-tabs__item">
-                                    <span class="desktop-tabs__title" data-title>
-                                        DETAILS
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </span>
-                                    <div data-content>
-                                        <h1>Details</h1>
-                                        <p>Our first-ever Fingersave model - built for keepers who want more support without sacrificing feel.</p><p>Finished in a <strong>negative cut</strong> for that close, second-skin fit, with <strong>removable Fingersave spines</strong> so you can choose the level of protection you want. Extra reinforcement when you need it, full flexibility when you don’t.</p><p>The <strong>3.5mm latex + 4mm foam palm</strong> gives you pro-level grip in all conditions, while the <strong>embossed latex backhand</strong> and <strong>8mm foam</strong> provide comfort and impact absorption, finished with <strong>mesh lamination</strong> for added breathability.</p><p>A <strong>latex strap with velcro closure</strong> and <strong>elasticated cuff</strong> keeps things locked in, and the <strong>mesh gussets</strong> allow airflow throughout the fingers.<br><br>Other details:<br><br><strong>- Velcro pocket</strong> under the backhand for spine access<br><br><strong>- Hanging loop</strong> for easy drying<br><br>- Comes in a premium <strong>zippered glove bag</strong></p>
-                                    </div>
-                                </div>
-                                <div class="desktop-tabs__item">
-                                    <span class="desktop-tabs__title" data-title>
-                                        WASH & CARE
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </span>
-                                    <div data-content>
-                                        <h1>WASH & CARE</h1>
-                                        <p><span class="metafield-multi_line_text_field">- Fill a sink or basin with lukewarm water and add mild detergent.<br>
-                                        <br>
-                                        - Immerse the gloves and gently rub them to remove dirt and sweat.<br>
-                                        <br>
-                                        - Rinse the gloves thoroughly with clean water.<br>
-                                        <br>
-                                        - Squeeze out excess water and pat dry with a towel.<br>
-                                        <br>
-                                        - Air dry the gloves away from direct sunlight or heat sources.</span></p>
-                                    </div>
-                                </div>
-                                <div class="desktop-tabs__item">
-                                    <span class="desktop-tabs__title" data-title>
-                                        SHIPPING & RETURN
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </span>
-                                    <div data-content>
-                                        <h1>SHIPPING & RETURN</h1>
-                                        <p><span class="metafield-multi_line_text_field">UK (&amp; NORTHERN IRELAND): Enjoy complimentary shipping on orders over £100, dispatched from our London base through Royal Mail. For orders below £100, a standard shipping fee of £5.00 applies, while next-day delivery is available at £7.00.<br>
-                                        <br>
-                                        USA: Choose our Standard Untracked option for £5.00, or upgrade to Premium Tracked shipping for £10.00.<br>
-                                        <br>
-                                        EUROPE &amp; IRELAND: Choose our Standard Untracked option for £5.00, or upgrade to Premium Tracked shipping for £10.00.<br>
-                                        <br>
-                                        We post nearly every order within 24 hours. If you order before noon - we will try to ship the same day. Average shipping time is about 2-3 days, and we charge a nominal fee which covers shipping and handling.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popup__container">
-                                <select
-                                    class="popup__quantity-selector"
-                                >
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-            
-                                <button class="popup__submit">ADD to cart</button>
-                            </div>
-                            <button class="popup__close">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-                                    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
+                                    {{ variant.option1 }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <button data-buttonPopup="{{ product.id }}" class="section-glove__button">
+                            Add | {{ product.price | money }}
+                        </button>
                     </div>
                 </div>
             {% endfor %}
@@ -357,16 +205,6 @@
             </div>
         </div>
     </div>
-</div>
-
-<div data-popup-image class="bundle__image">
-    <button data-prev class="bundle__image-prev">
-        <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
-    </button>
-    <img id="image" src="" alt="">
-    <button data-next class="bundle__image-next">
-        <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
-    </button>
 </div>
 
 <style>

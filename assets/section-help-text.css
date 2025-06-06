@@ -1,0 +1,142 @@
+.section-help-text{
+    padding: 50px 0;
+}
+
+.section-help-text__title{
+    text-align: center;
+    margin: 0;
+    font-family: "Anton";
+    font-size: 32px;
+    max-width: 615px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.section-help-text__text{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 750px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.section-help-text__text span{
+    font-weight: bold;
+}
+
+.section-help-text__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    margin-bottom: 25px;
+    column-gap: 20px;
+}
+
+.section-help-text__image.img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.section-help-text__image img{
+    width: 100%;
+}
+
+.section-htlp-text__span{
+    display: block;
+    color: #000;
+    font-size: 48px;
+    text-align: center;
+    margin: -35px 0;
+}
+
+.section-help-text__item{
+    width: 100%;
+    background: rgba(240, 240, 240, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section-help-text__desc{
+    padding: 10px 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 22px;
+    flex: 1;
+}
+
+.questions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+.question-card {
+    background-color: rgba(240, 240, 240, 1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0px black;
+    border: 1px solid black;
+}
+
+.question-text{
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+@media (max-width: 750px) {
+    .section-help-text{
+        padding: 30px 0;
+    }
+
+    .section-help-text__title{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .section-help-text__text{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .section-help-text__image{
+        display: flex !important;
+        padding-top: 5px;
+        margin-bottom: 15px;
+        flex-direction: column;
+        row-gap: 10px;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .questions-section {
+        padding-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    .section-help-text__item{
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .section-help-text__desc{
+        font-size: 14px;
+    }
+
+    .question-text{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

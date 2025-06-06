@@ -81,160 +81,29 @@ const drawCart = () => {
 }
 
 const addEvent = () => {
-    const buttons = document.querySelectorAll("[data-buttonPopup]");
-    const popups = document.querySelectorAll(".popup");
-    const sizes = document.querySelectorAll(".popup__sizes");
-    const colors = document.querySelectorAll(".popup__list");
-    const buttonModals = document.querySelectorAll(".popup__modal-button");
-    const popupHelps = document.querySelectorAll(".popup__help");
-    const buttonBoxes = document.querySelectorAll(".popup__box-wrapper");
-    const boxContainers = document.querySelectorAll(".popup__box-container");
-    const boxCloses = document.querySelectorAll("[data-close-icon]");
-    const submits = document.querySelectorAll(".popup__submit");
-    const quantities = document.querySelectorAll(".popup__quantity-selector");
-    const images = document.querySelectorAll(".popup__images");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", (e) => {
-            const productId = button.getAttribute('data-buttonPopup');
-            const popup = document.querySelector("#popup-" + productId);
-
-            popup.classList.add("active");
-        });
-    });
-
-    popups.forEach(popup => {
-        popup.addEventListener("click", (e) => {
-            if (e.target.classList.contains("popup") || e.target.closest(".popup__close")) {
-                popup.classList.remove("active");
-            }
-        });
-    });
-
-    colors.forEach(color => {
-        color.querySelectorAll(".popup__button").forEach(item => {
-            item.addEventListener("click", (e) => {
-                const productId = item.getAttribute('data-productId');
-                const popup = document.querySelector("#popup-" + productId);
-
-                popups.forEach(popup => {
-                    popup.classList.remove("active");
-                });
-
-                popup.classList.add("active");
-            });
-        })
-    });
-
-    sizes.forEach((size, i) => {
-        size.querySelectorAll(".popup__btn").forEach(item => {
-            item.addEventListener("click", (e) => {
-                size.querySelectorAll(".popup__btn").forEach(btn => {
-                    btn.classList.remove("active");
-                });
-
-                item.classList.add("active");
-                document.querySelectorAll(".selected-size")[i].innerHTML = item.innerHTML;
-            });
-        })
-    });
-
-    buttonModals.forEach((button, i) => {
-        button.addEventListener("click", (e) => {
-            popupHelps[i].classList.add("active");
-            document.querySelector(".bundle__cart-wrapper").style.zIndex = "100";
-        });
-    });
-
-    popupHelps.forEach(popup => {
-        popup.addEventListener("click", (e) => {
-            if (e.target.classList.contains("popup__help") || e.target.closest(".popup__help-close")) {
-                popup.classList.remove("active");
-                document.querySelector(".bundle__cart-wrapper").style.zIndex = "1000";
-            }
-        });
-    });
-
-    buttonBoxes.forEach((button, i) => {
-        button.addEventListener("click", (e) => {
-            boxContainers[i].classList.toggle("active");
-        });
-    });
-
-    boxCloses.forEach((close, i) => {
-        close.addEventListener("click", (e) => {
-            boxContainers[i].classList.remove("active");
-        });
-    });
-
-    submits.forEach((submit, i) => {
+    document.querySelectorAll(".bundle__products-button").forEach((submit, i) => {
         submit.addEventListener("click", (e) => {
-            const sizeHTML = document.querySelectorAll(".popup__content")[i].querySelector(".selected-size")?.innerHTML;
-            const type = submit.getAttribute('data-product-type');
+            const type = submit.getAttribute('data-type');
+            const variant = document.querySelectorAll(".bundle__products-select")[i]?.value;
+            const size = document.querySelector(`[value='${variant}']`)?.innerHTML?.trim();
+            const title = document.querySelectorAll(".bundle__products-title")[i]?.innerHTML;
+            const price = document.querySelectorAll(".bundle__products-price span")[i]?.innerHTML;
+            const image = document.querySelectorAll(".bundle__products-image img")[i]?.src;
 
-            if (sizeHTML || type == "accessory") {
-                const variant = sizeHTML ? document.querySelectorAll(".popup__content")[i].querySelector(".popup__sizes .active").getAttribute("data-variant-id") : submit.getAttribute('data-variant-id');
-                const product = submit.getAttribute('data-product-id');
-                const title = submit.getAttribute('data-product-title');
-                const description = submit.getAttribute('data-product-description');
-                const price = submit.getAttribute('data-product-price');
-                const image = submit.getAttribute('data-product-image');
-                const personalization = document.querySelectorAll("[data-personalization]")[i]?.value || null;
-                const quantity = +quantities[i].value;
-                const size = sizeHTML ? sizeHTML.trim() : null;
+            const type_bundle = bundle.filter(item => item.type == type);
     
-                const type_bundle = bundle.filter(item => item.type == type);
-    
-                if (type_bundle.length < numbers[type]) {
-                    bundle.push({
-                        variant, product, title, description, price,
-                        type, image, quantity, size, personalization
-                    });
-    
-                    if (type_bundle.length == numbers[type] - 1 && active !== 2) {
-                        changeActivePage(active + 1);
-                    }
+            if (type_bundle.length < numbers[type]) {
+                bundle.push({
+                    variant, title, price, type, image, size
+                });
+
+                if (type_bundle.length == numbers[type] - 1 && active !== 2) {
+                    changeActivePage(active + 1);
                 }
-    
-                sizes.forEach((size, i) => {
-                    size.querySelectorAll(".popup__btn").forEach(item => {
-                        item.classList.remove("active")
-                    });
-                });
-    
-                document.querySelectorAll(".selected-size").forEach(item => {
-                    item.innerHTML = "";
-                });
-    
-                drawCart();
-                popups[i].classList.remove("active");
             }
-        });
-    });
 
-    const addEventArrow = (childNodes, i, img) => {
-        let activeId = i;
-        document.querySelector("[data-next]").addEventListener("click", (e) => {
-          activeId = activeId == childNodes.length - 1 ? 0 : activeId + 1;
-          img.src = childNodes[activeId].src;
+            drawCart();
         });
-        document.querySelector("[data-prev]").addEventListener("click", (e) => {
-          activeId = activeId == 0 ? childNodes.length - 1 : activeId - 1;
-          img.src = childNodes[activeId].src;
-        });
-    }
-
-    images.forEach(images => {
-        images.querySelectorAll("img").forEach((image, i) => {
-            image.addEventListener("click", (e) => {
-                const popup = document.querySelector("[data-popup-image]");
-
-                popup.classList.add("active")
-                popup.querySelector("#image").src = image.src;
-        
-                addEventArrow(images.querySelectorAll("img"), i, popup.querySelector("#image"));
-            });
-        })
     })
 }
 
@@ -259,238 +128,33 @@ function changeActivePage(i) {
                             item.tags.some(item => item == "new-in") ? '<span class="card-top-badge">New In</span>': ""
                         }
                     </div>
-                    <button data-buttonPopup="${item.id}" class="bundle__products-button">
-                        Add
-                        <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.42857 4H0V3H3.42857V0H4.57143V3H8V4H4.57143V7H3.42857V4Z" fill="white"/>
-                        </svg>
-                    </button>
+                    <div class="bundle__products-wrap">
+                        <select name="variant-id" class="bundle__products-select" style="${item.variants.length === 1 ? 'display: none;' : ''}">
+                            ${
+                                item.variants.map(variant => {
+                                    return `
+                                        <option 
+                                            value="${variant.id}" 
+                                            ${variant.available || "disabled"}
+                                        >
+                                            ${variant.option1}
+                                        </option>
+                                    `
+                                })
+                            }
+                        </select>
+                        <button data-type="${item.type}" class="bundle__products-button">
+                            Add
+                            <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.42857 4H0V3H3.42857V0H4.57143V3H8V4H4.57143V7H3.42857V4Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
                     <p class="bundle__products-title">${item.title}</p>
                     ${ 
                         item.type == "glove" ? `<p class="bundle__products-subtitle">${item.glove_type}</p>` : ""
                     }
                     <p class="bundle__products-price">${item.price}</p>
-                    <div id="popup-${item.id}" class="popup">
-                        <div class="popup__content relative">
-                            <div class="popup__images">
-                                ${ 
-                                    item.images.map(img => {
-                                        return `
-                                            <img
-                                                src="${img}"
-                                                alt="Product image"
-                                                class="popup__image"
-                                            >
-                                        `
-                                    }).join("")
-                                }
-                            </div>
-                            <div class="popup__stars">
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.93133 12.9708L4.00589 8.34386L0.416016 5.23286L5.15245 4.82186L7.00008 0.458923L8.8477 4.82186L13.5841 5.23286L9.99426 8.34386L11.0688 12.9708L7.00008 10.516L2.93133 12.9708Z" fill="#D75555"/>
-                                </svg>
-                            </div>
-                            <div class="popup__wrapper">
-                                <h2 class="popup__title">${item.title}</h3>
-                                ${ 
-                                    item.type == "glove" ? `<span class="popup__subtitle">${item.glove_type}</span>` : ""
-                                }
-                            </div>
-                            <h3 class="popup__price">${item.price}</h3>
-                            ${
-                                item.type == "glove" ?
-                                `
-                                    <h4 class="popup__color">COLOUR :</h4>
-                                    <ul class="popup__list">
-                                        ${
-                                            list.map(elem => {
-                                                if (elem.title.split(" ")[0] == item.title.split(" ")[0]) {
-                                                    return `
-                                                        <li class="popup__item">
-                                                            <button data-productId="${elem.id}" class="popup__button">
-                                                                <img
-                                                                    src="${elem.images[0]}"
-                                                                    alt="photo"  
-                                                                >
-                                                            </button>
-                                                        </li>
-                                                    `
-                                                }
-                                            }).filter(item => item).join("")
-                                        }
-                                    </ul>
-                                `:""
-                            }
-                            ${
-                                item.type !== "accessory" || item.tags.some(item => item == "size") ?
-                                `
-                                    <div class="popup__wrap">
-                                        <h4 class="popup__size">
-                                            SIZE: <span class="selected-size"></span>
-                                        </h4>
-                                        ${
-                                            !item.tags.some(item => item == "size")?
-                                            `
-                                                <button
-                                                class="popup__modal-button"
-                                                data-modal="${item.id}"
-                                            >
-                                                HELP ME CHOOSE
-                                            </button>
-                                            <div id="helpchoose-${item.id}" class="popup__help">
-                                                <div class="popup__help-content">
-                                                    <button
-                                                        data-modal="${item.id}"
-                                                        class="popup__help-close ${item.type !== "glove"? "big": ""}"
-                                                    >
-                                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-                                                            <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
-                                                            </path>
-                                                        </svg>
-                                                    </button>
-                                                        <h1 class="popup__help-title">Size Guide</h1>
-                                                        ${
-                                                            item.type == "glove" ? 
-                                                            document.querySelector("." + item.type)?.innerHTML :
-                                                            item.tags.some(item => item == "trousers")? document.querySelector(".trouser").innerHTML:
-                                                            item.tags.some(item => item == "top")? document.querySelector(".top").innerHTML:
-                                                            document.querySelector(".short").innerHTML
-                                                        }
-                                                    }
-                                                </div>
-                                            </div>
-                                            `: ""
-                                        }
-                                    </div>
-                                    <div class="popup__sizes">
-                                        ${
-                                            item.variants.map(variant => {
-                                                if (variant.available) {
-                                                    return `
-                                                        <button
-                                                            class="popup__btn"
-                                                            data-variant-id="${variant.id}"
-                                                        >
-                                                            ${variant.option1}
-                                                        </button>
-                                                    `
-                                                } else {
-                                                    return `
-                                                        <button
-                                                            class="popup__btn"
-                                                            disabled
-                                                        >
-                                                            ${variant.option1}
-                                                        </button>
-                                                    `
-                                                }
-                                            }).join("")
-                                        }
-                                    </div>
-                                `:""
-                            }
-                            ${
-                                item.type == "glove" ?
-                                `
-                                    <div class="popup__box">
-                                        <div class="popup__box-wrapper">
-                                            <svg
-                                                width="18"
-                                                viewBox="0 0 56 56"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <circle cx="28" cy="28" r="28" fill="black"/>
-                                                <mask id="mask0_701_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="14" y="14" width="28" height="28">
-                                                    <rect x="14" y="14" width="28" height="28" fill="#D9D9D9"/>
-                                                </mask>
-                                                <g mask="url(#mask0_701_2)">
-                                                    <path d="M19.8333 36.1668H21.4667L31.5292 26.1043L29.8958 24.471L19.8333 34.5335V36.1668ZM36.5167 24.4127L31.5583 19.5127L33.1917 17.8793C33.6389 17.4321 34.1882 17.2085 34.8396 17.2085C35.491 17.2085 36.0403 17.4321 36.4875 17.8793L38.1208 19.5127C38.5681 19.9599 38.8014 20.4995 38.8208 21.1314C38.8403 21.7634 38.6264 22.3029 38.1792 22.7502L36.5167 24.4127ZM34.825 26.1335L22.4583 38.5002H17.5V33.5418L29.8667 21.1752L34.825 26.1335Z" fill="white"/>
-                                                </g>
-                                            </svg>
-                                            <span class="text-[10px]">ADD PERSONALISATION</span>
-                                        </div>
-                                        <div class="popup__box-container">
-                                            <div class="popup__box-wrap">
-                                                <div class="popup__box-info">
-                                                    <label for="personalization">Name and number printed</label>
-                                                    <span>£7</span>
-                                                </div>
-                                                <div data-close-icon>
-                                                    <svg
-                                                        width="28"
-                                                        height="28"
-                                                        viewBox="0 0 28 28"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                        <mask id="mask0_44_569" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
-                                                            <rect width="28" height="28" fill="#D9D9D9"/>
-                                                        </mask>
-                                                        <g mask="url(#mask0_44_569)">
-                                                            <path d="M7.46671 22.1667L5.83337 20.5334L12.3667 14L5.83337 7.46671L7.46671 5.83337L14 12.3667L20.5334 5.83337L22.1667 7.46671L15.6334 14L22.1667 20.5334L20.5334 22.1667L14 15.6334L7.46671 22.1667Z" fill="#1C1B1F"/>
-                                                        </g>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <input
-                                                required
-                                                type="text"
-                                                data-personalization
-                                                maxlength="12"
-                                                form="{{ product_form_id }}"
-                                                name="properties[Name and number printed]"
-                                                placeholder="12 characters only"
-                                            >
-                                        </div>
-                                    </div>
-                                `:""
-                            }
-                            <div class="popup__container">
-                                <select
-                                    class="popup__quantity-selector"
-                                >
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-            
-                                <button
-                                    class="popup__submit"
-                                    data-variant-id="${item.variants[0].id}"
-                                    data-product-id="${item.id}"
-                                    data-product-title="${item.title}"
-                                    data-product-type="${item.type}"
-                                    data-product-price="${item.price}"
-                                    data-product-description="${item.glove_type}"
-                                    data-product-image="${item.images[0]}"
-                                >
-                                    Add to Bundle
-                                </button>
-                            </div>
-                            <button class="popup__close">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-                                    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
                 </div>
             `;
         }
@@ -549,10 +213,6 @@ document.querySelector(".bundle__cart-submit").addEventListener("click", async (
         });
 
         bundle.push({
-            variant: "44030822383872",
-            quantity: number
-        },
-        {
             variant: "54938685211004",
             quantity: 1
         });

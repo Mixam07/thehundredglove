@@ -1,0 +1,214 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_jDTjMH": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": true,
+        "align_bottom_mobile": true,
+        "desktop_image": "shopify://shop_images/Hero_1920x600_1.jpg",
+        "mobile_image": "shopify://shop_images/Hero_Section_Mobile.jpg",
+        "banner_heading": "CARE GUIDE & FAQ",
+        "banner_text": "<p class=\"section-banner__text\">Our gloves are made with pro-level latex designed for elite performance. To get the most out of them, it's crucial to understand how latex works, how to care for it, and what wear and tear actually means. Our gloves are built for performance, and every detail—from the latex to the cut—is chosen with purpose.</p>"
+      }
+    },
+    "marquee_sec_wnQpia": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_content_jBeemJ": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_ChjeNV": {
+          "type": "row",
+          "settings": {
+            "content-title": "BEFORE FIRST USE",
+            "content-description": "<p class=\"section-content__text\">Always pre-wash your gloves.</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Remove any plastic film (on adult models).</li>\n<li class=\"section-content__elem\">Rinse in warm water (no soap) to activate the latex.</li>\n<li class=\"section-content__elem\">Let them air dry naturally, away from direct sunlight or heat. </li>\n</ul>\n<p class=\"section-content__text\">Why it matters: Latex has a protective coating from manufacturing. Washing removes this and \"activates\" the true grip.</p>",
+            "content-image": "shopify://shop_images/DSC8142.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_wDx6QU": {
+          "type": "row",
+          "settings": {
+            "content-title": "UNDERSTANDING LATEX & GRIP",
+            "content-description": "<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">All latex used in pro-level gloves is soft, grippy, and porous—ideal for match-level handling.</li>\n<li class=\"section-content__elem\">Softer latex = better grip, but naturally wears faster, especially on turf or dry pitches.</li>\n<li class=\"section-content__elem\">Visual wear ≠ dead grip. Latex can look worn but still offer elite performance.</li>\n<li class=\"section-content__elem\">Flaking, discoloration, or minor abrasion is expected and does not mean the gloves are faulty.</li>\n<li class=\"section-content__elem\">Latex performs best when slightly damp—this reactivates the natural tackiness in the material. </li>\n</ul>\n<p class=\"section-content__text\">Clean, slightly damp latex always grips better than dry, dirty latex. Simple.\n</p>",
+            "content-image": "shopify://shop_images/MPH-02304.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_EHWWKt": {
+          "type": "row",
+          "settings": {
+            "content-title": "ON MATCH DAY",
+            "content-description": "<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Dampen the palms before and during play.</li>\n<li class=\"section-content__elem\">Use a water bottle or towel at the goalpost.</li>\n<li class=\"section-content__elem\">Avoid wiping gloves on dry kit or shorts.</li>\n<li class=\"section-content__elem\">Don’t land palms-first. Use forearms or fists when getting up. </li>\n</ul>",
+            "content-image": "shopify://shop_images/MPH00194_0089fd44-16c0-46d5-bd69-51af83067b65.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_ArPFM3": {
+          "type": "row",
+          "settings": {
+            "content-title": "CLEANING AFTER USE",
+            "content-description": "<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Rinse gloves in lukewarm water after every session.</li>\n<li class=\"section-content__elem\">Use glove-specific cleaner or baby shampoo (never detergent).</li>\n<li class=\"section-content__elem\">Lightly massage the latex—no scrubbing or twisting.</li>\n<li class=\"section-content__elem\">Pat dry with a towel and let air dry fully. </li>\n</ul>\n<p class=\"section-content__text\">Never machine wash or tumble dry. You’ll kill the latex.</p>",
+            "content-image": "shopify://shop_images/DSC08639.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_HhmFKU": {
+          "type": "row",
+          "settings": {
+            "content-title": "DRYING",
+            "content-description": "<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Air dry in a ventilated space, away from direct sunlight.</li>\n<li class=\"section-content__elem\">Takes 12–24 hours.</li>\n<li class=\"section-content__elem\">Use newspaper inside the gloves to soak up internal moisture. </li>\n</ul>",
+            "content-image": "shopify://shop_images/MPH-02564.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_9nN74f": {
+          "type": "row",
+          "settings": {
+            "content-title": "STORAGE",
+            "content-description": "<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Only store gloves when they’re completely dry and clean.</li>\n<li class=\"section-content__elem\">Keep in a glove wallet or breathable mesh bag.</li>\n<li class=\"section-content__elem\">Latex palms facing each other helps preserve tack.</li>\n<li class=\"section-content__elem\">Avoid sealed containers that trap moisture (like plastic bags).</li>\n</ul>",
+            "content-image": "shopify://shop_images/340693715_560069816237760_2793892965856573079_n.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_qyWwEL": {
+          "type": "row",
+          "settings": {
+            "content-title": "EXTENDING GLOVE LIFE",
+            "content-description": "<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Use older gloves for training, newer pairs for match day.</li>\n<li class=\"section-content__elem\">Don’t grab goalposts or nets with latex palms.</li>\n<li class=\"section-content__elem\">Trim nails and remove rings before use.</li>\n<li class=\"section-content__elem\">Avoid repetitive diving on hard turf.</li>\n<li class=\"section-content__elem\">Never leave gloves in a hot car or kitbag overnight. </li>\n</ul> <br>\n<p class=\"section-content__text\">The better you care for them, the longer they’ll perform.</p>",
+            "content-image": "shopify://shop_images/IMG_2489.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_ChjeNV",
+        "row_wDx6QU",
+        "row_EHWWKt",
+        "row_ArPFM3",
+        "row_HhmFKU",
+        "row_9nN74f",
+        "row_qyWwEL"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_advantages_FNp9Tx": {
+      "type": "section-help-advantages",
+      "name": "section-help-advantages",
+      "settings": {}
+    },
+    "section_help_faq_QLgiiV": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_7ncjGg": {
+          "type": "row",
+          "settings": {
+            "faq-title": "\"My gloves felt slippery out of the box.\"",
+            "faq-description": " That’s the factory coating. Pre-wash activates the real grip."
+          }
+        },
+        "row_tEP3BF": {
+          "type": "row",
+          "settings": {
+            "faq-title": "\"My gloves wore down quickly.\"",
+            "faq-description": "Soft latex offers unreal grip—but it’s sensitive to surfaces and technique. Abrasion is normal, especially on turf."
+          }
+        },
+        "row_U73TtT": {
+          "type": "row",
+          "settings": {
+            "faq-title": "\"The grip faded.\"",
+            "faq-description": " Clean your gloves. Dirty latex = useless grip. Re-wet them mid-game for extra tack."
+          }
+        },
+        "row_HqgQB4": {
+          "type": "row",
+          "settings": {
+            "faq-title": "\"Do worn gloves still work?\"",
+            "faq-description": " Yes. Some gloves that look wrecked still grip brilliantly. Performance > appearance."
+          }
+        },
+        "row_4WyVcg": {
+          "type": "row",
+          "settings": {
+            "faq-title": "\"Can I return worn gloves?\"",
+            "faq-description": "If you’re not satisfied after 10 games, reach out for an exchange or store credit. Photos required."
+          }
+        },
+        "row_gcaecc": {
+          "type": "row",
+          "settings": {
+            "faq-title": "\"My gloves ripped.\"",
+            "faq-description": "Send us photos. If it’s a defect, we’ll sort it. If it’s from use, we’ll explain what likely caused it."
+          }
+        },
+        "row_EpXVe6": {
+          "type": "row",
+          "settings": {
+            "faq-title": "\"Something’s missing from my order.\"",
+            "faq-description": " Let us know right away. We’ll fix it, fast."
+          }
+        },
+        "row_EpyLHV": {
+          "type": "row",
+          "settings": {
+            "faq-title": "\"How do I contact support?\"",
+            "faq-description": " Live chat or email: keepers@thehundredglove.com"
+          }
+        }
+      },
+      "block_order": [
+        "row_7ncjGg",
+        "row_tEP3BF",
+        "row_U73TtT",
+        "row_HqgQB4",
+        "row_4WyVcg",
+        "row_gcaecc",
+        "row_EpXVe6",
+        "row_EpyLHV"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_jDTjMH",
+    "marquee_sec_wnQpia",
+    "section_help_content_jBeemJ",
+    "section_help_advantages_FNp9Tx",
+    "section_help_faq_QLgiiV"
+  ]
+}

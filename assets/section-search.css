@@ -68,8 +68,6 @@
     height: 100%;
 }
 
-
-
 .collection-hero{
     display: flex;
     justify-content: space-between;
@@ -188,6 +186,102 @@
     padding: 0;
 }
 
+.section-glove__item{
+    background-color: rgba(240, 240, 240, 1);
+    border-radius: 10px;
+    padding: 25px 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-gloce__information{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex: 1 1;
+}
+
+.card-top-badge{
+    top: 10px !important;
+    left: 10px !important;
+}
+
+.section-glove__image{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.section-glove__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.loox-rating{
+    display: flex;
+    justify-content: center;
+}
+
+.loox-rating svg{
+    color: rgba(0, 0, 0, 1) !important;
+    margin-bottom: 5px;
+}
+
+.section-glove__caption{
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    font-family: "Anton" !important;
+    line-height: 24px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.section-glove__type{
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    color: rgba(58, 58, 58, 1);
+}
+
+.section-glove__button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    background-color: rgba(215, 85, 85, 1);
+    border-radius: 5px;
+    border: none;
+    padding: 15px 10px;
+}
+
+.section-glove__button,
+.section-glove__button span{
+    color: #fff;
+    font-family: "Arial" !important;
+    font-size: 14px;
+}
+
+.section-glove__wrapp{
+    display: flex;
+    column-gap: 5px;
+    margin-top: 10px;
+}
+
+.section-glove__select{
+    min-width: 65px;
+    border-radius: 5px;
+    background-color: transparent;
+    display: flex;
+    text-align: center;
+    border: .5px solid rgba(178, 178, 178, 1);
+}
+
 @media (max-width: 1200px) {
     .section-search{
         padding-top: 65px;
@@ -195,7 +289,7 @@
     }
 
     .collection-products{
-        gap: 45px 45px;
+        gap: 30px 40px;
     }
 }
   
@@ -207,7 +301,7 @@
 
     .collection-products{
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px 45px;
+        gap: 20px 30px;
     }
 }
   
@@ -223,6 +317,7 @@
 
     .search__wrapper{
         display: flex;
+        row-gap: 15px;
         flex-direction: column;
     }
 
@@ -240,13 +335,61 @@
 
     .collection-products{
         grid-template-columns: repeat(3, 1fr);
-        gap: 35px 30px;
+        gap: 15px 20px;
+    }
+
+    .section-glove__item{
+        padding: 20px 10px;
+    }
+
+    .section-glove__caption{
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+
+    .section-glove__type{
+        font-size: 8px;
+    }
+
+    .section-glove__select{
+        min-width: 40px;
+        font-size: 10px;
+    }
+
+    .section-glove__button{
+        padding: 10px 6px;
+        border-radius: 2.5px;
+    }
+
+    .section-glove__button,
+    .section-glove__button span{
+        font-size: 8px;
+    }
+
+    .section-glove__wrapp{
+        margin-top: 5px;
+    }
+
+    .section-glove__item .loox-rating svg{
+        width: 8px !important;
+        height: 8px !important;
+    }
+
+    .section-glove__item .loox-rating-label{
+        font-size: 8px !important;
+        margin-bottom: 3px;
+    }
+
+    .collection-hero{
+        padding: 0;
     }
 }
   
 @media (max-width: 576px) {
     .collection-products{
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .section-search{

@@ -1,0 +1,190 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_mfPP6m": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": true,
+        "desktop_image": "shopify://shop_images/b0203eece7fa9f53d7e29f38d08006ba3ede016b.png",
+        "mobile_image": "shopify://shop_images/3be91127a8cc373c744ebb2f5a02d3c08a0357ed.png",
+        "banner_heading": "Buying Goalkeeper Gloves for Your Child",
+        "banner_text": ""
+      }
+    },
+    "marquee_sec_Wd8P7A": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_text_WXwPgW": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "The complete, no-nonsense guide for parents",
+        "description": "<p class=\"section-help-text__text\">If you're buying gloves for your child, chances are this is new territory. Maybe it’s their first season in goal. Maybe they’re all in — and suddenly obsessed with keeping clean sheets.</p>\n<p class=\"section-help-text__text\">Whatever stage they’re at, here's what you need to know:<br>Gloves aren't just accessories — they're essential equipment.<br>And buying the right pair will make a huge difference in their confidence, safety, and performance.</p>\n<p class=\"section-help-text__text\">This is the guide we wish every parent had before buying their first pair.</p>"
+      }
+    },
+    "section_help_content_fafB6k": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_RURRAx": {
+          "type": "row",
+          "settings": {
+            "content-title": "What type of glove does your child actually need?",
+            "content-description": "<p class=\"section-content__text\">Here’s what most parents don’t get told:</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">You don’t need the most expensive glove.</li>\n<li class=\"section-content__elem\">You don’t need adult gloves in a smaller size</li>\n<li class=\"section-content__elem\">And you definitely don’t need cheap Amazon specials with no grip and weak stitching</li>\n</ul>\n<p class=\"section-content__text\">You need gloves designed for junior keepers who are still learning how to dive, catch, recover, and fall — because that’s where most damage happens.</p>\n<p class=\"section-content__text\">That’s what we build ours for.</p>",
+            "content-image": "shopify://shop_images/d2870f4df3ceb003e34eff919533663a3e7ed498.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_eL3Vmg": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why junior keepers wear through gloves quickly (and why it's not a fault)",
+            "content-description": "<p class=\"section-content__text\">If you’re wondering why your child’s gloves seem to wear down fast — you’re not alone.</p>\n<p class=\"section-content__text\">We hear this all the time.</p>\n<p class=\"section-content__text\">\n\"They’ve only had them 3 weeks!\"<br>\"The palm is peeling already.\"<br>\"Is this a defect?\"\n</p>\n<p class=\"section-content__text\">It’s not. It’s exactly what’s meant to happen.</p>\n<p class=\"section-content__text\">Youth goalkeepers are still learning technique — which means they often land palms-first, drag gloves on turf, or push off using the latex instead of their fists.</p>\n<p class=\"section-content__text\">It’s part of the process. It’s how they figure things out.</p>\n<p class=\"section-content__text\">That’s why we use Giga latex on all our junior gloves.</p>\n<p class=\"section-content__text\">It gives them solid grip, but holds up far better than the soft pro-grade latex we use on adult models.</p>\n<p class=\"section-content__text\">Our gloves aren’t built to stay perfect.<br>They’re built to take the hits, session after session.</p>",
+            "content-image": "shopify://shop_images/c5b05844ccf117320861b30696b32d16586022b1.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_ndw6BP": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why glove fit matters more than you think",
+            "content-description": "<p class=\"section-content__text\">A glove that’s too big means your child can’t feel the ball — they’ll struggle to catch, and they’ll feel like the glove is getting in the way.</p>\n<p class=\"section-content__text\">Too small, and they’ll be uncomfortable or split at the seams during play.</p>\n<p class=\"section-content__text\">Here’s how to get it right:</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Measure from the base of their palm to the tip of their middle finger</li>\n<li class=\"section-content__elem\">Add 1cm</li>\n<li class=\"section-content__elem\">Match to the correct size in our glove size chart →</li>\n</ul>\n<p class=\"section-content__text\">Pro tip: Don't size up “to grow into them.” You’ll just make everything harder.</p>",
+            "content-image": "shopify://shop_images/Group_39697.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_EJYUMy": {
+          "type": "row",
+          "settings": {
+            "content-title": "How many gloves should your child have?",
+            "content-description": "<p class=\"section-content__text\">This is a big one.</p>\n<p class=\"section-content__text\">Most kids train 1–3 times per week, plus matches at the weekend. That’s a lot of wear.</p>\n<p class=\"section-content__text\">If they’re using one pair for everything, the latex will wear out much quicker — especially on artificial pitches.</p>\n<p class=\"section-content__text\">We recommend:</p>\n <ul class=\"section-content__list\">\n<li class=\"section-content__elem\">1 pair for training</li>\n<li class=\"section-content__elem\">1 pair saved for match day</li>\n</ul>\n<p class=\"section-content__text\">Even if they’re the same model, keeping a match pair fresh makes a huge difference in grip — and confidence.</p>",
+            "content-image": "shopify://shop_images/ba4d70ea203c43b3847bcc51cfd8b15afe07ceec_67a54fc9-b052-4399-95d3-fda87b345887.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_dTRCJP": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why not all kids gloves are equal",
+            "content-description": "<p class=\"section-content__text\">Most brands either:</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Cut corners on junior gloves (cheap materials, poor fit), or</li>\n<li class=\"section-content__elem\">Use adult latex that isn't built for how kids play</li>\n</ul>\n<p class=\"section-content__text\">We don’t.</p>\n<p class=\"section-content__text\">Every junior model we make is built from the ground up:</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Giga Latex for grip + long-term durability</li>\n<li class=\"section-content__elem\">Reinforced palms to survive turf and repeated dives</li>\n<li class=\"section-content__elem\">Junior-specific fit — not just adult gloves shrunk down</li>\n<li class=\"section-content__elem\">Proper support — no gimmicks or hollow padding</li>\n</ul>\n<p class=\"section-content__text\">If your child takes goalkeeping seriously — or is showing signs that they might — they need gloves that support their progress, not slow them down.</p>",
+            "content-image": "shopify://shop_images/370e0250aac54d9d1443ba5bd6185583a37e161d.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_RURRAx",
+        "row_eL3Vmg",
+        "row_ndw6BP",
+        "row_EJYUMy",
+        "row_dTRCJP"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_text_3HYQzg": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Final word: Buy right, and let them focus on playing",
+        "description": "<p class=\"section-help-text__text\">Most parents overspend or underdeliver when it comes to goalkeeper gloves.</p>\n<p class=\"section-help-text__text\">But that’s only because no one gives you straight answers.</p>\n<p class=\"section-help-text__text\">Here’s ours:</p>\n<p class=\"section-help-text__text\">You don’t need the flashiest glove on the shelf.<br>You need a glove that fits, grips, and lasts long enough to let them grow.</p>\n<p class=\"section-help-text__text\">That’s what we build every glove for.  </p>\n<p class=\"section-help-text__text\">And that’s why 25,000+ keepers — many of them under 16 — wear them every week.</p>"
+      }
+    },
+    "section_help_faq_9D8ttf": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_nY7Rea": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What size should I get for my child?",
+            "faq-description": "Measure their hand from palm base to fingertip (in cm), then add 1cm. That’s the size. Most kids aged 7–9 wear size 4–5, 10–12 wear 6–7, and so on. Check our full size guide →"
+          }
+        },
+        "row_NznBRn": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Do they need two pairs of gloves?",
+            "faq-description": "If they train and play weekly — yes. One for training, one for matches. It keeps the match pair fresh and helps both pairs last longer."
+          }
+        },
+        "row_JhhVPR": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Why are their gloves peeling already?",
+            "faq-description": "It’s not a fault — it’s normal. Youth keepers often drag their palms or dive hands-first while learning. We use Giga latex to give grip and durability, but wear is part of the game."
+          }
+        },
+        "row_Mr6M3L": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What if my child plays on artificial pitches?",
+            "faq-description": "Turf wears down gloves faster. That’s why we recommend gloves with more durable latex and proper care (rinse after use, avoid heat, dry flat)."
+          }
+        },
+        "row_ERpT44": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How long should gloves last?",
+            "faq-description": "It depends how often they train and play. With proper care, you should get 1–3 months out of a pair. If they train 3x a week on turf, you’ll go through gloves faster."
+          }
+        },
+        "row_P3dJ4g": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What makes your junior gloves different?",
+            "faq-description": "We don’t water them down. Same build quality, junior-specific fit, and more durable latex. Built for real keepers — not just weekend kickarounds."
+          }
+        }
+      },
+      "block_order": [
+        "row_nY7Rea",
+        "row_NznBRn",
+        "row_JhhVPR",
+        "row_Mr6M3L",
+        "row_ERpT44",
+        "row_P3dJ4g"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_mfPP6m",
+    "marquee_sec_Wd8P7A",
+    "section_help_text_WXwPgW",
+    "section_help_content_fafB6k",
+    "section_help_text_3HYQzg",
+    "section_help_faq_9D8ttf"
+  ]
+}

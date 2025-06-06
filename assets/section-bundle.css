@@ -8,6 +8,20 @@
     column-gap: 50px;
 }
 
+.bundle__products-wrap{
+    display: flex;
+    column-gap: 5px;
+    margin-bottom: 10px;
+}
+
+.bundle__products-select{
+    min-width: 50px;
+    border-radius: 5px;
+    background-color: transparent;
+    display: flex;
+    text-align: center;
+}
+
 .card-top-badge{
     position: absolute;
     top: 5px;
@@ -155,14 +169,13 @@
     border: none;
     width: 100%;
     color: #fff;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 10px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 10px;
 }
 
 .bundle__products-title{
@@ -804,6 +817,15 @@
 
     .bundle__products-wrapper{
         margin-bottom: 48px;
+    }
+
+    .bundle__products-select{
+        min-width: 30px;
+        font-size: 10px;
+    }
+
+    .bundle__products-button{
+        padding: 5px;
     }
 }
   

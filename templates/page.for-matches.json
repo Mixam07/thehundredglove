@@ -1,0 +1,194 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_AyFTee": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": false,
+        "desktop_image": "shopify://shop_images/a7fa7ab950b834729f4f4b3fde51b25ec526502b.png",
+        "mobile_image": "shopify://shop_images/491b71d83b6d16fdf9bf1b6841a4fdf3c70227db.png",
+        "banner_heading": "Best Goalkeeper Gloves For Matches",
+        "banner_text": "<p class=\"section-banner__text\">You don’t turn up on match day with tired legs — so why turn up with dead gloves?</p>\n<p class=\"section-banner__text\">Match gloves aren’t a luxury — they’re a weapon. And if you’re serious about saving points, not just making saves, you need gear that shows up sharp and ready.</p>"
+      }
+    },
+    "marquee_sec_aCznVU": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_content_CqCNGw": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_kgafkD": {
+          "type": "row",
+          "settings": {
+            "content-title": "What makes a glove match-ready?",
+            "content-description": "<p class=\"section-content__text\">One word: grip.</p>\n<p class=\"section-content__text\">Match gloves are built for elite performance. Pro-grade latex. Snug fit. Total confidence on contact. These gloves are made to catch, hold, and dominate — not just survive a session.</p>\n<p class=\"section-content__text\">The latex is softer, the feel is sharper, and the handling is cleaner. They're not built for punishment. They’re built for moments that matter.</p>",
+            "content-image": "shopify://shop_images/ca11a8a2b0d2a2325242d590d162bf748481eba1.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_9UgaCU": {
+          "type": "row",
+          "settings": {
+            "content-title": "Training vs Match Gloves — Keep Them Separate",
+            "content-description": "<p class=\"section-content__text\">You wouldn't warm up in studs on concrete. Same logic applies here.</p>\n<p class=\"section-content__text\">We strongly recommend having one pair for training, one for match days. That way, your match gloves stay fresh, your grip stays elite, and you’re not walking into kick-off with latex that’s already been through the grinder.</p>\n<p class=\"section-content__text\">Train hard. Play harder. But don’t mix the two.</p>",
+            "content-image": "shopify://shop_images/ba4d70ea203c43b3847bcc51cfd8b15afe07ceec.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_gf7Qpi": {
+          "type": "row",
+          "settings": {
+            "content-title": "How to Protect Your Match Gloves",
+            "content-description": "<p class=\"section-content__text\">Want your gloves to show up every weekend? Look after them like they’re part of your kit — not an afterthought.</p>\n<ul class=\"section-content__list\">\n    <li class=\"section-content__elem\">Never train in them.</li>\n<li class=\"section-content__elem\">Rinse after every match to clear dirt and sweat.</li>\n<li class=\"section-content__elem\">Air dry — always. No heaters. No sun.</li>\n<li class=\"section-content__elem\">Store flat in a glove bag. No scrunching into the boot bag.</li>\n</ul>\n<p class=\"section-content__text\">Match latex is unforgiving. You take care of it — it’ll take care of you.</p>",
+            "content-image": "shopify://shop_images/479796d7d72fa432934b74e91a99283e1dc6cc13.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_kgafkD",
+        "row_9UgaCU",
+        "row_gf7Qpi"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_other_fc73iL": {
+      "type": "section-help-other",
+      "blocks": {
+        "row_dzzgnt": {
+          "type": "row",
+          "settings": {
+            "featured_product": "omen-black-white",
+            "other-title": "Omen",
+            "other-description": "Our first fingersave model. Built for protection and power."
+          }
+        },
+        "row_m9HRxa": {
+          "type": "row",
+          "settings": {
+            "featured_product": "vanguard-white-pink",
+            "other-title": "Vanguard",
+            "other-description": "Ultra-lightweight. Pro grip. Clean handling."
+          }
+        },
+        "row_CEacQE": {
+          "type": "row",
+          "settings": {
+            "featured_product": "sentinel",
+            "other-title": "Sentinel",
+            "other-description": "Structured, locked-in, and built to command your box."
+          }
+        },
+        "row_qK8knY": {
+          "type": "row",
+          "settings": {
+            "featured_product": "spectre-pink-black",
+            "other-title": "Spectra",
+            "other-description": "Minimal design. Premium grip. Tighter fit for clean contact."
+          }
+        }
+      },
+      "block_order": [
+        "row_dzzgnt",
+        "row_m9HRxa",
+        "row_CEacQE",
+        "row_qK8knY"
+      ],
+      "name": "section-help-other",
+      "settings": {
+        "main_title": "What Gloves from Hundred Are Built for Match Day?",
+        "subtitle": "What Gloves from Hundred Are Built for Match Day?",
+        "footer_text": "Pick your weapon — and keep it fresh for game day."
+      }
+    },
+    "section_help_faq_xggtg6": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_hjNMwL": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Can I use the same gloves for training and matches?",
+            "faq-description": "You can — but don’t expect them to last. Match gloves are built for grip, not punishment. If you use them in every session, the latex will wear fast and lose its bite."
+          }
+        },
+        "row_RpzBNa": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How many pairs of gloves should I own?",
+            "faq-description": "At least two — one for training, one for match day. It’s what most serious keepers do. Your match gloves stay fresh, and your training gloves take the hits."
+          }
+        },
+        "row_maGxaL": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What’s the difference between training and match gloves?",
+            "faq-description": "Match gloves use softer latex for grip. Training gloves (or tougher models) are built for durability. Same shape, different purpose. Don’t mix them if you want to keep that match sharpness."
+          }
+        },
+        "row_kQVTHw": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How do I make my match gloves last longer?",
+            "faq-description": "Rinse after every match. Let them dry naturally. Don’t crush them in your bag. And never, ever train in them."
+          }
+        },
+        "row_pP4LDi": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Which latex is best for match day?",
+            "faq-description": "Softer, high-grade latex like the 4mm pro contact latex we use in models like the Vanguard and Omen. It grips harder — but needs care to perform at its best."
+          }
+        }
+      },
+      "block_order": [
+        "row_hjNMwL",
+        "row_RpzBNa",
+        "row_maGxaL",
+        "row_kQVTHw",
+        "row_pP4LDi"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_AyFTee",
+    "marquee_sec_aCznVU",
+    "section_help_content_CqCNGw",
+    "section_help_other_fc73iL",
+    "section_help_faq_xggtg6"
+  ]
+}

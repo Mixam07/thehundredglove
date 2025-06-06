@@ -1,0 +1,138 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_jDTjMH": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": true,
+        "desktop_image": "shopify://shop_images/Hero_1920x600_2.jpg",
+        "mobile_image": "shopify://shop_images/Hero_Section_Mobile_6.jpg",
+        "banner_heading": "CARE GUIDE & FAQ",
+        "banner_text": "<p class=\"section-banner__text\">You’ve got two options: guess your size and hope for the best…<br>\nOr measure it properly - and get gloves that actually fit. <br>\nHere’s how to do it right the first time.</p>"
+      }
+    },
+    "marquee_sec_wnQpia": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_promo_HjAq7r": {
+      "type": "section-help-promo",
+      "name": "section-help-promo",
+      "settings": {}
+    },
+    "section_help_content_jBeemJ": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_ChjeNV": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why The Right Size Is Important ",
+            "content-description": "<p class=\"section-content__text\">Fit isn’t a nice-to-have - it’s everything.</p>\n<p class=\"section-content__text\">Too tight, and you’re fighting your gloves the whole session. They restrict movement, strain at the seams, and wear out faster. You’ll feel it when you punch, parry, or even pull them off. </p>\n<p class=\"section-content__text\">It’s uncomfortable, and it kills your confidence.</p>\n<p class=\"section-content__text\">Too loose, and you’re giving away grip. Your hands move inside the glove. You lose that connection with the ball. The latex doesn’t sit where it should, and the glove works against you. Mistakes creep in. Injuries follow.</p>\n<p class=\"section-content__text\">When your gloves fit properly, they move with you. You’re locked in. You’re focused. Every fingertip is exactly where it should be, and every save feels solid. Your grip stays consistent. </p>\n<p class=\"section-content__text\">Your gloves last longer. You trust your hands — and that changes how you play.</p>\n<p class=\"section-content__text\">This is the easiest edge you’ll ever get.</p>\n<p class=\"section-content__text\">Get the size right, and let the gloves do their job.</p>",
+            "content-image": "shopify://shop_images/MPH01430.jpg",
+            "content-isadaptive": true
+          }
+        }
+      },
+      "block_order": [
+        "row_ChjeNV"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_faq_QLgiiV": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_7ncjGg": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How do I know what size goalkeeper gloves to buy?",
+            "faq-description": "Measure from the base of your palm to the tip of your middle finger, in centimetres. Add 1cm to that number — that’s your glove size. Use our size chart to match it up. If you’re in between sizes, size up."
+          }
+        },
+        "row_tEP3BF": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Should goalkeeper gloves fit tight or loose?",
+            "faq-description": "They should feel snug — but not restrictive. You want a close fit around the fingers and palm, without your hand being squeezed. If they’re too tight, you’ll feel it in your fingers. Too loose, and you’ll lose grip and control."
+          }
+        },
+        "row_U73TtT": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What happens if my gloves are too big?",
+            "faq-description": " You’ll lose contact with the latex, which means less grip and less control. Your hand can shift inside the glove, and that’s how you end up with bad saves — or worse, injuries."
+          }
+        },
+        "row_HqgQB4": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What if I’m between two glove sizes?",
+            "faq-description": "Always size up. A little extra room won’t hurt, but gloves that are too tight will. Tight gloves wear faster, restrict movement, and can split at the seams."
+          }
+        },
+        "row_4WyVcg": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Are youth glove sizes different from adult ones?",
+            "faq-description": "Same system — smaller numbers. Youth keepers will typically wear size 4 to 7. Adults usually start from size 8. Always measure to be sure, especially with growing hands."
+          }
+        },
+        "row_gcaecc": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How should goalkeeper gloves feel when new?",
+            "faq-description": "New gloves should feel snug, even slightly tight — they’ll break in after a few sessions. If they’re uncomfortable from the start, they’re probably too small."
+          }
+        }
+      },
+      "block_order": [
+        "row_7ncjGg",
+        "row_tEP3BF",
+        "row_U73TtT",
+        "row_HqgQB4",
+        "row_4WyVcg",
+        "row_gcaecc"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_jDTjMH",
+    "marquee_sec_wnQpia",
+    "section_help_promo_HjAq7r",
+    "section_help_content_jBeemJ",
+    "section_help_faq_QLgiiV"
+  ]
+}

@@ -1,0 +1,180 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_YTmY83": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": false,
+        "desktop_image": "shopify://shop_images/14.jpg",
+        "mobile_image": "shopify://shop_images/Hero_Section_Mobile_7.jpg",
+        "banner_heading": "Goalkeeper Glove Latex & Grip Guide",
+        "banner_text": ""
+      }
+    },
+    "marquee_sec_NtyAwC": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_text_cMDR6x": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Not all grip is built the same — and that’s exactly the point.",
+        "description": "<p class=\"section-help-text__text\">The latex on your gloves is what connects you to the ball. It’s the single biggest difference between a catch that sticks and one that spills. But here’s what most people don’t realise:</p>\n<div class=\"section-help-text__items\">\n<div class=\"section-help-text__image\">\n<div>\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Group_39764.jpg?v=1749042073\" alt=\"\">\n</div>\n<span class=\"section-htlp-text__span\">=</span>\n<div>\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Group_39765.jpg?v=1749042073\" alt=\"\">\n</div>\n<span class=\"section-htlp-text__span\">=</span>\n<div>\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Group_39766.jpg?v=1749042074\" alt=\"\">\n</div>\n</div>\n</div>\n<p class=\"section-help-text__text\">That’s the trade-off. Always has been.</p>\n<p class=\"section-help-text__text\">You want elite grip? You’ve got to treat it right.<br>You want something bombproof? You’re giving up that top-tier feel.<br>It’s about choosing the right glove — and understanding what it’s built for.</p>"
+      }
+    },
+    "section_help_content_YbehKk": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_cEYm3e": {
+          "type": "row",
+          "settings": {
+            "content-title": "What is latex, and why does it matter?",
+            "content-description": "<p class=\"section-content__text\">Latex is the material used on the palms of your gloves — and it’s what gives you grip.</p>\n<p class=\"section-content__text\">Different latexes behave differently. Some are sticky and responsive. Others are tougher and more forgiving. But no latex lasts forever.</p>\n<p class=\"section-content__text\">Grip fades. That’s normal.</p>\n<p class=\"section-content__text\">Especially if you’re using the wrong gloves in the wrong conditions — or not taking care of them.</p>",
+            "content-image": "shopify://shop_images/DSC08626.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_XY36hQ": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why The Right Size Is Important ",
+            "content-description": "<p class=\"section-content__text\">We only use match-quality latex across our entire range. But here’s how the performance differs:</p>\n<p class=\"section-content__text\">Our highest-grade latex. Sticky, soft, and match-ready from the first touch. This is the stuff serious keepers wear when it matters most. It gives you that pro-level grip — but it demands proper care. You train in this every day? It won’t last long.</p>\n<p class=\"section-content__text\">Best for: Match day, elite performance, clean conditions.</p>\n<p class=\"section-content__text\">On our junior gloves, we use Giga latex — slightly firmer and far more durable. Still great grip, but built to handle the way younger keepers dive, push off, and drag their hands. It’s designed to take hits while they learn their craft.</p>\n<p class=\"section-content__text\">Best for: Youth players, artificial pitches, training environments.</p>",
+            "content-image": "shopify://shop_images/Group_39767.png",
+            "content-isadaptive": true
+          }
+        },
+        "row_xYyhQJ": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why latex wears out",
+            "content-description": "<p class=\"section-content__text\">Latex doesn’t just “go bad” — it wears out because of how you use it.</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Dry conditions</li>\n<li class=\"section-content__elem\">No rinsing</li>\n<li class=\"section-content__elem\">Turf burn</li>\n<li class=\"section-content__elem\">Dragging the palm when recovering</li>\n<li class=\"section-content__elem\">Leaving gloves wet in your bag</li>\n<li class=\"section-content__elem\">Training 4x a week in your match pair</li>\n</ul>\n<p class=\"section-content__text\">It’s avoidable. And it’s why we tell every keeper the same thing: your gloves are only as good as how you treat them.</p>",
+            "content-image": "shopify://shop_images/MPH00174.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_6pPHVH": {
+          "type": "row",
+          "settings": {
+            "content-title": "How to get the best out of your grip",
+            "content-description": "<p class=\"section-content__text\">Want to keep that latex alive? Here's how to do it properly:</p>\n<ol class=\"section-content__list\">\n<li class=\"section-content__elem\">Rinse before first use<br> Every glove should be rinsed before it touches a ball. It removes residue and “activates” the latex.</li>\n<li class=\"section-content__elem\">Keep the palms damp when playing<br>Latex grips better when it’s slightly moist. Dry latex drags and wears faster.</li>\n<li class=\"section-content__elem\">Rinse after every session<br>Cold or lukewarm water only. No soap. Just clear the dirt and sweat.</li>\n<li class=\"section-content__elem\">Dry flat, out of sunlight<br>No heaters. No tumble dryers. No radiators. Latex hates heat.</li>\n<li class=\"section-content__elem\">Store them properly<br>Flat. Palms together. In a glove wallet or breathable pouch. Not stuffed into the bottom of your kit bag.</li>\n<li class=\"section-content__elem\">Use separate gloves for training and match day<br>This one’s non-negotiable. Don’t kill your best latex by dragging it through Monday night sessions.</li>\n</ol>",
+            "content-image": "shopify://shop_images/IMG_2037.jpg",
+            "content-isadaptive": true
+          }
+        }
+      },
+      "block_order": [
+        "row_cEYm3e",
+        "row_XY36hQ",
+        "row_xYyhQJ",
+        "row_6pPHVH"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": true
+      }
+    },
+    "section_help_text_zAiacN": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Final Word",
+        "description": "<p class=\"section-help-text__text\">Great grip is temporary. That’s the reality.</p>\n<p class=\"section-help-text__text\">But if you respect the latex — if you clean it, store it, and use it the way it was designed — it’ll reward you with clean handling and serious confidence.</p>\n<p class=\"section-help-text__text\">Better grip = softer latex = faster wear.</p>\n<p class=\"section-help-text__text\">That’s the deal. Treat it right.</p>"
+      }
+    },
+    "section_help_faq_Vitm3k": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_3RiEK7": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Why doesn’t my grip feel strong straight out the bag?",
+            "faq-description": "Some gloves come with a thin plastic film (mainly adult match models). Peel it off. Then rinse the latex in cold water — that activates the grip. Don’t skip it."
+          }
+        },
+        "row_Yae48N": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Can I use dry gloves?",
+            "faq-description": "Technically yes — but you’ll lose grip fast and wear the latex quicker. Keep the palms slightly damp before and during play for best performance."
+          }
+        },
+        "row_7CDhG7": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What’s the best latex for grip?",
+            "faq-description": "4mm Pro Contact Latex — no question. It’s softer, tackier, and more responsive. But it also needs more care. Giga latex is more durable, especially for juniors and turf."
+          }
+        },
+        "row_WkHFE6": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Do youth gloves have different latex?",
+            "faq-description": "Yes. We use Giga latex on junior gloves — tougher and more forgiving while young keepers develop their technique."
+          }
+        },
+        "row_xdccAX": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How long should grip last?",
+            "faq-description": "Match latex (like Pro Contact) will typically last 8–12 full matches with proper care. More if you keep them clean and only use them on match day. Giga latex and tougher models will last longer, especially on rough surfaces."
+          }
+        },
+        "row_68Neff": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Why does my latex look like it’s peeling?",
+            "faq-description": "That’s wear and tear — not a fault. Latex naturally breaks down with use, especially if not cleaned or used dry. The more it gets dragged or scuffed, the faster it peels."
+          }
+        }
+      },
+      "block_order": [
+        "row_3RiEK7",
+        "row_Yae48N",
+        "row_7CDhG7",
+        "row_WkHFE6",
+        "row_xdccAX",
+        "row_68Neff"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_YTmY83",
+    "marquee_sec_NtyAwC",
+    "section_help_text_cMDR6x",
+    "section_help_content_YbehKk",
+    "section_help_text_zAiacN",
+    "section_help_faq_Vitm3k"
+  ]
+}

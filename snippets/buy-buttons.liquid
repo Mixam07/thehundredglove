@@ -12,7 +12,6 @@
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
 
-{% if bundle %}
   <style>
     kaching-bundle{
       display: none;
@@ -199,8 +198,37 @@
               <p class="numbers__price">£90.00</p>
             </div>
             <p class="numbers__desc">Most Popular</p>
+            <div>
+              <p class="numbers__headline">Size</p>
+              <div class="numbers__size">
+                #1
+                <select name="variant-2" class="section-glove__select">
+                  {% for variant in product.variants %}
+                      <option 
+                          value="{{ variant.id }}" 
+                          {% unless variant.available %}disabled{% endunless %}
+                      >
+                          {{ variant.option1 }}
+                      </option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="numbers__size">
+                #2
+                <select name="variant-2" class="section-glove__select">
+                  {% for variant in product.variants %}
+                      <option 
+                          value="{{ variant.id }}" 
+                          {% unless variant.available %}disabled{% endunless %}
+                      >
+                          {{ variant.option1 }}
+                      </option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
           </div>
-          <p class="numbers__discount">Save 22%</p>
+          <p class="numbers__discount">Save 20%</p>
         </label>
       </div>
       <div class="numbers__wrapper">
@@ -213,21 +241,54 @@
               <p class="numbers__price">£120.00</p>
             </div>
             <p class="numbers__desc">Best Value</p>
-          </div>
-          <div>
-            <div class="numbers__discount">
-              Save 32%
-              <p class="numbers__other">
-                <img src="{{ 'product-icon.svg' | asset_url }}" alt="star" />
-                <span>FREE Shipping + Gift + Goalkeeper Workout Plan Ebook</span>
-              </p>
+            <div>
+              <p class="numbers__headline">Size</p>
+              <div class="numbers__size">
+                #1
+                <select name="variant-3" class="section-glove__select">
+                  {% for variant in product.variants %}
+                      <option 
+                          value="{{ variant.id }}" 
+                          {% unless variant.available %}disabled{% endunless %}
+                      >
+                          {{ variant.option1 }}
+                      </option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="numbers__size">
+                #2
+                <select name="variant-3" class="section-glove__select">
+                  {% for variant in product.variants %}
+                      <option 
+                          value="{{ variant.id }}" 
+                          {% unless variant.available %}disabled{% endunless %}
+                      >
+                          {{ variant.option1 }}
+                      </option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="numbers__size">
+                #3
+                <select name="variant-3" class="section-glove__select">
+                  {% for variant in product.variants %}
+                      <option 
+                          value="{{ variant.id }}" 
+                          {% unless variant.available %}disabled{% endunless %}
+                      >
+                          {{ variant.option1 }}
+                      </option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
           </div>
+          <p class="numbers__discount">Save 35%</p>
         </label>
       </div>
     </div>
   </div>
-{% endif %}
 
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
@@ -242,6 +303,7 @@
         assign show_dynamic_checkout = true
       endif
     -%}
+    <div></div>
 
     <product-form class="product-form" data-hide-errors="{{ gift_card_recipient_feature_active }}">
       <div class="product-form__error-message-wrapper" role="alert" hidden>
@@ -501,12 +563,7 @@
           );
         }
       }
-      
-      if (isPersonalization)
-        variants.push({
-          id: "44030822383872",
-          quantity: 1
-        })
+
 
       const data = {
         items: variants.map(item => {
@@ -538,123 +595,4 @@
       .catch(error => console.error('Error:', error));
     }
   });
-  /*
-  document.querySelector(".personal-btn").addEventListener("click", function () {
-    const pack__list = document.querySelectorAll(".pack__list-variants");
-    const numbers = document.querySelectorAll("[data-number]");
-    let number = 1;
-
-    numbers.forEach(item => {
-      if(item.checked) {
-        number = +item.value
-      }
-    });
-    
-    if(pack__list.length > 0) {
-      addProductWithManyVariants(pack__list, number, numbers);
-    } else {
-      let isPersonalization = !! document.querySelector('#personalization')?.value;
-      const inputs = document.querySelectorAll("[data-number]");
-      const variants = [];
-      
-      if (inputs.length == 0 || inputs[0].checked) {
-        const inputs_list = document.querySelectorAll('fieldset.product-form__input input');
-
-        if(inputs_list.length > 0){
-          inputs_list.forEach(item => {
-            if(item.value) {
-              variants.push({
-                id: item.value,
-                quantity: item.checked? 1 : 0
-              });
-            }
-          })
-        } else{
-          const input = document.querySelector("[data-varianfirstid]");
-          variants.push({
-            id: input.value,
-            quantity: 1
-          })
-        }
-      } else {
-        let selects;
-
-        inputs.forEach(item => {
-          if (item.classList.contains("kaching-bundles__bar--selected"))
-            selects = item.querySelectorAll("select")
-          });
-
-          selects.forEach(select => {
-            const title = select.value;
-            
-            variants_list.forEach(variant => {
-              if (title == variant.title) {
-                variants.push({
-                  id: variant.id,
-                  quantity: number
-                });
-              }
-            })
-          })
-
-        if (inputs[2].checked) {
-          variants.push(
-            {
-              id: "53598862836092",
-              quantity: 1
-            },
-            {
-              id: "54858935828860",
-              quantity: 1
-            }
-          );
-        }
-      }
-      
-      if (isPersonalization)
-        variants.push({
-          id: "44030822383872",
-          quantity: 1
-        })
-
-      const data = {
-        items: variants.map(item => {
-          return {
-            id: item.id,
-            quantity: item.quantity
-          }
-        })
-      };
-
-      fetch(window.Shopify.routes.root + 'cart/add.js', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-      })
-      .then(response => response.json())
-      .then(response => {
-          console.log(response);
-          
-          fetch('/cart.js')
-              .then(res => res.json())
-              .then(cart => {
-                  console.log(cart.item_count);
-                  document.querySelector('.cart-count-bubble span').textContent = cart.item_count;
-              });
-      })
-      .catch(error => console.error('Error:', error));
-    }
-  });
-  */
 </script>
-
-<!--
-document.querySelectorAll('.product-variant-id').forEach(item => {
-          variants.push({
-            id: item.value,
-            quantity: 1
-          });
-        })
-          -->

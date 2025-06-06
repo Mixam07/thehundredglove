@@ -1,0 +1,208 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_pMrURn": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": false,
+        "desktop_image": "shopify://shop_images/Frame_427319615.jpg",
+        "mobile_image": "shopify://shop_images/Frame_427319787.jpg",
+        "banner_heading": "Wet Weather Goalkeeping Tips",
+        "banner_text": "<p class=\"section-banner__text\">Rain doesn’t care if you’re ready. The whistle blows either way.</p>\n<p class=\"section-banner__text\">And if your gloves aren’t prepped for wet weather — expect slippery palms, bad handling, and excuses no one wants to hear.</p>\n<p class=\"section-banner__text\">Here’s how to show up when the pitch is soaked and the shots don’t stop..</p>"
+      }
+    },
+    "marquee_sec_YFpnHg": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_content_jYRpj8": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_NgmRRy": {
+          "type": "row",
+          "settings": {
+            "content-title": "The truth about grip in the rain",
+            "content-description": "<p class=\"section-content__text\">Latex changes in the wet.</p>\n<p class=\"section-content__text\">Some get better. Some get worse.</p>\n<p class=\"section-content__text\">But even with the best gloves in the world, rain will affect how the ball reacts.</p>\n<p class=\"section-content__text\">Here’s the mistake most keepers make:<br>They show up with bone-dry gloves and expect them to perform in a storm.</p>\n<p class=\"section-content__text\">That’s not how it works.</p>",
+            "content-image": "shopify://shop_images/DSC08608.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_NgmRRy"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_list_kWakLN": {
+      "type": "section-help-list",
+      "blocks": {
+        "row_qxqcqB": {
+          "type": "row",
+          "settings": {
+            "content-title": "Always dampen your gloves before kick-off",
+            "content-description": "Yes — even if it’s already raining.<br>\nDry latex in wet conditions loses grip fast.<br>Dampen the palms with clean water before you even leave the changing room. This primes the latex and reduces slipping.",
+            "content-image": "shopify://shop_images/Untitled_design_1.jpg",
+            "content-link": ""
+          }
+        },
+        "row_RzCKmc": {
+          "type": "row",
+          "settings": {
+            "content-title": "Rinse them at halftime",
+            "content-description": "Gloves collect dirt, mud, and waterlogged pitch grime. Give them a quick rinse or towel wipe at the break to refresh the grip.",
+            "content-image": "shopify://shop_images/MPH01418.jpg",
+            "content-link": ""
+          }
+        },
+        "row_QedRBw": {
+          "type": "row",
+          "settings": {
+            "content-title": "Use a glove towel — properly",
+            "content-description": "Our glove towel isn’t just for show. Use it on the backhand or wrist area to remove excess water. Don’t rub the palms — you’ll damage the latex. Pat, press, reset.",
+            "content-image": "shopify://shop_images/Untitled_design_2.jpg",
+            "content-link": ""
+          }
+        },
+        "row_3VUWiP": {
+          "type": "row",
+          "settings": {
+            "content-title": "Don’t wear soaking wet gloves from warm-up",
+            "content-description": "If your warm-up gloves are drenched, change them before the match. Grip changes once latex is saturated. Start the match with a dry, prepped pair if possible.",
+            "content-image": "shopify://shop_images/340693715_560069816237760_2793892965856573079_n_a62e5471-f32f-414d-950a-3e2a586eaa2d.jpg",
+            "content-link": ""
+          }
+        },
+        "row_RPzUwj": {
+          "type": "row",
+          "settings": {
+            "content-title": "Focus on handling, not flair",
+            "content-description": "Rainy games are about control, not showboating. Catch when you can. Parry when you have to. Do the basics. Wet weather punishes bad decisions.",
+            "content-image": "shopify://shop_images/MPH00189_45907f4b-a90e-46a5-8573-846786474f28.jpg",
+            "content-link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_qxqcqB",
+        "row_RzCKmc",
+        "row_QedRBw",
+        "row_3VUWiP",
+        "row_RPzUwj"
+      ],
+      "name": "section-help-list",
+      "settings": {
+        "main_title_link": ""
+      }
+    },
+    "section_help_content_GaVU9g": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_JJf6an": {
+          "type": "row",
+          "settings": {
+            "content-title": "Bonus: Wet weather prep checklist",
+            "content-description": "<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Dampen palms before play</li>\n<li class=\"section-content__elem\">Pack a glove towel</li>\n<li class=\"section-content__elem\">Rinse at halftime if needed</li>\n<li class=\"section-content__elem\">Always bring a second pair</li>\n<li class=\"section-content__elem\">Play smart — not flashy</li>\n</ul>",
+            "content-image": "shopify://shop_images/MPH-02589_b8605ab3-68e7-4b49-8758-f575e32f855f.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_JJf6an"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": true
+      }
+    },
+    "section_help_faq_79hJFL": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_ezYxMn": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Should goalkeeper gloves be wet or dry in the rain?",
+            "faq-description": "Slightly damp — always. Dry latex in rain loses grip fast. Dampen them with clean water before kick-off and maintain throughout."
+          }
+        },
+        "row_RVrzHM": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Can I use my regular gloves in wet weather?",
+            "faq-description": "Yes — but you’ll need to prep them properly. And if you're playing in constant rain, expect the grip to change as the latex becomes saturated. That's why we recommend a backup pair."
+          }
+        },
+        "row_nrVdJb": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What’s the best latex for rain?",
+            "faq-description": "Softer latex (like our 4mm Pro Contact) performs well when prepped. But like all latex, it needs to be dampened and cared for to hold up in the wet."
+          }
+        },
+        "row_JUVrYF": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Do I need a glove towel?",
+            "faq-description": "If you’re playing in wet conditions — yes. It helps remove excess water from your gloves (especially the backhand and wrists) without damaging the latex."
+          }
+        },
+        "row_Mt9WAU": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Can rain damage goalkeeper gloves?",
+            "faq-description": "No — but bad habits can. Rubbing palms dry with rough towels, using heat to dry gloves afterward, or storing them wet in your bag will wreck them. Handle with care."
+          }
+        }
+      },
+      "block_order": [
+        "row_ezYxMn",
+        "row_RVrzHM",
+        "row_nrVdJb",
+        "row_JUVrYF",
+        "row_Mt9WAU"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_pMrURn",
+    "marquee_sec_YFpnHg",
+    "section_help_content_jYRpj8",
+    "section_help_list_kWakLN",
+    "section_help_content_GaVU9g",
+    "section_help_faq_79hJFL"
+  ]
+}

@@ -1,0 +1,171 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_jDTjMH": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": false,
+        "desktop_image": "shopify://shop_images/Hero_1920x600_2_7b2adac1-dfb2-4ded-aa2d-c6dff7920611.jpg",
+        "mobile_image": "shopify://shop_images/Hero_Section_Mobile_3.jpg",
+        "banner_heading": "CARE GUIDE & FAQ",
+        "banner_text": "<p class=\"section-banner__text\">Buy a new pair of gloves and see a thin layer of plastic on the palm?</p>\n<p class=\"section-banner__text\">That’s not a defect — it’s there for protection.</p>\n<p class=\"section-banner__text\">Most of our adult gloves come with a thin plastic film across the latex. It keeps the grip fresh during shipping and storage. But before you wear them, you need to peel it off. Properly.</p>"
+      }
+    },
+    "marquee_sec_wnQpia": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_content_jBeemJ": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_ChjeNV": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why it’s there",
+            "content-description": "<p class=\"section-content__text\">Top-tier latex (like the 4mm pro contact latex we use) is soft, grippy, and sensitive. It performs better — but also dries out faster if exposed for too long. The film stops that. It locks in moisture, protects the surface, and keeps your gloves match-ready straight out the bag.</p>",
+            "content-image": "shopify://shop_images/MPH-02309.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_wDx6QU": {
+          "type": "row",
+          "settings": {
+            "content-title": "When to remove it",
+            "content-description": "<p class=\"section-content__text\">Just before your first use.<br>\nNot when they arrive. Not after you try them on.<br>\nLeave the film on until you’re ready to train or play — it keeps the grip fresh.</p>",
+            "content-image": "shopify://shop_images/1.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_EHWWKt": {
+          "type": "row",
+          "settings": {
+            "content-title": "How to remove it(without ruining your gloves)",
+            "content-description": "<ol class=\"section-content__list\">\n<li class=\"section-content__elem\">Start at one corner of the palm — usually by the wrist or pinky.</li>\n<li class=\"section-content__elem\">Peel slowly and evenly. Don’t yank it.</li>\n<li class=\"section-content__elem\">Go section by section. If it rips, just find another edge and keep peeling.</li>\n<li class=\"section-content__elem\">Avoid using sharp tools or scratching the latex underneath.</li>\n<li class=\"section-content__elem\">Once the film is off, rinse the gloves with clean, lukewarm water and let them air dry. This “activates” the latex and improves grip.</li>\n</ol>\n<p class=\"section-help-text__text\">Done right, your gloves are now match-ready.</p>",
+            "content-image": "shopify://shop_images/MPH01488.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_ArPFM3": {
+          "type": "row",
+          "settings": {
+            "content-title": "What if my gloves don’t have a film?",
+            "content-description": "<p class=\"section-content__text\">Not all gloves come with it. It’s mostly found on pro-level adult models with softer latex. Some youth sizes and harder-wearing training gloves don’t need it — and won’t have it.</p>",
+            "content-image": "shopify://shop_images/cds.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_ChjeNV",
+        "row_wDx6QU",
+        "row_EHWWKt",
+        "row_ArPFM3"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_text_hnwjjm": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Final Tip",
+        "description": "<p class=\"section-help-text__text\">Don’t peel the film weeks in advance.</p>\n<p class=\"section-help-text__text\">Don’t store gloves with half-peeled latex.</p>\n<p class=\"section-help-text__text\">And definitely don’t forget to remove it before a match — or you’ll find out the hard way why the grip feels wrong.</p>"
+      }
+    },
+    "section_help_faq_QLgiiV": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_7ncjGg": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Why is there plastic on my goalkeeper gloves?",
+            "faq-description": "That’s a protective film — not a fault. It’s used on most adult gloves with pro-grade latex to keep the grip fresh and clean during shipping and storage."
+          }
+        },
+        "row_tEP3BF": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Do I have to remove the film before using the gloves?",
+            "faq-description": "Yes. Always. Gloves won’t perform properly until the film is fully peeled off. It blocks the latex from making contact with the ball — so don’t skip it."
+          }
+        },
+        "row_U73TtT": {
+          "type": "row",
+          "settings": {
+            "faq-title": "When should I take the film off?",
+            "faq-description": "Right before your first session. Not days before. Not after unboxing. The longer it stays sealed, the fresher the grip will be."
+          }
+        },
+        "row_HqgQB4": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How do I remove the film safely?",
+            "faq-description": "Start at a corner and peel slowly. If it rips, just start from another edge. Don’t use anything sharp, and don’t rush it. Once it’s off, rinse the gloves in lukewarm water to activate the latex."
+          }
+        },
+        "row_4WyVcg": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Do kids’ gloves have the plastic film too?",
+            "faq-description": "Usually not. Most youth gloves use tougher latex that doesn’t require it. You’ll mostly find the film on our adult match models."
+          }
+        },
+        "row_gcaecc": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What happens if I forget to take the film off?",
+            "faq-description": "You’ll notice straight away — the grip will feel off, slippery, or dead. If that happens, check your gloves. The film is clear and thin, but easy to spot once you know it’s there."
+          }
+        }
+      },
+      "block_order": [
+        "row_7ncjGg",
+        "row_tEP3BF",
+        "row_U73TtT",
+        "row_HqgQB4",
+        "row_4WyVcg",
+        "row_gcaecc"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_jDTjMH",
+    "marquee_sec_wnQpia",
+    "section_help_content_jBeemJ",
+    "section_help_text_hnwjjm",
+    "section_help_faq_QLgiiV"
+  ]
+}

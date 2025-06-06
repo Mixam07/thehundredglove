@@ -691,7 +691,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".banner__content svg,.bannerTrustBadge{margin: 0;}"
+      ".banner__content svg,.bannerTrustBadge {margin: 0;}",
+      ".section-help-text__image.img {grid-template-columns: 1fr 1fr 1fr 1fr;}"
     ]
   }
 }

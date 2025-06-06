@@ -1,0 +1,81 @@
+{{ 'section-help-list.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <div class="section-help-list__wrapper">
+        <h1 class="section-help-list__title">Top wet weather tips</h1>
+        <div class="section-help-list__information">
+            <p class="section-help-list__text">A glove that’s too big means your child can’t feel the ball — they’ll struggle to catch, and they’ll feel like the glove is getting in the way.</p>
+            <p class="section-help-list__text">Too small, and they’ll be uncomfortable or split at the seams during play.</p>
+        </div>
+        <ol class="section-help-list__list">
+            {% for block in section.blocks %}
+                {% if block.type == 'row' %}
+                    <div class="section-help-list__item">
+                        <div class="section-help-list__image">
+                            <img src="{{ block.settings['content-image'] | img_url: 'original' }}" alt="photo">
+                        </div>
+                        <div class="section-help-list__wrap">
+                            <li class="section-help-list__caption">{{ block.settings['content-title'] }}</li>
+                            <div class="section-help-list__description">{{ block.settings['content-description'] }}</div>
+                            {% if block.settings['content-link'] %}
+                                <a class="section-help-list__link" href="{{ block.settings['content-link'] }}">Shop now</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "section-help-list",
+    "tag": "section",
+    "class": "section-help-list",
+    "settings": [
+        {
+            "type": "url",
+            "id": "main_title_link",
+            "label": "Main Title Link"
+        }
+    ],
+    "blocks": [
+    {
+        "type": "row",
+        "name": "Content",
+        "settings": 
+            [
+                {
+                    "id": "content-title",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "Title"
+                },
+                {
+                    "id": "content-description",
+                    "type": "textarea",
+                    "label": "Description",
+                    "default": "Description"
+                },
+                {
+                    "id": "content-image",
+                    "type": "image_picker",
+                    "label": "Image"
+                },
+                {
+                    "type": "url",
+                    "id": "content-link",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "section-help-list",
+            "category" : "Custom"
+        }
+    ]
+}
+{% endschema %}

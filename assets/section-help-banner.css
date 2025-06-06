@@ -1,15 +1,19 @@
+.section-help-banner .page-width{
+    padding: 0;
+}
+
 .section-help-banner{
     background: center center no-repeat;
     background-size: cover;
     height: 600px;
 }
 
-.page-width{
+.section-help-banner .page-width{
     height: 100%;
 }
 
 .section-banner__wrapper{
-    max-width: 500px;
+    max-width: 550px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -30,6 +34,11 @@
     color: #fff;
     font-size: 48px;
     margin-bottom: 25px;
+    max-width: 500px;
+}
+
+.section-center .section-banner__title{
+    margin: 0 auto;
 }
 
 .section-banner__text{
@@ -54,7 +63,7 @@
 
     .section-banner__title{
         text-align: center;
-        font-size: 36px;
+        font-size: 34px;
         margin: 0;
     }
 
@@ -62,5 +71,6 @@
         text-align: center;
         font-size: 14px;
         margin-bottom: 5px;
+        line-height: 18px;
     }
 }

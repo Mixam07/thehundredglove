@@ -1,0 +1,182 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_nCX8mV": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": false,
+        "desktop_image": "shopify://shop_images/Hero_1920x600_4cbff4bc-8a5d-4ce9-baed-6cfb5d39f793.jpg",
+        "mobile_image": "shopify://shop_images/Hero_Section_Mobile_1.jpg",
+        "banner_heading": "What Makes Us Different",
+        "banner_text": ""
+      }
+    },
+    "marquee_sec_GM8tq6": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_text_9Pbt9L": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Built with purpose. Worn with pride.",
+        "description": "<p class=\"section-help-text__text\">We didn’t start Hundred because we wanted to launch “a glove brand.”</p>\n<p class=\"section-help-text__text\">We started it because no one was making goalkeeper gear properly.</p>\n<p class=\"section-help-text__text\">Brands were selling overpriced gloves with generic latex, lazy fits, and marketing gimmicks dressed up as innovation.</p>\n<p class=\"section-help-text__text\">So we stripped everything back — and built gloves the way they should be:<br>Performance-driven. Keeper-specific. Premium where it matters.</p>"
+      }
+    },
+    "section_help_content_ajjLDi": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_3nbLG3": {
+          "type": "row",
+          "settings": {
+            "content-title": "Premium is a standard — not a price tag",
+            "content-description": "<p class=\"section-content__text\">We use 4mm pro-level latex, reinforced stitching, and elite-level construction across our range — not just on the expensive pairs.</p>\n<p class=\"section-content__text\">Other brands charge £100+ for this.</p>\n<p class=\"section-content__text\">We don't play that game.</p>\n<p class=\"section-content__text\">Premium isn’t about how much you pay.</p>\n<p class=\"section-content__text\">It’s about how the glove performs at full stretch in the 89th minute — and how long it keeps doing it.</p>",
+            "content-image": "shopify://shop_images/2.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_kxpg3h": {
+          "type": "row",
+          "settings": {
+            "content-title": "Purpose-built for goalkeepers — and no one else",
+            "content-description": "<p class=\"section-content__text\">We don’t make boots. We don’t do teamwear.</p>\n<p class=\"section-content__text\">Everything we make — gloves, base layers, grip towels, padded clothing — is designed for the player who puts on the gloves and stays there.</p>\n<p class=\"section-content__text\">We obsess over the details:</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Grip that sticks when it counts</li>\n<li class=\"section-content__elem\">Wrist support that actually works</li>\n<li class=\"section-content__elem\">Cuts that fit real goalkeepers, not mannequins</li>\n<li class=\"section-content__elem\">Youth models that aren’t just shrunken-down versions</li>\n</ul>\n<p class=\"section-content__text\">We build differently — because goalkeeping is different.</p>",
+            "content-image": "shopify://shop_images/IMG_1969.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_6hgr4y": {
+          "type": "row",
+          "settings": {
+            "content-title": "We design for performance. Full stop.",
+            "content-description": "<p class=\"section-content__text\">We don’t do gimmicks. No pointless spines. No “airflow tech” that does nothing.</p>\n<p class=\"section-content__text\">Every material, cut, and feature we include is there to help you make one more save.</p>\n<p class=\"section-content__text\">What we care about is:</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">How it fits</li>\n<li class=\"section-content__elem\">How it grips</li>\n<li class=\"section-content__elem\">How it handles a diving punch at full stretch on turf</li>\n</ul>\n<p class=\"section-content__text\">That’s it. No noise. Just purpose.</p>",
+            "content-image": "shopify://shop_images/IMG_1986.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_XcqPUh": {
+          "type": "row",
+          "settings": {
+            "content-title": "We’re not here to compete. We’re here to lead.",
+            "content-description": "<p class=\"section-content__text\">We’re not trying to undercut.<br>We’re not trying to blend in.<br>We’re not copying what’s out there.</p>\n<p class=\"section-content__text\">We build gloves that outperform brands twice the price — and we know it.</p>\n<p class=\"section-content__text\">Ask any of the 25,000+ keepers who wear them every week.</p>",
+            "content-image": "shopify://shop_images/IMG_2699.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_mBBjaC": {
+          "type": "row",
+          "settings": {
+            "content-title": "Trusted by serious keepers.Chosen by parents who get it.",
+            "content-description": "<p class=\"section-content__text\">We’re the brand that gets recommended in real WhatsApp groups.</p>\n<p class=\"section-content__text\">On wet sidelines. By coaches. Between parents. At the training ground.</p>\n<p class=\"section-content__text\">Because we deliver gloves that feel right, fit properly, grip hard, and don’t fall apart.</p>\n<p class=\"section-content__text\">No middlemen. No markups. Just the gear — done properly.</p>",
+            "content-image": "shopify://shop_images/IMG_2752.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_3nbLG3",
+        "row_kxpg3h",
+        "row_6hgr4y",
+        "row_XcqPUh",
+        "row_mBBjaC"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_text_tLRf6z": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Final word",
+        "description": "<p class=\"section-help-text__text\">We’re not another glove brand.</p>\n<p class=\"section-help-text__text\">We’re the quiet confidence. The focused design. The elite fit.</p>\n<p class=\"section-help-text__text\">We're what keepers wear when they care about their game — not just the badge.</p>\n<p class=\"section-help-text__text\">Hundred. Built to hold. Built to last. Built for goalkeepers.</p>"
+      }
+    },
+    "section_help_faq_YtKRq4": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_hptaf7": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What makes Hundred gloves different from other brands?",
+            "faq-description": "We build specifically for goalkeepers — no teamwear, no sideline distractions. We use pro-grade materials, elite fit patterns, and pricing that reflects performance, not marketing fluff."
+          }
+        },
+        "row_GekcJQ": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Are your gloves just for professionals?",
+            "faq-description": "No. They’re for serious goalkeepers — whether you're in academy setups, Sunday league, or learning your craft in goal at 9 years old. If you care about your game, they’re for you."
+          }
+        },
+        "row_QJjhf8": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Why are your gloves priced lower than big-name brands?",
+            "faq-description": "Because we don’t waste money on fluff. No retail markups. No overpriced endorsements. We sell direct and build with better materials — that’s how we offer premium gloves for less."
+          }
+        },
+        "row_qUPFc7": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Do you use the same latex as top-end gloves?",
+            "faq-description": "Yes. Our top models use 4mm pro contact latex — the same compound you’ll find in gloves double the price. Our junior gloves use Giga latex for durability and grip where it matters most."
+          }
+        },
+        "row_ABh8yw": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Are your junior gloves just smaller versions?",
+            "faq-description": "Absolutely not. We redesign junior gloves from the ground up — with more durable materials, reinforced seams, and youth-specific fits. They're built for how kids dive, fall, and develop."
+          }
+        }
+      },
+      "block_order": [
+        "row_hptaf7",
+        "row_GekcJQ",
+        "row_QJjhf8",
+        "row_qUPFc7",
+        "row_ABh8yw"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_nCX8mV",
+    "marquee_sec_GM8tq6",
+    "section_help_text_9Pbt9L",
+    "section_help_content_ajjLDi",
+    "section_help_text_tLRf6z",
+    "section_help_faq_YtKRq4"
+  ]
+}

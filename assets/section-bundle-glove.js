@@ -95,41 +95,14 @@ const changeActiveNumber = () => {
     numbers[index].classList.add("active");
 }
 
-document.querySelectorAll("[data-buttonPopup]").forEach(button => {
+document.querySelectorAll("[data-buttonPopup]").forEach((button, i) => {
     button.addEventListener("click", (e) => {
-        const id = button.getAttribute("data-buttonPopup");
-        document.querySelector("body").style.overflow = "hidden";
-
-        document.querySelector("#popup-" + id).classList.add("active");
-    });
-});
-
-document.querySelectorAll(".popup").forEach(popup => {
-    popup.addEventListener("click", (e) => {
-        if(e.target.classList.contains("popup") || e.target.closest(".popup__close")){
-            popup.classList.remove("active");
-            document.querySelector("body").style.overflow = "auto";
-        }
-    });
-
-    popup.querySelectorAll(".popup__btn[data-variant-id]").forEach((button, i) => {
-        button.addEventListener("click", (e) => {
-            popup.querySelectorAll(".popup__btn[data-variant-id]").forEach(btn => {
-                btn.classList.remove("active");
-            })
-
-            button.classList.add("active");
-            popup.querySelector(".selected-size").innerHTML = button.innerHTML;
-        });
-    });
-
-    popup.querySelector(".popup__submit").addEventListener("click", (e) => {
-        const size = popup.querySelector(".selected-size")?.innerHTML?.trim();
-        const variantId = popup.querySelector("[data-variant-id].active")?.getAttribute("data-variant-id");
-        const title = popup.querySelector(".popup__title")?.innerHTML;
-        const price = popup.querySelector(".popup__price")?.innerHTML;
-        const image = popup.querySelector(".popup__images img")?.src;
-
+        const variantId = document.querySelectorAll(".section-glove__select")[i]?.value;
+        const size = document.querySelector(`[value="${variantId}"]`)?.innerHTML?.trim();
+        const title = document.querySelectorAll(".section-glove__caption")[i]?.innerHTML;
+        const price = document.querySelectorAll(".section-glove__button span")[i]?.innerHTML;
+        const image = document.querySelectorAll(".section-glove__image img")[i]?.src;
+  
         if(size) {
             popup.querySelectorAll("[data-variant-id]").forEach(size => {
                 size.classList.remove("active");
@@ -152,34 +125,6 @@ document.querySelectorAll(".popup").forEach(popup => {
     });
 });
 
-document.querySelectorAll("[data-productId]").forEach(button => {
-    button.addEventListener("click", (e) => {
-        const id = button.getAttribute("data-productId");
-
-        document.querySelectorAll(".popup").forEach(popup => {
-            popup.classList.remove("active");
-        });
-
-        document.querySelector("#popup-" + id).classList.add("active");
-    });
-});
-
-document.querySelectorAll("[data-modal]").forEach(item => {
-    item.addEventListener("click", (e) => {
-        const id = item.getAttribute("data-modal");
-
-        document.querySelector("#helpchoose-" + id).classList.add("active");
-    });
-});
-
-document.querySelectorAll(".popup__help").forEach(item => {
-    item.addEventListener("click", (e) => {
-        if(e.target.classList.contains("popup__help") || e.target.closest(".popup__help-close")){
-            item.classList.remove("active");
-        }
-    });
-});
-
 submit.addEventListener("click", async (e) => {
     const list = [...bundle.map(item => {
         return {
@@ -190,9 +135,6 @@ submit.addEventListener("click", async (e) => {
     let num = 0;
 
     list.push({
-        variantId: "44030822383872",
-        quantity: num
-    }, {
         variantId: bundles[number - 2],
         quantity: 1
     });

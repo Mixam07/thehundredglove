@@ -173,49 +173,86 @@ try{
         }
 
         newList.forEach(item => {
-            const { title, variant } = parseTitleWithBrackets(item.title)
             wrapper.innerHTML += `
-                <div class="card card--standard card--media" style="--ratio-percent: 125.0%;">
-                    <div class="card__inner color-background-2 gradient ratio" style="--ratio-percent: 125.0%;">
-                        <div class="card__media">
-                            <a href="${item.url}" class="media media--transparent media--hover-effect">
-                                <img alt="${item.title}" src="${item.images[0]}" class="motion-reduce"  />
-                            </a>
-                        </div>
+                <div class="section-glove__item">
+                    ${
+                        item.tags.some(item => item == 'fingersave')? `<span class="card-top-badge">Fingersave</span>`:
+                        item.tags.some(item => item == 'best-seller')? `<span class="card-top-badge">Best Seller</span>`:
+                        item.tags.some(item => item == 'new-in')? `<span class="card-top-badge">New In</span>`: ""
+                    }
+                    <a href="${item.url}" class="section-glove__image">
+                        <img alt="${item.title}" src="${item.images[0]}" />
+                    </a>
+                    <div class="loox-rating">
+                        ${document.querySelector(`[data-reviews="${item.id}"]`).innerHTML}
                     </div>
-                    <div class="card__content">
-                        <div class="card__information"> 
-                            <div class="single_card_reviews">
-                                ${document.querySelector(`[data-reviews="${item.id}"]`).innerHTML}
-                                <div>
-                                    <span>Reviews</span>
-                                </div>
-                            </div>
-                            <div class="flex-information_card_product">
-                                <div class="title_information_card"> 
-                                    <a href="${item.url}" class="full-unstyled-link">
-                                        <h3 class="title_product_carousel">${title}</h3>
-                                        ${variant ? `<p class="color_product_carousel" style="text-decoration:none;">(${variant})</p>`: ""}
-                                    </a>
-                                </div>
-                                <div class="card-information"><span class="caption-large light"></span>
-                                    <div class="card-information">
-                                        <div class="price">
-                                            <div class="price__container">
-                                                <div class="price__regular">
-                                                    <span class="price-item price-item--regular">
-                                                        From <span class="money">${item.price}</span>
-                                                    </span>         
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="section-gloce__information">
+                        <a href="${item.url}" class="section-glove__caption">${item.title}</a>
+                        <p class="section-glove__type">${item.type}</p>
+                        <div class="section-glove__wrapp">
+                            <select name="variant-id" class="section-glove__select">
+                                ${
+                                    item.variants.map(variant => {
+                                        return `
+                                            <option 
+                                                value="${variant.id}" 
+                                                ${variant.available || "disabled"}
+                                            >
+                                                ${variant.option1}
+                                            </option>
+                                        `
+                                    })
+                                }
+                            </select>
+                            <button data-buttonPopup="{{ product.id }}" class="section-glove__button">
+                                SHOP NOW | ${item.price}
+                            </button>
                         </div>
                     </div>
                 </div>
             `;
+        });
+
+
+        document.querySelectorAll(".section-glove__button").forEach((item, i) => {
+            item.addEventListener("click", async (e) => {
+
+                const variantId = document.querySelectorAll(".section-glove__select")[i]?.value;
+      
+                const formData = {
+                    items: [
+                        {
+                            id: variantId,
+                            quantity: 1
+                        }
+                    ]
+                };
+
+                try {
+                    const response = await fetch("/cart/add.js", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        console.log(result);
+                        
+                        fetch("/cart.js")
+                        .then(res => res.json())
+                        .then(cart => {
+                            console.log(cart);
+                        });
+                    } else {
+                        console.error(response.error, response);
+                    }
+                } catch (error) {
+                    console.error(error);
+                }
+            });
         });
 
         document.querySelector("[data-number-products]").textContent = newList.length;

@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_CYtkfJ": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": false,
+        "desktop_image": "shopify://shop_images/Hero_1920x600_1_1.jpg",
+        "mobile_image": "shopify://shop_images/Hero_Section_Mobile_1_1.jpg",
+        "banner_heading": "How to Make Your Goalkeeper Gloves Last Longer",
+        "banner_text": "<p class=\"section-banner__text\">Latex breaks down. Seams split. Grip fades. But most of the time?</p>\n<p class=\"section-banner__text\">That’s on the keeper — not the glove.</p>\n<p class=\"section-banner__text\">If you're rinsing once a week and throwing gloves into your bag soaking wet, you're cutting their life in half.</p>\n<p class=\"section-banner__text\">Here’s how to fix that — and why proper care starts with how you play.</p>"
+      }
+    },
+    "marquee_sec_xxNhdA": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_content_6NQAxm": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_nddzfW": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why goalkeeper gloves wear out",
+            "content-description": "<p class=\"section-content__text\">Soft latex = elite grip.</p>\n<p class=\"section-content__text\">But soft latex also means more wear.</p>\n<p class=\"section-content__text\">The better the grip, the more sensitive the glove. Match latex is designed to perform, not to take endless punishment. That’s why how you treat your gloves — and how you dive — matters.</p>",
+            "content-image": "shopify://shop_images/goalkeeper_goalie_goalkeepergloves_goaliegloves_wornout_newglovesplease_100gloves_thehundredglove_wontletmethrowthemaway.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_FwVqXA": {
+          "type": "row",
+          "settings": {
+            "content-title": "Your Technique Matters (Especially for Younger Keepers)",
+            "content-description": "<p class=\"section-content__text\">Let’s be blunt: most glove damage doesn’t come from dodgy manufacturing.</p>\n<p class=\"section-content__text\">It comes from bad habits.</p>\n<p class=\"section-content__text\">If you’re punching the ground every dive, scraping your hands on turf, dragging your palms when you get up — your gloves will fall apart fast. We see it all the time, especially with junior keepers who are still learning how to land, push off, and move correctly.</p>\n<p class=\"section-content__text\">It’s not always the glove. Sometimes it’s the goalkeeper.</p>\n<p class=\"section-content__text\">Great technique = longer glove lifespan.</p>\n<p class=\"section-content__text\">Clean handling, smart recovery, and controlled movement all reduce wear.</p>\n<p class=\"section-content__text\">It’s not about babying your gloves — it’s about not battering them needlessly.</p>",
+            "content-image": "shopify://shop_images/MPH-02561.jpg",
+            "content-isadaptive": false
+          }
+        },
+        "row_KzRAUd": {
+          "type": "row",
+          "settings": {
+            "content-title": "How to make your gloves last longer",
+            "content-description": "<ol class=\"section-content__list\">\n<li class=\"section-content__elem\">Rinse after every session<br>Use cold or lukewarm water — no soap. Gently rinse out dirt and sweat. Every session means every session.\n</li>\n<li class=\"section-content__elem\">Air dry only<br>No radiators. No hairdryers. No sun. Heat kills latex.<br>Dry them flat in a cool, shaded room.</li>\n<li class=\"section-content__elem\">Use separate gloves for training and matches<br>Train hard. Play harder. But don’t wear the same pair for both.<br>One training pair. One match pair. Simple.</li>\n<li class=\"section-content__elem\">Store them properly<br>Never leave gloves bunched up in your bag. Store them flat, palms together, in a glove wallet or breathable bag.</li>\n<li class=\"section-content__elem\">Activate the grip before play<br>Lightly dampen the palms with clean water before kick-off.<br>Moist latex = more grip, less abrasion, and a longer life.</li>\n</ol>",
+            "content-image": "shopify://shop_images/MPH01404.jpg",
+            "content-isadaptive": true
+          }
+        }
+      },
+      "block_order": [
+        "row_nddzfW",
+        "row_FwVqXA",
+        "row_KzRAUd"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_text_L37Wjq": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Final word",
+        "description": "<p class=\"section-help-text__text\">Your gloves won’t last forever. But how long they last?</p>\n<p class=\"section-help-text__text\">That’s down to you.</p>\n<p class=\"section-help-text__text\">Your technique. Your care routine. Your decisions.  </p>\n<p class=\"section-help-text__text\">Look after your gloves — and they’ll show up when it counts.</p>"
+      }
+    },
+    "section_help_faq_LxKQB7": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_r7RtLP": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How long should goalkeeper gloves last?",
+            "faq-description": "It depends how often you train and how you treat them. With proper care, a match pair can last 2–3 months. Training gloves may last longer — or less, if you're hammering them on turf every day."
+          }
+        },
+        "row_RzRCHN": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What ruins goalkeeper gloves the fastest?",
+            "faq-description": "Letting them dry with mud and sweat on them. Storing them wet in your bag. And using them for both training and matches. It’s not rocket science — it’s laziness that kills gloves."
+          }
+        },
+        "row_zeBwqk": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Can I put my gloves in the washing machine?",
+            "faq-description": "No. Ever. Washing machines destroy latex. Always hand-rinse your gloves in cold or lukewarm water. That’s it."
+          }
+        },
+        "row_6yrK4p": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What’s the best way to dry goalkeeper gloves?",
+            "faq-description": "Air dry only. No heaters. No direct sunlight. Lay them flat, out of the bag, and give them time. Using heat will dry out the latex and ruin the grip."
+          }
+        },
+        "row_Cf6DTP": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Should goalkeeper gloves be damp before use?",
+            "faq-description": "Yes. Dampen them slightly with clean water before training or matches. It improves grip and reduces abrasion — especially on artificial pitches."
+          }
+        },
+        "row_bkpjtA": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Why do the palms start to peel or crack?",
+            "faq-description": "Usually because they weren’t rinsed after use, were left to dry too fast, or were used dry on turf. Latex is delicate — and when it’s abused, it breaks down."
+          }
+        }
+      },
+      "block_order": [
+        "row_r7RtLP",
+        "row_RzRCHN",
+        "row_zeBwqk",
+        "row_6yrK4p",
+        "row_Cf6DTP",
+        "row_bkpjtA"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_CYtkfJ",
+    "marquee_sec_xxNhdA",
+    "section_help_content_6NQAxm",
+    "section_help_text_L37Wjq",
+    "section_help_faq_LxKQB7"
+  ]
+}

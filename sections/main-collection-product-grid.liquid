@@ -165,9 +165,6 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
-                  <script>
-                    console.log({{ product | json }})
-                  </script>
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,

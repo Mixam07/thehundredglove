@@ -1,0 +1,83 @@
+{{ 'section-help-other.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  <div class="section-help-other__title">
+    {{ section.settings.main_title }}
+  </div>
+  <div class="section-help-other__subtitle">
+    {{ section.settings.subtitle }}
+  </div>
+
+  <div class="gloves-row">
+    {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.featured_product] %}
+      {% if product %}
+        <div class="glove-card">
+          <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+          <h3 class="glove-title">{{ block.settings.other-title }}</h3>
+          <p class="glove-description">{{ block.settings.other-description }}</p>
+          <a class="glove-button" href="{{ product.url }}">SHOP NOW</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <p class="section-help-other__text">{{ section.settings.footer_text }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "section-help-other",
+  "tag": "section",
+  "class": "section-help-other",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Title",
+      "default": "WHAT GLOVES FROM HUNDRED ARE BUILT FOR MATCH DAY?"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Every glove we make performs — but some are made for the big stage:"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "Pick your weapon — and keep it fresh for game day."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "product",
+          "id": "featured_product",
+          "label": "Featured Product"
+        },
+        {
+          "id": "other-title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "id": "other-description",
+          "type": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "section-help-other",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

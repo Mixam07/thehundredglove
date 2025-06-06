@@ -13,6 +13,11 @@
       padding-bottom: {{section.settings.pdBottomMob}}px;
     }
   }
+
+  .nwReviewsWrapSwiperSlider{
+    width: 350px !important;
+    margin-right: 30px !important;
+  }
   .nwReviewsWrapTitle p{
     margin: 0;
   }
@@ -48,30 +53,31 @@
     height: auto;
   }
   .nwReviewsWrapSwiperSliderTop{
-    padding: 35px 25px 15px 25px;
+    padding: 15px 25px 35px 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100% - 70px);
+    height: calc(100% - 90px);
     text-align:center;
   }
   .nwReviewsWrapSwiperSliderBottom{
-    padding: 8px;
-    background: rgba(0,0,0,0.1);
+    padding: 20px;
+    background: rgba(58, 58, 58, 1);
     border-radius:0 0 8px 8px;
     
   }
   .nwReviewsWrapSwiperSliderBottomMiddle{
     color: #151515;
     text-align: center;
-  
+    max-width: 115px;
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
+    color: #fff;
     line-height: 1.7; /* 171.429% */
   }
   .nwReviewsWrapSwiperSliderTopTitle{
-  margin-top: 15px;
+  margin-top: 10px;
     color: #000;
     text-align: center;
     font-size: 21px;
@@ -118,9 +124,9 @@
   }
   .nwReviewsWrapSwiperSliderBottomRightBtn{
     display:block;
-    width: 54px;
-    height: 54px;
-    background: #000;
+    width: 50px;
+    height: 50px;
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,13 +139,14 @@
   }
   .nwReviewsWrapSwiperSliderBottomLeft{
     display:block;
-    width: 54px;
-    height: 54px;
+    margin-top: -50px;
+    width: 105px;
+    height: 105px;
   }
-  .nwReviewsWrapSwiperSliderBottomLeft{
-    display:block;
-    height: 54px;
-    width: auto;
+  .nwReviewsWrapSwiperSliderBottomLeft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .nwReviewsWrapSwiperSliderOne{
     height: 100%;
@@ -149,6 +156,20 @@
   }
 
   @media(max-width: 999px){
+    div.nwReviewsWrapSwiperSlider{
+      width: 275px !important;
+      margin-right: 20px;
+    }
+
+    .nwReviewsWrapSwiperSliderTopText{
+      font-size: 14px !important;
+      margin-bottom: 15px;
+    }
+
+    .nwReviewsWrapSwiperSliderBottom{
+      padding: 15px;
+    }
+
     .nwReviewsWrapTitle{
       color: #000;
       text-align: center;
@@ -160,7 +181,7 @@
       letter-spacing: -0.48px;
     }
     .nwReviewsWrapSwiperSliderTop{
-      padding: 23px 20px 10px 20px;
+      padding: 10px 20px 20px 20px;
       height: calc(100% - 58px);
     }
     .nwReviewsWrapSwiperSliderTopTitle {
@@ -191,8 +212,10 @@
       border-radius: 0 0 6.185px 6.185px;
     }
     .nwReviewsWrapSwiperSliderBottomLeft{
-      width: 41.748px;
-      height: 41.748px;
+      height: 100px;
+      width: 100px;
+      margin-bottom: -15px;
+      margin-right: -50px;
     }
     .nwReviewsWrapSwiperSliderBottomLeft img{
       height: 100%;
@@ -218,6 +241,7 @@
     }
     .nwReviewsWrapSwiperSliderBottomMiddle{
       font-size: 11px;
+      max-width: 75px;
     }
     .nwReviewsWrapSwiper{
       padding: 40px 0!important;
@@ -276,9 +300,6 @@
       background-color: #F0F0F0;
       border-radius: 23px;
     }
-  }
-  .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderBottom {
-    background-color: #DBD9D9;
   }
 
   .section-{{ section.id }} .page-width .nwReviewsWrapSwiperSliderBottomRightBtn img {
@@ -371,7 +392,7 @@
 
               <div class="nwReviewsWrapSwiperSliderBottom">
                 <div class="nwReviewsWrapSwiperSliderBottomLeft">
-                  <img data-src="{{ block.settings.product.featured_image | img_url:'x54' }}" alt="img" class="lazy2 lazy3" loading="lazy">
+                  <img data-src="{{ block.settings.product.featured_image | img_url: 'master' }}" alt="img" class="lazy2 lazy3" loading="lazy">
                 </div>
                 <div class="nwReviewsWrapSwiperSliderBottomMiddle">
                   {{ block.settings.product.title }}
@@ -379,10 +400,10 @@
                 <div class="nwReviewsWrapSwiperSliderBottomRight">
                   <a class="nwReviewsWrapSwiperSliderBottomRightBtn" href="{{ block.settings.product.url }}">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.99983 22H14.9998C19.0198 22 19.7398 20.39 19.9498 18.43L20.6998 12.43C20.9698 9.99 20.2698 8 15.9998 8H7.99983C3.72983 8 3.02983 9.99 3.29983 12.43L4.04983 18.43C4.25983 20.39 4.97983 22 8.99983 22Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M15.4955 12H15.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8.49451 12H8.50349" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.99983 22H14.9998C19.0198 22 19.7398 20.39 19.9498 18.43L20.6998 12.43C20.9698 9.99 20.2698 8 15.9998 8H7.99983C3.72983 8 3.02983 9.99 3.29983 12.43L4.04983 18.43C4.25983 20.39 4.97983 22 8.99983 22Z" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.4955 12H15.5045" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8.49451 12H8.50349" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <!--<img src="{{ 'icon-car-png.png' | asset_url }}" alt=“Add to cart icon“ width="80" height="80">-->
                   </a>

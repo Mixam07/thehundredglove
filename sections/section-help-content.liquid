@@ -2,10 +2,10 @@
 
 {% for block in section.blocks %}
     {% if block.type == 'row' %}
-        <div class="section-content__item">
+        <div class="section-content__item {% if section.settings.is_reversed %}reversed{% endif %}">
             <div class="page-width">
                 <div class="section-content__wrap">
-                    <div class="section-content__image">
+                    <div class="section-content__image {% if  block.settings['content-isadaptive'] %}adaptive{% endif %}">
                         <img src="{{ block.settings['content-image'] | img_url: 'original' }}" alt="photo">
                     </div>
                     <div class="section-content__wrapper">
@@ -29,6 +29,14 @@
     "name": "section-help-content",
     "tag": "section",
     "class": "section-help-content",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "is_reversed",
+            "label": "Reverse layout",
+            "default": false
+        }
+    ],
     "blocks": [
     {
         "type": "row",
@@ -51,6 +59,11 @@
                     "id": "content-image",
                     "type": "image_picker",
                     "label": "Image"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "content-isadaptive",
+                    "label": "Is adaptive"
                 }
             ]
         }

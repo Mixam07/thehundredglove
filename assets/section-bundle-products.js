@@ -227,31 +227,6 @@ const addGifts = async (products) => {
   }
 }
 
-const addPersonalization = async (products) => {
-  let number = 0;
-
-  products.forEach(product => {
-    if (product.personalization && product.personalization.length > 0) {
-      number += 1;
-    }
-  })
-
-  const bundleFormData = new FormData();
-  bundleFormData.append("id", "44030822383872");
-  bundleFormData.append("quantity", number);
-
-  await fetch("/cart/add.js", {
-    method: "POST",
-    body: bundleFormData,
-  })
-  .then(async response => {
-    const bundleResult = await response.json();
-    console.log(`Bundle added: ${bundleResult.title}`);
-  })
-  .catch(e => {
-    console.error(e);
-  }); 
-}
 
 const addBundle = async (products) => {
   let bundleNote = "";
@@ -302,7 +277,6 @@ async function addToCart(products) {
   }
 
   addBundle(products);
-  addPersonalization(products);
   addGifts(products);
   
   //window.location.href = '/checkout';

@@ -1,0 +1,279 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "section_help_banner_ThcynQ": {
+      "type": "section-help-banner",
+      "name": "section-help-banner",
+      "settings": {
+        "center_desktop": false,
+        "align_bottom_mobile": true,
+        "desktop_image": "shopify://shop_images/21.jpg",
+        "mobile_image": "shopify://shop_images/9_b.jpg",
+        "banner_heading": "Is This Normal Glove Wear?",
+        "banner_text": ""
+      }
+    },
+    "marquee_sec_nEQkkT": {
+      "type": "marquee_sec",
+      "custom_css": [
+        ".marquee {background: #000;}",
+        ".marquee .content span {color: #fff;}",
+        ".marquee .content span::before {background: #fff;}"
+      ],
+      "name": "Marquee_sec",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "section_help_text_M6Widi": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "A straight-talking guide to grip, latex, and why wear is part of the job.",
+        "description": "<p class=\"section-help-text__text\">If you're here because your gloves are wearing down quicker than you expected — this page is for you.</p>\n<p class=\"section-help-text__text\">You're not alone. It’s one of the most common questions we get from keepers and parents:</p>\n<div class=\"questions-section\">\n<div class=\"question-card\">\n<p class=\"question-text\">“Why are the palms peeling?”</p>\n</div>\n<div class=\"question-card\">\n<p class=\"question-text\">“Is this a defect?”</p>\n</div>\n<div class=\"question-card\">\n<p class=\"question-text\">“They’ve only been used 3 times — is this normal?”</p>\n</div>\n</div>\n<p class=\"section-help-text__text\">Let’s set the record straight.</p>"
+      }
+    },
+    "section_help_content_pYec3t": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_m3tbYp": {
+          "type": "row",
+          "settings": {
+            "content-title": "How to measure your child’s hand",
+            "content-description": "<p class=\"section-content__text\">If your gloves are showing signs of wear after just a few sessions, that doesn’t mean they’re faulty.</p>\n<p class=\"section-content__text\">It means the latex is doing what it was designed to do: grip.</p>\n<p class=\"section-content__text\">Latex is a soft, high-performance material. The stickier it is, the more fragile it becomes. That’s the trade-off.</p>\n<p class=\"section-content__text\">Better grip = softer latex = faster wear.</p>\n<p class=\"section-content__text\">That’s how it works. Always has.</p>\n<p class=\"section-content__text\">If you’re using match-quality gloves (like ours), expect visible wear from the first few sessions — especially if you’re playing on turf, diving aggressively, or using poor recovery technique.</p>",
+            "content-image": "shopify://shop_images/DSC8186.jpg",
+            "content-isadaptive": true
+          }
+        },
+        "row_KY74D7": {
+          "type": "row",
+          "settings": {
+            "content-title": "How wear happens(and why it’s not a problem)",
+            "content-description": "<p class=\"section-content__text\">Latex wears down through friction — not time.</p>\n<p class=\"section-content__text\">It’s the constant impact, catching, diving, pushing off the ground, and recovering that breaks it down.</p>\n<p class=\"section-content__text\">What does normal wear look like?</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">Peeling on the palms</li>\n<li class=\"section-content__elem\">Flattening of the latex texture</li>\n<li class=\"section-content__elem\">Abrasions on the fingertips</li>\n<li class=\"section-content__elem\">Small nicks or surface tears where you push off</li>\n<li class=\"section-content__elem\">Faster wear on one glove (usually your dominant hand)</li>\n</ul>\n<p class=\"section-content__text\">None of this means the grip is gone. In fact, our gloves perform until there’s almost nothing left on the palm. You’ll often see keepers using a heavily worn pair and still catching clean — because it’s about feel, not looks.</p>",
+            "content-image": "shopify://shop_images/MPH-02270.jpg",
+            "content-isadaptive": true
+          }
+        },
+        "row_hxwQzW": {
+          "type": "row",
+          "settings": {
+            "content-title": "Why you can have two identical pairs — and one wears faster",
+            "content-description": "<p class=\"section-content__text\">This is something we hear a lot:</p>\n<p class=\"section-content__text\">“I’ve got two pairs of the same model. One’s fine. The other’s wearing fast. What gives?”</p>\n<p class=\"section-content__text\">Here’s why:</p>\n<ul class=\"section-content__list\">\n<li class=\"section-content__elem\">You might train more in one than the other</li>\n<li class=\"section-content__elem\">You may dive harder on one surface (turf vs grass)</li>\n<li class=\"section-content__elem\">You’re using different recovery habits depending on fatigue</li>\n<li class=\"section-content__elem\">One hand takes more impact (your dominant side will wear faster)</li>\n</ul>\n<p class=\"section-content__text\">Same glove. Different context. Different wear.</p>\n<p class=\"section-content__text\">This is why we always recommend separating gloves by use: One pair for matches. One for training. Even if they’re the same model — different usage = different lifespan.</p>",
+            "content-image": "shopify://shop_images/MPH01490.jpg",
+            "content-isadaptive": true
+          }
+        },
+        "row_EpUdiM": {
+          "type": "row",
+          "settings": {
+            "content-title": "Technique matters.Especially for junior keepers.",
+            "content-description": "<p class=\"section-content__text\">No one likes to hear it, but it’s true:</p>\n<p class=\"section-content__text\">A huge amount of wear — especially in youth gloves — comes down to poor technique.</p>\n<p class=\"section-content__text\">If a keeper is dragging their palms when they stand up, diving hands-first onto turf, or landing flat on the latex — it’ll shred fast. That’s not a glove fault. That’s part of learning.</p>\n<p class=\"section-content__text\">That’s why we use Giga latex on all our junior models — it’s more durable, less prone to tearing, and built to help younger keepers develop without destroying gloves every other session.</p>",
+            "content-image": "shopify://shop_images/MPH00188.jpg",
+            "content-isadaptive": true
+          }
+        }
+      },
+      "block_order": [
+        "row_m3tbYp",
+        "row_KY74D7",
+        "row_hxwQzW",
+        "row_EpUdiM"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_text_fGmiJj": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "How long should gloves last?",
+        "description": "<p class=\"section-help-text__text\">There’s no fixed number. But here’s a rough guide:</p>\n<div class=\"section-help-text__items\">\n<div class=\"section-help-text__image img\">\n<div class=\"section-help-text__item\">\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/MPH-02481.jpg?v=1749045385\" alt=\"\">\n<p class=\"section-help-text__desc\">Match gloves\n(4mm Pro Contact latex): ~8–12 matches with proper care</p>\n</div>\n<div class=\"section-help-text__item\">\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Untitled_design_3.jpg?v=1749045385\" alt=\"\">\n<p class=\"section-help-text__desc\">Training gloves or Giga latex: depends on frequency, surface, and habits</p>\n</div>\n<div class=\"section-help-text__item\">\n<img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/IMG_2367.jpg?v=1749045386\" alt=\"\">\n<p class=\"section-help-text__desc\">On turf or hard ground: expect faster wear, no matter the model</p>\n</div>\n</div>\n</div>\n<p class=\"section-help-text__text\">Some pros wear through gloves in 3 games. Others get 20+.</p>\n<p class=\"section-help-text__text\">It’s not about time — it’s about how you use them.</p>"
+      }
+    },
+    "section_help_content_LTQhJ9": {
+      "type": "section-help-content",
+      "blocks": {
+        "row_pyBEdJ": {
+          "type": "row",
+          "settings": {
+            "content-title": "So when should I replace them?",
+            "content-description": "<p class=\"section-content__text\">When the latex is completely gone, or you’ve lost control and feel in the hand.</p>\n<p class=\"section-content__text\">Cosmetic wear doesn’t mean performance loss.</p>\n<p class=\"section-content__text\">Our gloves are designed to perform until they’re down to the fabric. If they still grip, they’re still good.</p>",
+            "content-image": "shopify://shop_images/wwd.jpg",
+            "content-isadaptive": false
+          }
+        }
+      },
+      "block_order": [
+        "row_pyBEdJ"
+      ],
+      "name": "section-help-content",
+      "settings": {
+        "is_reversed": false
+      }
+    },
+    "section_help_images_HtTtFC": {
+      "type": "section-help-images",
+      "blocks": {
+        "row_dqL8HN": {
+          "type": "row",
+          "settings": {
+            "content-title": "Always rinse before first use to activate the latex",
+            "content-image": "shopify://shop_images/DSC8142.png"
+          }
+        },
+        "row_hfPeKQ": {
+          "type": "row",
+          "settings": {
+            "content-title": "Dampen before play (dry latex wears faster)",
+            "content-image": "shopify://shop_images/Untitled_design_1_1ba86562-c578-4ef6-8c20-62c1416027f2.png"
+          }
+        },
+        "row_xqDra4": {
+          "type": "row",
+          "settings": {
+            "content-title": "Rinse after every session — cold water only",
+            "content-image": "shopify://shop_images/MPH01418.png"
+          }
+        },
+        "row_HzDhVg": {
+          "type": "row",
+          "settings": {
+            "content-title": "Dry flat, away from heat",
+            "content-image": "shopify://shop_images/DSC8105.png"
+          }
+        },
+        "row_GWRbrP": {
+          "type": "row",
+          "settings": {
+            "content-title": "Store them flat, not crushed in your bag",
+            "content-image": "shopify://shop_images/421843232_18292871788194466_3954202536836863357_n.png"
+          }
+        },
+        "row_9iahdN": {
+          "type": "row",
+          "settings": {
+            "content-title": "Never use match gloves for training",
+            "content-image": "shopify://shop_images/IMG_2261.png"
+          }
+        },
+        "row_xQ9X9W": {
+          "type": "row",
+          "settings": {
+            "content-title": "Don’t drag your hands when recovering",
+            "content-image": "shopify://shop_images/MPH01292.png"
+          }
+        }
+      },
+      "block_order": [
+        "row_dqL8HN",
+        "row_hfPeKQ",
+        "row_xqDra4",
+        "row_HzDhVg",
+        "row_GWRbrP",
+        "row_9iahdN",
+        "row_xQ9X9W"
+      ],
+      "name": "section-help-images",
+      "settings": {
+        "main_title_link": ""
+      }
+    },
+    "section_help_text_LMFJUf": {
+      "type": "section-help-text",
+      "name": "section-help-text",
+      "settings": {
+        "title": "Final word",
+        "description": "<p class=\"section-help-text__text\">This isn’t a fault. It’s football.</p>\n<p class=\"section-help-text__text\">Your gloves are a tool — and tools wear down when they’re used properly.</p>\n<p class=\"section-help-text__text\">If you’re seeing wear after a few sessions, you’re not alone.</p>\n<p class=\"section-help-text__text\">It means you’re diving. Catching. Moving like a real keeper. It means the latex is doing what it was built for.</p>\n<p class=\"section-help-text__text\">Our gloves will grip until there’s nothing left.</p>\n<p class=\"section-help-text__text\">We don’t build them to stay pretty. We build them to perform.</p>"
+      }
+    },
+    "section_help_faq_Bq7xkU": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_UdNKj3": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Why are my gloves wearing out so quickly?",
+            "faq-description": "Because you’re using match-grade latex — which is softer and more sensitive. If you’re training regularly, diving hard, or playing on turf, this is completely normal."
+          }
+        },
+        "row_jMwpkf": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Can I return gloves that have worn after a few uses?",
+            "faq-description": "No — wear and tear is expected with use, especially on soft latex. It’s not a product fault; it’s a result of usage, which varies per keeper."
+          }
+        },
+        "row_twHC48": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Why is only one glove more worn than the other?",
+            "faq-description": "Most keepers have a dominant hand that does more catching, diving, or recovery work. One glove will always wear faster — totally normal."
+          }
+        },
+        "row_Am7F3e": {
+          "type": "row",
+          "settings": {
+            "faq-title": "My child’s gloves are worn after just a few weeks — is that expected?",
+            "faq-description": "Yes. Younger keepers often drag their hands or dive palms-down while learning. That’s why our junior gloves use Giga latex — more durable for this stage of development."
+          }
+        },
+        "row_piELgB": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How do I know when to replace gloves?",
+            "faq-description": "When the grip is gone and you’ve lost control. Peeling latex doesn’t mean they’re finished. If they still perform, keep using them."
+          }
+        },
+        "row_WngMRX": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What’s the best way to stop gloves from wearing so fast?",
+            "faq-description": "Use them properly. Don’t wear match gloves for training. Rinse them after every session. Keep them slightly damp before playing. And clean up your technique."
+          }
+        }
+      },
+      "block_order": [
+        "row_UdNKj3",
+        "row_jMwpkf",
+        "row_twHC48",
+        "row_Am7F3e",
+        "row_piELgB",
+        "row_WngMRX"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "section_help_banner_ThcynQ",
+    "marquee_sec_nEQkkT",
+    "section_help_text_M6Widi",
+    "section_help_content_pYec3t",
+    "section_help_text_fGmiJj",
+    "section_help_content_LTQhJ9",
+    "section_help_images_HtTtFC",
+    "section_help_text_LMFJUf",
+    "section_help_faq_Bq7xkU"
+  ]
+}

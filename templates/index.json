@@ -95,6 +95,7 @@
       ],
       "settings": {
         "title": "FAN FAVOURITES 🔥",
+        "style": true,
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -239,6 +240,62 @@
         "button3": "Accessories"
       }
     },
+    "section_video_WHXnfd": {
+      "type": "section-video",
+      "blocks": {
+        "row_NBxPy9": {
+          "type": "row",
+          "settings": {
+            "content-title": "@hundredgk",
+            "content-video": "https://cdn.shopify.com/videos/c/o/v/10a10cdf590f421582dd83eec5278aea.mp4",
+            "content-product": "omen-black-white"
+          }
+        },
+        "row_BwezaV": {
+          "type": "row",
+          "settings": {
+            "content-title": "@hundredgk",
+            "content-video": "https://cdn.shopify.com/videos/c/o/v/d95599ee0d844cfa8f5740eda9630c25.mp4",
+            "content-product": "omen-white-black"
+          }
+        },
+        "row_7xQqiD": {
+          "type": "row",
+          "settings": {
+            "content-title": "@hundredgk",
+            "content-video": "https://cdn.shopify.com/videos/c/o/v/b1b4232f64aa4c19b4551e9e26fa44cb.mp4",
+            "content-product": "spectre-pink-black"
+          }
+        },
+        "row_hTXV94": {
+          "type": "row",
+          "settings": {
+            "content-title": "@hundredgk",
+            "content-video": "https://cdn.shopify.com/videos/c/o/v/8d25aa0c2f654255a519976f81b9fbb7.mp4",
+            "content-product": "vanguard-white-pink"
+          }
+        },
+        "row_NfLLYX": {
+          "type": "row",
+          "settings": {
+            "content-title": "@hundredgk",
+            "content-video": "https://cdn.shopify.com/videos/c/o/v/03c1aab9b1f043f48548d5f0881b601c.mp4",
+            "content-product": "the-hundred-glove"
+          }
+        }
+      },
+      "block_order": [
+        "row_NBxPy9",
+        "row_BwezaV",
+        "row_7xQqiD",
+        "row_hTXV94",
+        "row_NfLLYX"
+      ],
+      "name": "section-video",
+      "settings": {
+        "is_centered": true
+      }
+    },
     "featured_collection_NY7tyg": {
       "type": "featured-collection",
       "custom_css": [
@@ -247,6 +304,7 @@
       ],
       "settings": {
         "title": "Curated bundles",
+        "style": true,
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -625,6 +683,7 @@
     "f83b6b96-36cd-45b0-b7d4-898890fc0c56",
     "section_category_AAXPaQ",
     "46e54b38-38b9-4d23-a389-40a835204ffa",
+    "section_video_WHXnfd",
     "featured_collection_NY7tyg",
     "section_bundle_list_icxNJj",
     "image_banner_epWtCR",
