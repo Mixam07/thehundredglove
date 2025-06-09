@@ -341,6 +341,5 @@ try{
     changeProducts();
     changeTags();
 }catch(e){
-    debugger
     console.error(e)
 }

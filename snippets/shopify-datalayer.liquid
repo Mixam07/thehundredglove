@@ -74,7 +74,7 @@
           fetch("/cart.js")
           .then((response) => response.json())
           .then((data) => {
-            this.cart = data;
+            render(cart);
           });
         }
 

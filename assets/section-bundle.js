@@ -67,7 +67,23 @@ const drawCart = () => {
             </li>`
         }
     }
+    const t = bundle;
+    let total = 0;
+    let currency = "";
 
+    // Обробка першого значення, щоб отримати валюту
+    if (bundle.length > 0) {
+        const match = bundle[0].price.match(/^(\D+)/); // бере всі символи на початку, які не є цифрами
+        if (match) currency = match[1];
+    }
+
+    // Підрахунок
+    total = bundle.reduce((sum, item) => {
+        const num = parseFloat(item.price.replace(/[^0-9.]/g, '')); // прибирає все, крім цифр та крапки
+        return sum + (isNaN(num) ? 0 : num);
+    }, 0);
+
+    document.querySelector(".bundle__cart-prevcost").textContent = total !== 0 ? currency + total.toFixed(2): ""
     document.querySelector(".bundle__cart-caption").innerHTML = bundle.length < 5 ? `Add ${5 - bundle.length} MORE ITEMS FOR A FREE GIFT 🎁` : "CONGRATS, YOU'VE UNLOCKED A FREE GIFT 🎉";
     document.querySelector(".bundle__cart-submit").disabled = bundle.length >= 5 ? false : true;
     document.querySelector(".bundle__cart-progress-active").style.width = bundle.length / 5 * 100 + "%";
@@ -81,14 +97,14 @@ const drawCart = () => {
 }
 
 const addEvent = () => {
-    document.querySelectorAll(".bundle__products-button").forEach((submit, i) => {
+    document.querySelectorAll(".section-glove__button").forEach((submit, i) => {
         submit.addEventListener("click", (e) => {
             const type = submit.getAttribute('data-type');
-            const variant = document.querySelectorAll(".bundle__products-select")[i]?.value;
+            const variant = document.querySelectorAll(".section-glove__select")[i]?.value;
             const size = document.querySelector(`[value='${variant}']`)?.innerHTML?.trim();
-            const title = document.querySelectorAll(".bundle__products-title")[i]?.innerHTML;
-            const price = document.querySelectorAll(".bundle__products-price span")[i]?.innerHTML;
-            const image = document.querySelectorAll(".bundle__products-image img")[i]?.src;
+            const title = document.querySelectorAll(".section-glove__caption")[i]?.innerHTML;
+            const price = document.querySelectorAll(".section-glove__button span")[i]?.innerHTML;
+            const image = document.querySelectorAll(".section-glove__image img")[i]?.src;
 
             const type_bundle = bundle.filter(item => item.type == type);
     
@@ -114,12 +130,59 @@ function changeActivePage(i) {
 
     document.querySelector(".bundle__products-wrapper").innerHTML = "";
 
-    list.forEach(item => {
+    list.forEach((item, q) => {
         const avalible = item.variants.some(variant => variant.available);
+
+        const stars = document.querySelectorAll(".loox-information .wrapper")[active].querySelectorAll(".loox-rating")[q]?.innerHTML || ""
 
         if (item.type == classes[active] && avalible) {
             document.querySelector(".bundle__products-wrapper").innerHTML += `
-                <div class="bundle__products-item">
+                <div class="section-glove__item">
+                    ${
+                        item.tags.some(item => item == "fingersave") ? '<span class="card-top-badge">Fingersave</span>':
+                        item.tags.some(item => item == "best-seller") ? '<span class="card-top-badge">Best Seller</span>':
+                        item.tags.some(item => item == "new-in") ? '<span class="card-top-badge">New In</span>': ""
+                    }
+                    <div class="section-glove__image">
+                        <img alt="${item.title}" src="${item.images[0]}" />
+                    </div>
+                    <div class="loox-rating">
+                        ${stars}
+                    </div>
+                    <p class="section-glove__caption">${item.title}</p>
+                    ${ 
+                        item.type == "glove" ? `<p class="section-glove__type">${item.glove_type}</p>` : ""
+                    }
+                    ${
+                        item.variants.length !== 1 ?
+                        `<p class="section-glove__text">Size:</p>`: ""
+                    }
+                    <div class="section-glove__wrapp">
+                        <select name="variant-id" class="section-glove__select" style="${item.variants.length === 1 ? 'display: none;' : ''}">
+                            ${
+                                item.variants.map(variant => {
+                                    return `
+                                        <option 
+                                            value="${variant.id}" 
+                                            ${variant.available || "disabled"}
+                                        >
+                                            ${variant.option1}
+                                        </option>
+                                    `
+                                })
+                            }
+                        </select>
+                        <button data-type="${item.type}" class="section-glove__button">
+                            Add | ${item.price}
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+    });
+
+    /*
+    <div class="bundle__products-item">
                     <div class="bundle__products-image">
                         <img alt="${item.title}" src="${item.images[0]}" />
                         ${
@@ -128,6 +191,7 @@ function changeActivePage(i) {
                             item.tags.some(item => item == "new-in") ? '<span class="card-top-badge">New In</span>': ""
                         }
                     </div>
+                    <p class="bundle__products-size">Size:</p>
                     <div class="bundle__products-wrap">
                         <select name="variant-id" class="bundle__products-select" style="${item.variants.length === 1 ? 'display: none;' : ''}">
                             ${
@@ -155,10 +219,7 @@ function changeActivePage(i) {
                         item.type == "glove" ? `<p class="bundle__products-subtitle">${item.glove_type}</p>` : ""
                     }
                     <p class="bundle__products-price">${item.price}</p>
-                </div>
-            `;
-        }
-    });
+                </div>*/
 
     if (i == 0) {
         pageButtons[0].style.display = "none";
@@ -239,7 +300,8 @@ document.querySelector(".bundle__cart-submit").addEventListener("click", async (
                 fetch("/cart.js")
                 .then(res => res.json())
                 .then(cart => {
-                    console.log(cart);
+                    render(cart);
+                    document.querySelector(".drawer").classList.add("active");
                 });
             } else {
                 console.error(response.error, response);

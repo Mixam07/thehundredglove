@@ -1,9 +1,14 @@
-{{ 'section-bundle.css' | asset_url | stylesheet_tag }}
 {{ 'section-popup.css' | asset_url | stylesheet_tag }}
+{{ 'section-bundle-glove.css' | asset_url | stylesheet_tag }}
+{{ 'section-bundle.css' | asset_url | stylesheet_tag }}
 
 <style>
     #tidio-chat{
         display: none !important;
+    }
+
+    .section-glove__caption{
+        font-weight: 400 !important;
     }
 </style>
 
@@ -146,10 +151,47 @@
 </div>
 
 <style>
-    .content div{
+    .content div,
+    .loox-information{
         display: none;
     }
 </style>
+
+<div class="loox-information">
+    <div class="wrapper">
+        {% for product in section.settings.collection_1.products %}
+            <div data-reviews="{{ product.id }}">
+            <div class="loox-rating"
+                data-id="{{ product.id }}"
+                data-rating="{{ product.metafields.loox.avg_rating }}"
+                data-raters="{{ product.metafields.loox.num_reviews }}">
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="wrapper">
+        {% for product in section.settings.collection_2.products %}
+            <div data-reviews="{{ product.id }}">
+            <div class="loox-rating"
+                data-id="{{ product.id }}"
+                data-rating="{{ product.metafields.loox.avg_rating }}"
+                data-raters="{{ product.metafields.loox.num_reviews }}">
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="wrapper">
+        {% for product in section.settings.collection_3.products %}
+            <div data-reviews="{{ product.id }}">
+            <div class="loox-rating"
+                data-id="{{ product.id }}"
+                data-rating="{{ product.metafields.loox.avg_rating }}"
+                data-raters="{{ product.metafields.loox.num_reviews }}">
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 
 <script>
     const list = [

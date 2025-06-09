@@ -1,36 +1,46 @@
 {{ 'section-banner.css' | asset_url | stylesheet_tag }}
 
 <div class="banner__container container bundle">
+    <!--
     <div class="banner__wrapper">
         <div class="banner__main">
-            <div class="banner__logo">
-                <img src="{{ 'logo-black.svg' | asset_url }}" alt="logo">
-            </div>
             <div class="bunner__wrap">
-                <img src="{{ 'thg_clothing.svg' | asset_url }}" alt="">
+                <div class="banner__stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
+                        <path d="M9.45898 0.148438L11.5919 6.55801H18.494L12.9101 10.5194L15.0429 16.9289L9.45898 12.9676L3.87502 16.9289L6.00791 10.5194L0.423947 6.55801H7.3261L9.45898 0.148438Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
+                        <path d="M9.45898 0.148438L11.5919 6.55801H18.494L12.9101 10.5194L15.0429 16.9289L9.45898 12.9676L3.87502 16.9289L6.00791 10.5194L0.423947 6.55801H7.3261L9.45898 0.148438Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
+                        <path d="M9.45898 0.148438L11.5919 6.55801H18.494L12.9101 10.5194L15.0429 16.9289L9.45898 12.9676L3.87502 16.9289L6.00791 10.5194L0.423947 6.55801H7.3261L9.45898 0.148438Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
+                        <path d="M9.45898 0.148438L11.5919 6.55801H18.494L12.9101 10.5194L15.0429 16.9289L9.45898 12.9676L3.87502 16.9289L6.00791 10.5194L0.423947 6.55801H7.3261L9.45898 0.148438Z" fill="white"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
+                        <path d="M9.45898 0.148438L11.5919 6.55801H18.494L12.9101 10.5194L15.0429 16.9289L9.45898 12.9676L3.87502 16.9289L6.00791 10.5194L0.423947 6.55801H7.3261L9.45898 0.148438Z" fill="white"/>
+                    </svg>
+                </div>
+                Trusted by 20,000+ Keepers
             </div>
             <h1 class="banner__title">ACADEMY PACK</h1>
             <h2 class="banner__subtitle">the best deal in goalkeeping</h2>
-            <h3 class="banner__caption">5 for
-                {% if cart.currency.iso_code == "USD" %}
-                    $170.00
-                {% elsif cart.currency.iso_code == "EUR" %}
-                    €155.00
-                {% else %}
-                    £120.00
-                {% endif %}
-            </h3>
-        </div>
-        <div class="banner__image">
-            <img src="{{ section.settings.banner-photo | img_url: 'original' }}" alt="banner_photo">
         </div>
         <p class="banner__item">PAIR OF GLOVES  |  3X CLOTHING  |  1X ACCESSORY</p>
     </div>
+    -->
 </div>
 
 <style>
     .banner{
-        background: url("{{ section.settings.banner-background-photo | img_url: 'original' }}")50% 50%/cover no-repeat;
+        background: url("{{ section.settings.banner-background-photo | img_url: "master" }}")50% 50%/cover no-repeat;
+    }
+
+    @media (max-width: 762px) {
+        .banner{
+            background: url("{{ section.settings.banner-photo | img_url: "master" }}")50% 50%/cover no-repeat;
+        }
     }
 </style>
 

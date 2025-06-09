@@ -163,7 +163,8 @@ submit.addEventListener("click", async (e) => {
             fetch("/cart.js")
             .then(res => res.json())
             .then(cart => {
-                console.log(cart);
+                render(cart);
+                document.querySelector(".drawer").classList.add("active");
             });
         } else {
             console.error(response.error, response);

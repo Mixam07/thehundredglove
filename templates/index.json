@@ -230,6 +230,7 @@
     },
     "46e54b38-38b9-4d23-a389-40a835204ffa": {
       "type": "collection-tab",
+      "disabled": true,
       "custom_css": [
         "a.view_all_col {background: #d75555; padding: 10px 15px; color: #fff; border-radius: 5px;}"
       ],

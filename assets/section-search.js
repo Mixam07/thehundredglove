@@ -190,7 +190,7 @@ try{
                         <a href="${item.url}" class="section-glove__caption">${item.title}</a>
                         <p class="section-glove__type">${item.type}</p>
                         <div class="section-glove__wrapp">
-                            <select name="variant-id" class="section-glove__select">
+                            <select name="variant-id" class="section-glove__select" style="${item.variants.length === 1 ? 'display: none;' : ''}">
                                 ${
                                     item.variants.map(variant => {
                                         return `
@@ -204,7 +204,7 @@ try{
                                     })
                                 }
                             </select>
-                            <button data-buttonPopup="{{ product.id }}" class="section-glove__button">
+                            <button class="section-glove__button">
                                 SHOP NOW | ${item.price}
                             </button>
                         </div>
@@ -236,7 +236,6 @@ try{
                         },
                         body: JSON.stringify(formData)
                     });
-
                     if (response.ok) {
                         const result = await response.json();
                         console.log(result);
@@ -244,7 +243,8 @@ try{
                         fetch("/cart.js")
                         .then(res => res.json())
                         .then(cart => {
-                            console.log(cart);
+                            render(cart);
+                            document.querySelector(".drawer").classList.add("active");
                         });
                     } else {
                         console.error(response.error, response);
