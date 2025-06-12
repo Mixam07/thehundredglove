@@ -1,18 +1,15 @@
 try{
-const buttons = document.querySelectorAll("[data-modal]");
-const popups = document.querySelectorAll(".popup-modal");
-const variants = document.querySelectorAll(".product-item");
-const helps = document.querySelectorAll(".product-popup-modal__button");
-const helpPopups = document.querySelectorAll(".help-choose");
-const sizesWrap = document.querySelectorAll(".data-sizes");
-const sizeWrapper = document.querySelectorAll(".selected-size");
-const images = document.querySelectorAll(".popup-images");
-const imageWrapper = document.querySelector("[data-popup-image]");
-const personalizationButton = document.querySelectorAll(".personalization-box__wrap");
-const personalizationWrapper = document.querySelectorAll(".personalization-drawer");
-const personalizationClose = document.querySelectorAll(".personalization-drawer .close-icon");
-const personalizationInputs = document.querySelectorAll("[data-personalization]");
-const addButtons = document.querySelectorAll(".add-in-bundle");
+    const buttons = document.querySelectorAll("[data-buttonPopup]");
+    const popups = document.querySelectorAll(".popup");
+    const sizes = document.querySelectorAll(".popup__sizes");
+    const colors = document.querySelectorAll(".popup__list");
+    const buttonModals = document.querySelectorAll(".popup__modal-button");
+    const popupHelps = document.querySelectorAll(".popup__help");
+    const buttonBoxes = document.querySelectorAll(".popup__box-wrapper");
+    const boxContainers = document.querySelectorAll(".popup__box-container");
+    const boxCloses = document.querySelectorAll("[data-close-icon]");
+    const submits = document.querySelectorAll(".popup__submit");
+    const images = document.querySelectorAll(".popup__images");
 const wrapper = document.querySelector("#bundle-products");
 const plans = document.querySelectorAll(".section-product__item");
 const giftsItem = document.querySelectorAll(".section-product__option");
@@ -70,136 +67,136 @@ const drawBundle = () => {
 }
 
 buttons.forEach(button => {
-    button.addEventListener("click", (e) => {
-        const id = button.getAttribute("data-modal");
-        const popup = document.querySelector(id);
+        button.addEventListener("click", (e) => {
+            const productId = button.getAttribute('data-buttonPopup');
+            const popup = document.querySelector("#popup-" + productId);
 
-        popup.classList.remove("hidden");
-    });
-});
-
-popups.forEach(popup => {
-    popup.addEventListener("click", (e) => {
-        if (e.target.classList.contains("popup-modal") || e.target.closest(".close-popup-modal")) {
-            popup.classList.add("hidden")
-        }
-    });
-});
-
-variants.forEach(variant => {
-    variant.addEventListener("click", (e) => {
-        const id = variant.querySelector(".button-color").getAttribute("data-id");
-        const popup = document.querySelector(id);
-
-        popups.forEach(popup => {
-            popup.classList.add("hidden")
+            popup.classList.add("active");
         });
-
-        popup.classList.remove("hidden");
     });
-});
 
-helps.forEach(help => {
-    help.addEventListener("click", (e) => {
-        const id = help.getAttribute("data-modal");
-        const popup = document.querySelector(id);
-
-        popup.classList.remove("hidden");
+    popups.forEach(popup => {
+        popup.addEventListener("click", (e) => {
+            if (e.target.classList.contains("popup") || e.target.closest(".popup__close")) {
+                popup.classList.remove("active");
+            }
+        });
     });
-});
 
-helpPopups.forEach(popup => {
-    popup.addEventListener("click", (e) => {
-        if (e.target.classList.contains("help-choose") || e.target.closest(".close-help-choose")) {
-            popup.classList.add("hidden");
-        }
-    });
-});
+    colors.forEach(color => {
+        color.querySelectorAll(".popup__button").forEach(item => {
+            item.addEventListener("click", (e) => {
+                const productId = item.getAttribute('data-productId');
+                const popup = document.querySelector("#popup-" + productId);
 
-sizesWrap.forEach((wrap, i) => {
-    wrap.querySelectorAll(".size-option").forEach((size, q, arr) => {
-        size.addEventListener("click", (e) => {
-            arr.forEach(size => {
-                size.classList.remove("selected");
+                popups.forEach(popup => {
+                    popup.classList.remove("active");
+                });
+
+                popup.classList.add("active");
             });
-    
-            size.classList.add("selected");
-            sizeWrapper[i].innerHTML = size.innerHTML;
-        });
-    });;
-});
-
-const addEventArrow = (childNodes, i, img) => {
-    let activeId = i;
-
-    document.querySelector("[data-next]").addEventListener("click", (e) => {
-      activeId = activeId == childNodes.length - 1 ? 0 : activeId + 1;
-      img.src = childNodes[activeId].src;
+        })
     });
 
-    document.querySelector("[data-prev]").addEventListener("click", (e) => {
-      activeId = activeId == 0 ? childNodes.length - 1 : activeId - 1;
-      img.src = childNodes[activeId].src;
-    });
-}
+    sizes.forEach((size, i) => {
+        size.querySelectorAll(".popup__btn").forEach(item => {
+            item.addEventListener("click", (e) => {
+                size.querySelectorAll(".popup__btn").forEach(btn => {
+                    btn.classList.remove("active");
+                });
 
-images.forEach(wrap => {
-    wrap.querySelectorAll("img").forEach((image, i, imagesList) => {
-        image.addEventListener("click", (e) => {
-            imageWrapper.classList.remove("opacity-0", "pointer-events-none")
-            imageWrapper.querySelector("#image").src = image.src;
-    
-            addEventArrow(imagesList, i, imageWrapper.querySelector("#image"));
+                item.classList.add("active");
+                document.querySelectorAll(".selected-size")[i].innerHTML = item.innerHTML;
+            });
+        })
+    });
+
+    buttonModals.forEach((button, i) => {
+        button.addEventListener("click", (e) => {
+            popupHelps[i].classList.add("active");
+            document.querySelector(".bundle__cart-wrapper").style.zIndex = "100";
         });
     });
-});
 
-imageWrapper.addEventListener("click", (e) => {
-    if (e.target.classList.contains("data-popup-image")) {
-        imageWrapper.classList.add("opacity-0", "pointer-events-none")
+    popupHelps.forEach(popup => {
+        popup.addEventListener("click", (e) => {
+            if (e.target.classList.contains("popup__help") || e.target.closest(".popup__help-close")) {
+                popup.classList.remove("active");
+                document.querySelector(".bundle__cart-wrapper").style.zIndex = "1000";
+            }
+        });
+    });
+
+    buttonBoxes.forEach((button, i) => {
+        button.addEventListener("click", (e) => {
+            boxContainers[i].classList.toggle("active");
+        });
+    });
+
+    boxCloses.forEach((close, i) => {
+        close.addEventListener("click", (e) => {
+            boxContainers[i].classList.remove("active");
+        });
+    });
+
+    submits.forEach((submitBtn, i) => {
+        submitBtn.addEventListener("click", (e) => {
+            const sizeHTML = document.querySelectorAll(".popup__content")[i].querySelector(".selected-size")?.innerHTML;
+            const type = submitBtn.getAttribute('data-product-type');
+
+            if (sizeHTML || type == "accessory") {
+                const variant = sizeHTML ? document.querySelectorAll(".popup__content")[i].querySelector(".popup__sizes .active").getAttribute("data-variant-id") : submit.getAttribute('data-variant-id');
+                const title = submitBtn.getAttribute('data-product-title');
+                const type = submitBtn.getAttribute('data-product-type');
+                const image = submitBtn.getAttribute('data-product-image');
+                const size = sizeHTML ? sizeHTML.trim() : null;
+    
+                if (bundle.length < 3) {
+                    bundle.push({ image, title, type, variant, size })
+                }
+
+                if (bundle.length >= 3) {
+                    submit.classList.remove("opacity-75");
+                }
+
+                drawBundle();
+
+                popups.forEach(popup => {
+                    popup.classList.remove("active");
+                });
+            }
+        });
+    });
+
+    const addEventArrow = (childNodes, i, img) => {
+        let activeId = i;
+        document.querySelector("[data-next]").addEventListener("click", (e) => {
+          activeId = activeId == childNodes.length - 1 ? 0 : activeId + 1;
+          img.src = childNodes[activeId].src;
+        });
+        document.querySelector("[data-prev]").addEventListener("click", (e) => {
+          activeId = activeId == 0 ? childNodes.length - 1 : activeId - 1;
+          img.src = childNodes[activeId].src;
+        });
     }
-});
 
-personalizationButton.forEach((button, i) => {
-    button.addEventListener("click", (e) => {
-        personalizationWrapper[i].classList.toggle("hidden");
-    });
-});
+    images.forEach(images => {
+        images.querySelectorAll("img").forEach((image, i) => {
+            image.addEventListener("click", (e) => {
+                const popup = document.querySelector("[data-popup-image]");
 
-personalizationClose.forEach((close, i) => {
-    close.addEventListener("click", (e) => {
-        personalizationWrapper[i].classList.add("hidden");
-    });
-});
-
-addButtons.forEach((button, i) => {
-    button.addEventListener("click", (e) => {
-        if (sizeWrapper[i].innerHTML) {
-            const image = button.getAttribute("data-product-image");
-            const title = button.getAttribute("data-product-title");
-            const type = button.getAttribute("data-product-type");
-            const size = sizeWrapper[i].innerHTML;
-            const variant = sizesWrap[i].querySelector(".selected").getAttribute("data-variant-id");
-            const personalization = personalizationInputs[i].value || null;
-
-            if (bundle.length < 3) {
-                bundle.push({ image, title, type, variant, personalization, size })
-            }
-
-            sizesWrap[i].querySelectorAll(".size-option").forEach(size => {
-                size.classList.remove("selected")
+                popup.classList.add("active")
+                popup.querySelector("#image").src = image.src;
+        
+                addEventArrow(images.querySelectorAll("img"), i, popup.querySelector("#image"));
             });
-            sizeWrapper[i].innerHTML = "";
-            popups[i].classList.add("hidden");
+        })
+    })
 
-            if (bundle.length >= index) {
-                submit.classList.remove("opacity-75");
-            }
 
-            drawBundle();
-        }
-    });
-});
+
+
+
 
 plans.forEach((plan, i) => {
     plan.addEventListener("click", (e) => {
@@ -229,6 +226,39 @@ plans.forEach((plan, i) => {
         text.innerHTML = `
             <span class='section-product__bold'>Awesome!</span> You’ve Unlocked <span class='section-product__circle'>${gifts[i]}</span> FREE Gifts
         `;
+
+        drawBundle();
+    });
+});
+
+document.querySelectorAll(".section-glove__select").forEach((item, i) => {
+    item.addEventListener("change", (e) => {
+        const value = item.value;
+        const active = document.querySelector(`[value="${value}"]`);
+        const price = active.getAttribute("data-price");
+
+        if(price){
+            document.querySelectorAll(".section-glove__button .money")[i].textContent = price
+        }
+    });
+})
+
+document.querySelectorAll(".section-glove__button").forEach((item, i) => {
+    item.addEventListener("click", (e) => {
+        const element = document.querySelectorAll(".section-glove__item")[i];
+        const image = element.querySelector(".section-glove__image img").src;
+        const title = element.querySelector(".section-glove__caption").textContent;
+        const type = element.querySelector(".section-glove__type").textContent;
+        const variant = element.querySelector(".section-glove__select").value;
+        const size = element.querySelector(`[value="${variant}"]`).textContent;
+
+        if (bundle.length < 3) {
+            bundle.push({ image, title, type, variant, size })
+        }
+
+        if (bundle.length >= 3) {
+            submit.classList.remove("opacity-75");
+        }
 
         drawBundle();
     });

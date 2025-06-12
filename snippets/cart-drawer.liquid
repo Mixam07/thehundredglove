@@ -5,6 +5,12 @@
   {% render 'cart-drawer' %}
 {% endcomment %}
 
+<!-- CSS -->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />-->
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
 <style>
@@ -59,12 +65,12 @@
     font-family: "Arial" !important;
     font-weight: 700;
     text-transform: none;
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 
   .totals__subtotal-value *,
   .totals__subtotal-value{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
   }
 
@@ -91,12 +97,12 @@
   }
 
   .quantity{
-    width: 65px !important;
-    min-height: 20px !important;
+    width: 75px !important;
+    min-height: 30px !important;
   }
 
   .quantity__button{
-    width: calc(65px/3) !important;
+    width: calc(75px/3) !important;
     color: rgba(196, 196, 196, 1);
     font-size: 12px;
     margin: 3px 0;
@@ -155,6 +161,9 @@
 
   .cart-element__details{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .cart-element__totals,
@@ -163,12 +172,14 @@
   }
 
   .cart-element__name{
+    font-size: 18px;
+    text-transform: uppercase;
     text-decoration: none !important;
     font-family: "Anton" !important;
   }
 
   .product-option{
-    margin-top: -10px;
+    margin-top: -5px;
     margin-bottom: 5px;
   }
 
@@ -185,7 +196,7 @@
   }
 
   .quantity__input{
-    line-height: 26px;
+    line-height: 30px;
   }
 
   .cart-element__totals{
@@ -248,7 +259,6 @@
   .protection__title{
     margin: 0;
     font-family: "Anton" !important;
-    font-size: 14px;
     color: #000;
     text-transform: uppercase;
   }
@@ -256,7 +266,7 @@
   .protection__description{
     color: #000;
     margin: 0;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 12px;
     max-width: 175px;
   }
@@ -270,6 +280,7 @@
   .protection__price{
     font-weight: 700;
     font-size: 12px;
+    margin: 0;
   }
 
   .protection__input{
@@ -283,12 +294,17 @@
   .protection__checkbox{
     width: 40px;
     height: 22px;
-    background-color: rgba(215, 85, 85, 1);
+    background-color: #C5CCD6;
     border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: start;
     padding: 0 2px;
+    transition: .5s all;
+  }
+
+  .protection__input:checked ~ .protection__checkbox{
+    background-color: rgba(215, 85, 85, 1);
   }
 
   .protection__active{
@@ -360,7 +376,7 @@
   .gifts__price,
   .gifts__caption{
     margin: 0;
-    font-size: 8px;
+    font-size: 9px;
     line-height: 12px;
   }
 
@@ -379,7 +395,106 @@
     margin: 0 -1.5rem;
   }
 
+  .related-products__wrappper h2{
+    margin: 0;
+    font-size: 18px;
+    font-family: "Anton" !important;
+  }
+
+  .related-products__wrappper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .related-swiper {
+    margin-left: -1.5rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    cursor: grab;
+  }
+
+  .related-swiper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .related-swiper.dragging {
+    cursor: grabbing;
+    user-select: none;
+  }
+
+  .product-card{
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+    padding: 2px 15px 2px 5px;
+    border: .5px solid rgba(217, 217, 217, 1);
+    min-width: 75%;
+  }
+
+  .product-card:first-child{
+    border-radius: 10px 0 0 10px;
+  }
+
+  .product-card:last-child{
+    border-radius: 0 10px 10px 0;
+  }
+
+  .product-card__info{
+    flex: 1;
+  }
+
+  .related-products{
+    padding-bottom: 15px;
+    margin: 0 -1.5rem;
+    border-bottom: .5px solid rgba(217, 217, 217, 1);
+    padding-left: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .product-card__image{
+    display: flex;
+    align-items: center;
+  }
+
+  .product-card__image img{
+    width: 65px;
+  }
+
+  .product-card__title{
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .product-card__price{
+    margin: 0;
+    line-height: 14px;
+  }
+
+  .product-card__price span{
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .product-card__button{
+    background-color: rgba(229, 229, 229, 1);
+    padding: 5px 15px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: "Arial" !important;
+    border: none;
+    margin: 0;
+  }
+
   @media (max-width: 750px) {
+    .cart-element__name{
+      font-size: 16px;
+    }
     .drawer__header{
       padding: 1.5rem 2.5rem !important;
     }
@@ -389,19 +504,12 @@
     }
 
     .gifts{
-      padding: 35px 1.5rem 35px 1.5rem;
       row-gap: 20px;
     }
 
     .gifts__wrap{
       width: 26px;
       height: 26px;
-    }
-
-    .gifts__price,
-    .gifts__caption{
-      font-size: 6px;
-      line-height: 7px;
     }
 
     .cart-element__media{
@@ -421,11 +529,6 @@
       padding: 0;
     }
 
-    .protection__title{
-      font-size: 12px;
-      margin-top: -25px;
-    }
-
     .cart__checkout-button{
       font-size: 12px !important;
       padding: 10px !important;
@@ -434,9 +537,13 @@
     .cart-1{
       margin-bottom: 10px;
     }
+
+    .protection__description{
+      font-size: 10px;
+    }
   }
 </style>
-<!--43898975584512-->
+
 <cart-drawer class="drawer is-empty">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
@@ -448,7 +555,7 @@
       tabindex="-1"
     >
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+        <h2 class="drawer__heading">YOUR KIT BAG</h2>
         <button
           class="drawer__close"
           type="button"
@@ -482,14 +589,14 @@
                     <div class="gifts__wrap">
                       <img src="{{ 'gift.svg' | asset_url }}" alt="">
                     </div>
-                    <p class="gifts__price">£0.00</p>
+                    <p class="gifts__price">£80.00</p>
                     <p class="gifts__caption">Free Gift</p>
                   </div>
                   <div class="gifts__item">
                     <div class="gifts__wrap">
                       <img src="{{ 'gift-shipping.svg' | asset_url }}" alt="">
                     </div>
-                    <p class="gifts__price">£0.00</p>
+                    <p class="gifts__price">£130.00</p>
                     <p class="gifts__caption">Free Shipping</p>
                   </div>
                 </div>
@@ -507,6 +614,28 @@
       <div class="drawer__footer">
         <!-- Start blocks -->
         <!-- Subtotals -->
+
+        <section class="related-products">
+          <div class="related-products__wrappper">
+            <h2>GOALKEEPERS ALSO LOVE</h2>
+          </div>
+          <div class="related-swiper">
+            {% for product in collections['related'].products %}
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="{{ product.featured_image | img_url: '300x' }}" alt="{{ product.title }}">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__title">{{ product.title }}</h3>
+                  <p class="product-card__price">{{ product.price | money_without_trailing_zeros }}</p>
+                </div>
+                <div class="product-card__wrapper">
+                  <button data-variantId="{{ product.variants.first.id }}" class="product-card__button">ADD</button>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
 
         <div class="totals" role="status">
           <h2 class="totals__subtotal">Total</h2>
@@ -568,6 +697,34 @@
 </span>
 
 <script>
+  const swiper = document.querySelector('.related-swiper');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  swiper.addEventListener('mousedown', (e) => {
+    isDown = true;
+    swiper.classList.add('dragging');
+    startX = e.clientX;
+    scrollLeft = swiper.scrollLeft;
+  });
+
+  swiper.addEventListener('mouseup', () => {
+    isDown = false;
+    swiper.classList.remove('dragging');
+  });
+
+  swiper.addEventListener('mouseleave', () => {
+    isDown = false;
+    swiper.classList.remove('dragging');
+  });
+
+  swiper.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    const walk = (e.clientX - startX) * 2; // Множник для швидкості прокрутки
+    swiper.scrollLeft = scrollLeft - walk;
+  });
+
   function updateCart(variantId, quantity, input) {
     fetch("/cart/change.js", {
       method: "POST",
@@ -583,7 +740,7 @@
       fetch("/cart.js")
         .then(res => res.json())
         .then(cart => {
-          render(cart);
+          render(cart, true);
         });
     });
   };
@@ -593,8 +750,89 @@
       document.querySelector("body").style.overflow = "auto";
     }
   });
+//let q = 0
+  async function render(cart, t) {
+    /*
+    debugger
+    cart.items.forEach(async item => {
+      if(item.product_type == "goalkeeper gloves" && item.final_price > 0 && q == 0){
+        const response = await fetch("/cart/add.js", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              items: [
+                {
+                  id: item.id,
+                  quantity: 1,
+                  properties: {
+                    _discount: '20%',
+                    _original_variant: item.variant_id
+                  }
+                }
+              ]
+            })
+        });
 
-  function render(cart, t) {
+        if (response.ok) {
+            const result = await response.json();
+            
+            fetch("/cart.js")
+            .then(res => res.json())
+            .then(cart => {
+                render(cart);
+            });
+        } else {
+            console.error(response.error, response);
+        }
+        q = 1
+      }
+    });
+    */
+    /*
+    for (const item of gloveItems) {
+      const alreadyDiscounted = item.properties && item.properties._discount === '20%';
+
+      if (!alreadyDiscounted) {
+        const discountedVariantId = discountedVariantIds[item.variant_id];
+
+        if (discountedVariantId) {
+          await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              items: [
+                {
+                  id: discountedVariantId,
+                  quantity: 1,
+                  properties: {
+                    _discount: '20%',
+                    _original_variant: item.variant_id
+                  }
+                }
+              ]
+            })
+          });
+
+          await fetch('/cart/change.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              id: item.key,
+              quantity: 0
+            })
+          });
+        }
+      }
+    }
+      
+
+    // Після знижок – оновити cart
+    const newCart = await fetch('/cart.js').then(res => res.json());
+    render(newCart, true)
+  }
+    */
     if(cart.items.length == 0) {
       document.querySelector(".drawer").classList.add("is-empty")
     }else {
@@ -647,6 +885,7 @@
         }
       }
 
+
       tbody.innerHTML += `
         <div class="cart-element" role="row">
           <div class="cart-element__media">
@@ -655,13 +894,16 @@
           <div class="cart-element__details">
             <a href="${item.url}" class="cart-element__name h4 break">${item.product_title}</a>
             ${optionsHTML}
-            <div class="cart-element__quantity-wrapper">
-              <quantity-input class="quantity cart-quantity">
-                <button class="quantity__button" name="minus" data-variant-id="${item.variant_id}" type="button">-</button>
-                <div quantityVariantId="${item.variant_id}" class="quantity__input" data-index="${index + 1}">${item.quantity}</div>
-                <button class="quantity__button" name="plus" data-variant-id="${item.variant_id}" type="button">+</button>
-              </quantity-input>
-            </div>
+            ${
+              (item.variant_id !== 54858935828860 && item.variant_id !== 53598862836092)?
+              `<div class="cart-element__quantity-wrapper">
+                <quantity-input class="quantity cart-quantity">
+                  <button class="quantity__button" name="minus" data-variant-id="${item.variant_id}" type="button">-</button>
+                  <div quantityVariantId="${item.variant_id}" class="quantity__input" data-index="${index + 1}">${item.quantity}</div>
+                  <button class="quantity__button" name="plus" data-variant-id="${item.variant_id}" type="button">+</button>
+                </quantity-input>
+              </div>`: ""
+            }
           </div>
           <div class="cart-element__totals right">
             <span class="price price--end">${currency}${linePrice}</span>
@@ -703,9 +945,123 @@
     } else if(price < 13000){
       document.querySelector('.gifts__title').innerHTML = `You're <span>${currency}${((13000 - price) / 100).toFixed(2)}</span> Away From Free Shipping`;
     } else {
-      document.querySelector('.gifts__title').innerHTML = ``;
+      document.querySelector('.gifts__title').innerHTML = `Nice! You've Also Unlocked Free Shipping 🙌`;
+    }
+ 
+    const hasGiftItem = cart.items.some(item => item.variant_id === 54858935828860);
+
+    if(price >= 8000){
+      if (!hasGiftItem) {
+        // Додаємо подарунок через запит до Shopify API або cart.js (якщо використовується)
+        const response = await fetch("/cart/add.js", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            items: [{ id: 54858935828860, quantity: 1 }]
+          })
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          console.log("Item added:", result);
+
+          // Отримуємо оновлений кошик і перерендерюємо без перезавантаження
+          const cartResponse = await fetch("/cart.js");
+          const cart = await cartResponse.json();
+          render(cart, true);
+        } else {
+          const errorData = await response.json();
+          console.error("Add to cart failed:", errorData);
+        }
+      }
+    } else {
+      if (hasGiftItem) {
+        updateCart("54858935828860", 0)
+      }
+    }
+
+    const productQuantities = {};
+
+    cart.items.forEach(item => {
+      const id = item.product_id;
+      if (!productQuantities[id]) {
+        productQuantities[id] = 0;
+      }
+      productQuantities[id] += item.quantity;
+    });
+
+    // Перевірка, чи є хоч один продукт, якого 3 або більше одиниць (навіть з різними варіантами)
+    const hasThreeOfSameProduct = Object.values(productQuantities).some(qty => qty >= 3);
+
+    const hasGiftItemSecond = cart.items.some(item => item.variant_id === 53598862836092);
+
+    if(!hasGiftItemSecond && hasThreeOfSameProduct){
+      // Додаємо подарунок через запит до Shopify API або cart.js (якщо використовується)
+      const response = await fetch("/cart/add.js", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          items: [{ id: 53598862836092, quantity: 1 }]
+        })
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Item added:", result);
+
+        // Отримуємо оновлений кошик і перерендерюємо без перезавантаження
+        const cartResponse = await fetch("/cart.js");
+        const cart = await cartResponse.json();
+        render(cart, true);
+      } else {
+        const errorData = await response.json();
+        console.error("Add to cart failed:", errorData);
+      }
+    } else if(!hasThreeOfSameProduct && hasGiftItemSecond){
+      updateCart("53598862836092", 0);
     }
   }
+
+  document.querySelectorAll("[data-variantId]").forEach(btn => {
+    btn.addEventListener("click", async (e) => {
+      const id = btn.getAttribute("data-variantId");
+
+      const formData = {
+          items: [
+              { id: id, quantity: 1 },
+          ]
+      }
+
+      try{
+          const response = await fetch("/cart/add.js", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(formData)
+          });
+
+          if (response.ok) {
+              const result = await response.json();
+              console.log(result);
+              
+              fetch("/cart.js")
+              .then(res => res.json())
+              .then(cart => {
+                  render(cart);
+              });
+          } else {
+              console.error(response.error, response);
+          }
+      }catch(e) {
+          console.error(e);
+      }
+    });
+  });
 
   document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
@@ -727,7 +1083,7 @@
   });
 
   function checkedItems(cart) {
-    const variantIdsToRemove = [43898975584512, 54858935828860];
+    const variantIdsToRemove = [43898975584512]; //, 54858935828860
     const removePromises = [];
 
     variantIdsToRemove.forEach(variantId => {
@@ -815,10 +1171,10 @@
           items: [{
               id: "43898975584512",
               quantity: localStorage.getItem("protection") == "true"? 1: 0
-          },{
+          }/*,{
               id: "54858935828860",
               quantity: price >= 8000? 1: 0
-          }]
+          }*/]
       };
 
       try {

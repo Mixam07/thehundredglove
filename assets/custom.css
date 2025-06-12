@@ -1894,7 +1894,7 @@ hr.page-divider {
     .product__info-wrapper .product-form__input {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 5px;
     }
     .product-form__submit,
     .shopify-cleanslate div,

@@ -71,7 +71,6 @@
     },
     "section_main_banner_gzE3LM": {
       "type": "section-main-banner",
-      "name": "section-main-banner",
       "settings": {
         "collection": ""
       }
@@ -292,7 +291,6 @@
         "row_hTXV94",
         "row_NfLLYX"
       ],
-      "name": "section-video",
       "settings": {
         "is_centered": true
       }
@@ -333,7 +331,6 @@
     "section_bundle_list_icxNJj": {
       "type": "section-bundle-list",
       "disabled": true,
-      "name": "section-bundle-list",
       "settings": {
         "collection": ""
       }
@@ -595,7 +592,7 @@
         "pdBottom": 70,
         "pdTopMob": 25,
         "pdBottomMob": 25,
-        "title": "Join Over <b style=\"color:#D75555;\">10,000+</b> Keepers Who Have Made The Switch",
+        "title": "Join Over <b style=\"color:#D75555;\">25,000+</b>  Keepers Who Have Made The Switch",
         "color_title": "#ffffff",
         "text": "<p>We're building an incredible community of goalkeepers who want to perform at their very best. Join the Hundred Club and never settle for average again.</p>",
         "color_text": "#ffffff"

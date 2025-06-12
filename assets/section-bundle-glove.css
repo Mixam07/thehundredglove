@@ -9,7 +9,7 @@
 }
 
 .page-width{
-    max-width: 1350px;
+    max-width: 1450px;
 }
 
 .section-glove__wrapper{
@@ -116,7 +116,7 @@
     margin-bottom: 10px;
 }
 
-.section-glove__caption{
+.section-glove__t{
     margin: 0;
     font-size: 14px;
     font-weight: 700;
@@ -195,7 +195,7 @@
     object-fit: contain;
 }
 
-.loox-rating{
+.section-glove__image ~ .loox-rating{
     display: flex;
     justify-content: center;
 }
@@ -223,6 +223,11 @@
     margin: 0;
     text-transform: uppercase;
     color: rgba(58, 58, 58, 1);
+}
+
+.section-glove__select{
+    border: rgba(178, 178, 178, 1) 1px solid;
+    border-radius: 5px;
 }
 
 .section-glove__button{

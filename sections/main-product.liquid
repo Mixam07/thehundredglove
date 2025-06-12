@@ -177,17 +177,27 @@
     padding: 20px 15px;
   }
 
+  .card-top-badge{
+    top: 15px !important;
+    left: 15px !important;
+  }
+
   @media (max-width: 750px) {
+    .card-top-badge{
+        top: 10px !important;
+        left: 10px !important;
+    }
+
     .another__content{
-      max-width: 275px;
+      max-width: 325px;
     }
 
     .another__title, .another__title span{
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .another__title{
-      max-width: 175px;
+      max-width: 225px;
     }
 
     .another__content{
@@ -249,7 +259,7 @@
 
           const formData = {
             items: [
-              { id: "55418273628540", quantity: 1 },
+              /*{ id: "55418273628540", quantity: 1 },*/
               { id: variant, quantity: 1 },
               { id: prev_variant, quantity: 1 }
             ]
@@ -439,22 +449,11 @@
                     price_class: 'price--large'
                   -%}
                 </div>
-            
-                {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                  <div class="product__tax caption rte">
-                    {%- if cart.taxes_included -%}
-                      {{ 'products.product.include_taxes' | t }}
-                    {%- endif -%}
-                    {%- if shop.shipping_policy.body != blank -%}
-                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                    {%- endif -%}
-                  </div>
-                {%- endif -%}
-                <div {{ block.shopify_attributes }}>
-                  {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
-                  <input data-varianfirstid type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                  {{ form | payment_terms }}
-                </div>
+              </div>
+              <div {{ block.shopify_attributes }}>
+                {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+                <input data-varianfirstid type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                {{ form | payment_terms }}
               </div>
             {%- when 'inventory' -%}
               <p
@@ -1133,6 +1132,10 @@
         {% endif %}
       </product-info>
       <style>
+        .product-form__input.product-form__quantity{
+          display: none !important;
+        }
+
         .product__info-container .desktop-tabs{
           width: 100%;
         }
@@ -1568,6 +1571,29 @@
     display: flex !important;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .card-wrapper{
+    border: none !important;
+  }
+
+  .card__inner{
+    margin-bottom: 8px;
+  }
+
+  .flex-information_card_product{
+    display: flex !important;
+  }
+
+  .title_product_carousel{
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 800px) {
+    .product-form__input .label{
+      min-height: 40px;
+      width: 44px;
+    }
   }
 </style>
 

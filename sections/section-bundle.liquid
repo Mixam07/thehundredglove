@@ -2,6 +2,10 @@
 {{ 'section-bundle-glove.css' | asset_url | stylesheet_tag }}
 {{ 'section-bundle.css' | asset_url | stylesheet_tag }}
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 <style>
     #tidio-chat{
         display: none !important;
@@ -58,11 +62,11 @@
                             <p class="bundle__cart-heading">Your bundle</p>
                             <p class="bundle__cart-cost">
                                 {% if cart.currency.iso_code == "USD" %}
-                                    $170.00
+                                    $169.11
                                 {% elsif cart.currency.iso_code == "EUR" %}
-                                    €155.00
+                                    €147.80
                                 {% else %}
-                                    £120.00
+                                    £124.99
                                 {% endif %}
                             </p>
                             <p class="bundle__cart-prevcost">
@@ -220,6 +224,7 @@
                     price: "{{ variant.price | money_without_currency }}",
                     available: {{ variant.available | json }},
                     option1: "{{ variant.option1 | escape }}",
+                    price: "{{ variant.price | money | strip_html }}",
                 }{% if forloop.last == false %},{% endif %}
                 {% endfor %}
             ],
@@ -290,6 +295,233 @@
     ];
 </script>
 
+<div class="another">
+  <div class="another__content">
+    <button class="another__close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <path d="M28.147 9.49612L26.0581 7.40723L17.7766 15.6887L9.49514 7.40723L7.40625 9.49612L15.6877 17.7776L7.40625 26.0591L9.49514 28.148L17.7766 19.8665L26.0581 28.148L28.147 26.0591L19.8655 17.7776L28.147 9.49612Z" fill="#202020"/>
+      </svg>
+    </button>
+    <h1 class="another__title">would you like to add another pair of gloves for <span>20% off</span>?</h1>
+    <div class="another__wrapper">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% for product in collections['gloves'].products %}
+            <div class="swiper-slide">
+              <div class="another__item">
+                  {% if product.tags contains 'fingersave' %}
+                      <span class="card-top-badge">Fingersave</span>
+                  {% elsif product.tags contains 'best-seller' %}
+                      <span class="card-top-badge">Best Seller</span>
+                  {% elsif product.tags contains 'new-in' %}
+                      <span class="card-top-badge">New In</span>
+                  {% endif %}
+                  <div class="section-glove__image">
+                      <img src="{{ product.images[0] | img_url: 'medium' }}" alt="{{ product.title }}" />
+                  </div>
+                  <div class="loox-rating"
+                      data-id="{{ product.id }}"
+                      data-rating="{{ product.metafields.loox.avg_rating }}"
+                      data-raters="{{ product.metafields.loox.num_reviews }}">
+                  </div>
+                  <p class="section-glove__caption">{{ product.title }}</p>
+                  <p class="section-glove__type">{{ product.metafields.custom.glove_type }}</p>
+                  <p class="section-glove__text">Size:</p>
+                  <div class="section-glove__wrapp">
+                      <select name="variant-id" data-select class="section-glove__select">
+                          {% for variant in product.variants %}
+                              <option 
+                                  value="{{ variant.id }}" 
+                                  {% unless variant.available %}disabled{% endunless %}
+                              >
+                                  {{ variant.option1 }}
+                              </option>
+                          {% endfor %}
+                      </select>
+                      <button data-button data-buttonPopup="{{ product.id }}" class="section-glove__button">
+                          Add | {{ product.price | money }}
+                      </button>
+                  </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <div class="another__buttons">
+      <button class="another__button">No Thanks, I'll Pass</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-glove__caption{
+    font-weight: 400 !important;
+  }
+
+  .another{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000000;
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s all;
+  }
+
+  .another.active{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .another__content{
+    max-width: 850px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 35px 45px 15px 45px;
+    position: relative;
+    border-radius: 15px;
+  }
+
+  .another__close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide,
+  .swiper-slide img{
+    width: 100%;
+  }
+
+  .another__title{
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  .another__title,
+  .another__title span{
+    font-family: "Anton" !important;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .another__title span{
+    color: rgba(215, 85, 85, 1);
+  }
+
+  .another__wrapper{
+    position: relative;
+  }
+
+  .swiper-button-next{
+    right: -5px !important;
+    transform: translateX(100%) !important;
+  }
+
+  .swiper-button-prev{
+    left: -5px !important;
+    transform: translateX(-100%) !important;
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after{
+    color: #000;
+    font-size: 24px !important;
+  }
+
+  .another__wrapper{
+    margin-bottom: 15px;
+  }
+
+  .another__button{
+    display: block;
+    margin: 0 auto;
+    color: rgba(118, 118, 118, 1);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    text-transform: none;
+    font-family: "Arial" !important;
+    text-decoration: underline;
+  }
+
+  .another__item{
+    background-color: rgba(240, 240, 240, 1);
+    border-radius: 10px;
+    padding: 20px 15px;
+  }
+
+  .card-top-badge{
+    top: 15px !important;
+    left: 15px !important;
+  }
+
+  @media (max-width: 750px) {
+    .card-top-badge{
+        top: 10px !important;
+        left: 10px !important;
+    }
+
+    .another__content{
+      max-width: 325px;
+    }
+
+    .another__title, .another__title span{
+      font-size: 20px;
+    }
+
+    .another__title{
+      max-width: 225px;
+    }
+
+    .another__content{
+      padding: 20px 30px;
+    }
+
+    .swiper-button-next{
+      right: 0 !important;
+    }
+
+    .swiper-button-prev{
+      left: 0 !important;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after{
+      color: #000;
+      font-size: 20px !important;
+    }
+
+    .another__button{
+      font-size: 12px;
+    }
+
+    .another__close{
+      top: 0;
+      right: 5px;
+      width: 20px;
+    }
+
+    .another__close svg{
+      width: 100%;
+    }
+  }
+</style>
 
 {{ 'section-bundle.js' | asset_url | script_tag }}
 

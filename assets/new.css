@@ -34,8 +34,8 @@ h4.title_product_carousel,
 /*title hero*/
 .banner__content p,
 .nwTextImageWrapLeftText p {
-  font-size: 16px !important;
-  line-height: 30px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
   font-weight: normal !important;
 }
 .button-with-hover {
@@ -85,8 +85,8 @@ h4.title_product_carousel,
   }
   .banner__content p,
   .nwTextImageWrapLeftText p {
-    font-size: 16px !important;
-    line-height: 24px !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
   }
   .tab-container-main .tab button {
     font-size: 22px !important;

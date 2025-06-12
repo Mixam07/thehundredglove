@@ -256,7 +256,7 @@
           <p class="section-glove__type">{{ card_product.metafields.custom.glove_type }}</p>
         {% endif %}
         <div class="section-glove__wrapp">
-            <a href="{{ card_product.url }}" data-buttonPopup="{{ card_product.id }}" class="section-glove__button">
+            <a href="{% if card_product.id == 14991728279932 %}/pages/academy-pack{% else %}{{ card_product.url }}{% endif %}" data-buttonPopup="{{ card_product.id }}" class="section-glove__button">
                 SHOP NOW | {{ card_product.price | money }}
             </a>
         </div>

@@ -63,17 +63,18 @@
     .numbers__item{
       transition: .5s all;
       width: 100%;
-      border: #B9B9B9 solid 1px;
+      box-shadow: rgba(215, 85, 85, 0.3) 0px 0px 0px 2px inset;
       border-radius: 15px;
       padding: 5px;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 150px;
     }
 
     .numbers__caption{
+      text-transform: none;
+      color: rgb(214, 85, 84);
       transition: .5s all;
       margin: 0;
       position: absolute;
@@ -81,12 +82,11 @@
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 5px 25px;
-      border: #B9B9B9 solid 1px;
+      box-shadow: rgba(215, 85, 85, 0.3) 0px 0px 0px 2px inset;
       border-radius: 10px;
       background-color: #fff;
       font-size: 14px;
       font-family: "Arial" !important;
-      font-weight: 700;
       white-space: nowrap;
     }
 
@@ -101,17 +101,19 @@
     .numbers__prevprice{
       text-decoration: line-through;
       font-size: 12px;
+      color: rgb(85, 85, 85);
+      font-size: 15px;
       margin: 0;
     }
 
     .numbers__price{
       font-weight: 700;
+      font-size: 18px;
       margin: 0;
     }
 
     .numbers__info{
-      padding-top: 20px;
-      margin-bottom: 15px;
+      padding: 40px 5px 10px 5px;
     }
 
     .numbers__desc{
@@ -122,12 +124,12 @@
 
     .numbers__discount{
       width: 100%;
-      padding: 10px;
+      padding: 7px;
       text-align: center;
       background-color: #B9B9B9;
       color: #fff;
       margin: 0;
-      font-size: 14px;
+      font-size: 10px;
       border-radius: 0 0 10px 10px;
       transition: .5s all;
     }
@@ -160,12 +162,12 @@
     }
 
     .numbers__input:checked ~ .numbers__item{
-      border: #D75555 solid 1px;
+      box-shadow: rgb(215, 85, 85) 0px 0px 0px 2px inset;
       background-color: #FFF1F1;
     }
 
     .numbers__input:checked ~ .numbers__item .numbers__caption{
-      border: #D75555 solid 1px;
+      box-shadow: rgb(215, 85, 85) 0px 0px 0px 2px inset;
       color: #D75555;
     }
 
@@ -181,7 +183,7 @@
       text-align: center;
       margin: 0;
       font-size: 14px;
-      margin-top: 5px;
+      margin-top: 10px;
     }
 
     .numbers__size{
@@ -200,9 +202,26 @@
       display: block;
     }
 
+    .numbers__select{
+      color: #000;
+      background-color: #fff;
+      min-height: 30px;
+      display: flex;
+      align-items: center;
+      box-shadow:  rgba(215, 85, 85, 0.3) 0px 0px 0px 1px inset;
+      box-sizing: border-box;
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 7px 25px 7px 7px;
+    }
+
+    .numbers__size{
+      margin-top: 5px;
+    }
+
     @media (max-width: 750px) {
       .numbers__caption{
-        font-size: 8px;
+        font-size: 15px;
         padding: 5px 15px;
       }
 
@@ -215,20 +234,16 @@
         font-size: 9px;
       }
 
-      .numbers__price{
-        font-size: 9px;
-      }
-
       .numbers__prices{
         margin-bottom: 0;
       }
 
       .numbers__desc{
-        font-size: 8px;
+        font-size: 10px;
       }
 
-      .numbers__item{
-        min-height: 80px;
+      .numbers__info{
+        padding: 20px 2px 10px 2px;
       }
 
       .numbers__discount{
@@ -237,17 +252,14 @@
         border-radius: 0 0 13px 13px;
       }
 
-      .numbers__item{
-        padding: 2px;
-      }
-
       .numbers__headline{
-        font-size: 7px;
+        font-size: 12px;
+        margin-top: 5px;
       }
 
       .numbers__size *,
       .numbers__size{
-        font-size: 7px;
+        font-size: 10px;
       }
 
       .numbers__list{
@@ -276,13 +288,13 @@
       <div class="numbers__wrapper">
         <input class="numbers__input" type="radio" value="2" name="number" data-number id="num2" />
         <label for="num2" class="numbers__item">
-          <h4 class="numbers__caption">2 Pair</h4>
+          <h4 class="numbers__caption">2 Pairs</h4>
           <div class="numbers__info">
             <div class="numbers__prices">
               <p class="numbers__prevprice">£109.898</p>
               <p class="numbers__price">£90.00</p>
             </div>
-            <p class="numbers__desc">Most Popular</p>
+            <p class="numbers__desc">Save 20%</p>
             <div class="numbers__wrap">
               <p class="numbers__headline">Size</p>
               <div class="numbers__size">
@@ -313,19 +325,19 @@
               </div>
             </div>
           </div>
-          <p class="numbers__discount">Save 20%</p>
+          <p class="numbers__discount">+1 Free Gift</p>
         </label>
       </div>
       <div class="numbers__wrapper">
         <input class="numbers__input" type="radio" value="3" name="number" data-number id="num3" />
         <label for="num3" class="numbers__item">
-          <h4 class="numbers__caption">3 Pair</h4>
+          <h4 class="numbers__caption">3 Pairs</h4>
           <div class="numbers__info">
             <div class="numbers__prices">
               <p class="numbers__prevprice">£158.97</p>
               <p class="numbers__price">£120.00</p>
             </div>
-            <p class="numbers__desc">Best Value</p>
+            <p class="numbers__desc">Save 35%</p>
             <div class="numbers__wrap">
               <p class="numbers__headline">Size</p>
               <div class="numbers__size">
@@ -369,7 +381,7 @@
               </div>
             </div>
           </div>
-          <p class="numbers__discount">Save 35%</p>
+          <p class="numbers__discount">+2 Free Gift</p>
         </label>
       </div>
     </div>
@@ -605,6 +617,19 @@ const addProductWithManyVariants = (packList, quantity) => {
     sizes.forEach(item => {
       items.push({ id: item.value, quantity: 1 });
     });
+  }
+
+  if(packList[1].checked){
+    items.push(
+      { id: "54858935828860", quantity: 1 },
+      { id: "45950893359360", quantity: 1 },
+    );
+  }else if(packList[2].checked){
+    items.push(
+      { id: "54858935828860", quantity: 1 },
+      { id: "53598862836092", quantity: 1 },
+      { id: "45950893326592", quantity: 1 },
+    );
   }
 
   addToCart(items);
