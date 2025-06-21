@@ -29,7 +29,7 @@ const drawBundle = () => {
 
         if (product) {
             wrapper.innerHTML += `
-                <div class="relative flex flex-col md:gap-[20px] w-[60px] sm:w-[100px] md:w-full">
+                <div class="relative flex flex-col md:gap-[20px] w-[60px] sm:max-w-[175px] md:w-full">
                     <div class="md:h-[175px] h-[60px] border-solid border-[1px] border-[#B2B2B2] rounded-[6px] bundle_bg">
                         <img class="h-full w-full object-contain" src="${product.image}" alt="" />
                     </div>
@@ -44,7 +44,7 @@ const drawBundle = () => {
             `;
         } else {
             wrapper.innerHTML += ` 
-                <div class="relative flex flex-col gap-[20px] w-[60px] sm:w-[100px] md:w-full pb-[12px]">
+                <div class="relative flex flex-col gap-[20px] w-[60px] sm:max-w-[175px] md:w-full pb-[12px]">
                     <div class="md:h-[175px] h-[60px] flex items-center justify-center border-solid border-[1px] border-[#B2B2B2] rounded-[6px] bundle_bg text-[24px] md:text-[76px] text-[#fff] font-anton">
                         ${i+1}
                     </div>

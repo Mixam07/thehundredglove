@@ -1,0 +1,117 @@
+.section-bundle-service{
+    padding: 75px 0;
+}
+
+.section-bundle-service__title{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 70px;
+    font-size: 32px;
+}
+
+.section-bundle-service__items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px 10px;
+}
+
+.section-bundle-service__item{
+    max-width: 215px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-bundle-service__caption{
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+
+.section-bundle-service__description{
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    line-height: 20px;
+}
+
+.section-bundle-service__image{
+    margin-bottom: 5px;
+}
+
+.section-bundle-service__items{
+    margin-bottom: 60px;
+}
+
+.section-bundle-service__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.section-bundle-service__button{
+    background-color: #D75555;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section-bundle-service__text{
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+    column-gap: 5px;
+    margin: 0;
+}
+
+@media (max-width: 762px) {
+    .section-bundle-service{
+        padding: 30px 0;
+    }
+
+    .section-bundle-service__title{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .section-bundle-service__items{
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 15px;
+        margin: 0;
+    }
+
+    .section-bundle-service__wrap{
+        display: none;
+    }
+
+    .section-bundle-service__image{
+        width: 40px;
+    }
+
+    .section-bundle-service__caption{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .section-bundle-service__description{
+        font-size: 12px;
+    }
+
+    .section-bundle-service__button{
+        padding: 5px 20px;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .section-bundle-service__text{
+        font-size: 12px;
+    }
+}

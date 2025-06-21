@@ -275,6 +275,7 @@
 }
 
 .section-glove__select{
+    color: #000;
     min-width: 65px;
     border-radius: 5px;
     background-color: transparent;

@@ -95,7 +95,7 @@ try{
         }
 
         newList.forEach(item => {
-            const { title, variant } = parseTitleWithBrackets(item.title)
+            const { title, variant } = parseTitleWithBrackets(item.title);
             wrapper.innerHTML += `
                 <div class="card card--standard card--media" style="--ratio-percent: 125.0%;">
                     <div class="card__inner color-background-2 gradient ratio" style="--ratio-percent: 125.0%;">
@@ -108,10 +108,11 @@ try{
                     <div class="card__content">
                         <div class="card__information">
                             <div class="single_card_reviews">
-                                ${document.querySelector(`[data-reviews="${item.id}"]`).innerHTML}
-                                <div>
-                                    <span>Reviews</span>
-                                </div>
+                                ${
+                                    document.querySelector(`[data-reviews="${item.id}"]`)?
+                                    `${document.querySelector(`[data-reviews="${item.id}"]`).innerHTML}
+                                    <span>Reviews</span>`: ""
+                                }
                             </div>
                             <div class="flex-information_card_product">
                                 <div class="title_information_card"> 

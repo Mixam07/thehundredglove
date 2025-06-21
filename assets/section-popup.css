@@ -260,7 +260,8 @@
     cursor: pointer;
 }
 
-.popup__help{
+.popup__help,
+.popup__helps{
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -277,7 +278,12 @@
     opacity: 0;
 }
 
-.popup__help.active{
+.popup__helps{
+    z-index: 100000000000000000000000;
+}
+
+.popup__help.active,
+.popup__helps.active{
     pointer-events: all;
     opacity: 1;
 }

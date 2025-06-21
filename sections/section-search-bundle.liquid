@@ -109,13 +109,15 @@
 
 <div class="loox-information">
   {% for product in collections[section.settings.collection].products %}
-    <div data-reviews="{{ product.id }}">
-      <div class="loox-rating"
-        data-id="{{ product.id }}"
-        data-rating="{{ product.metafields.loox.avg_rating }}"
-        data-raters="{{ product.metafields.loox.num_reviews }}">
+    {% if product.metafields.loox.avg_rating %}
+      <div data-reviews="{{ product.id }}">
+        <div class="loox-rating"
+          data-id="{{ product.id }}"
+          data-rating="{{ product.metafields.loox.avg_rating }}"
+          data-raters="{{ product.metafields.loox.num_reviews }}">
+        </div>
       </div>
-    </div>
+    {% endif %}
   {% endfor %}
 </div>
 
@@ -123,11 +125,32 @@
   .loox-information{
     display: none;
   }
+
+  .card__information svg{
+    width: 15px;
+  }
 </style>
+
+{% assign base_url = request.locale.root_url %}
+
+{% if base_url == "/" %}
+  {% assign prefix = "" %}
+{% else %}
+  {% assign prefix = base_url %}
+{% endif %}
 
 <script>
   const products = [
     {% for product in collections[section.settings.collection].products %}
+
+      {% if product.id == 14991728279932 %}
+        {% assign product_url = prefix | append: "/pages/academy-pack" %}
+      {% elsif product.id == 8463579414784 or product.id == 14863374156156 or product.id == 15329989853564 %}
+        {% assign product_url = prefix | append: "/pages/bundle" %}
+      {% else %}
+        {% assign product_url = product.url %}
+      {% endif %}
+
       {
         id: {{ product.id }},
         title: "{{ product.title | escape }}",
@@ -139,7 +162,7 @@
         ],
         images: [
           {% for image in product.images %}
-            "{{ image | img_url: 'master' }}"{% unless forloop.last %},{% endunless %}
+            "{{ image | img_url: 'medium' }}"{% unless forloop.last %},{% endunless %}
           {% endfor %}
         ],
         variants: [
@@ -161,7 +184,7 @@
           {% endfor %}
         ],
         price: "{{ product.price | money }}",
-        url: "{{ product.url }}"
+        url: "{{ product_url }}"
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];

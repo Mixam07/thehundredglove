@@ -226,6 +226,7 @@
 }
 
 .section-glove__select{
+    color: #000;
     border: rgba(178, 178, 178, 1) 1px solid;
     border-radius: 5px;
 }
@@ -240,6 +241,10 @@
     border-radius: 5px;
     border: none;
     padding: 10px;
+}
+
+.section-glove__button.special{
+    font-weight: 700;
 }
 
 .section-glove__button,
@@ -403,6 +408,15 @@
     .section-glove__button,
     .section-glove__button span{
         font-size: 10px;
+    }
+
+    .section-glove__button.special,
+    .section-glove__button.special span{
+        font-size: 12px;
+    }
+
+    .section-glove__button.special{
+        padding: 12px;
     }
 }
 

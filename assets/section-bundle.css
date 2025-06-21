@@ -121,7 +121,7 @@
     font-family: "Anton" !important;
     font-size: 25px;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .section-glove__item{
@@ -175,19 +175,19 @@
 }
 
 .bundle__products-button{
-    font-family: "Arial" !important;
-    background-color: #D75555;
-    border-radius: 5px;
+    background: transparent;
     border: none;
-    width: 100%;
-    color: #fff;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    column-gap: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
+    column-gap: 20px;
+    font-family: "Arial" !important;
+    color: #B2B2B2;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: -42px;
+    margin-bottom: 20px;
 }
 
 .bundle__products-title{
@@ -756,12 +756,6 @@
 
     .bundle__products-headline{
         font-size: 23px;
-        margin-bottom: 20px;
-    }
-
-    .bundle__products-button{
-        font-size: 13px;
-        column-gap: 5px;
     }
 
     .bundle__products-subtitle{
@@ -835,10 +829,6 @@
         font-size: 10px;
     }
 
-    .bundle__products-button{
-        padding: 5px;
-    }
-
     .bundle__products-size{
         font-size: 8px;
     }
@@ -898,17 +888,12 @@
 
     .bundle__products-headline{
         font-size: 20px;
-        margin-bottom: 10px;
     }
 
     .bundle__products-wrapper{
         gap: 5px;
         grid-template-columns: repeat(2, calc(50% - 5px * 1/2));
         margin-bottom: 40px;
-    }
-
-    .bundle__products-button{
-        font-size: 10px;
     }
 
     .bundle__products-subtitle{

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     padding: 120px 0;
-    background: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/82c9b3f1c8729b165ea3da156d265a9eb5bd15b9.png?v=1747833687") center center no-repeat;
+    background: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/82c9b3f1c8729b165ea3da156d265a9eb5bd15b9.png?v=1750521214") center center no-repeat;
     background-size: cover;
 }
 
@@ -55,7 +55,7 @@
 
 @media (max-width: 750px) {
     .section-bundle-banner{
-        background-image: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/c4846c59984919438cc5d91eed274033e7f8aef6.png?v=1747833687");
+        background-image: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/c4846c59984919438cc5d91eed274033e7f8aef6.png?v=1750521212");
         padding-top: 325px;
         padding-bottom: 45px;
     }

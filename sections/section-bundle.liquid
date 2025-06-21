@@ -16,7 +16,7 @@
     }
 </style>
 
-<div class="page-width bundle">
+<div id="build-bundle-product" class="page-width bundle">
     <div class="bundle__wrapper">
         <div class="bundle__navigation">
             <div class="bundle__navigation-wrapper">
@@ -36,6 +36,10 @@
         </div>
         <div class="bundle__products">
             <p class="bundle__products-headline"></p>
+            <button class="bundle__products-button">
+                <img src="{{ 'finger.svg' | asset_url }}" alt="finger">
+                Need help with sizing?
+            </button>
             <div class="bundle__products-wrapper"></div>
             <div class="bundle__products-buttons">
                 <div class="bundle__products-wrap">
@@ -62,7 +66,7 @@
                             <p class="bundle__cart-heading">Your bundle</p>
                             <p class="bundle__cart-cost">
                                 {% if cart.currency.iso_code == "USD" %}
-                                    $169.11
+                                    $169.99
                                 {% elsif cart.currency.iso_code == "EUR" %}
                                     €147.80
                                 {% else %}
@@ -121,14 +125,6 @@
     </div>
 </div>
 
-<div class="bundle__end">
-    <div class="bundle__end-content">
-        <img class="bundle__end-image" src="{{ 'thumbs_up.svg' | asset_url }}" alt="thumbs_up">
-        <p class="bundle__end-text">GREAT CHOICE, CLICK HERE TO GO TO THE NEXT STEP</p>
-        <button class="bundle__end-button">NEXT</button>
-    </div>
-</div>
-
 <div data-popup-image class="bundle__image">
     <button data-prev class="bundle__image-prev">
         <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
@@ -138,6 +134,55 @@
         <img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
     </button>
 </div>
+
+<div class="popup__helps">
+    <div class="popup__help-content">
+        <button
+            data-modal="abcd"
+            class="popup__help-close"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+                <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+                </path>
+            </svg>
+        </button>
+        <h1 class="popup__help-title">Size Guide</h1>
+        <div class="content" data-content="0">
+            {{ section.settings.page_1.content }}
+        </div>
+        <div class="content" data-content="1">
+            {{ section.settings.page_2.content }}
+            {{ section.settings.page_3.content }}
+            {{ section.settings.page_4.content }}
+        </div>
+    </div>
+</div>
+
+<style>
+    .popup__helps .content{
+        display: none;
+    }
+
+    .popup__helps .popup__help-content{
+        max-width: 450px;
+    }
+
+    @media (max-width: 750px) {
+        .popup__helps img{
+            width: 90% !important;
+        }
+
+        .popup__helps .popup__help-content{
+            max-width: 90%;
+        }
+
+        .content p{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
 
 <div class="content">
     <div class="glove">
@@ -210,7 +255,7 @@
             ],
             glove_type: "{{ product.metafields.custom.glove_type }}",
             title: "{{ product.title | escape }}",
-            price: "{{ product.price | money }}",
+            price: "{{ product.price | money | strip_html }}",
             images: [
                 {% for image in product.images %}
                 "{{ image | img_url: 'medium' }}"{% if forloop.last == false %},{% endif %}
@@ -241,7 +286,7 @@
                 {% endfor %}
             ],
             title: "{{ product.title | escape }}",
-            price: "{{ product.price | money }}",
+            price: "{{ product.price | money | strip_html }}",
             images: [
                 {% for image in product.images %}
                 "{{ image | img_url: 'medium' }}"{% if forloop.last == false %},{% endif %}
@@ -252,7 +297,7 @@
                 {
                     id: "{{ variant.id }}",
                     title: "{{ variant.title | escape }}",
-                    price: "{{ variant.price | money_without_currency }}",
+                    price: "{{ variant.price | money | strip_html }}",
                     available: {{ variant.available | json }},
                     option1: "{{ variant.option1 | escape }}",
                 }{% if forloop.last == false %},{% endif %}
@@ -272,7 +317,7 @@
                 {% endfor %}
             ],
             title: "{{ product.title | escape }}",
-            price: "{{ product.price | money }}",
+            price: "{{ product.price | money | strip_html }}",
             images: [
                 {% for image in product.images %}
                 "{{ image | img_url: 'medium' }}"{% if forloop.last == false %},{% endif %}
@@ -283,7 +328,7 @@
                 {
                     id: "{{ variant.id }}",
                     title: "{{ variant.title | escape }}",
-                    price: "{{ variant.price | money_without_currency }}",
+                    price: "{{ variant.price | money | strip_html }}",
                     available: {{ variant.available | json }},
                     option1: "{{ variant.option1 | escape }}",
                 }{% if forloop.last == false %},{% endif %}
@@ -302,7 +347,7 @@
         <path d="M28.147 9.49612L26.0581 7.40723L17.7766 15.6887L9.49514 7.40723L7.40625 9.49612L15.6877 17.7776L7.40625 26.0591L9.49514 28.148L17.7766 19.8665L26.0581 28.148L28.147 26.0591L19.8655 17.7776L28.147 9.49612Z" fill="#202020"/>
       </svg>
     </button>
-    <h1 class="another__title">would you like to add another pair of gloves for <span>20% off</span>?</h1>
+    <h1 class="another__title">WOULD YOU LIKE TO ADD ANOTHER PAIR OF GLOVES?</h1>
     <div class="another__wrapper">
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -338,7 +383,7 @@
                               </option>
                           {% endfor %}
                       </select>
-                      <button data-button data-buttonPopup="{{ product.id }}" class="section-glove__button">
+                      <button data-button data-buttonPopup="{{ product.id }}" class="section-glove__button special">
                           Add | {{ product.price | money }}
                       </button>
                   </div>

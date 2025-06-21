@@ -195,7 +195,7 @@
         "glove-3-pair-price": "£120",
         "glove-3-pair-discount": "SAVE 53%",
         "glove-1-gift-photo": "shopify://shop_images/photo_1.png",
-        "glove-1-gift-title": "Free Shipping",
+        "glove-1-gift-title": "Priority Dispatch",
         "glove-1-gift-subtitle": "You saved £7.00",
         "glove-2-gift-photo": "shopify://shop_images/photo_2.png",
         "glove-2-gift-title": "Free Gift",
@@ -414,6 +414,56 @@
         "show_text_below": false
       }
     },
+    "nw_faq_section_E3FxJH": {
+      "type": "nw-faq-section",
+      "blocks": {
+        "slide_XtgB7L": {
+          "type": "slide",
+          "settings": {
+            "title": "Are all of your gloves durable?",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
+          }
+        },
+        "slide_cj6Hm6": {
+          "type": "slide",
+          "settings": {
+            "title": "How do you ensure both outstanding grip + durability?",
+            "text": "We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability."
+          }
+        },
+        "slide_kGnE7z": {
+          "type": "slide",
+          "settings": {
+            "title": "How long is the risk free guarantee?",
+            "text": "Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked."
+          }
+        },
+        "slide_aPpca6": {
+          "type": "slide",
+          "settings": {
+            "title": "Do all of your gloves fit true to size?",
+            "text": "They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available."
+          }
+        }
+      },
+      "block_order": [
+        "slide_XtgB7L",
+        "slide_cj6Hm6",
+        "slide_kGnE7z",
+        "slide_aPpca6"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "guarantee_anKzdL": {
+      "type": "guarantee",
+      "settings": {
+        "image_background": "shopify://shop_images/Group_65.png",
+        "title": "<p>10 Game Guarantee</p>",
+        "text": "<p>We’re all about delivering gloves that perform as hard as you do. At The Hundred Glove, we back our gear with a 10 Game Guarantee because we believe in the quality and durability of our gloves.</p><p>No fluff, no nonsense—just gloves built to help you make every save count. If they don’t meet your expectations within the first 10 games, we’ve got you covered.</p>"
+      }
+    },
     "multicolumn_hHHdMa": {
       "type": "nw-multicolumn",
       "blocks": {
@@ -544,56 +594,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 80
-      }
-    },
-    "nw_faq_section_E3FxJH": {
-      "type": "nw-faq-section",
-      "blocks": {
-        "slide_XtgB7L": {
-          "type": "slide",
-          "settings": {
-            "title": "Are all of your gloves durable?",
-            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
-          }
-        },
-        "slide_cj6Hm6": {
-          "type": "slide",
-          "settings": {
-            "title": "How do you ensure both outstanding grip + durability?",
-            "text": "We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability."
-          }
-        },
-        "slide_kGnE7z": {
-          "type": "slide",
-          "settings": {
-            "title": "How long is the risk free guarantee?",
-            "text": "Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked."
-          }
-        },
-        "slide_aPpca6": {
-          "type": "slide",
-          "settings": {
-            "title": "Do all of your gloves fit true to size?",
-            "text": "They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available."
-          }
-        }
-      },
-      "block_order": [
-        "slide_XtgB7L",
-        "slide_cj6Hm6",
-        "slide_kGnE7z",
-        "slide_aPpca6"
-      ],
-      "settings": {
-        "title": ""
-      }
-    },
-    "guarantee_anKzdL": {
-      "type": "guarantee",
-      "settings": {
-        "image_background": "shopify://shop_images/Group_65.png",
-        "title": "<p>10 Game Guarantee</p>",
-        "text": "<p>We’re all about delivering gloves that perform as hard as you do. At The Hundred Glove, we back our gear with a 10 Game Guarantee because we believe in the quality and durability of our gloves.</p><p>No fluff, no nonsense—just gloves built to help you make every save count. If they don’t meet your expectations within the first 10 games, we’ve got you covered.</p>"
       }
     },
     "image_banner_gAEDJc": {

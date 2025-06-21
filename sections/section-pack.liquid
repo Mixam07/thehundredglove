@@ -7,11 +7,11 @@
                 <img src="{{ 'arrow_images.svg' | asset_url }}" alt="">
             </button>
             <div class="pack__main-image">
-                <img src="{{ product.images.first | img_url: 'master' }}" alt="image" />
+                <img src="{{ product.images.first | img_url: 'medium' }}" alt="image" />
             </div>
             <div class="pack__items">
                 {% for image in product.images %}
-                    <img src="{{ image | img_url: 'master' }}" alt="image" />
+                    <img src="{{ image | img_url: 'medium' }}" alt="image" />
                 {% endfor %}
             </div>
             <button class="pack__next">
@@ -40,7 +40,7 @@
 
                     <div class="pack__item">
                         <div class="pack__image">
-                            <img src="{{ product_option.images.first | img_url: 'master' }}" alt="photo">
+                            <img src="{{ product_option.images.first | img_url: 'medium' }}" alt="photo">
                         </div>
                         <div class="pack__info">
                             <p class="pack__caption">{{ product_option.title }}</p>

@@ -1,0 +1,32 @@
+{{ 'section-bundle-text.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <div class="section-bundle-text__wrapper">
+        <div class="section-bundle-text__information">
+            <h1 class="section-bundle-text__title">Switching Glove Brands Is a Big Call - We Get It.</h1>
+            <p class="section-bundle-text__description">That’s why we offer a <span>10-Game Guarantee.</span></p>
+            <p class="section-bundle-text__description">Try our gloves for up to 10 matches. If you’re not impressed, send them back for a full refund.</p>
+            <p class="section-bundle-text__description"><span>No stress. No pressure.</span></p>
+            <p class="section-bundle-text__description">Just gloves that have to earn their place on your hands.</p>
+        </div>
+        <div class="section-bundle-text__image">
+            <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Add_a_heading_3.png?v=1750445062" alt="image">
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "section-bundle-text",
+        "tag": "section",
+        "class": "section-bundle-text",
+        "settings": [
+        ],
+        "presets" : [
+            {
+                "name" : "section-bundle-text",
+                "category" : "Custom"
+            }
+        ]
+    }
+{% endschema %}

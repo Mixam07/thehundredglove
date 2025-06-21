@@ -311,7 +311,7 @@ window.TriplePixelData={TripleName:"the-hundredglove.myshopify.com",ver:"1.9.0"}
     {% endif %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    {% unless request.path contains 'build-your-bundle' %}
+    {% unless request.path contains 'build-your-bundle' or request.path contains 'junior-bundle' %}
       {{ 'new.css' | asset_url | stylesheet_tag }}
     {% endunless %}
 

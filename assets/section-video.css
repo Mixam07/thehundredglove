@@ -44,6 +44,7 @@
 }
 
 .video__image{
+    z-index: 10;
     min-width: 105px;
     max-width: 105px;
     height: 105px;

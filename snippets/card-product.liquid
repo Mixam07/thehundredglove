@@ -115,6 +115,7 @@
   }
 
   .section-glove__select{
+    color: #000;
       min-width: 50px;
       border-radius: 5px;
       background-color: transparent;
@@ -138,8 +139,10 @@
   }
   
   .section-glove__type.height{
-    min-height: 30px;
+    min-height: 44px;
+    font-size: 12px;
     display: block !important;
+    text-transform: none;
   }
 
   @media (max-width: 762px) {
@@ -157,8 +160,9 @@
       margin-top: 15px;
     }
 
-    .section-glove__type{
-        font-size: 8px;
+    .section-glove__type.height{
+        font-size: 10px;
+        min-height: 36px;
     }
 
     .section-glove__select{
@@ -230,6 +234,13 @@
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
+    {% assign base_url = request.locale.root_url %}
+
+    {% if base_url == "/" %}
+      {% assign prefix = "" %}
+    {% else %}
+      {% assign prefix = base_url %}
+    {% endif %}
       <div class="section-glove__item">
         {% if card_product.tags contains 'fingersave' %}
             <span class="card-top-badge">Fingersave</span>
@@ -238,7 +249,14 @@
         {% elsif card_product.tags contains 'new-in' %}
             <span class="card-top-badge">New In</span>
         {% endif %}
-        <a href="{{ card_product.url }}" class="section-glove__image">
+        {% if card_product.id == 14991728279932 %}
+          {% assign product_url = prefix | append: "/pages/academy-pack" %}
+        {% elsif card_product.id == 8463579414784 or card_product.id == 14863374156156 or card_product.id == 15329989853564 %}
+          {% assign product_url = prefix | append: "/pages/bundle" %}
+        {% else %}
+          {% assign product_url = card_product.url %}
+        {% endif %}
+        <a href="{{ product_url }}" class="section-glove__image">
             <img src="{{ card_product.images[0] | img_url: 'medium' }}" alt="{{ card_product.title }}" />
         </a>
         <div class="section-glove__rev {% if card_product.metafields.loox.num_reviews == nil or card_product.metafields.loox.num_reviews == 0 %}opacity{% endif %}">
@@ -249,15 +267,17 @@
           </div>
           <span>Reviews</span>
         </div>
-        <a href="{{ card_product.url }}" class="section-glove__caption">{{ card_product.title }}</a>
+        <a href="{{ product_url }}" class="section-glove__caption">{{ card_product.title }}</a>
         {% if card_product.collections contains collections['bundle'] %}
           <p class="section-glove__type height">{{ card_product.description | strip_html | replace: "Do not add this product to your cart. Please visit the bundle page to edit.", "" }}</p>
         {% else %}
           <p class="section-glove__type">{{ card_product.metafields.custom.glove_type }}</p>
         {% endif %}
         <div class="section-glove__wrapp">
-            <a href="{% if card_product.id == 14991728279932 %}/pages/academy-pack{% else %}{{ card_product.url }}{% endif %}" data-buttonPopup="{{ card_product.id }}" class="section-glove__button">
-                SHOP NOW | {{ card_product.price | money }}
+            <a href="{{ product_url }}"
+              data-buttonPopup="{{ card_product.id }}"
+              class="section-glove__button">
+              SHOP NOW | {{ card_product.price | money }}
             </a>
         </div>
       </div>

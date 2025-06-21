@@ -53,8 +53,8 @@
         "badge_text": "Trusted by 10,000+ Keepers",
         "toptitle_text": "",
         "color_toptitle": "#ffffff",
-        "image": "shopify://shop_images/8e9578d3937c5d0ddaf16a82126123ab.png",
-        "imagemobile": "shopify://shop_images/56ffcfcc5c66e591605c947e65feb7c2.png",
+        "image": "shopify://shop_images/55227d49a64edff52ff2a87445719752219349c8.png",
+        "imagemobile": "shopify://shop_images/15e15d26c0118559964c722d3247e10562856b7d.png",
         "moveBanner": false,
         "body_text": "#000000",
         "image_overlay_opacity": 0,
@@ -263,7 +263,7 @@
           "type": "row",
           "settings": {
             "content-title": "@hundredgk",
-            "content-video": "https://cdn.shopify.com/videos/c/o/v/b1b4232f64aa4c19b4551e9e26fa44cb.mp4",
+            "content-video": "https://cdn.shopify.com/videos/c/o/v/8ced5f8d7e9140ea9fe19f203d63b332.mp4",
             "content-product": "spectre-pink-black"
           }
         },

@@ -2625,7 +2625,6 @@ details[open] > .header__menu-item .icon-caret {
   }
   :root {
     --easter-egg: none;
-    --sparkle: url("./sparkle.gif");
   }
 }
 @media (max-width: 767px) {
@@ -3231,7 +3230,7 @@ details[open] > .header__menu-item .icon-caret {
   }
 
   .page-landing-page .banner__buttons ~ .icon-with-text .h4 {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .page-landing-page .banner__buttons ~ .icon-with-text img {
@@ -3528,4 +3527,8 @@ a.view_all_col.show-mobile{
     font-size: 16px !important;
     padding: 10px !important;
   }
+}
+
+:host *{
+  display: none !important;
 }

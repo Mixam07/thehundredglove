@@ -473,15 +473,16 @@
 
   .product-card__price{
     margin: 0;
-    line-height: 14px;
   }
 
+  .product-card__price,
   .product-card__price span{
     font-size: 10px;
     line-height: 14px;
   }
 
   .product-card__button{
+    color: #000;
     background-color: rgba(229, 229, 229, 1);
     padding: 5px 15px;
     font-size: 10px;
@@ -582,21 +583,21 @@
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             <div class="drawer__cart-items-wrapper">
               <div class="gifts">
-                <p class="gifts__title">You're <span>£9.00</span> Away From Free Gift</p>
+                <p class="gifts__title"></p>
                 <div class="gifts__wrapper">
                   <span class="gifts__active"></span>
                   <div class="gifts__item">
                     <div class="gifts__wrap">
                       <img src="{{ 'gift.svg' | asset_url }}" alt="">
                     </div>
-                    <p class="gifts__price">£80.00</p>
+                    <p data-gift class="gifts__price">{% if cart.currency.iso_code == "USD" %}$130.00{% else %}£80.00{% endif %}</p>
                     <p class="gifts__caption">Free Gift</p>
                   </div>
                   <div class="gifts__item">
                     <div class="gifts__wrap">
                       <img src="{{ 'gift-shipping.svg' | asset_url }}" alt="">
                     </div>
-                    <p class="gifts__price">£130.00</p>
+                    <p data-shippining class="gifts__price">{% if cart.currency.iso_code == "USD" %}$185.00{% else %}£130.00{% endif %}</p>
                     <p class="gifts__caption">Free Shipping</p>
                   </div>
                 </div>
@@ -652,7 +653,13 @@
             </div>
           </div>
           <div class="protaction__wrap">
-            <p class="protection__price">£3.00</p>
+            <p class="protection__price">
+              {% if cart.currency.iso_code == "USD" %}
+                $4.00
+              {% else %}
+                £3.00
+              {% endif %}
+            </p>
             <label for="protection" class="protection__check">
               <input class="protection__input" id="protection" name="protection" type="checkbox">
               <div class="protection__checkbox">
@@ -750,89 +757,13 @@
       document.querySelector("body").style.overflow = "auto";
     }
   });
-//let q = 0
+
   async function render(cart, t) {
-    /*
-    debugger
-    cart.items.forEach(async item => {
-      if(item.product_type == "goalkeeper gloves" && item.final_price > 0 && q == 0){
-        const response = await fetch("/cart/add.js", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              items: [
-                {
-                  id: item.id,
-                  quantity: 1,
-                  properties: {
-                    _discount: '20%',
-                    _original_variant: item.variant_id
-                  }
-                }
-              ]
-            })
-        });
-
-        if (response.ok) {
-            const result = await response.json();
-            
-            fetch("/cart.js")
-            .then(res => res.json())
-            .then(cart => {
-                render(cart);
-            });
-        } else {
-            console.error(response.error, response);
-        }
-        q = 1
-      }
-    });
-    */
-    /*
-    for (const item of gloveItems) {
-      const alreadyDiscounted = item.properties && item.properties._discount === '20%';
-
-      if (!alreadyDiscounted) {
-        const discountedVariantId = discountedVariantIds[item.variant_id];
-
-        if (discountedVariantId) {
-          await fetch('/cart/add.js', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              items: [
-                {
-                  id: discountedVariantId,
-                  quantity: 1,
-                  properties: {
-                    _discount: '20%',
-                    _original_variant: item.variant_id
-                  }
-                }
-              ]
-            })
-          });
-
-          await fetch('/cart/change.js', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              id: item.key,
-              quantity: 0
-            })
-          });
-        }
-      }
-    }
-      
-
-    // Після знижок – оновити cart
-    const newCart = await fetch('/cart.js').then(res => res.json());
-    render(newCart, true)
-  }
-    */
+    const shipping = document.querySelector("[data-shippining]").textContent;
+    const shippingNumber = parseFloat(shipping.slice(1)) * 100;
+    const gift = document.querySelector("[data-gift]").textContent;
+    const giftNumber = parseFloat(gift.slice(1)) * 100;
+    
     if(cart.items.length == 0) {
       document.querySelector(".drawer").classList.add("is-empty")
     }else {
@@ -936,21 +867,21 @@
     const giftElement = document.querySelector('.gifts__active');
 
     if (giftElement) {
-      giftElement.style.width = Math.min((price / 13000) * 100, 100) + '%';
+      giftElement.style.width = Math.min((price / shippingNumber) * 100, 100) + '%';
       giftElement.setAttribute('data-price', price);
     }
 
-    if(price < 8000){
-      document.querySelector('.gifts__title').innerHTML = `You're <span>${currency}${((8000 - price) / 100).toFixed(2)}</span> Away From Free Gift`;
-    } else if(price < 13000){
-      document.querySelector('.gifts__title').innerHTML = `You're <span>${currency}${((13000 - price) / 100).toFixed(2)}</span> Away From Free Shipping`;
+    if(price < giftNumber){
+      document.querySelector('.gifts__title').innerHTML = `You're <span>${currency}${((giftNumber - price) / 100).toFixed(2)}</span> Away From Free Gift`;
+    } else if(price < shippingNumber){
+      document.querySelector('.gifts__title').innerHTML = `You're <span>${currency}${((shippingNumber - price) / 100).toFixed(2)}</span> Away From Free Shipping`;
     } else {
       document.querySelector('.gifts__title').innerHTML = `Nice! You've Also Unlocked Free Shipping 🙌`;
     }
  
     const hasGiftItem = cart.items.some(item => item.variant_id === 54858935828860);
 
-    if(price >= 8000){
+    if(price >= giftNumber){
       if (!hasGiftItem) {
         // Додаємо подарунок через запит до Shopify API або cart.js (якщо використовується)
         const response = await fetch("/cart/add.js", {

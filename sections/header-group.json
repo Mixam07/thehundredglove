@@ -52,7 +52,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".essential_annoucement_bar_wrapper {display: none !important;}"
+        ".essential_annoucement_bar_wrapper{display: none !important;}"
       ],
       "settings": {
         "logo_position": "middle-left",
@@ -72,7 +72,7 @@
     "custom_liquid_X4ezYD": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{%if template contains 'collection' or template contains 'index' %}\n\n<a style=\"text-decoration:none\" href=\"https://thehundredglove.com/pages/academy-pack\" >\n    <div class=\"mime\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/7aca5b8cf1c4ae6a1cdd99a69c0c0a13.png?v=1739474535\" alt=\"\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/5aacdbba5214870ffda4b6a7e1f4ce64.png?v=1739476388\" alt=\"\">\n    </div>\n</a>\n    \n<style>\n    .mime{\n        height: 50px;\n        width: 100%;\n        display: flex;\n        justify-content: center;\n        overflow: hidden;\n        position: relative;\n        background-color: #FFB80A;\n    }\n\n    .mime img{\n        height: 100%;\n        object-fit: contain;\n        position: absolute;\n        top: 0;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    .mime img:last-child{\n        display: none;\n    }\n\n    @media (max-width: 992px) {\n        .mime{\n            height: 45px;\n        }\n    }\n\n    @media (max-width: 762px) {\n\n        .mime img:first-child{\n            display: none;\n        }\n\n        .mime img:last-child{\n            display: block;\n        }\n    }\n\n    @media (max-width: 576px) {\n        .mime{\n            height: 40px;\n        }\n    }\n</style>\n    \n{% endif %}",
+        "custom_liquid": "{%if template contains 'collection' or template contains 'index' %}\n\n{% assign base_url = request.locale.root_url %}\n\n  {% if base_url == \"/\" %}\n    {% assign prefix = \"/\" %}\n  {% else %}\n    {% assign last_char = base_url | slice: -1 %}\n    {% if last_char == \"/\" %}\n      {% assign prefix = base_url %}\n    {% else %}\n      {% assign prefix = base_url | append: \"/\" %}\n    {% endif %}\n  {% endif %}\n\n<a style=\"text-decoration:none\" href=\"{{ prefix }}pages/academy-pack\" >\n    <div class=\"mime\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/6d965dc47aca5b8cf1c4ae6a1cdd99a69c0c0a13.png?v=1750183431\" alt=\"\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0667/5877/0944/files/28353b325aacdbba5214870ffda4b6a7e1f4ce64.png?v=1750183458\" alt=\"\">\n    </div>\n</a>\n    \n<style>\n    .mime{\n        height: 50px;\n        width: 100%;\n        display: flex;\n        justify-content: center;\n        overflow: hidden;\n        position: relative;\n        background-color: #FFB80A;\n    }\n\n    .mime img{\n        height: 100%;\n        object-fit: contain;\n        position: absolute;\n        top: 0;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    .mime img:last-child{\n        display: none;\n    }\n\n    @media (max-width: 992px) {\n        .mime{\n            height: 45px;\n        }\n    }\n\n    @media (max-width: 762px) {\n\n        .mime img:first-child{\n            display: none;\n        }\n\n        .mime img:last-child{\n            display: block;\n        }\n    }\n\n    @media (max-width: 576px) {\n        .mime{\n            height: 40px;\n        }\n    }\n</style>\n    \n{% endif %}",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -102,7 +102,7 @@
           "settings": {
             "menu-title": "COMMUNITY",
             "menu-image": "shopify://shop_images/UsersFour-1.svg",
-            "menu-link": "https://www.instagram.com/thehundredglove/"
+            "menu-link": "https://www.instagram.com/hundredgk/"
           }
         },
         "row_1_nxM8iU": {

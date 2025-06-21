@@ -1,0 +1,168 @@
+.section-bundle-video{
+    margin-bottom: 80px;
+}
+
+.video__wrapper{
+    display: flex;
+    column-gap: 25px;
+    overflow: hidden;
+    padding-left: 150px;
+}
+
+.video__wrapper.center{
+    padding: 0;
+    justify-content: center;
+}
+
+.video__item{
+    min-width: 275px;
+    max-width: 275px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none !important;
+    padding-top: 400px;
+    position: relative;
+}
+
+.video__video{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.video__video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video__play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video__play-icon::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+/* При відтворенні — сховати */
+.video__item.playing .video__play-icon {
+    display: none;
+}
+
+.video__information{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video__description{
+    padding: 15px 15px 15px 0;
+    width: 100%;
+}
+
+.video__image{
+    z-index: 10;
+    width: 100%;
+    margin-top: -35px;
+    border-radius: 0 0 10px 10px;
+}
+
+.video__tag{
+    font-size: 12px;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+    text-align: start;
+}
+
+.video__title{
+    font-size: 10px;
+    text-align: start;
+    color: #fff;
+    margin: 0;
+}
+
+.video__info{
+    text-align: start;
+    margin: 0;
+}
+
+.video__info,
+.video__info span{
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.video__info span{
+    font-weight: 700;
+}
+
+.video__caption{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+
+@media (max-width: 762px) {
+    .section-bundle-video{
+        margin-bottom: 25px;
+    }
+
+    .video__item{
+        min-width: 250px;
+        max-width: 250px;
+        padding-top: 350px;
+    }
+
+    .video__video{
+        height: 350px;
+    }
+
+    .video__wrapper{
+        overflow: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE 10+ */
+    }
+
+    .video__wrapper.center{
+        justify-content: start;
+        padding: 0 10px;
+    }
+
+    .video__wrapper::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Edge */
+    }
+
+    .video__description{
+        padding: 10px 10px 10px 0;
+    }
+
+    .video__caption{
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+}

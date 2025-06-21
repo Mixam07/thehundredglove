@@ -8,7 +8,6 @@ const numbers = {
 
 const cart = document.querySelector(".bundle__cart-list");
 const pageButtons = document.querySelectorAll(".bundle__products-btn");
-const popupEnd = document.querySelector(".bundle__end");
 const navigationItems = document.querySelectorAll(".bundle__navigation-item");
 
 const drawCart = () => {
@@ -206,11 +205,11 @@ const addEvent = () => {
                         variant, product, title, description, price,
                         type, image, quantity, size, personalization
                     });
-    
-                    if (type_bundle.length == numbers[type] - 1 && active !== 2) {
-                        popupEnd.classList.add("active");
-                    }
                 }
+
+                popups.forEach(popup => {
+                    popup.classList.remove("active");
+                })
     
                 sizes.forEach((size, i) => {
                     size.querySelectorAll(".popup__btn").forEach(item => {
@@ -297,6 +296,7 @@ const addEvent = () => {
 
 function changeActivePage(i) {
     active = i;
+    document.querySelector(".bundle__products-button").style.display = i !== 2? "flex": "none";
     const titles = ["step 1 - choose your glove (1 pair)", "step 2 - Choose Your Clothing Size (3 items)", "step 3 - Choose Your Accessory (1 item)"];
     const classes = ["glove", "clothing", "accessory"]
 
@@ -448,7 +448,6 @@ function changeActivePage(i) {
                                                         item.tags.some(item => item == "top")? document.querySelector(".top").innerHTML:
                                                         document.querySelector(".short").innerHTML
                                                     }
-                                                }
                                             </div>
                                         </div>
                                         `: ""
@@ -611,12 +610,6 @@ navigationItems.forEach((item, i) => {
     });
 });
 
-popupEnd.addEventListener("click", (e) => {
-    if (e.target.classList.contains("bundle__end")) {
-        popupEnd.classList.remove("active");
-    }
-});
-
 document.querySelector(".bundle__cart-submit").addEventListener("click", async (e) => {
     if (bundle.length >= 5) {
         document.querySelector(".another").classList.add("active")
@@ -742,6 +735,18 @@ document.addEventListener('DOMContentLoaded', function () {
             bundle = [];
             drawCart();
             changeActivePage(0);
+        }
+    });
+
+    document.querySelector(".bundle__products-button").addEventListener("click", (e) => {
+        document.querySelector(".popup__helps").classList.add("active");
+        document.querySelectorAll("[data-content]")[active].style.display = "block";
+    });
+
+    document.querySelector(".popup__helps").addEventListener("click", (e) => {
+        if (e.target.classList.contains("popup__helps") || e.target.closest(".popup__help-close")) {
+            document.querySelector(".popup__helps").classList.remove("active");
+            document.querySelectorAll("[data-content]")[active].style.display = "none";
         }
     });
 });

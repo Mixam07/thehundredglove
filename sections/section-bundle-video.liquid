@@ -1,0 +1,87 @@
+{{ 'section-bundle-video.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <h1 class="video__caption">WHAT PARENTS ARE SAYING</h1>
+</div>
+
+<div class="video__wrapper {% if section.settings.is_centered %}center{% endif %}">
+  {% for block in section.blocks %}
+    {% if block.type == 'row' %}
+      <div class="video__item">
+        <div class="video__video">
+            <video
+                playsinline
+                preload="auto"
+                poster="{{ block.settings['content-poster'] | img_url: 'master' }}"
+                data-video
+                id="custom-video"
+            >
+                <source src="{{ block.settings['content-video'] }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video__play-icon" id="play-icon"></div>
+        </div>
+        <img class="video__image" src="{{ block.settings['content-image'] | img_url: 'master' }}" alt="{{ product.title }}">
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{{ 'section-video.js' | asset_url | script_tag }}
+
+{% schema %}
+    {
+        "name": "section-bundle-video",
+        "tag": "section",
+        "class": "section-bundle-video",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "is_centered",
+                "label": "Is center",
+                "default": false
+            }
+        ],
+        "blocks": [
+            {
+                "type": "row",
+                "name": "Content",
+                "settings": [
+                    {
+                        "id": "content-video",
+                        "type": "text",
+                        "label": "Video URL"
+                    },
+                    {
+                        "id": "content-poster",
+                        "type": "image_picker",
+                        "label": "Video preview image"
+                    },
+                    {
+                        "id": "content-image",
+                        "type": "image_picker",
+                        "label": "Image"
+                    },
+                    {
+                        "id": "content-title",
+                        "type": "text",
+                        "label": "Title",
+                        "default": "Title here"
+                    },
+                    {
+                        "id": "content-description",
+                        "type": "textarea",
+                        "label": "Description",
+                        "default": "Write a short description here."
+                    }
+                ]
+            }
+        ],
+        "presets" : [
+            {
+                "name" : "section-bundle-video",
+                "category" : "Custom"
+            }
+        ]
+    }
+{% endschema %}

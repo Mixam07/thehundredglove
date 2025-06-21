@@ -8,7 +8,7 @@
   }
 
   .register-container {
-    background-image: url('{{ section.settings.background_img | img_url: 'master' }}');
+    background-image: url('{{ section.settings.background_img | img_url: 'medium' }}');
   }
 
   @media screen and (min-width: 750px) {
@@ -20,7 +20,7 @@
 
   @media(max-width: 767px) {
     .register-container {
-      background-image: url('{{ section.settings.mob_background_img | img_url: 'master' }}');
+      background-image: url('{{ section.settings.mob_background_img | img_url: 'medium' }}');
     }
   }
 {%- endstyle -%}

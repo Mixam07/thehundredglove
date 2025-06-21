@@ -1,0 +1,110 @@
+.section-bundle-advantages{
+    padding: 50px 0;
+    background-color: #F0F0F0;
+    margin-bottom: 60px;
+}
+
+.section-bundle-advantages__wrapper{
+    display: grid;
+    grid-template-columns: 60% calc(40% - 60px);
+    column-gap: 60px;
+}
+
+.section-bundle-advantages__image{
+    grid-row: 1/4;
+    grid-column: 2/3;
+}
+
+.section-bundle-advantages__image img{
+    width: 100%;
+}
+
+.section-bundle-advantages__title{
+    margin: 0;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-bundle-advantages__description{
+    max-width: 450px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.section-bundle-advantages__description span{
+    font-weight: 700;
+}
+
+.section-bundle-advantages__button{
+    background-color: #D75555;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.section-bundle-advantages__wrap{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.section-bundle-advantages__info{
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+    column-gap: 5px;
+    margin: 0;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+@media (max-width: 762px) {
+    .section-bundle-advantages{
+        padding: 25px 0;
+        margin-bottom: 25px;
+    }
+
+    .section-bundle-advantages__wrapper{
+        display: block;
+    }
+
+    .section-bundle-advantages__title{
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .section-bundle-advantages__description{
+        line-height: 21px;
+        text-align: center;
+        font-size: 14px;
+        max-width: 350px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .section-bundle-advantages__image{
+        max-width: 250px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .section-bundle-advantages__wrap{
+        margin-top: 15px;
+        display: flex;
+    }
+
+    .section-bundle-advantages__button{
+        margin-bottom: 5px;
+        font-size: 14px;
+        padding: 5px 20px;
+    }
+}

@@ -60,7 +60,7 @@
         class="disabled"
       {% endif %}
     >
-    <label class="label" data-id="{{ value.id }}" data-price="{{ value.price | money }}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+    <label class="label" data-id="{{ value.id }}" data-price="{{ value.price | money | strip_html }}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
       {{ value.option1 -}}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>

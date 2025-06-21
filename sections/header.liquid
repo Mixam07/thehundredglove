@@ -163,7 +163,18 @@
       assign localization_forms = true
     endif
   -%}
+  {% assign base_url = request.locale.root_url %}
 
+  {% if base_url == "/" %}
+    {% assign prefix = "/" %}
+  {% else %}
+    {% assign last_char = base_url | slice: -1 %}
+    {% if last_char == "/" %}
+      {% assign prefix = base_url %}
+    {% else %}
+      {% assign prefix = base_url | append: "/" %}
+    {% endif %}
+  {% endif %}
   <div class="header-menu">
     <div class="page-width">
       <div class="header-menu__wrapper">
@@ -184,24 +195,24 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="/collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">All Goalkeeper Gloves</a>
-                    <a href="/collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">Adult Goalkeeper Gloves</a>
-                    <a href="/collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">Junior Goalkeeper Gloves</a>
+                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">All Goalkeeper Gloves</a>
+                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">Adult Goalkeeper Gloves</a>
+                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">Junior Goalkeeper Gloves</a>
                   </div>
                   <div class="header-menu__element">
                     <div class="header-menu__wrap">
                       <h4 class="header-menu__headline">By Type</h4>
                       <div class="header-menu__items">
-                        <a href="/collections/all?handle=gloves&features=negative-cut&min=0&max=500" class="header-menu__item">Negative Cut</a>
-                        <a href="/collections/all?handle=gloves&features=gecko-cut&min=0&max=500" class="header-menu__item">Hybrid Cut</a>
-                        <a href="/collections/all?handle=gloves&features=finger-protection&min=0&max=500" class="header-menu__item">Finger Protection</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=negative-cut&min=0&max=500" class="header-menu__item">Negative Cut</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=hybrid-cut&min=0&max=500" class="header-menu__item">Hybrid Cut</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=finger-protection&min=0&max=500" class="header-menu__item">Finger Protection</a>
                       </div>
                     </div>
                     <div class="header-menu__wrap">
                       <h4 class="header-menu__headline">By Surface</h4>
                       <div class="header-menu__items">
-                        <a href="#" class="header-menu__item">All Surfaces</a>
-                        <a href="#" class="header-menu__item">Astro/4G</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=all-surfaces&min=0&max=500" class="header-menu__item">All Surfaces</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=astro-4g&min=0&max=500" class="header-menu__item">Astro/4G</a>
                       </div>
                     </div>
                   </div>
@@ -215,25 +226,24 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="/collections/all?handle=clothings&min=0&max=500" class="header-menu__caption">Shop All Clothing</a>
-                    <a href="/collections/all?handle=clothings&features=adult-clothing&min=0&max=500" class="header-menu__caption">Adult Clothing</a>
-                    <a href="/collections/all?handle=clothings&features=junior-clothing&min=0&max=500" class="header-menu__caption">Junior Clothing</a>
+                    <a href="{{ prefix }}collections/all?handle=clothings&min=0&max=500" class="header-menu__caption">Shop All Clothing</a>
+                    <a href="{{ prefix }}collections/all?handle=clothings&features=adult-clothing&min=0&max=500" class="header-menu__caption">Adult Clothing</a>
+                    <a href="{{ prefix }}collections/all?handle=clothings&features=junior-clothing&min=0&max=500" class="header-menu__caption">Junior Clothing</a>
                   </div>
                   <div class="header-menu__element">
                     <div class="header-menu__wrap">
                       <h4 class="header-menu__headline">By Product</h4>
                       <div class="header-menu__items">
-                        <a href="#" class="header-menu__item">Shorts</a>
-                        <a href="#" class="header-menu__item">Top</a>
-                        <a href="#" class="header-menu__item">Trousers</a>
-                        <a href="#" class="header-menu__item">1/4 Zip</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=shorts&min=0&max=500" class="header-menu__item">Shorts</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=top&min=0&max=500" class="header-menu__item">Top</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=trousers&min=0&max=500" class="header-menu__item">Trousers</a>
                       </div>
                     </div>
                     <div class="header-menu__wrap">
                       <h4 class="header-menu__headline">By Type</h4>
                       <div class="header-menu__items">
-                        <a href="#" class="header-menu__item">Padded</a>
-                        <a href="#" class="header-menu__item">Unpadded</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=padded&min=0&max=500" class="header-menu__item">Padded</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=unpadded&min=0&max=500" class="header-menu__item">Unpadded</a>
                       </div>
                     </div>
                   </div>
@@ -247,18 +257,18 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="/collections/all?handle=accessories&min=0&max=500" class="header-menu__caption">Shop All Accessories</a>
+                    <a href="{{ prefix }}collections/all?handle=accessories&min=0&max=500" class="header-menu__caption">Shop All Accessories</a>
                   </div>
                   <h4 class="header-menu__headline">By Product</h4>
                   <div class="header-menu__items">
-                    <a href="/products/mini-shin-pads" class="header-menu__item">Shin Pads</a>
-                    <a href="/collections/all?handle=accessories&min=0&max=500" class="header-menu__item">Finger Protect Tape</a>
-                    <a href="/products/goalkeeper-cap-black-white" class="header-menu__item">Goalkeeper Cap</a>
-                    <a href="/products/grip-socks" class="header-menu__item">Grip Socks</a>
-                    <a href="/products/water-bottle" class="header-menu__item">Water Bottle</a>
-                    <a href="/products/glove-wallet" class="header-menu__item">Glove Wallet</a>
-                    <a href="/products/gripcharge" class="header-menu__item">Grip Charge</a>
-                    <a href="/products/glove-towel" class="header-menu__item">Glove Towel</a>
+                    <a href="{{ prefix }}products/mini-shin-pads" class="header-menu__item">Shin Pads</a>
+                    <a href="{{ prefix }}products/2x-black-finger-protect-tape" class="header-menu__item">Finger Protect Tape</a>
+                    <a href="{{ prefix }}products/goalkeeper-cap-black-white" class="header-menu__item">Goalkeeper Cap</a>
+                    <a href="{{ prefix }}products/grip-socks" class="header-menu__item">Grip Socks</a>
+                    <a href="{{ prefix }}products/water-bottle" class="header-menu__item">Water Bottle</a>
+                    <a href="{{ prefix }}products/glove-wallet" class="header-menu__item">Glove Wallet</a>
+                    <a href="{{ prefix }}products/gripcharge" class="header-menu__item">Grip Charge</a>
+                    <a href="{{ prefix }}products/glove-towel" class="header-menu__item">Glove Towel</a>
                   </div>
                 </div>
               </div>
@@ -270,18 +280,18 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="/collections/bundle" class="header-menu__caption">Shop All Bundles</a>
+                    <a href="{{ prefix }}collections/bundle" class="header-menu__caption">Shop All Bundles</a>
                   </div>
                   <h4 class="header-menu__headline">By Product</h4>
                   <div class="header-menu__items">
-                    <a href="/products/core-skin-combo-bundle" class="header-menu__item">Core Skin - Combo Bundle</a>
-                    <a href="/pages/academy-pack" class="header-menu__item">Academy Pack</a>
-                    <a href="/apps/bundles/bundle/146719" class="header-menu__item">2x Pro Glove Bundle</a>
-                    <a href="/apps/bundles/bundle/153564" class="header-menu__item">3x Pro Glove Bundle</a>
-                    <a href="/products/match-day-add-on-kit" class="header-menu__item">Match Day Add-On Kit</a>
-                    <a href="/products/full-protection-kit" class="header-menu__item">Full Protection Kit</a>
-                    <a href="/products/3-padded-items" class="header-menu__item">3 padded items</a>
-                    <a href="/products/3-core-skin-items" class="header-menu__item">3 Core Skin items</a>
+                    <a href="{{ prefix }}products/core-skin-combo-bundle" class="header-menu__item">Core Skin - Combo Bundle</a>
+                    <a href="{{ prefix }}pages/academy-pack" class="header-menu__item">Academy Pack</a>
+                    <a href="{{ prefix }}apps/bundles/bundle/146719" class="header-menu__item">2x Pro Glove Bundle</a>
+                    <a href="{{ prefix }}apps/bundles/bundle/153564" class="header-menu__item">3x Pro Glove Bundle</a>
+                    <a href="{{ prefix }}products/match-day-add-on-kit" class="header-menu__item">Match Day Add-On Kit</a>
+                    <a href="{{ prefix }}products/full-protection-kit" class="header-menu__item">Full Protection Kit</a>
+                    <a href="{{ prefix }}products/3-padded-items" class="header-menu__item">3 padded items</a>
+                    <a href="{{ prefix }}products/3-core-skin-items" class="header-menu__item">3 Core Skin items</a>
                   </div>
                 </div>
               </div>
@@ -302,10 +312,10 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="/pages/for-matches" class="header-menu__caption">Best Gloves for Matches</a>
-                    <a href="/pages/for-training" class="header-menu__caption">Best Gloves for Training</a>
-                    <a href="/pages/for-child" class="header-menu__caption">Best Gloves for Your Child</a>
-                    <a href="/pages/size-guid" class="header-menu__caption">Glove Size Guide</a>
+                    <a href="{{ prefix }}pages/for-matches" class="header-menu__caption">Best Gloves for Matches</a>
+                    <a href="{{ prefix }}pages/for-training" class="header-menu__caption">Best Gloves for Training</a>
+                    <a href="{{ prefix }}pages/for-child" class="header-menu__caption">Best Gloves for Your Child</a>
+                    <a href="{{ prefix }}pages/size-guid" class="header-menu__caption">Glove Size Guide</a>
                   </div>
                 </div>
               </div>
@@ -317,9 +327,9 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="/pages/care-guide" class="header-menu__caption">Care Guide & FAQ</a>
-                    <a href="/pages/grip-guide" class="header-menu__caption">Latex Types & Grip Guide</a>
-                    <a href="/pages/last-longer" class="header-menu__caption">Gloves Last Longer</a>
+                    <a href="{{ prefix }}pages/care-guide" class="header-menu__caption">Care Guide & FAQ</a>
+                    <a href="{{ prefix }}pages/grip-guide" class="header-menu__caption">Latex Types & Grip Guide</a>
+                    <a href="{{ prefix }}pages/last-longer" class="header-menu__caption">Gloves Last Longer</a>
                   </div>
                 </div>
               </div>
@@ -331,11 +341,11 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="/pages/for-kids" class="header-menu__caption">Size Help for Kids</a>
-                    <a href="/pages/glove-wear" class="header-menu__caption">Glove Wear</a>
-                    <a href="/pages/plastic-film" class="header-menu__caption">Remove the Plastic Film</a>
-                    <a href="/pages/goalkeeping-tips" class="header-menu__caption">Wet Weather</a>
-                    <a href="/pages/us-different" class="header-menu__caption">What Makes Us Different</a>
+                    <a href="{{ prefix }}pages/for-kids" class="header-menu__caption">Size Help for Kids</a>
+                    <a href="{{ prefix }}pages/glove-wear" class="header-menu__caption">Glove Wear</a>
+                    <a href="{{ prefix }}pages/plastic-film" class="header-menu__caption">Remove the Plastic Film</a>
+                    <a href="{{ prefix }}pages/goalkeeping-tips" class="header-menu__caption">Wet Weather</a>
+                    <a href="{{ prefix }}pages/us-different" class="header-menu__caption">What Makes Us Different</a>
                   </div>
                 </div>
               </div>
@@ -364,6 +374,7 @@
               </svg>
             </div>
             <div class="header-menu__content other">
+              <!--
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
                   ABOUT US
@@ -378,6 +389,7 @@
                   </div>
                 </div>
               </div>
+              -->
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
                   BLOG
@@ -386,10 +398,9 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="#" class="header-menu__caption">Glove Guides</a>
-                    <a href="#" class="header-menu__caption">Keeper Tips & Training</a>
-                    <a href="#" class="header-menu__caption">Product Updates</a>
-                    <a href="#" class="header-menu__caption">View All Posts</a>
+                    <a href="{{ prefix }}pages/size-guid" class="header-menu__caption">Glove Guides</a>
+                    <a href="{{ prefix }}pages/goalkeeping-tips" class="header-menu__caption">Keeper Tips & Training</a>
+                    <a href="{{ prefix }}pages/us-different" class="header-menu__caption">What Makes Us Different</a>
                   </div>
                 </div>
               </div>
@@ -401,10 +412,9 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="#" class="header-menu__caption">Buying Gloves for Your Child</a>
-                    <a href="#" class="header-menu__caption">Glove Size Help for Kids</a>
-                    <a href="#" class="header-menu__caption">FAQs for First-Time GK Parents</a>
-                    <a href="#" class="header-menu__caption">How to Make Gloves Last Longer</a>
+                    <a href="{{ prefix }}pages/for-child" class="header-menu__caption">Buying Gloves for Your Child</a>
+                    <a href="{{ prefix }}pages/for-kids" class="header-menu__caption">Glove Size Help for Kids</a>
+                    <a href="{{ prefix }}pages/last-longer" class="header-menu__caption">How to Make Gloves Last Longer</a>
                   </div>
                 </div>
               </div>
@@ -416,9 +426,9 @@
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="https://www.instagram.com/thehundredglove/" class="header-menu__caption">Instagram</a>
-                    <a href="https://www.tiktok.com/@thehundredglove" class="header-menu__caption">TikTok</a>
-                    <a href="https://www.youtube.com/@thehundredglove3485/featured" class="header-menu__caption">YouTube</a>
+                    <a href="https://www.instagram.com/hundredgk/" class="header-menu__caption">Instagram</a>
+                    <a href="https://www.tiktok.com/@hundredgk" class="header-menu__caption">TikTok</a>
+                    <a href="https://www.youtube.com/@hundredgk" class="header-menu__caption">YouTube</a>
                   </div>
                 </div>
               </div>

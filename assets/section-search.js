@@ -135,9 +135,9 @@ try{
         const newList = [];
 
         data.forEach((product, i) => {
-            const match = product.price.match(/£([\d.]+)/);
+            const match = product.price.match(/[\£\$\€]([\d.,]+)/);
             const price = parseFloat(match[1]);
- 
+
             if (size && !(product.variants.some(item => item.title.toLocaleLowerCase() == size && item.available))) return
             if (!(product.collections.some(collection => collection == handle || !handle))) return;
             if (!(product.collections.some(collection => collection == features || !features))) return;
@@ -205,14 +205,13 @@ try{
                                 }
                             </select>
                             <button class="section-glove__button">
-                                SHOP NOW | ${item.price}
+                                QUICK BUY | ${item.price}
                             </button>
                         </div>
                     </div>
                 </div>
             `;
         });
-
 
         document.querySelectorAll(".section-glove__button").forEach((item, i) => {
             item.addEventListener("click", async (e) => {
@@ -543,5 +542,6 @@ try{
     changeProducts();
     changeTags();
 }catch(e){
+    debugger
     console.error(e)
 }

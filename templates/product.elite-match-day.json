@@ -189,7 +189,8 @@
         "339d7fd4-cab4-4784-961a-57defc90cb4e"
       ],
       "custom_css": [
-        ".product__info-wrapper .product-form__input {justify-content: flex-start;}"
+        ".product__info-wrapper .product-form__input {justify-content: flex-start;}",
+        ".pack__list-wrapper{display: none;}"
       ],
       "settings": {
         "desktopTabs": false,
@@ -557,6 +558,7 @@
       ],
       "settings": {
         "title": "Customers Also Brought",
+        "style": false,
         "heading_size": "h1",
         "description": "",
         "show_description": false,

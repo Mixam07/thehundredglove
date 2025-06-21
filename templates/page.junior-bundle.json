@@ -1,0 +1,768 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_NbiQwE": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_hiKtYG": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE BUNDLE ALL YOUNG KEEPERS NEED",
+            "heading_size": "h1"
+          }
+        },
+        "text_a83PFn": {
+          "type": "text",
+          "settings": {
+            "text": "Build Your Perfect Glove Bundle and Save Big",
+            "text_style": "body"
+          }
+        },
+        "icon_with_text_NQz7GK": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "check_mark",
+            "image_1": "shopify://shop_images/red_background-checkbox-min.png",
+            "heading_1": "ELITE GLOVES FOR JUNIORS",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/red_background-checkbox-min.png",
+            "heading_2": "BUILT FOR HARD PITCHES",
+            "icon_3": "truck",
+            "image_3": "shopify://shop_images/red_background-checkbox-min.png",
+            "heading_3": "ONE SIMPLE BUNDLE",
+            "heading_4": ""
+          }
+        },
+        "buttons_aELMzH": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "CHOOSE YOUR GLOVE",
+            "button_link_1": "#build-bundle-product",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hiKtYG",
+        "text_a83PFn",
+        "icon_with_text_NQz7GK",
+        "buttons_aELMzH"
+      ],
+      "custom_css": [
+        ".banner__box h1 {font-size: 48px !important; line-height: 50px !important;}",
+        ".banner__text {margin: 1rem 0 0 0 !important;}",
+        ".banner__content * {color: #fff;}",
+        "@media (max-width: 749px) {.banner__heading {font-size: 30px; max-width: 100%; margin: 0 auto; text-align: center; } .banner__box h1 {font-size: 28px !important; line-height: 30px !important; } .banner__box {margin-top: 250px; } .banner__text {display: none; } .icon-with-text, .banner__box {display: flex; flex-direction: column; align-items: center; }}"
+      ],
+      "settings": {
+        "customClass": "",
+        "show_badge": true,
+        "badge_text": "Trusted By 20,000+ Goalkeepers",
+        "toptitle_text": "",
+        "color_toptitle": "#ffffff",
+        "image": "shopify://shop_images/a0a392cc320a2724021391f757608571e043df42.png",
+        "imagemobile": "shopify://shop_images/fc9f90ca9529538736ea195406767e49496b13c7.png",
+        "moveBanner": false,
+        "body_text": "#ffffff",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "product_track_93KQk8": {
+      "type": "product-track",
+      "settings": {
+        "text_field": "ELEVATE YOUR GAME",
+        "text_field2": "ELEVATE YOUR GAME",
+        "text_field3": "ELEVATE YOUR GAME"
+      }
+    },
+    "image_with_text_FDbqjR": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_content_wFeAjM": {
+          "type": "image_content",
+          "settings": {
+            "content_image": "shopify://shop_images/Group_39827.png",
+            "title": "Pro-level gloves as standard",
+            "description": "Proper grip, proper materials. The same latex trusted by older academy keepers — built to actually perform."
+          }
+        },
+        "image_content_ziMAUA": {
+          "type": "image_content",
+          "settings": {
+            "content_image": "shopify://shop_images/Group_39828.png",
+            "title": "Protection that matters",
+            "description": "Summer pitches are brutal. Our full padded kit absorbs impact and keeps them diving confidently on any surface."
+          }
+        },
+        "image_content_WgkxQh": {
+          "type": "image_content",
+          "settings": {
+            "content_image": "shopify://shop_images/Group_39829.png",
+            "title": "More for your money",
+            "description": "Get everything in one hit — gloves, padded kit, and accessories — without paying over the odds piece by piece."
+          }
+        },
+        "image_content_bUAW7C": {
+          "type": "image_content",
+          "settings": {
+            "content_image": "shopify://shop_images/Group_39830.png",
+            "title": "Trusted by thousands",
+            "description": "Already worn by over 25,000 goalkeepers. Parents know they’re getting proper kit, without cutting corners."
+          }
+        }
+      },
+      "block_order": [
+        "image_content_wFeAjM",
+        "image_content_ziMAUA",
+        "image_content_WgkxQh",
+        "image_content_bUAW7C"
+      ],
+      "custom_css": [
+        ".image-with-text__media {border: none;}",
+        ".image-with-text__media img {aspect-ratio: 500 / 450; height: auto !important;}",
+        ".image-with-text {max-width: 1400px;}",
+        "@media (max-width: 999px) {.image-with-text__content {display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0; } .image_content-wrap h5 {text-align: center; } .image-with-text__content--mobile-center > * {align-self: unset; margin-top: 0; } .image-with-text__media-item img {aspect-ratio: 1 / 1; } h2 {text-align: center; }}"
+      ],
+      "settings": {
+        "customClass": "",
+        "title": "WHY PARENTS ARE PICKING THE ACADEMY PACK THIS PRE-SEASON",
+        "heading_size": "h1",
+        "button_url": "#build-bundle-product",
+        "button_text": "Shop now",
+        "button_subtext": "Try 100% Risk Free with Our 10 Game Guarantee",
+        "image": "shopify://shop_images/94410c20bc992492f86db31ff5545b47a7efee00.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_bundle_information_8H4PtX": {
+      "type": "section-bundle-information",
+      "name": "section-bundle-info",
+      "settings": {}
+    },
+    "section_bundle_GrygX7": {
+      "type": "section-bundle",
+      "name": "section-bundle",
+      "settings": {
+        "collection_1": "gloves",
+        "collection_2": "clothings",
+        "collection_3": "accessories",
+        "page_1": "glove-size-img",
+        "page_2": "short-size",
+        "page_3": "top-size",
+        "page_4": "trouser-size",
+        "link": ""
+      }
+    },
+    "section_bundle_content_78qGPL": {
+      "type": "section-bundle-content",
+      "blocks": {
+        "row_DwdTGx": {
+          "type": "row",
+          "settings": {
+            "content-image": "shopify://shop_images/MPH-02243.png",
+            "content-title": "1 — Pro-Grade Gloves. No Downgrades.",
+            "content-description": "The same quality latex trusted by older academy keepers. We don’t cut corners just because they’re younger."
+          }
+        },
+        "row_UA4BDY": {
+          "type": "row",
+          "settings": {
+            "content-image": "shopify://shop_images/MPH-02546.png",
+            "content-title": "2 — Full-Season Protection Built In.",
+            "content-description": "Growing keepers hit the ground — literally. Our padded kit absorbs impact on hard summer pitches."
+          }
+        },
+        "row_A64fRx": {
+          "type": "row",
+          "settings": {
+            "content-image": "shopify://shop_images/MPH-02365.png",
+            "content-title": "3 — Better Value.Less Headache.",
+            "content-description": "One bundle sorts gloves, kit, and accessories — without mixing brands or paying 2-3x by buying individually."
+          }
+        }
+      },
+      "block_order": [
+        "row_DwdTGx",
+        "row_UA4BDY",
+        "row_A64fRx"
+      ],
+      "disabled": true,
+      "name": "section-bundle-content",
+      "settings": {}
+    },
+    "section_bundle_reviews_Tn8dbY": {
+      "type": "section-bundle-reviews",
+      "blocks": {
+        "row_mdLmwQ": {
+          "type": "row",
+          "settings": {
+            "content-image": "shopify://shop_images/4-1_win_today_first_game_in_my_new_thehundredglove_gloves_they_felt_awesome._To_cap_it_all_got_MOTM_from_other_coach._Today_s_performance_was_SOLID_thehundredglove_thehundredclub_thac.jpg",
+            "content-title": "My son loves the gloves.",
+            "content-description": "My son loves the gloves. Since we bought him his 1st pair he doesn't want any other gloves, delivery was quick. Highly recommended if you want good quality goalie gloves",
+            "content-name": "Agnieszka B"
+          }
+        },
+        "row_qgJkxj": {
+          "type": "row",
+          "settings": {
+            "content-image": "shopify://shop_images/jojogonzalez_2014_.._goalkeeper_football_goalkeepertraining_soccer_goalkeepers_goalkeepergloves_goalkeepersaves_goalkeeperlife_portero_gk_goalie_goleiro_keeper_goalkeepercoach_goalkee_e0ba760f-db69-40b9-af3f-2b38b006c91c.jpg",
+            "content-title": "Well done!",
+            "content-description": "My son plays U7s in MJPL and SDYFL, and it's been tough finding well-fitting goalie gear—until we tried Hundred Glove. The fit and quality are spot on. Far better than other brands we've used. Well done!",
+            "content-name": "ADAM S"
+          }
+        },
+        "row_xQGb3r": {
+          "type": "row",
+          "settings": {
+            "content-image": "shopify://shop_images/1st_game_of_the_season_started_with_a_good_performance_from_the_girls._Can_t_wait_to_see_how_well_we_do_throughout_the_season_the_girls_outfield_are_amazing._Looking_forward_to_next_w.jpg",
+            "content-title": "Extremely fantastic quality!",
+            "content-description": "Extremely fantastic quality! My daughter loves the gloves and they arrived much earlier than we expected. The grip is outstanding as is the fitting well done, making the best gloves on the market",
+            "content-name": "LIAM B"
+          }
+        },
+        "row_4kaX8Q": {
+          "type": "row",
+          "settings": {
+            "content-image": "shopify://shop_images/Staying_focussed_in_today_s_matches_for_millwallfc_wearing_my_thehundredglove_Sentinels._millwall_academyfootball_goalkeeper_topkeeper_thehundredglove.jpg",
+            "content-title": "TOP-NOTCH GEAR!",
+            "content-description": "Top-notch gear! My son couldn’t be happier with the gloves — they offer amazing grip and feel really secure. Delivery was quick, and the sizing is just right. Highly recommend!",
+            "content-name": "James Turner"
+          }
+        }
+      },
+      "block_order": [
+        "row_mdLmwQ",
+        "row_qgJkxj",
+        "row_xQGb3r",
+        "row_4kaX8Q"
+      ],
+      "name": "section-bundle-reviews",
+      "settings": {}
+    },
+    "section_bundle_advantages_PdyzWr": {
+      "type": "section-bundle-advantages",
+      "name": "section-bundle-advantages",
+      "settings": {}
+    },
+    "section_bundle_video_NDmp3Y": {
+      "type": "section-bundle-video",
+      "blocks": {
+        "row_bzjWEM": {
+          "type": "row",
+          "settings": {
+            "content-video": "https://cdn.shopify.com/videos/c/o/v/95c31eafd85c42d686ef4436d0e8c84a.mov",
+            "content-poster": "shopify://shop_images/2_a.png",
+            "content-image": "shopify://shop_images/1.png",
+            "content-title": "Michael",
+            "content-description": "Parent of U12 Keeper"
+          }
+        },
+        "row_QwGfFX": {
+          "type": "row",
+          "settings": {
+            "content-video": "https://cdn.shopify.com/videos/c/o/v/fa7195509c48435f9b22d3036bfd038d.mov",
+            "content-poster": "shopify://shop_images/1_a.png",
+            "content-image": "shopify://shop_images/2_0c60c5a2-7ba5-4494-898d-1805d4231b17.png",
+            "content-title": "Liza",
+            "content-description": "Parent of U12 Keeper"
+          }
+        }
+      },
+      "block_order": [
+        "row_bzjWEM",
+        "row_QwGfFX"
+      ],
+      "name": "section-bundle-video",
+      "settings": {
+        "is_centered": true
+      }
+    },
+    "image_banner_tBegLG": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_ytAxKH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "heading_size": "h2"
+          }
+        },
+        "text_HT784J": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "I grew tired of overpaying for gloves that didn't meet my performance needs. Determined to find a better solution, I founded The Hundred Glove to revolutionise the goalkeeping industry. Our mission is simple: provide top of the range gloves that combine cutting-edge technology, ergonomic design, and affordability. Every goalkeeper deserves the best equipment to excel on the field without breaking the bank. Join us in redefining what it means to be a goalkeeper with gloves crafted for champions, built to last, and designed to enhance every save.",
+            "text_style": "body"
+          }
+        },
+        "richtext_eNFcRd": {
+          "type": "richtext",
+          "settings": {
+            "heading": "<p>I grew tired of overpaying for gloves that didn't meet my performance needs. Determined to find a better solution, I founded The Hundred Glove to revolutionise the goalkeeping industry. </p><p>Our mission is simple: provide top of the range gloves that combine cutting-edge technology, ergonomic design, and affordability. Every goalkeeper deserves the best equipment to excel on the field without breaking the bank. </p><p>Join us in redefining what it means to be a goalkeeper with gloves crafted for champions, built to last, and designed to enhance every save.</p>"
+          }
+        },
+        "buttons_V83aJg": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "#build-bundle-product",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ytAxKH",
+        "text_HT784J",
+        "richtext_eNFcRd",
+        "buttons_V83aJg"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media (max-width: 999px) {.banner:not(.banner--mobile-bottom) .banner__box {background: #fff; color: #121212; margin-top: 500px; } .banner__heading {color: #121212 !important; text-align: center; } .banner__text p {color: #121212 !important; } .media > img {object-position: top center; height: auto; }}"
+      ],
+      "settings": {
+        "customClass": "",
+        "show_badge": false,
+        "badge_text": "",
+        "toptitle_text": "",
+        "color_toptitle": "#000000",
+        "image": "shopify://shop_images/Group_64.png",
+        "imagemobile": "shopify://shop_images/Our_Story_compressed_1.jpg",
+        "moveBanner": false,
+        "body_text": "#ffffff",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "section_bundle_story_r3Y7yc": {
+      "type": "section-bundle-story",
+      "name": "section-bundle-story",
+      "settings": {}
+    },
+    "section_bundle_service_3UfdAX": {
+      "type": "section-bundle-service",
+      "name": "section-bundle-service",
+      "settings": {}
+    },
+    "section_bundle_text_YeJzjQ": {
+      "type": "section-bundle-text",
+      "name": "section-bundle-text",
+      "settings": {}
+    },
+    "section_help_faq_parJLn": {
+      "type": "section-help-faq",
+      "blocks": {
+        "row_RhENRF": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What sizes should I order?",
+            "faq-description": "Our sizing is simple — you’ll choose glove, top, shorts and trousers sizes during the bundle build. If you’re unsure, you can check our size guide before ordering."
+          }
+        },
+        "row_kzpNjX": {
+          "type": "row",
+          "settings": {
+            "faq-title": "What if I order the wrong size?",
+            "faq-description": "No problem. As long as items are unused and the glove film is still on, we offer easy size exchanges."
+          }
+        },
+        "row_Qp4JHi": {
+          "type": "row",
+          "settings": {
+            "faq-title": "How long does delivery take?",
+            "faq-description": "We ship almost every order within 24 hours. Most orders arrive in 1–3 business days depending on location."
+          }
+        },
+        "row_mBYbV9": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Are the gloves different for juniors?",
+            "faq-description": "No. We don’t downgrade for juniors — all gloves use the same pro-grade latex as our senior models."
+          }
+        },
+        "row_VrLyWG": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Is there any extra cost at delivery?",
+            "faq-description": "No hidden charges. For European customers, all taxes and duties are covered upfront."
+          }
+        },
+        "row_kYnhBr": {
+          "type": "row",
+          "settings": {
+            "faq-title": "Will the gear last a full season?",
+            "faq-description": "That’s exactly what it’s built for. Durable gloves, padded kit, and proper stitching designed for weekly training and match days."
+          }
+        }
+      },
+      "block_order": [
+        "row_RhENRF",
+        "row_kzpNjX",
+        "row_Qp4JHi",
+        "row_mBYbV9",
+        "row_VrLyWG",
+        "row_kYnhBr"
+      ],
+      "name": "section-help-faq",
+      "settings": {}
+    },
+    "nw_faq_section_E3FxJH": {
+      "type": "nw-faq-section",
+      "blocks": {
+        "slide_XtgB7L": {
+          "type": "slide",
+          "settings": {
+            "title": "Are all of your gloves durable?",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
+          }
+        },
+        "slide_cj6Hm6": {
+          "type": "slide",
+          "settings": {
+            "title": "How do you ensure both outstanding grip + durability?",
+            "text": "We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability."
+          }
+        },
+        "slide_kGnE7z": {
+          "type": "slide",
+          "settings": {
+            "title": "How long is the risk free guarantee?",
+            "text": "Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked."
+          }
+        },
+        "slide_aPpca6": {
+          "type": "slide",
+          "settings": {
+            "title": "Do all of your gloves fit true to size?",
+            "text": "They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available."
+          }
+        }
+      },
+      "block_order": [
+        "slide_XtgB7L",
+        "slide_cj6Hm6",
+        "slide_kGnE7z",
+        "slide_aPpca6"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": ""
+      }
+    },
+    "guarantee_anKzdL": {
+      "type": "guarantee",
+      "disabled": true,
+      "settings": {
+        "image_background": "shopify://shop_images/Group_65.png",
+        "title": "<p>10 Game Guarantee</p>",
+        "text": "<p>We’re all about delivering gloves that perform as hard as you do. At The Hundred Glove, we back our gear with a 10 Game Guarantee because we believe in the quality and durability of our gloves.</p><p>No fluff, no nonsense—just gloves built to help you make every save count. If they don’t meet your expectations within the first 10 games, we’ve got you covered.</p>"
+      }
+    },
+    "multicolumn_hHHdMa": {
+      "type": "nw-multicolumn",
+      "blocks": {
+        "column_A3rmya": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/maximum-min.png",
+            "title": "Maximum Comfort",
+            "text": "<p>Ergonomically designed to fit perfectly, reducing hand fatigue during intense play.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dCCeAB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/breathable-min.png",
+            "title": "Breathable Design",
+            "text": "<p>Ventilation technology keeps your hands cool and dry during intense matches.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cPCX7U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/internal-min.png",
+            "title": "Internal Grip Technology",
+            "text": "<p>Internal grip technology ensures your hand stays secure inside the glove for better control.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RmNMjL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/trust-min.png",
+            "title": "Trusted by 15,000+ Goalkeepers",
+            "text": "<p>Trusted by 15,000+ Goalkeepers</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_A3rmya",
+        "column_dCCeAB",
+        "column_cPCX7U",
+        "column_RmNMjL"
+      ],
+      "disabled": true,
+      "settings": {
+        "customClass": "",
+        "title": "But There’s More…",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "button_subtext": "Button Sub Text",
+        "color_scheme": "scheme-1a602c24-b3d2-462a-9548-14ae0313cd4e",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_EjaxJj": {
+      "type": "nw-multicolumn",
+      "blocks": {
+        "column_KPWebX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/task_check.png",
+            "title": "Step 1: Select Your Model",
+            "text": "<p>Explore our elite collection and choose the model that aligns with your style and needs. Each glove is designed to boost your game.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7qYpxK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ruler.png",
+            "title": "Step 2: Measure Your Hand",
+            "text": "<p>Measure from the tip of your middle finger to the bottom of your palm. Use our sizing guide for the perfect fit, ensuring optimal performance.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jKULdB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/smile.png",
+            "title": "Step 3: Experience the Difference",
+            "text": "<p>Feel the superior grip, comfort, and durability with every save. Our gloves are engineered for excellence, empowering you to dominate the game.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_KPWebX",
+        "column_7qYpxK",
+        "column_jKULdB"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media (max-width: 999px) {.multicolumn .title {text-align: center; }}"
+      ],
+      "settings": {
+        "customClass": "find_fit",
+        "title": "Find Your Perfect Fit in Three Easy Steps",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "SHOP NOW",
+        "button_link": "#build-bundle-product",
+        "button_subtext": "Try 100% Risk Free with Our 10 Game Guarantee",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 80
+      }
+    },
+    "image_banner_gAEDJc": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_WwV9Cq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ready To Join The Hundred Club?",
+            "heading_size": "h2"
+          }
+        },
+        "text_bB9cNb": {
+          "type": "text",
+          "settings": {
+            "text": "Ready to Join the Upper Echelon of Goalkeeping? Buy now for superior grip, precision, and comfort",
+            "text_style": "body"
+          }
+        },
+        "buttons_7BT6FN": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "shop the hundred glove",
+            "button_link_1": "#build-bundle-product",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_WwV9Cq",
+        "text_bB9cNb",
+        "buttons_7BT6FN"
+      ],
+      "disabled": true,
+      "settings": {
+        "customClass": "ready-join",
+        "show_badge": false,
+        "badge_text": "",
+        "toptitle_text": "",
+        "color_toptitle": "#ffffff",
+        "image": "shopify://shop_images/landing-join-min.jpg",
+        "imagemobile": "shopify://shop_images/landing-join_mob-min.jpg",
+        "moveBanner": false,
+        "body_text": "#ffffff",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-4941ad48-5d78-467b-a95c-5b4b49397b5c",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "1728910141cd7d7a33": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_fJt9ei": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        },
+        "gsc_countdown_timer_countdown_qiECB8": {
+          "type": "shopify://apps/gsc-countdown-timer/blocks/countdown/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+          "disabled": true,
+          "settings": {
+            "widget_id": "GSC-BAR-lqDmHCFahgJo"
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_fJt9ei",
+        "gsc_countdown_timer_countdown_qiECB8"
+      ],
+      "custom_css": [
+        ".essential_annoucement_bar_wrapper {display: none;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_MPmBiV": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.footer__content-top,header-drawer,.menu-drawer-container{\ndisplay:none!important;\n}\n@media(max-width: 999px){\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_NbiQwE",
+    "product_track_93KQk8",
+    "image_with_text_FDbqjR",
+    "section_bundle_information_8H4PtX",
+    "section_bundle_GrygX7",
+    "section_bundle_content_78qGPL",
+    "section_bundle_reviews_Tn8dbY",
+    "section_bundle_advantages_PdyzWr",
+    "section_bundle_video_NDmp3Y",
+    "image_banner_tBegLG",
+    "section_bundle_story_r3Y7yc",
+    "section_bundle_service_3UfdAX",
+    "section_bundle_text_YeJzjQ",
+    "section_help_faq_parJLn",
+    "nw_faq_section_E3FxJH",
+    "guarantee_anKzdL",
+    "multicolumn_hHHdMa",
+    "multicolumn_EjaxJj",
+    "image_banner_gAEDJc",
+    "1728910141cd7d7a33",
+    "custom_liquid_MPmBiV"
+  ]
+}

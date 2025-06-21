@@ -106,7 +106,7 @@
                                 <img
                                     class="w-full h-full object-contain"
                                     alt="{{ product.title }}"
-                                    src="{{ product.images.first | img_url: 'master' }}"
+                                    src="{{ product.images.first | img_url: 'medium' }}"
                                 >
                             </div>
                             <button
@@ -128,7 +128,7 @@
                                 <div class="popup-images">
                                     {% for image in product.images %}
                                         <img
-                                            src="{{ image | img_url: 'master' }}"
+                                            src="{{ image | img_url: 'medium' }}"
                                             alt="Product image {{ forloop.index }}"
                                             class="popup-image"
                                         >
@@ -278,7 +278,7 @@
                                         data-product-id="{{ product.id }}"
                                         data-product-title="{{ product.title }}"
                                         data-product-type="{{ product.metafields.custom.glove_type }}"
-                                        data-product-image="{{ product.images.first | img_url: 'master' }}"
+                                        data-product-image="{{ product.images.first | img_url: 'medium' }}"
                                     >
                                         Add to Bundle
                                     </button>

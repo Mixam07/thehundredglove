@@ -34,12 +34,12 @@
 
 <style>
     .banner{
-        background: url("{{ section.settings.banner-background-photo | img_url: "master" }}")50% 50%/cover no-repeat;
+        background: url("{{ section.settings.banner-background-photo | img_url: 'master' }}")50% 50%/cover no-repeat;
     }
 
     @media (max-width: 762px) {
         .banner{
-            background: url("{{ section.settings.banner-photo | img_url: "master" }}")50% 50%/cover no-repeat;
+            background: url("{{ section.settings.banner-photo | img_url: 'master' }}")50% 50%/cover no-repeat;
         }
     }
 </style>

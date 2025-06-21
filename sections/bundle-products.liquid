@@ -1,10 +1,9 @@
 {{ 'section-bundle.css' | asset_url | stylesheet_tag }}
-{{ 'section-bundle-products.css' | asset_url | stylesheet_tag }}
 {{ 'section-glove.css' | asset_url | stylesheet_tag }}
-{{ 'personalization.css' | asset_url | stylesheet_tag }}
 {{ 'bundle-products.css' | asset_url | stylesheet_tag }}
 {{ 'section-bundle-glove.css' | asset_url | stylesheet_tag }}
 {{ 'section-popup.css' | asset_url | stylesheet_tag }}
+
 
 <style>
   .upcart-product-title-link{
@@ -18,33 +17,25 @@
   #tidio-chat{
         display: none !important;
     }
-</style>
+  .header--middle-left{
+    grid-template-areas: "heading icons";
+    grid-template-columns: 1fr 1fr;
+  }
+  .button-menu,
+  .header__inline-menu{
+    display: none;
+  }
 
-<div class="fixed top-0 left-0 w-full bg-white z-[1000] hidden">
-  <div class="page-width flex justify-between py-[25px] px-[30px]">
-    <a href="/">
-      <img src="{{ 'logo-black.svg' | asset_url }}" alt="">
-    </a>
-    <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {%- liquid
-          if cart == empty
-            render 'icon-cart-empty'
-          else
-            render 'icon-cart'
-          endif
-        -%}
-        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
-      </a>
-  </div>
-</div>
+  .header__heading-logo-wrapper{
+    width: 60px;
+  }
+
+  @media (max-width: 768px){
+    .my-sticky{
+      z-index: 100000002 !important;
+    }
+  }
+</style>
 
 <script src="https://cdn.tailwindcss.com"></script>
 {% assign url_path = request.path %}
@@ -197,7 +188,7 @@
                             data-variant-id="{{ product.variants.first.id }}"
                             data-product-title="{{ product.title }}"
                             data-product-type="{{ product.type }}"
-                            data-product-image="{{ product.featured_image | img_url: 'master' }}"
+                            data-product-image="{{ product.featured_image | img_url: 'medium' }}"
                           >Add to Bundle</button>
                         </div>
 
@@ -216,129 +207,6 @@
               Step 1: Choose bundle size
             </div>
             <div class="flex flex-col min-h-0">
-              <!--
-              <div class="flex flex-col gap-4 md:flex-row mt-[20px] gapFix">
-                {% assign boxes = shop.metaobjects.box_products.values | reverse %}
-                {% for box in boxes %}
-                  {% liquid
-                    assign opacity = 75
-                    assign boxCheck = false
-                    assign borderWidth = 0
-                    assign borderColor = ''
-                    assign selectedClass = 'bundle_option'
-                    assign lower_box_size = box_size | downcase | strip
-                    assign lower_box_title = box.title | downcase | strip
-                    if forloop.last
-                      assign opacity = 100
-                      assign borderWidth = 1
-                      assign borderColor = '#D75555'
-                      assign boxCheck = 'checked'
-                      assign selectedClass = 'bundle_option selected'
-                    endif
-                  %}
-                  <div data-plan class="w-full align-middle peer-disabled:cursor-not-allowed min-w-48 {{ selectedClass }}">
-                    <label for="{{ box.title | downcase }}">
-                      <div
-                        style="text-align:center;padding:7px;"
-                        class="relative border shadow-sm px-4 py-[20px] w-full group/radio items-center gap-1 text-sm transition-all duration-200 justify-between bg-card border-muted-foreground text-muted-foreground bg-[#ffffffb3] rounded-t-[6px] hover:bg-accent cursor-pointer"
-                      >
-                        {% if box.poppins %}
-                          <div
-                            style="text-align:center;"
-                            class="left-[50%] -translate-x-[50%] w-full max-w-[90%] mx-auto absolute text-center text-[16px] font-[600] leading-[22px] text-white -top-[27px] bg-[{{ box.poppins_background }}] p-[6px] rounded-[6px]"
-                          >
-                            {{ box.poppins }}
-                          </div>
-                        {% endif %}
-                        <div class="flex items-start justify-between w-full gap-4 text-lg  text-foreground">
-                          <div class="w-full">
-                            <div
-                              class="w-full inline-flex items-center gap-2 justify-between"
-                              style="justify-content: center;"
-                            >
-                              <div class="inline-flex items-end gap-2">
-                                <div class="mb-1 overflow-hidden text-uppercase text-[20px] leading-[28px] font-[500] text-[#121212] sibtextcts">
-                                  {{ box.allowed_items }}
-                                  {% if box.allowed_items == 1 %}
-                                    Pair
-                                  {% else %}
-                                    Pairs
-                                  {% endif %}
-                                </div>
-                              </div>
-                              <div class="relative relativeCUSTOM w-[24px] h-[24px]" style="width:0;">
-                                <input
-                                  style="opacity:0;"
-                                  type="radio"
-                                  title="{{ box.title | downcase }}"
-                                  id="{{ box.title | downcase }}"
-                                  name="boxType"
-                                  {% if forloop.last %}
-                                    checked
-                                  {% endif %}
-                                  class="w-[24px] h-[24px]"
-                                  value="{{ box.title | downcase }}"
-                                >
-                                <span></span>
-                              </div>
-                            </div>
-
-                            {% if forloop.index == 1 %}
-                              <img
-                                src="https://cdn.shopify.com/s/files/1/0667/5877/0944/t/55/assets/27%20(1).png?v=1733250952"
-                                style="width: 100%;aspect-ratio: 1 / 1;margin-top: -10px;object-fit: cover;"
-                              >
-                            {% endif %}
-                            {% if forloop.index == 2 %}
-                              <img
-                                src="https://cdn.shopify.com/s/files/1/0667/5877/0944/t/55/assets/White%20Blue%20Gloves.png?v=1733252178"
-                                style="width: 100%;aspect-ratio: 1 / 1;margin-top: -10px;object-fit: cover;"
-                              >
-                            {% endif %}
-                            {% if forloop.index == 3 %}
-                              <img
-                                src="https://cdn.shopify.com/s/files/1/0667/5877/0944/t/55/assets/26.png?v=1733252231"
-                                style="width: 100%;aspect-ratio: 1 / 1;margin-top: -10px;object-fit: cover;"
-                              >
-                            {% endif %}
-                          </div>
-                        </div>
-                        {% if box.description %}
-                          <div class="mt-[12px] text-[14px] font-[400] text-[#121212b3]">{{ box.description }}</div>
-                        {% endif %}
-                        {% if box.price %}
-                          {% comment %}
-                            <div class="mt-[6px] text-[18px] font-[400] text-[#121212]">
-                              {{ box.price | times: 100 | money }}
-                            </div>
-                          {% endcomment %}
-                        {% endif %}
-                        {% if box.sale_price %}
-                          <div
-                            class="mt-[20px] text-[14px] font-[400] text-[#12121299]"
-                            style="margin:0;margin-top:4px;"
-                          >
-                            {% if forloop.index == 1 %}
-                              <span class="money-mm"> Regular Price </span>
-                            {% else %}
-                              <span class="money-mm">
-                                {{ box.sale_price | times: 100 | money -}}
-                                /pair</span
-                              >
-                            {% endif %}
-                          </div>
-                        {% endif %}
-                      </div>
-                      {% if box.save_price_text %}
-                        <div class="bg-[#D75555] text-center p-[7px] mt-0 text-white text-[16px] rounded-b-[6px] ">
-                          {{ box.save_price_text }}
-                        </div>
-                      {% endif %}
-                    </label>
-                  </div>
-                {% endfor %}
-              </div>
-              -->
               <ul class="section-product__products">
                   <li class="section-product__item">
                       <h3 class="section-product__item-title">1 Pair</h3>
@@ -346,10 +214,9 @@
                           <img src="{{ section.settings.glove-1-pair-photo | img_url: 'original' }}" alt="pair">
                       </div>
                       <div class="section-product__item-wrapper">
-                          <p class="section-product__item-price">{{ section.settings.glove-1-pair-price  }}</p>
-                          <p class="section-product__item-discount">
+                          <p class="section-product__item-price">
                             {% if cart.currency.iso_code == "USD" %}
-                                $91.00
+                                $89.99
                             {% elsif cart.currency.iso_code == "EUR" %}
                                 €62.21
                             {% else %}
@@ -365,8 +232,7 @@
                           <img src="{{ section.settings.glove-2-pair-photo | img_url: 'original' }}" alt="pair">
                       </div>
                       <div class="section-product__item-wrapper">
-                          <p class="section-product__item-price">{{ section.settings.glove-2-pair-price  }}</p>
-                          <p class="section-product__item-discount">
+                          <p class="section-product__item-price">
                             {% if cart.currency.iso_code == "USD" %}
                                 $129.99
                             {% elsif cart.currency.iso_code == "EUR" %}
@@ -375,6 +241,7 @@
                                 £90.00
                             {% endif %}
                           </p>
+                          <p class="section-product__item-discount"><span>SAVE</span> 25%</p>
                       </div>
                   </li>  
                   <li class="section-product__item active">
@@ -384,16 +251,16 @@
                           <img src="{{ section.settings.glove-3-pair-photo | img_url: 'original' }}" alt="pair">
                       </div>
                       <div class="section-product__item-wrapper">
-                          <p class="section-product__item-price">{{ section.settings.glove-3-pair-price  }}</p>
-                          <p class="section-product__item-discount">
+                          <p class="section-product__item-price">
                             {% if cart.currency.iso_code == "USD" %}
-                                $159.99
+                                $169.99
                             {% elsif cart.currency.iso_code == "EUR" %}
                                 €140.88
                             {% else %}
                                 £120
                             {% endif %}
                           </p>
+                          <p class="section-product__item-discount"><span>SAVE</span> 53%</p>
                       </div>
                   </li>  
               </ul>
@@ -406,7 +273,13 @@
                           <img src="{{ section.settings.glove-1-gift-photo | img_url: 'original' }}" alt="photo">
                       </div>
                       <h3 class="section-product__option-title">{{ section.settings.glove-1-gift-title }}</h3>
-                      <p class="section-product__option-discount">{{ section.settings.glove-1-gift-subtitle }}</p>
+                      <p class="section-product__option-discount">You saved
+                        {% if cart.currency.iso_code == "USD" %}
+                            $9.99
+                        {% else %}
+                            £7.00
+                        {% endif %}
+                      </p>
                       <div class="section-product__icon">
                           {% render 'gift-lock' %}
                       </div>
@@ -416,7 +289,12 @@
                           <img src="{{ section.settings.glove-2-gift-photo | img_url: 'original' }}" alt="photo">
                       </div>
                       <h3 class="section-product__option-title">{{ section.settings.glove-2-gift-title }}</h3>
-                      <p class="section-product__option-discount">{{ section.settings.glove-2-gift-subtitle }}</p>
+                      <p class="section-product__option-discount">You saved
+                        {% if cart.currency.iso_code == "USD" %}
+                            $19.99
+                        {% else %}
+                            £19.99
+                        {% endif %}</p>
                       <div class="section-product__icon">
                           {% render 'gift-lock' %}
                       </div>
@@ -426,7 +304,12 @@
                           <img src="{{ section.settings.glove-3-gift-photo | img_url: 'original' }}" alt="photo">
                       </div>
                       <h3 class="section-product__option-title">{{ section.settings.glove-3-gift-title }}</h3>
-                      <p class="section-product__option-discount">{{ section.settings.glove-3-gift-subtitle }}</p>
+                      <p class="section-product__option-discount">You saved
+                        {% if cart.currency.iso_code == "USD" %}
+                            $14.99
+                        {% else %}
+                            £9.99
+                        {% endif %}</p>
                       <div class="section-product__icon">
                           {% render 'gift-lock' %}
                       </div>
@@ -438,63 +321,6 @@
               </div>
 
               <div class="asdsasd" id="fixedpart">
-                <!--
-                <div class="giftsWrap">
-                  <h4 class="text-[24px] text-[#000000] text-center mt-[25px] mb-[20px] font-bold">
-                    Free Gifts with Your Order
-                  </h4>
-
-                  <div class="giftsWrapItems">
-                    <div class="giftsWrapItemsOneWrap">
-                      <span class="giftsWrapFree">Free <i>£7.00</i> </span>
-
-                      <div class="giftsWrapItemsOne">
-                        <div class="giftImgLock giftImgLock1">
-                          {% render 'gift-lock' %}
-                        </div>
-
-                        <div class="giftImgOpen giftImgOpen1">
-                          <img src="{{ 'gift-1.svg' | asset_url }}" alt="gift">
-                        </div>
-                      </div>
-
-                      <p class="giftsWrapItemsOneText">Free Shipping</p>
-                    </div>
-
-                    <div class="giftsWrapItemsOneWrap">
-                      <span class="giftsWrapFree">Free <i>£19.99</i> </span>
-
-                      <div class="giftsWrapItemsOne">
-                        <div class="giftImgLock giftImgLock2">
-                          {% render 'gift-lock' %}
-                        </div>
-
-                        <div class="giftImgOpen giftImgOpen2">
-                          <img src="{{ 'gift-2.svg' | asset_url }}" alt="gift">
-                        </div>
-                      </div>
-
-                      <p class="giftsWrapItemsOneText">Free Gift</p>
-                    </div>
-
-                    <div class="giftsWrapItemsOneWrap">
-                      <span class="giftsWrapFree">Free <i>£9.95</i> </span>
-
-                      <div class="giftsWrapItemsOne">
-                        <div class="giftImgLock giftImgLock3">
-                          {% render 'gift-lock' %}
-                        </div>
-
-                        <div class="giftImgOpen giftImgOpen3">
-                          <img src="{{ 'gift-3.svg' | asset_url }}" alt="gift">
-                        </div>
-                      </div>
-
-                      <p class="giftsWrapItemsOneText">Goalkeeper Workout Plan Ebook</p>
-                    </div>
-                  </div>
-                </div>
-                -->
                 <div class="my-sticky md:block flex justify-between items-center">
                   <h4 class="text-[24px] text-[#000000] text-center mt-[25px] mb-[20px] md:block hidden">Your Bundle</h4>
                   <div

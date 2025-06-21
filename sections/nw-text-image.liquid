@@ -184,7 +184,7 @@
             <div class="swiper-wrapper">
               {% for block in section.blocks %}
                 <div class="swiper-slide">
-                  <img data-src="{{ block.settings.image | img_url:'x200' }}" alt="img" class="lazy2 lazy3">
+                  <img src="{{ block.settings.image | img_url:'x200' }}" alt="img" class="lazy2 lazy3">
                 </div>
               {% endfor %}
             </div>
@@ -198,7 +198,7 @@
               {% for block in newBlocks %}
                 <div class="swiper-slide">
                   <img
-                    data-src="{{ block.settings.image | img_url:'x200' }}"
+                    src="{{ block.settings.image | img_url:'x200' }}"
                     alt="img"
                     class="lazy2 lazy3"
                     loading="lazy"

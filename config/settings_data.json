@@ -106,10 +106,10 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "CONNECT",
-    "social_facebook_link": "https://www.facebook.com/TheHundredGlove/",
-    "social_instagram_link": "https://www.instagram.com/thehundredglove/",
-    "social_youtube_link": "ttps://www.youtube.com/@thehundredglove3485/featured",
-    "social_tiktok_link": "https://www.tiktok.com/@thehundredglove",
+    "social_facebook_link": "https://www.facebook.com/hundredgk",
+    "social_instagram_link": "https://www.instagram.com/hundredgk",
+    "social_youtube_link": "ttps://www.youtube.com/@hundredgk",
+    "social_tiktok_link": "https://www.tiktok.com/@hundredgk",
     "social_twitter_link": "https://twitter.com/thehundredglove",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -381,11 +381,6 @@
         "disabled": false,
         "settings": {}
       },
-      "4372474792694305445": {
-        "type": "shopify://apps/also-bought/blocks/app-embed-block/b94b27b4-738d-4d92-9e60-43c22d1da3f2",
-        "disabled": false,
-        "settings": {}
-      },
       "1232542678405107163": {
         "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
         "disabled": false,
@@ -396,14 +391,14 @@
         "disabled": false,
         "settings": {}
       },
-      "14952540001915115444": {
-        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
-        "disabled": true,
-        "settings": {}
-      },
       "15557474716127144420": {
         "type": "shopify://apps/kaching-bundles/blocks/app-embed-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
         "disabled": true,
+        "settings": {}
+      },
+      "10840395464443086010": {
+        "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
+        "disabled": false,
         "settings": {}
       }
     },

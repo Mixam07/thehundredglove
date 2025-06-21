@@ -1,0 +1,147 @@
+.section-bundle-info{
+    padding: 50px 0;
+    background-color: #F0F0F0;
+}
+
+.section-bundle-info__title,
+.title-wrapper-with-link .title{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.title-wrapper-with-link .title{
+    margin: 0 !important;
+    max-width: 525px;
+    margin: 0 auto;
+}
+
+.section-bundle-info__items{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+    margin-bottom: 50px;
+}
+
+.section-bundle-info__item{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-bundle-info__caption{
+    text-transform: uppercase;
+    font-family: 'Anton' !important;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.section-bundle-info__description{
+    text-align: center;
+    margin: 0;
+    line-height: 22px;
+}
+
+.section-bundle-info__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-bundle-info__button{
+    background-color: #D75555;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section-bundle-info__text{
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+    column-gap: 5px;
+    margin: 0;
+}
+
+.button-menu{
+    display: none;
+}
+
+.header--middle-left{
+    grid-template-areas: "heading menu icons";
+    grid-template-columns: 100px 45px;
+}
+
+.header__inline-menu{
+    display: none;
+}
+
+@media (max-width: 762px) {
+    .section-bundle-info__items{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .section-bundle-info{
+        padding: 25px 0;
+    }
+
+    .section-bundle-info__title,
+    .title-wrapper-with-link .title{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .section-bundle-info__item img{
+        width: 75px;
+    }
+
+    .section-bundle-info__caption{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .section-bundle-info__description{
+        font-size: 14px;
+    }
+
+    .section-bundle-info__items{
+        margin-bottom: 30px;
+    }
+
+    .section-bundle-info__button{
+        padding: 5px 20px;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .section-bundle-info__text{
+        font-size: 12px;
+    }
+
+    .image_content-wrap div h5{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .image_content-wrap div span{
+        font-size: 12px;
+    }
+
+    .banner__box{
+        padding-bottom: 20px !important;
+    }
+
+    .custom-image_btn{
+        display: none;
+    }
+}

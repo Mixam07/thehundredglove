@@ -1,0 +1,80 @@
+{{ 'section-bundle-information.css' | asset_url | stylesheet_tag }}
+
+<style>
+  @media (min-width: 749px) {
+    .banner__box {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .banner{
+      min-height: 400px !important;
+    }
+
+    .header__inline-menu {
+      display: none !important;
+    }
+
+    .image-with-text__media {
+      padding: 0 !important;
+    }
+  }
+
+  @media (max-width: 749px) {
+    .image-with-text__media {
+      margin-bottom: -55px !important;
+    }
+    
+    .image-with-text__media-item {
+      display: none;
+    }
+  }
+
+  .custom-image_btn,
+  .essential_annoucement_bar_wrapper{
+    display: none !important;
+  }
+</style>
+
+<div class="page-width">
+    <h1 class="section-bundle-info__title">How to Build Your Bundle</h1>
+    <div class="section-bundle-info__items">
+        <div class="section-bundle-info__item">
+            <img src="{{ 'info-1.svg' | asset_url }}" alt="arrow" />
+            <p class="section-bundle-info__caption">1. Choose Your 5 Items</p>
+            <p class="section-bundle-info__description">Start by picking any 5 essentials from our goalkeeper range below - you have loads of options from Gloves, padded kit, base layers, accessories - it’s your call.</p>
+        </div>
+        <div class="section-bundle-info__item">
+            <img src="{{ 'info-2.svg' | asset_url }}" alt="arrow" />
+            <p class="section-bundle-info__caption">2. Customise Your Sizes</p>
+            <p class="section-bundle-info__description">Select the right size for each item — gloves, tops, bottoms. We make it easy to mix sizes across the bundle.</p>
+        </div>
+        <div class="section-bundle-info__item">
+            <img src="{{ 'info-3.svg' | asset_url }}" alt="arrow" />
+            <p class="section-bundle-info__caption">3. Review & Checkout</p>
+            <p class="section-bundle-info__description">Double-check your picks, lock in your bundle, and you’re done. £124.99 for the full setup — delivered to your door.</p>
+        </div>
+    </div>
+    <div class="section-bundle-info__wrap">
+        <a class="section-bundle-info__button" href="#build-bundle-product">BUILD THEIR BUNDLE →</a>
+        <p class="section-bundle-info__text">
+            <img src="{{ 'verified_black.svg' | asset_url }}" alt="arrow" />
+            10 Game Guarantee
+        </p>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "section-bundle-info",
+        "tag": "section",
+        "class": "section-bundle-info",
+        "settings": [
+        ],
+        "presets" : [
+            {
+                "name" : "section-bundle-info",
+                "category" : "Custom"
+            }
+        ]
+    }
+{% endschema %}

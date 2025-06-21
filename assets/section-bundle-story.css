@@ -1,0 +1,102 @@
+.section-bundle-story{
+    background: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Untitled_design_1_bf4a73de-4eca-4389-9539-3c6be132ecec.jpg?v=1750324142") center/cover no-repeat;
+    padding-top: 95px;
+    padding-bottom: 50px;
+    color: #fff;
+}
+
+.section-bundle-story__wrapper{
+    max-width: 650px;
+}
+
+.section-bundle-story__title{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+    color: #fff;
+}
+
+.section-bundle-story__description{
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.section-bundle-story__description:last-child{
+    margin: 0;
+}
+
+.section-bundle-story__name{
+    margin: 35px 0;
+    font-weight: 700;
+}
+
+.section-bundle-story__button{
+    background-color: #D75555;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Arial" !important;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-bundle-story__wrap{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-bundle-story__text{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 750px) {
+    .section-bundle-story{
+        background-image: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Hero_Section_Mobile_1_2.jpg?v=1750324142");
+        padding-top: 350px;
+        padding-bottom: 20px;
+    }
+
+    .section-bundle-story__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-bundle-story__title{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .section-bundle-story__description{
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+
+    .section-bundle-story__name{
+        margin: 15px 0;
+    }
+
+    .section-bundle-story__name{
+        font-size: 14px;
+    }
+
+    .section-bundle-story__button{
+        font-size: 14px;
+        padding: 5px 20px;
+        margin-bottom: 5px;
+    }
+
+    .section-bundle-story__text{
+        font-size: 12px;
+    }
+}

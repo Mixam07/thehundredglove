@@ -1,0 +1,104 @@
+{{ 'section-bundle-content.css' | asset_url | stylesheet_tag }}
+
+<style>
+  @media (min-width: 749px) {
+    .banner__box {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .banner{
+      min-height: 400px !important;
+    }
+
+    .header__inline-menu {
+      display: none !important;
+    }
+
+    .image-with-text__media {
+      padding: 0 !important;
+    }
+  }
+
+  @media (max-width: 749px) {
+    .image-with-text__media {
+      margin-bottom: -55px !important;
+    }
+    
+    .image-with-text__media-item {
+      display: none;
+    }
+  }
+
+  .custom-image_btn{
+    display: none;
+  }
+</style>
+
+<div class="page-width">
+    <h1 class="section-bundle-content__title">3 Reasons Parents Pick The Academy Pack</h1>
+    <div class="section-bundle-content__wrapper">
+        {% for block in section.blocks %}
+            {% if block.type == 'row' %}
+                <div class="section-bundle-content__item">
+                    <div class="section-bundle-content__image">
+                        <img src="{{ block.settings['content-image'] | img_url: 'original' }}" alt="photo">
+                    </div>
+                    <h3 class="section-bundle-content__caption">
+                        {{ block.settings['content-title'] }}
+                    </h3>
+                    <p class="section-bundle-content__description">
+                        {{ block.settings['content-description'] }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "section-bundle-content",
+  "tag": "section",
+  "class": "section-bundle-content",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Content block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "content-image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "content-title",
+          "label": "Title",
+          "default": "Your title here"
+        },
+        {
+          "type": "text",
+          "id": "content-description",
+          "label": "Description",
+          "default": "Your description here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "section-bundle-content",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "row"
+        },
+        {
+          "type": "row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

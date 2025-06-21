@@ -1,0 +1,60 @@
+{{ 'section-bundle-service.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <h1 class="section-bundle-service__title">WHY HUNDRED?</h1>
+    <div class="section-bundle-service__items">
+        <div class="section-bundle-service__item">
+            <img class="section-bundle-service__image" src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/1_58297cc9-ce62-4219-8d22-152ea1de995d.png?v=1750500636" alt="service" />
+            <p class="section-bundle-service__caption">Trusted by 25,000+ Goalkeepers</p>
+            <p class="section-bundle-service__description">Used weekly across grassroots & academy level.</p>
+        </div>
+        <div class="section-bundle-service__item">
+            <img class="section-bundle-service__image" src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/2_385b5349-34ba-43cc-8d36-35f3108ad3ce.png?v=1750500636" alt="service" />
+            <p class="section-bundle-service__caption">Built for Growing Goalkeepers</p>
+            <p class="section-bundle-service__description">Pro-grade gloves and protection — no junior downgrades.</p>
+        </div>
+        <div class="section-bundle-service__item">
+            <img class="section-bundle-service__image" src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/3_edd68857-f789-4d4a-81cb-fbf0240abe20.png?v=1750500636" alt="service" />
+            <p class="section-bundle-service__caption">24 Hour Dispatch</p>
+            <p class="section-bundle-service__description">Most orders ship same day from our UK warehouse.</p>
+        </div>
+        <div class="section-bundle-service__item">
+            <img class="section-bundle-service__image" src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/4.png?v=1750500637" alt="service" />
+            <p class="section-bundle-service__caption">Free & Easy Size Exchanges</p>
+            <p class="section-bundle-service__description">Quick & simple swaps if your sizing isn’t right.</p>
+        </div>
+        <div class="section-bundle-service__item">
+            <img class="section-bundle-service__image" src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/5_7b09bad5-a924-403e-9484-aeda5b3443b7.png?v=1750500636" alt="service" />
+            <p class="section-bundle-service__caption">One Bundle. Full Season Sorted.</p>
+            <p class="section-bundle-service__description">Gloves, padded kit & accessory — no mixing brands.</p>
+        </div>
+        <div class="section-bundle-service__item">
+            <img class="section-bundle-service__image" src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/6_32975205-8eb9-4d0d-9bee-49e74c24cda3.png?v=1750500637" alt="service" />
+            <p class="section-bundle-service__caption">10-Game Guarantee</p>
+            <p class="section-bundle-service__description">If your gloves don’t deliver — we replace them.</p>
+        </div>
+    </div>
+    <div class="section-bundle-service__wrap">
+        <a class="section-bundle-service__button" href="#build-bundle-product">BUILD THEIR BUNDLE →</a>
+        <p class="section-bundle-service__text">
+            <img src="{{ 'verified_black.svg' | asset_url }}" alt="arrow" />
+            10 Game Guarantee
+        </p>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "section-bundle-service",
+        "tag": "section",
+        "class": "section-bundle-service",
+        "settings": [
+        ],
+        "presets" : [
+            {
+                "name" : "section-bundle-service",
+                "category" : "Custom"
+            }
+        ]
+    }
+{% endschema %}

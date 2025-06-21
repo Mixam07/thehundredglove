@@ -1,0 +1,68 @@
+.section-bundle-text{
+    padding: 25px 0;
+    background: url("https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Group_39829.jpg?v=1750445062") center/cover no-repeat;
+}
+
+.section-bundle-text__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section-bundle-text__image{
+    width: 40%;
+}
+
+.section-bundle-text__image img{
+    width: 100%;
+}
+
+.section-bundle-text__information{
+    max-width: 500px;
+}
+
+.section-bundle-text__title{
+    margin: 0;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.section-bundle-text__description span{
+    font-weight: 700;
+}
+
+.section-bundle-text__description{
+    margin: 0;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+@media (max-width: 762px) {
+    .section-bundle-text__wrapper{
+        display: block;
+    }
+
+    .section-bundle-text__image{
+        width: 100%;
+    }
+
+    .section-bundle-text{
+        padding-top: 30px;
+    }
+
+    .section-bundle-text__information{
+        padding: 0 20px;
+    }
+
+    .section-bundle-text__title{
+        font-size: 24px;
+        margin-bottom: 25px;
+        max-width: 250px;
+    }
+
+    .section-bundle-text__description{
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+}

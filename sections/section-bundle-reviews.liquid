@@ -1,0 +1,101 @@
+{{ 'section-bundle-reviews.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <h1 class="section-bundle-reviews__title">Why Hundreds Of YOUNG Keepers Love Our Gloves</h1>
+    <div class="section-bundle-reviews__wrapper">
+        {% for block in section.blocks %}
+            {% if block.type == 'row' %}
+                <div class="section-bundle-reviews__item">
+                    <div class="section-bundle-reviews__image">
+                        <img src="{{ block.settings['content-image'] | img_url: 'original' }}" alt="photo">
+                    </div>
+                    <div class="section-bundle-reviews__information">
+                        <div class="section-bundle-stars">
+                            <img src="{{ 'star-orange.svg' | asset_url }}" alt="star">
+                            <img src="{{ 'star-orange.svg' | asset_url }}" alt="star">
+                            <img src="{{ 'star-orange.svg' | asset_url }}" alt="star">
+                            <img src="{{ 'star-orange.svg' | asset_url }}" alt="star">
+                            <img src="{{ 'star-orange.svg' | asset_url }}" alt="star">
+                        </div>
+                        <h3 class="section-bundle-reviews__caption">
+                            {{ block.settings['content-title'] }}
+                        </h3>
+                        <p class="section-bundle-reviews__description">
+                            {{ block.settings['content-description'] }}
+                        </p>
+                        <p class="section-bundle-reviews__name">
+                            {{ block.settings['content-name'] }}
+                        </p>
+                        <div class="section-bundle-reviews__info">
+                            <img width="15px" src="{{ 'verified.svg' | asset_url }}" alt="star">
+                            Verified Reviewer
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="section-bundle-reviews__wrap">
+        <a href="#build-bundle-product" class="section-bundle-reviews__button">BUILD THEIR BUNDLE →</a>
+        <p class="section-bundle-reviews__text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M6.53096 16.2113L5.20784 13.9813L2.69542 13.4308L2.94066 10.8444L1.23828 8.89665L2.94066 6.94885L2.69542 4.36248L5.20784 3.81195L6.53096 1.58203L8.89508 2.58577L11.2592 1.58203L12.5823 3.81195L15.0947 4.36248L14.8495 6.94885L16.5519 8.89665L14.8495 10.8444L15.0947 13.4308L12.5823 13.9813L11.2592 16.2113L8.89508 15.2075L6.53096 16.2113ZM8.11656 11.2721L12.049 7.3396L11.2677 6.53549L8.11656 9.68667L6.52243 8.11534L5.74113 8.89665L8.11656 11.2721Z" fill="black"/>
+            </svg>
+            10 Game Guarantee
+        </p>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "section-bundle-reviews",
+    "tag": "section",
+    "class": "section-bundle-reviews",
+    "settings": [],
+    "blocks": [
+        {
+        "type": "row",
+        "name": "Content block",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "content-image",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "content-title",
+                "label": "Title",
+                "default": "Your title here"
+            },
+            {
+                "type": "text",
+                "id": "content-description",
+                "label": "Description",
+                "default": "Your description here"
+            },
+            {
+                "type": "text",
+                "id": "content-name",
+                "label": "Name",
+                "default": "Your name here"
+            }
+        ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "section-bundle-reviews",
+            "category": "Custom",
+            "blocks": [
+                {
+                    "type": "row"
+                },
+                {
+                    "type": "row"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

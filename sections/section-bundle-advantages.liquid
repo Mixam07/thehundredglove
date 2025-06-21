@@ -1,0 +1,42 @@
+{{ 'section-bundle-advantages.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+    <div class="section-bundle-advantages__wrapper">
+        <div class="section-bundle-advantages__information">
+            <h1 class="section-bundle-advantages__title">Why Overpay for the Same Outcome?</h1>
+            <p class="section-bundle-advantages__description">Parents, kitting out a young goalkeeper shouldn’t cost you £200+ at the start of every season.</p>
+            <p class="section-bundle-advantages__description">With most brands, you're buying gloves here, a base layer there, and accessories from somewhere else - it adds up fast.</p>
+            <p class="section-bundle-advantages__description">That’s why we created the <span>Academy Pack.</span></p>
+            <p class="section-bundle-advantages__description uppercase"><span>One bundle. 5 essential items. Built for performance.</span></p>
+        </div>
+        <div class="section-bundle-advantages__image">
+            <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Frame_1984078211.png?v=1750438766" alt="img" />
+        </div>
+        <div class="section-bundle-advantages__other">
+            <p class="section-bundle-advantages__description uppercase"><span>All for £124.99.</span></p>
+            <div class="section-bundle-advantages__wrap">
+                <a class="section-bundle-advantages__button">BUILD THEIR BUNDLE →</a>
+                <p class="section-bundle-advantages__info">
+                    <img src="{{ 'verified_black.svg' | asset_url }}" alt="arrow" />
+                    10 Game Guarantee
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "section-bundle-advantages",
+        "tag": "section",
+        "class": "section-bundle-advantages",
+        "settings": [
+        ],
+        "presets" : [
+            {
+                "name" : "section-bundle-advantages",
+                "category" : "Custom"
+            }
+        ]
+    }
+{% endschema %}

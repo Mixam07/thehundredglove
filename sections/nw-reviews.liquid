@@ -392,7 +392,7 @@
 
               <div class="nwReviewsWrapSwiperSliderBottom">
                 <div class="nwReviewsWrapSwiperSliderBottomLeft">
-                  <img data-src="{{ block.settings.product.featured_image | img_url: 'master' }}" alt="img" class="lazy2 lazy3" loading="lazy">
+                  <img src="{{ block.settings.product.featured_image | img_url: 'medium' }}" alt="img" class="lazy2 lazy3" loading="lazy">
                 </div>
                 <div class="nwReviewsWrapSwiperSliderBottomMiddle">
                   {{ block.settings.product.title }}
@@ -405,7 +405,6 @@
                       <path d="M15.4955 12H15.5045" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M8.49451 12H8.50349" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <!--<img src="{{ 'icon-car-png.png' | asset_url }}" alt=“Add to cart icon“ width="80" height="80">-->
                   </a>
                 </div>
               </div>
