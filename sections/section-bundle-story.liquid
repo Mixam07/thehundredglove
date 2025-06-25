@@ -2,19 +2,19 @@
 
 <div class="page-width">
   <div class="section-bundle-story__wrapper">
-    <h1 class="section-bundle-story__title">Our Story</h1>
-    <p class="section-bundle-story__description">When I started Hundred, my goal was simple - to give goalkeepers access to the same high-performance gloves used by the pros, without cutting corners for juniors.</p>
-    <p class="section-bundle-story__description">Too often, young keepers end up with downgraded gloves and cheap kit that doesn’t last. That never made sense to me.</p>
-    <p class="section-bundle-story__description">Every glove we make uses the same top-tier latex and materials we supply to senior keepers. We don’t believe in watered-down junior versions - because your goalkeeper deserves the same protection, grip and confidence as anyone else.</p>
-    <p class="section-bundle-story__description">The Academy Pack is how we make that possible - proper gear, built for the season, without overcomplicating it.</p>
-    <p class="section-bundle-story__name">— Joe Hume, Founder</p>
+    <h1 class="section-bundle-story__title">{% if request.locale.iso_code == 'sv' %}VÅR BERÄTTELSE{% else %}Our Story{% endif %}</h1>
+    <p class="section-bundle-story__description">{% if request.locale.iso_code == 'sv' %}{% else %}{% endif %}When I started Hundred, my goal was simple - to give goalkeepers access to the same high-performance gloves used by the pros, without cutting corners for juniors.</p>
+    <p class="section-bundle-story__description">{% if request.locale.iso_code == 'sv' %}{% else %}{% endif %}Too often, young keepers end up with downgraded gloves and cheap kit that doesn’t last. That never made sense to me.</p>
+    <p class="section-bundle-story__description">{% if request.locale.iso_code == 'sv' %}{% else %}{% endif %}Every glove we make uses the same top-tier latex and materials we supply to senior keepers. We don’t believe in watered-down junior versions - because your goalkeeper deserves the same protection, grip and confidence as anyone else.</p>
+    <p class="section-bundle-story__description">{% if request.locale.iso_code == 'sv' %}{% else %}{% endif %}The Academy Pack is how we make that possible - proper gear, built for the season, without overcomplicating it.</p>
+    <p class="section-bundle-story__name">{% if request.locale.iso_code == 'sv' %}- Joe Hume, grundare{% else %}— Joe Hume, Founder{% endif %}</p>
     <div class="section-bundle-story__wrap">
-      <a href="#build-bundle-product" class="section-bundle-story__button">BUILD THEIR BUNDLE →</a>
+      <a href="#build-bundle-product" class="section-bundle-story__button">{% if request.locale.iso_code == 'sv' %}BYGG DERAS PAKET →{% else %}BUILD THEIR BUNDLE →{% endif %}</a>
       <p class="section-bundle-story__text">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
           <path d="M6.53096 16.2113L5.20784 13.9813L2.69542 13.4308L2.94066 10.8444L1.23828 8.89665L2.94066 6.94885L2.69542 4.36248L5.20784 3.81195L6.53096 1.58203L8.89508 2.58577L11.2592 1.58203L12.5823 3.81195L15.0947 4.36248L14.8495 6.94885L16.5519 8.89665L14.8495 10.8444L15.0947 13.4308L12.5823 13.9813L11.2592 16.2113L8.89508 15.2075L6.53096 16.2113ZM8.11656 11.2721L12.049 7.3396L11.2677 6.53549L8.11656 9.68667L6.52243 8.11534L5.74113 8.89665L8.11656 11.2721Z" fill="white"/>
         </svg>
-        10 Game Guarantee
+        {% if request.locale.iso_code == 'sv' %}10-matchers garanti{% else %}10 Game Guarantee{% endif %}
       </p>
     </div>
   </div>

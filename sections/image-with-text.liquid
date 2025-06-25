@@ -20,7 +20,7 @@
     {%- unless section.settings.title == blank -%}
     <div style="justify-content: center;" class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
       <h2 class="title inline-richtext {{ section.settings.heading_size }}">
-        {{ section.settings.title }}
+        {% if request.locale.iso_code == 'sv' %}{{ section.settings.title-sv }}{% else %}{{ section.settings.title }}{% endif %}
       </h2>
       {%- if section.settings.button_label != blank and show_mobile_slider -%}
         <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
@@ -112,8 +112,8 @@
               <div class="image_content-wrap">
                 <img src="{{ block.settings.content_image | img_url: 'medium' }}" alt="" />
                 <div>
-                  <h5>{{ block.settings.title }}</h5>
-                  <span>{{ block.settings.description }}</span>
+                  <h5>{% if request.locale.iso_code == 'sv' %}{{ block.settings.title-sv }}{% else %}{{ block.settings.title }}{% endif %}</h5>
+                  <span>{% if request.locale.iso_code == 'sv' %}{{ block.settings.description-sv }}{% else %}{{ block.settings.description }}{% endif %}</span>
                 </div>
               </div>
           {%- endcase -%}
@@ -131,12 +131,12 @@
         {% endif %}
         class="button button--primary"
       >
-        {{ section.settings.button_text | escape }}
+        {% if request.locale.iso_code == 'sv' %}HANDLA NU{% else %}SHOP NOW{% endif %}
       </a>
       {% if section.settings.button_subtext %}
         <span>
           <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.843 17.221-1.487-2.506-2.824-.619.276-2.907L.894 9l1.914-2.19-.276-2.906 2.824-.619L6.843.78 9.5 1.907 12.157.779l1.487 2.506 2.824.619-.276 2.907L18.106 9l-1.914 2.19.276 2.906-2.824.619-1.487 2.506L9.5 16.093zm1.782-5.551 4.42-4.42-.878-.904-3.542 3.542-1.792-1.766L5.955 9z" fill="#121212"/></svg>
-          {{ section.settings.button_subtext }}
+          {% if request.locale.iso_code == 'sv' %}Prova helt utan risk med vår garanti på 10 matcher{% else %}Try 100% Risk Free with Our 10 Game Guarantee{% endif %}
         </span>
       {% endif %}
     </div>
@@ -159,6 +159,12 @@
     {
       "type": "inline_richtext",
       "id": "title",
+      "default": "Multicolumn",
+      "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title-sv",
       "default": "Multicolumn",
       "label": "t:sections.multicolumn.settings.title.label"
     },
@@ -572,8 +578,18 @@
         },
         {
           "type": "text",
+          "id": "title-sv",
+          "label": "Title sv"
+        },
+        {
+          "type": "text",
           "id": "description",
           "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "description-sv",
+          "label": "Description sv"
         }
       ]
     }

@@ -53,7 +53,13 @@ const drawBundle = () => {
         }
     }
 
-    submit.innerHTML = bundle.length >= index ? "Submit bundle" : `Add ${index - bundle.length} More Items`;
+    const country = document.querySelector(".country")?.innerHTML.trim();
+
+    if(country == "sv"){
+        submit.innerHTML = bundle.length >= index ? "Skicka in bunt" : `LÄGG TILL ${index - bundle.length} FLER ARTIKLAR`;
+    }else{
+        submit.innerHTML = bundle.length >= index ? "Submit bundle" : `Add ${index - bundle.length} More Items`;
+    }
 
     document.querySelectorAll(".bundle-remove").forEach((button, q) => {
         button.addEventListener("click", (e) => {

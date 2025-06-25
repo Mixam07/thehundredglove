@@ -3529,6 +3529,7 @@ a.view_all_col.show-mobile{
   }
 }
 
-:host *{
+:host *,
+[data-key="credit-promotion-auto-size"]{
   display: none !important;
 }

@@ -477,7 +477,7 @@
         -%}
 
       
-        <button class="personal-btn" type="button">Add To Cart</button>
+        <button class="personal-btn" type="button">{% if request.locale.iso_code == 'sv' %}LÄGG I VARUKORGEN{% else %}Add To Cart{% endif %}</button>
         <button
           id = "ProductSubmitButton-{{ section_id }}"
           type="submit"

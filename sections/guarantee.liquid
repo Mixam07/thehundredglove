@@ -110,11 +110,14 @@
     </div>
 
     <h4 class="nwGuaranteeTitle">
-      {{ section.settings.title }}
+      {% if request.locale.iso_code == 'sv' %}10-MATCHERS GARANTI{% else %}{{ section.settings.title }}{% endif %}
     </h4>
 
     <div class="nwGuaranteeText">
-      {{ section.settings.text }}
+      {% if request.locale.iso_code == 'sv' %}
+        <p>Vi är här för att leverera handskar som presterar lika hårt som du gör. På The Hundred Glove står vi bakom vår utrustning med en 10-matchers garanti eftersom vi tror på kvaliteten och hållbarheten i våra handskar.</p>
+        <p>Inga krusiduller, inga undanflykter — bara handskar skapade för att hjälpa dig göra varje räddning avgörande. Om de inte lever upp till dina förväntningar inom de första 10 matcherna, har vi dig täckt.</p>
+      {% else %}{{ section.settings.text }}{% endif %}
     </div>
     
   </div>
@@ -129,7 +132,7 @@
   <path d="M165.506 34.9327L168.014 24.1365L159.637 16.8775L170.689 15.9185L175 5.73828L179.311 15.9185L190.363 16.8775L181.986 24.1365L184.494 34.9327L175 29.2049L165.506 34.9327Z" fill="white"/>
   </svg>
 
-  LOVED BY 15.000+ goalkeepers
+  {% if request.locale.iso_code == 'sv' %}ÄLSKADE AV ÖVER 15 000 MÅLVAKTER{% else %}LOVED BY 15.000+ goalkeepers{% endif %}
 </div>
 
 

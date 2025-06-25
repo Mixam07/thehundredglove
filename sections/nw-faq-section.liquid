@@ -99,18 +99,34 @@
   <div class="page-width" style="max-width: 1100px;">
 
     <div class="nwFaqSectionTitle">
-      {{ section.settings.title }}
+      {% if request.locale.iso_code == 'sv' %}Vanliga frågor {% else %}{{ section.settings.title }}{% endif %}
     </div>
 
     <div class="nwFaqSectionItems">
       {% for block in section.blocks %}
         <div class="nwFaqSectionItemsOne">
           <div class="nwFaqSectionItemsOneTop">
-            {{ block.settings.title }}
+            {% if request.locale.iso_code == 'sv' %}
+                {% if block.settings.faq-title-sv != blank %}
+                    {{ block.settings.faq-title-sv }}
+                {% else %}
+                    {{ block.settings.faq-title }}
+                {% endif %}
+            {% else %}
+                {{ block.settings.faq-title }}
+            {% endif %}
           </div>
   
           <div class="nwFaqSectionItemsOneBottom">
-            {{ block.settings.text }}
+            {% if request.locale.iso_code == 'sv' %}
+                {% if block.settings.faq-text-sv != blank %}
+                    {{ block.settings.faq-text-sv }}
+                {% else %}
+                    {{ block.settings.faq-text }}
+                {% endif %}
+            {% else %}
+                {{ block.settings.faq-text }}
+            {% endif %}
           </div>
         </div>
       {% endfor %}
@@ -154,9 +170,19 @@
                "label": "Title"
              },
              {
+               "type": "text",
+               "id": "title-sv",
+               "label": "Title sv"
+             },
+             {
                "type": "textarea",
                "id": "text",
                "label": "Text"
+             },
+             {
+               "type": "textarea",
+               "id": "text-sv",
+               "label": "Text sv"
              }
            ]
          }

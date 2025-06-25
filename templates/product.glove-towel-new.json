@@ -656,6 +656,8 @@
       ],
       "settings": {
         "title": "Customers Also Brought",
+        "title-sv": "KUNDERKÖPTE OCKSÅ DETTA",
+        "style": false,
         "heading_size": "h1",
         "description": "",
         "show_description": false,

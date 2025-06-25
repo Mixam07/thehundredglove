@@ -94,6 +94,7 @@
       ],
       "settings": {
         "title": "FAN FAVOURITES 🔥",
+        "title-sv": "FAN SENSFAVORITER 🔥",
         "style": true,
         "heading_size": "h2",
         "description": "",
@@ -303,6 +304,7 @@
       ],
       "settings": {
         "title": "Curated bundles",
+        "title-sv": "Skräddarsydda paket",
         "style": true,
         "heading_size": "h2",
         "description": "",

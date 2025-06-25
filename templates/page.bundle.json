@@ -113,6 +113,7 @@
         "pdTopMob": 0,
         "pdBottomMob": 10,
         "title": "Why Hundreds Of Keepers Love Our Gloves",
+        "title-sv": "VARFÖR HUNDRATALS MÅLVAKTER ÄLSKAR VÅRA HANDSKAR",
         "text": ""
       }
     },
@@ -123,28 +124,36 @@
           "type": "slide",
           "settings": {
             "title": "Are all of your gloves durable?",
-            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
+            "title-sv": "Är alla era handskar slitstarka?",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear.",
+            "text-sv": "Ja, alla våra handskar är designade med hållbarhet i åtanke. De är tillverkade av högkvalitativa material och genomgår rigorösa tester för att säkerställa att de klarar av även de tuffaste påfrestningarna."
           }
         },
         "slide_zQt73D": {
           "type": "slide",
           "settings": {
             "title": "How do you ensure both outstanding grip + durability?",
-            "text": "We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability."
+            "title-sv": "Hur säkerställer ni både ett enastående grepp och hållbarhet?",
+            "text": "We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability.",
+            "text-sv": "Vi har under flera år samarbetat med materialforskare för att förändra hur moderna målvaktshandskar tillverkas. Genom att kombinera våra upptäckter med toppmoderna tillverkningsprocesser skapar vi handskar som erbjuder både exceptionellt grepp och långvarig hållbarhet."
           }
         },
         "slide_p8fiay": {
           "type": "slide",
           "settings": {
             "title": "How long is the risk free guarantee?",
-            "text": "Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked."
+            "title-sv": "Hur lång är den riskfria garantin?",
+            "text": "Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked.",
+            "text-sv": "Enkelt – om du är missnöjd med handskarnas prestanda efter minst 10 spelade matcher (bilddokumentation krävs efter varje match) kan du skicka tillbaka handskarna för full återbetalning. Inga frågor ställs."
           }
         },
         "slide_49FWaj": {
           "type": "slide",
           "settings": {
             "title": "Do all of your gloves fit true to size?",
-            "text": "They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available."
+            "title-sv": "Passar alla era handskar enligt storleken?",
+            "text": "They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available.",
+            "text-sv": "De är sanna i storlek, men kan variera beroende på skärningen. En storleksguide finns på varje produktsida för handskar, och vi har även en guide som visar alla våra handskmodeller och deras skärningar."
           }
         }
       },

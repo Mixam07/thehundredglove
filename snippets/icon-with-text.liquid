@@ -58,7 +58,7 @@
         >
       {%- endif -%}
       <span class="h4 inline-richtext">
-        {{- block.settings.heading_1 -}}
+        {% if request.locale.iso_code == 'sv' %}{{- block.settings.heading_1-sv -}}{% else %}{{- block.settings.heading_1 -}}{% endif %}
       </span>
     </li>
   {%- endunless -%}
@@ -80,7 +80,7 @@
         >
       {%- endif -%}
       <span class="h4 inline-richtext">
-        {{- block.settings.heading_2 -}}
+        {% if request.locale.iso_code == 'sv' %}{{- block.settings.heading_2-sv -}}{% else %}{{- block.settings.heading_2 -}}{% endif %}
       </span>
     </li>
   {%- endunless -%}
@@ -102,7 +102,7 @@
         >
       {%- endif -%}
       <span class="h4 inline-richtext">
-        {{- block.settings.heading_3 -}}
+        {% if request.locale.iso_code == 'sv' %}{{- block.settings.heading_3-sv -}}{% else %}{{- block.settings.heading_3 -}}{% endif %}
       </span>
     </li>
   {%- endunless -%}

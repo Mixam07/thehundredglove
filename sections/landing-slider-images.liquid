@@ -186,18 +186,17 @@
     <div class="nwTextImageWrap">
       <div class="nwTextImageWrapLeft">
         <div class="nwTextImageWrapLeftTitle">
-          {{ section.settings.title }}
+          {% if request.locale.iso_code == 'sv' %}{{ section.settings.title-sv }}{% else %}{{ section.settings.title }}{% endif %}
         </div>
         <div class="nwTextImageWrapLeftText">
-          {{ section.settings.text }}
+          {% if request.locale.iso_code == 'sv' %}{{ section.settings.text-sv }}{% else %}{{ section.settings.text }}{% endif %}
         </div>
         <a class="nwTextImageWrapLeftBtn" href="{{ section.settings.button_link }}">
-          {{ section.settings.button_label }}
+          {% if request.locale.iso_code == 'sv' %}HANDLA HANDSKAR{% else %}SHOP GLOVES{% endif %}
         </a>
         <div class="nwTextImageWrapLeftTextBottom">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6.343 17.22-1.487-2.505-2.824-.62.276-2.906-1.914-2.19 1.914-2.188-.276-2.907 2.824-.619L6.343.78 9 1.907 11.657.779l1.487 2.506 2.824.619-.276 2.907L17.606 9l-1.914 2.189.276 2.907-2.824.619-1.487 2.506L9 16.093zm1.782-5.55 4.42-4.42-.878-.904-3.542 3.542-1.792-1.766L5.455 9z" fill="#121212"/></svg>
-
-          {{ section.settings.button_subtext }}
+          {% if request.locale.iso_code == 'sv' %}Prova helt utan risk med vår 10-matchers garanti{% else %}Try 100% Risk Free With Our 10 Game Guarantee{% endif %}
         </div>
       </div>
       <div class="nwTextImageWrapRight">
@@ -314,8 +313,18 @@
     },
     {
       "type": "richtext",
+      "id": "title-sv",
+      "label": "Title sv"
+    },
+    {
+      "type": "richtext",
       "id": "text",
       "label": "Text"
+    },
+     {
+      "type": "richtext",
+      "id": "text-sv",
+      "label": "Text sv"
     },
     {
       "type": "text",

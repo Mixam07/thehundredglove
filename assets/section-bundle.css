@@ -398,6 +398,7 @@
 }
 
 .bundle__cart-info{
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     column-gap: 5px;

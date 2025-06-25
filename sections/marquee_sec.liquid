@@ -26,9 +26,11 @@
 
  <div class="marquee">
   <div class="track">
-    <div class="content"><span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span><span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span>
-    <span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span><span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span><span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span>
-    <span>{{ section.settings.text_field }}</span> <span>{{ section.settings.text_field2 }} </span> <span>{{ section.settings.text_field3 }}</span></div>
+    <div class="content">
+      {% for i in (1..20) %}
+        <span>{% if request.locale.iso_code == 'sv' %}Ta ditt spel till nästa nivå{% else %}{{ section.settings.text_field }}{% endif %}</span>
+      {% endfor %}
+    </div>
 </div>
  </div>
 {% schema %}

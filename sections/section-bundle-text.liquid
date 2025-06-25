@@ -3,11 +3,11 @@
 <div class="page-width">
     <div class="section-bundle-text__wrapper">
         <div class="section-bundle-text__information">
-            <h1 class="section-bundle-text__title">Switching Glove Brands Is a Big Call - We Get It.</h1>
-            <p class="section-bundle-text__description">That’s why we offer a <span>10-Game Guarantee.</span></p>
-            <p class="section-bundle-text__description">Try our gloves for up to 10 matches. If you’re not impressed, send them back for a full refund.</p>
-            <p class="section-bundle-text__description"><span>No stress. No pressure.</span></p>
-            <p class="section-bundle-text__description">Just gloves that have to earn their place on your hands.</p>
+            <h1 class="section-bundle-text__title">{% if request.locale.iso_code == 'sv' %}ATT BYTA HANDSKMÄRKE ÄR ETT STORT BESLUT – VI FÖRSTÅR DET.{% else %}Switching Glove Brands Is a Big Call - We Get It.{% endif %}</h1>
+            <p class="section-bundle-text__description">{% if request.locale.iso_code == 'sv' %}Därför erbjuder vi en <span>10-matchers garanti.</span>{% else %}That’s why we offer a <span>10-Game Guarantee.</span>{% endif %}</p>
+            <p class="section-bundle-text__description">{% if request.locale.iso_code == 'sv' %}Testa våra handskar i upp till 10 matcher. Om du inte är nöjd skickar du tillbaka dem för full återbetalning.{% else %}Try our gloves for up to 10 matches. If you’re not impressed, send them back for a full refund.{% endif %}</p>
+            <p class="section-bundle-text__description">{% if request.locale.iso_code == 'sv' %}<span>Ingen stress. Ingen press</span>{% else %}<span>No stress. No pressure.</span>{% endif %}</p>
+            <p class="section-bundle-text__description">{% if request.locale.iso_code == 'sv' %}Bara handskar som måste förtjäna sin plats på dina händer.{% else %}Just gloves that have to earn their place on your hands.{% endif %}</p>
         </div>
         <div class="section-bundle-text__image">
             <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Add_a_heading_3.png?v=1750445062" alt="image">

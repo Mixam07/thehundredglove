@@ -57,7 +57,7 @@
       {%- if section.settings.title != blank -%}
        <div class="heading_carousel_products">
         <h3 class="title inline-richtext  {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-          {{ section.settings.title }}
+          {% if request.locale.iso_code == 'sv' %}{{ section.settings.title-sv }}{% else %}{{ section.settings.title }}{% endif %}
         </h3>
           {%- if show_mobile_slider or show_desktop_slider -%}
         <div class="slider-buttons no-js-hidden">
@@ -179,6 +179,12 @@
     {
       "type": "inline_richtext",
       "id": "title",
+      "default": "Featured collection",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title-sv",
       "default": "Featured collection",
       "label": "t:sections.featured-collection.settings.title.label"
     },

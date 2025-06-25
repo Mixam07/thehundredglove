@@ -51,7 +51,9 @@
     class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin"
     style="margin-top: 0;"
   >
-    <h2 class="title inline-richtext h1 text-center" style="margin: auto;">{{ section.settings.title }}</h2>
+    <h2 class="title inline-richtext h1 text-center" style="margin: auto;">
+      {% if request.locale.iso_code == 'sv' %}SKAPA DITT ULTIMATA HANDSKPAKET{% else %}{{ section.settings.title }}{% endif %}
+    </h2>
   </div>
   <div class="relative w-full mx-auto py-6 lg:py-8">
     <div class="grid grid-cols-1 grid-rows-1 items-start gap-6 min-h-96 lg:grid-cols-4 text-foreground flexinmobilefix">
@@ -204,12 +206,12 @@
         <div class="h-auto  max-h-screen -my-6 py-6  transition-all duration-100">
           <div class="md:p-[32px] rounded-[8px] border-border text-card-foreground md:shadow-sm flex flex-col items-stretch justify-between col-span-1 bg-card bg-cardwrap">
             <div class="text-[16px] text-[#121212] mb-[25px] font-bold">
-              Step 1: Choose bundle size
+              {% if request.locale.iso_code == 'sv' %}Steg 1: Välj paketstorlek{% else %}Step 1: Choose bundle size{% endif %}
             </div>
             <div class="flex flex-col min-h-0">
               <ul class="section-product__products">
                   <li class="section-product__item">
-                      <h3 class="section-product__item-title">1 Pair</h3>
+                      <h3 class="section-product__item-title">{% if request.locale.iso_code == 'sv' %}1 par{% else %}1 Pair{% endif %}</h3>
                       <div class="section-product__item-photo">
                           <img src="{{ section.settings.glove-1-pair-photo | img_url: 'original' }}" alt="pair">
                       </div>
@@ -226,8 +228,8 @@
                       </div>
                   </li>  
                   <li class="section-product__item">
-                      <div class="section-product__item-popular">MOST POPULAR</div>
-                      <h3 class="section-product__item-title">2 Pair</h3>
+                      <div class="section-product__item-popular">{% if request.locale.iso_code == 'sv' %}Mest populär{% else %}MOST POPULAR{% endif %}</div>
+                      <h3 class="section-product__item-title">{% if request.locale.iso_code == 'sv' %}2 par{% else %}2 Pair{% endif %}</h3>
                       <div class="section-product__item-photo">
                           <img src="{{ section.settings.glove-2-pair-photo | img_url: 'original' }}" alt="pair">
                       </div>
@@ -241,7 +243,7 @@
                                 £90.00
                             {% endif %}
                           </p>
-                          <p class="section-product__item-discount"><span>SAVE</span> 25%</p>
+                          <p class="section-product__item-discount">{% if request.locale.iso_code == 'sv' %}<span>Spara</span> 25%{% else %}<span>SAVE</span> 25%{% endif %}</p>
                       </div>
                   </li>  
                   <li class="section-product__item active">
@@ -260,20 +262,24 @@
                                 £120
                             {% endif %}
                           </p>
-                          <p class="section-product__item-discount"><span>SAVE</span> 53%</p>
+                          <p class="section-product__item-discount">{% if request.locale.iso_code == 'sv' %}<span>Spara</span> 53%{% else %}<span>SAVE</span> 53%{% endif %}</p>
                       </div>
                   </li>  
               </ul>
               <div class="section-product__inscription">
+                {% if request.locale.iso_code == 'sv' %}
+                  <span class='section-product__bold'>Grymt!</span> Du har låst upp <span class='section-product__circle'>3</span> GRATIS Gåvor
+                {% else %}
                   <span class='section-product__bold'>Awesome!</span> You’ve Unlocked <span class='section-product__circle'>3</span> FREE Gifts
+                {% endif %}
               </div>
               <ul class="section-product__list">
                   <li class="section-product__option active">
                       <div class="section-product__option-photo">
                           <img src="{{ section.settings.glove-1-gift-photo | img_url: 'original' }}" alt="photo">
                       </div>
-                      <h3 class="section-product__option-title">{{ section.settings.glove-1-gift-title }}</h3>
-                      <p class="section-product__option-discount">You saved
+                      <h3 class="section-product__option-title">{% if request.locale.iso_code == 'sv' %}Prioriterad sändning{% else %}{{ section.settings.glove-1-gift-title }}{% endif %}</h3>
+                      <p class="section-product__option-discount">{% if request.locale.iso_code == 'sv' %}Du sparade{% else %}You saved{% endif %}
                         {% if cart.currency.iso_code == "USD" %}
                             $9.99
                         {% else %}
@@ -288,8 +294,8 @@
                       <div class="section-product__option-photo">
                           <img src="{{ section.settings.glove-2-gift-photo | img_url: 'original' }}" alt="photo">
                       </div>
-                      <h3 class="section-product__option-title">{{ section.settings.glove-2-gift-title }}</h3>
-                      <p class="section-product__option-discount">You saved
+                      <h3 class="section-product__option-title">{% if request.locale.iso_code == 'sv' %}Gratis gåva{% else %}{{ section.settings.glove-2-gift-title }}{% endif %}</h3>
+                      <p class="section-product__option-discount">{% if request.locale.iso_code == 'sv' %}Du sparade{% else %}You saved{% endif %}
                         {% if cart.currency.iso_code == "USD" %}
                             $19.99
                         {% else %}
@@ -303,8 +309,8 @@
                       <div class="section-product__option-photo">
                           <img src="{{ section.settings.glove-3-gift-photo | img_url: 'original' }}" alt="photo">
                       </div>
-                      <h3 class="section-product__option-title">{{ section.settings.glove-3-gift-title }}</h3>
-                      <p class="section-product__option-discount">You saved
+                      <h3 class="section-product__option-title">{% if request.locale.iso_code == 'sv' %}Träningsplan{% else %}{{ section.settings.glove-3-gift-title }}{% endif %}</h3>
+                      <p class="section-product__option-discount">{% if request.locale.iso_code == 'sv' %}Du sparade{% else %}You saved{% endif %}
                         {% if cart.currency.iso_code == "USD" %}
                             $14.99
                         {% else %}
@@ -322,7 +328,7 @@
 
               <div class="asdsasd" id="fixedpart">
                 <div class="my-sticky md:block flex justify-between items-center">
-                  <h4 class="text-[24px] text-[#000000] text-center mt-[25px] mb-[20px] md:block hidden">Your Bundle</h4>
+                  <h4 class="text-[24px] text-[#000000] text-center mt-[25px] mb-[20px] md:block hidden">{% if request.locale.iso_code == 'sv' %}DITT PAKET{% else %}Your Bundle{% endif %}</h4>
                   <div
                     id="bundle-products"
                     class="bundle-products flex md:gap-[20px] justify-center md:mb-[25px]"
@@ -339,9 +345,7 @@
                       <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="m6.625 11.958 4.708-4.708-1.187-1.187-3.521 3.52-1.75-1.75-1.187 1.188zm.875 5.375q-2.895-.729-4.781-3.322Q.833 11.416.833 8.25V3.166L7.5.667l6.667 2.5V8.25q0 3.166-1.886 5.76-1.885 2.595-4.781 3.323m0-1.75q2.166-.687 3.583-2.75A7.9 7.9 0 0 0 12.5 8.25V4.313l-5-1.875-5 1.875V8.25q0 2.52 1.417 4.583 1.416 2.063 3.583 2.75" fill="#121212"/>
                       </svg>
-                      <span class="text-[#121212] text-[14px] risktext"
-                        >TRY 100% RISK FREE WITH OUR 10 GAME GUARANTEE</span
-                      >
+                      <span class="text-[#121212] text-[14px] risktext">{% if request.locale.iso_code == 'sv' %}PROVA HELT UTAN RISK MED VÅR 10-MATCHERS GARANTI{% else %}TRY 100% RISK FREE WITH OUR 10 GAME GUARANTEE{% endif %}</span>
                     </div>
                   </div>
                 </div>
@@ -353,19 +357,19 @@
               <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.875 23.25a2.625 2.625 0 1 0 0-5.25 2.625 2.625 0 0 0 0 5.25ZM7 23.25A2.625 2.625 0 1 0 7 18a2.625 2.625 0 0 0 0 5.25Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M4.375 20.625H3.5A2.625 2.625 0 0 1 .875 18V4A2.625 2.625 0 0 1 3.5 1.375H14A2.625 2.625 0 0 1 16.625 4v16.625h-7m9.625 0h-2.625V8.375h6.125l4.375 5.396V18a2.625 2.625 0 0 1-2.625 2.625m2.625-7h-10.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
               </svg>
-              <span class="text-[#121212] text-[16px]">Fast Shipping</span>
+              <span class="text-[#121212] text-[16px]">{% if request.locale.iso_code == 'sv' %}Snabb leverans{% else %}Fast Shipping{% endif %}</span>
             </div>
             <div class="flex flex-col items-center justify-center gap-[12px] columnitemfix">
               <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M27.625 24.5A2.625 2.625 0 0 1 25 27.125H4A2.625 2.625 0 0 1 1.375 24.5V8.75A2.625 2.625 0 0 1 4 6.125h21a2.625 2.625 0 0 1 2.625 2.625zM4 6.125 15.083.948M25 6.125l-5.76-4.01" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M19.75 6.125v8.75L18 14l-1.75.875L14.5 14l-1.75.875L11 14l-1.75.875v-8.75M5.75 19.25h7m-7 3.5h3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
               </svg>
-              <span class="text-[#121212] text-[16px]">30-Days Returns</span>
+              <span class="text-[#121212] text-[16px]">{% if request.locale.iso_code == 'sv' %}30 dagars returrätt{% else %}30-Days Returns{% endif %}</span>
             </div>
             <div class="flex flex-col items-center justify-center gap-[12px] columnitemfix">
               <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.5 27.125S1.125 22.313 1.125 17.5V6.125c0-2.023 1.02-3.19 2.625-3.5L12.5.875l8.75 1.75c1.605.31 2.625 1.477 2.625 3.5V17.5c0 4.813-11.375 9.625-11.375 9.625Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="m7.444 14.3 4.075 4.075 6.037-6.037M1.125 9.625c0-2.023 1.02-3.19 2.625-3.5l8.75-1.75 8.75 1.75c1.605.31 2.625 1.477 2.625 3.5M12.5.875v3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
               </svg>
-              <span class="text-[#121212] text-[16px]">Satisfaction Guarantee</span>
+              <span class="text-[#121212] text-[16px]">{% if request.locale.iso_code == 'sv' %}Nöjdhetsgaranti{% else %}Satisfaction Guarantee{% endif %}</span>
             </div>
           </div>
           <div class="mt-[40px] rounded-[6px] bg-[#F0F0F0] p-[16px] md:p-[32px] reviewpart">
@@ -421,6 +425,16 @@
     </div>
   </div>
 </section>
+
+<div class="country">
+  {% if request.locale.iso_code == 'sv' %}sv{% else %}{% endif %}
+</div>
+
+<style>
+  .country{
+    display: none;
+  }
+</style>
 
 <div data-popup-image class="data-popup-image opacity-0 pointer-events-none">
   <button data-prev class="absolute top-2/4 translate-y-[-50%] left-[5px] text-white prev">

@@ -6,14 +6,30 @@
     {% for block in section.blocks %}
         <div class="faq-item">
             <h3>
-                {{ block.settings.faq-title }}
+                {% if request.locale.iso_code == 'sv' %}
+                    {% if block.settings.faq-title-sv != blank %}
+                        {{ block.settings.faq-title-sv }}
+                    {% else %}
+                        {{ block.settings.faq-title }}
+                    {% endif %}
+                {% else %}
+                    {{ block.settings.faq-title }}
+                {% endif %}
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
                     <path d="M21.0146 11.5254L11.5236 21.0164" stroke="#151515" stroke-width="1.84078" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M11.5234 11.5254L21.0144 21.0164" stroke="#151515" stroke-width="1.84078" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </h3>
             <div class="faq-answer">
-                <p>{{ block.settings.faq-description }}</p>
+                {% if request.locale.iso_code == 'sv' %}
+                    {% if block.settings.faq-description-sv != blank %}
+                        {{ block.settings.faq-description-sv }}
+                    {% else %}
+                        {{ block.settings.faq-description }}
+                    {% endif %}
+                {% else %}
+                    {{ block.settings.faq-description }}
+                {% endif %}
             </div>
         </div>
     {% endfor %}
@@ -62,9 +78,19 @@
                     "label": "Title"
                 },
                 {
+                    "id": "faq-title-sv",
+                    "type": "text",
+                    "label": "Title sv"
+                },
+                {
                     "id": "faq-description",
                     "type": "text",
                     "label": "Description"
+                },
+                {
+                    "id": "faq-description-sv",
+                    "type": "text",
+                    "label": "Description sv"
                 }
             ]
         }

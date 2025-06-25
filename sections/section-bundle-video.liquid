@@ -1,7 +1,7 @@
 {{ 'section-bundle-video.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
-    <h1 class="video__caption">WHAT PARENTS ARE SAYING</h1>
+    <h1 class="video__caption">{% if request.locale.iso_code == 'sv' %}VAD FÖRÄLDRAR SÄGER{% else %}WHAT PARENTS ARE SAYING{% endif %}</h1>
 </div>
 
 <div class="video__wrapper {% if section.settings.is_centered %}center{% endif %}">

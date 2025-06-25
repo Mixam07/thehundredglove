@@ -14,7 +14,15 @@
     .section-glove__caption{
         font-weight: 400 !important;
     }
+
+    .country{
+        display: none;
+    }
 </style>
+
+<div class="country">
+    {% if request.locale.iso_code == 'sv' %}sv{% endif %}
+</div>
 
 <div id="build-bundle-product" class="page-width bundle">
     <div class="bundle__wrapper">
@@ -22,15 +30,15 @@
             <div class="bundle__navigation-wrapper">
                 <span class="bundle__navigation-item active">
                     1
-                    <span class="bundle__navigation-caption">Choose Your Glove</span>
+                    <span class="bundle__navigation-caption">{% if request.locale.iso_code == 'sv' %}Välj din handske{% else %}Choose Your Glove{% endif %}</span>
                 </span>
                 <span class="bundle__navigation-item">
                     2
-                    <span class="bundle__navigation-caption">Choose Your Clothing Size</span>
+                    <span class="bundle__navigation-caption">{% if request.locale.iso_code == 'sv' %}Välj din klädstorlek{% else %}Choose Your Clothing Size{% endif %}</span>
                 </span>
                 <span class="bundle__navigation-item">
                     3
-                    <span class="bundle__navigation-caption">Choose Your Accessory</span>
+                    <span class="bundle__navigation-caption">{% if request.locale.iso_code == 'sv' %}Välj ditt tillbehör{% else %}Choose Your Accessory{% endif %}</span>
                 </span>
             </div>
         </div>
@@ -38,21 +46,21 @@
             <p class="bundle__products-headline"></p>
             <button class="bundle__products-button">
                 <img src="{{ 'finger.svg' | asset_url }}" alt="finger">
-                Need help with sizing?
+                {% if request.locale.iso_code == 'sv' %}Behöver du hjälp med storlekarna?{% else %}Need help with sizing?{% endif %}
             </button>
             <div class="bundle__products-wrapper"></div>
             <div class="bundle__products-buttons">
                 <div class="bundle__products-wrap">
-                    <button class="bundle__products-btn">PREVIOUS</button>
+                    <button class="bundle__products-btn">{% if request.locale.iso_code == 'sv' %}FÖREGÅENDE{% else %}PREVIOUS{% endif %}</button>
                 </div>
                 <div class="bundle__products-wrap">
-                    <button class="bundle__products-btn">NEXT</button>
+                    <button class="bundle__products-btn">{% if request.locale.iso_code == 'sv' %}NÄSTA{% else %}NEXT{% endif %}</button>
                 </div>
             </div>
         </div>
         <div class="bundle__cart">
             <div class="bundle__cart-wrapper">
-                <p class="bundle__cart-headline">Your bundle</p>
+                <p class="bundle__cart-headline">{% if request.locale.iso_code == 'sv' %}DITT PAKET{% else %}Your bundle{% endif %}</p>
                 <div class="bundle__cart-wrap">
                     <div class="bundle__cart-head">
                         <p class="bundle__cart-caption"></p>
@@ -83,10 +91,10 @@
                                 {% endif %}
                             </p>
                         </div>
-                        <button data-link="{{ section.settings.link }}" class="bundle__cart-submit">submit bundle</button>
+                        <button data-link="{{ section.settings.link }}" class="bundle__cart-submit">{% if request.locale.iso_code == 'sv' %}Skicka paketet{% else %}submit bundle{% endif %}</button>
                         <div class="bundle__cart-info">
                             <img src="{{ 'verified-gray.svg' | asset_url }}" alt="verified">
-                            TRY 100% RISK FREE WITH OUR 10 GAME GUARANTEE
+                            {% if request.locale.iso_code == 'sv' %}Prova helt utan risk med vår 10-matchers garanti{% else %}TRY 100% RISK FREE WITH OUR 10 GAME GUARANTEE{% endif %}
                         </div>
                     </div>
                 </div>
@@ -96,19 +104,19 @@
                     <svg class="bundle__cart-icon" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.875 23.25a2.625 2.625 0 1 0 0-5.25 2.625 2.625 0 0 0 0 5.25ZM7 23.25A2.625 2.625 0 1 0 7 18a2.625 2.625 0 0 0 0 5.25Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M4.375 20.625H3.5A2.625 2.625 0 0 1 .875 18V4A2.625 2.625 0 0 1 3.5 1.375H14A2.625 2.625 0 0 1 16.625 4v16.625h-7m9.625 0h-2.625V8.375h6.125l4.375 5.396V18a2.625 2.625 0 0 1-2.625 2.625m2.625-7h-10.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
                     </svg>
-                    <p class="bundle__cart-text">Fast Shipping</p>
+                    <p class="bundle__cart-text">{% if request.locale.iso_code == 'sv' %}Snabb leverans{% else %}Fast Shipping{% endif %}</p>
                 </div>
                 <div class="bundle__cart-elem">
                     <svg class="bundle__cart-icon" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M27.625 24.5A2.625 2.625 0 0 1 25 27.125H4A2.625 2.625 0 0 1 1.375 24.5V8.75A2.625 2.625 0 0 1 4 6.125h21a2.625 2.625 0 0 1 2.625 2.625zM4 6.125 15.083.948M25 6.125l-5.76-4.01" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="M19.75 6.125v8.75L18 14l-1.75.875L14.5 14l-1.75.875L11 14l-1.75.875v-8.75M5.75 19.25h7m-7 3.5h3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
                     </svg>
-                    <p class="bundle__cart-text">30-Days Returns</p>
+                    <p class="bundle__cart-text">{% if request.locale.iso_code == 'sv' %}30 dagars returrätt{% else %}30-Days Returns{% endif %}</p>
                 </div>
                 <div class="bundle__cart-elem">
                     <svg class="bundle__cart-icon" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12.5 27.125S1.125 22.313 1.125 17.5V6.125c0-2.023 1.02-3.19 2.625-3.5L12.5.875l8.75 1.75c1.605.31 2.625 1.477 2.625 3.5V17.5c0 4.813-11.375 9.625-11.375 9.625Z" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/><path d="m7.444 14.3 4.075 4.075 6.037-6.037M1.125 9.625c0-2.023 1.02-3.19 2.625-3.5l8.75-1.75 8.75 1.75c1.605.31 2.625 1.477 2.625 3.5M12.5.875v3.5" stroke="#121212" stroke-width="2" stroke-miterlimit="10"/>
                     </svg>
-                    <p class="bundle__cart-text">Satisfaction Guarantee</p>
+                    <p class="bundle__cart-text">{% if request.locale.iso_code == 'sv' %}Nöjdhetsgaranti{% else %}Satisfaction Guarantee{% endif %}</p>
                 </div>
             </div>
             <div class="bundle__cart-verified">
@@ -116,9 +124,9 @@
                     <img src="{{ 'recommend.svg' | asset_url }}" alt="img">
                 </div>
                 <div class="bundle__cart-verified-wrapper">
-                    <p class="bundle__cart-verified-caption">Your order is protected by</p>
-                    <p class="bundle__cart-verified-title">10-Game Money Back Guarantee</p>
-                    <p class="bundle__cart-verified-subtitle">If for any reason you don’t like our glove, you can return it and receive a full refund.</p>
+                    <p class="bundle__cart-verified-caption">{% if request.locale.iso_code == 'sv' %}Din beställning är skyddad av{% else %}Your order is protected by{% endif %}</p>
+                    <p class="bundle__cart-verified-title">{% if request.locale.iso_code == 'sv' %}10-matchers pengarna tillbaka-garanti{% else %}10-Game Money Back Guarantee{% endif %}</p>
+                    <p class="bundle__cart-verified-subtitle">{% if request.locale.iso_code == 'sv' %}Om du av någon anledning inte är nöjd med våra handskar kan du returnera dem och få full återbetalning{% else %}If for any reason you don’t like our glove, you can return it and receive a full refund.{% endif %}</p>
                 </div>
             </div>
         </div>

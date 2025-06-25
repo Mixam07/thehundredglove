@@ -338,7 +338,8 @@
     
     <div class="nwReviewsWrapTitle">
       <h3>
-      {{ section.settings.title }}</h3>
+        {% if request.locale.iso_code == 'sv' %}{{ section.settings.title-sv }}{% else %}{{ section.settings.title }}{% endif %}
+      </h3>
     </div>
     <div class="nwReviewsWrap">
       <div class="swiper nwReviewsWrapSwiper">
@@ -385,7 +386,7 @@
                     </defs>
                     </svg>
     
-                    Verified Reviewer
+                    {% if request.locale.iso_code == 'sv' %}Verifierad recension{% else %}Verified Reviewer{% endif %}
                   </div>
                 </div>
               </div>
@@ -418,7 +419,7 @@
   </div>
 </section>
 
-  <script>
+<script>
     var nwReviewsWrapSwiper = new Swiper(".nwReviewsWrapSwiper", {
       //slidesPerView: "auto",
       //centeredSlides: true,
@@ -504,6 +505,11 @@
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "title-sv",
+      "label": "Title sv"
     },
     {
       "type": "richtext",

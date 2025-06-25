@@ -189,30 +189,30 @@
             <div class="header-menu__content">
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  Gloves
+                  {% if request.locale.iso_code == 'sv' %}HANDSKAR{% else %}Gloves{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">All Goalkeeper Gloves</a>
-                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">Adult Goalkeeper Gloves</a>
-                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">Junior Goalkeeper Gloves</a>
+                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Alla målvaktshandskar{% else %}All Goalkeeper Gloves{% endif %}</a>
+                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Vuxen målvaktshandskar{% else %}Adult Goalkeeper Gloves{% endif %}</a>
+                    <a href="{{ prefix }}collections/all?handle=gloves&min=0&max=500" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Junior målvaktshandskar {% else %}Junior Goalkeeper Gloves{% endif %}</a>
                   </div>
                   <div class="header-menu__element">
                     <div class="header-menu__wrap">
-                      <h4 class="header-menu__headline">By Type</h4>
+                      <h4 class="header-menu__headline">{% if request.locale.iso_code == 'sv' %}EFTER TYP{% else %}By Type{% endif %}</h4>
                       <div class="header-menu__items">
-                        <a href="{{ prefix }}collections/all?handle=gloves&features=negative-cut&min=0&max=500" class="header-menu__item">Negative Cut</a>
-                        <a href="{{ prefix }}collections/all?handle=gloves&features=hybrid-cut&min=0&max=500" class="header-menu__item">Hybrid Cut</a>
-                        <a href="{{ prefix }}collections/all?handle=gloves&features=finger-protection&min=0&max=500" class="header-menu__item">Finger Protection</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=negative-cut&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Negativt snitt{% else %}Negative Cut{% endif %}</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=hybrid-cut&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Hybrid-snitt{% else %}Hybrid Cut{% endif %}</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=finger-protection&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Fingerskydd{% else %}Finger Protection{% endif %}</a>
                       </div>
                     </div>
                     <div class="header-menu__wrap">
-                      <h4 class="header-menu__headline">By Surface</h4>
+                      <h4 class="header-menu__headline">{% if request.locale.iso_code == 'sv' %}EFTER YTA{% else %}By Surface{% endif %}</h4>
                       <div class="header-menu__items">
-                        <a href="{{ prefix }}collections/all?handle=gloves&features=all-surfaces&min=0&max=500" class="header-menu__item">All Surfaces</a>
-                        <a href="{{ prefix }}collections/all?handle=gloves&features=astro-4g&min=0&max=500" class="header-menu__item">Astro/4G</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=all-surfaces&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Alla ytor{% else %}All Surfaces{% endif %}</a>
+                        <a href="{{ prefix }}collections/all?handle=gloves&features=astro-4g&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Astro/4G{% else %}Astro/4G{% endif %}</a>
                       </div>
                     </div>
                   </div>
@@ -220,30 +220,30 @@
               </div>
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  CLOTHING
+                  {% if request.locale.iso_code == 'sv' %}KLÄDER{% else %}CLOTHING{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="{{ prefix }}collections/all?handle=clothings&min=0&max=500" class="header-menu__caption">Shop All Clothing</a>
-                    <a href="{{ prefix }}collections/all?handle=clothings&features=adult-clothing&min=0&max=500" class="header-menu__caption">Adult Clothing</a>
-                    <a href="{{ prefix }}collections/all?handle=clothings&features=junior-clothing&min=0&max=500" class="header-menu__caption">Junior Clothing</a>
+                    <a href="{{ prefix }}collections/all?handle=clothings&min=0&max=500" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Shoppa alla kläder{% else %}Shop All Clothing{% endif %}</a>
+                    <a href="{{ prefix }}collections/all?handle=clothings&features=adult-clothing&min=0&max=500" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Vuxen Kläder{% else %}Adult Clothing{% endif %}</a>
+                    <a href="{{ prefix }}collections/all?handle=clothings&features=junior-clothing&min=0&max=500" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Junior Kläder{% else %}Junior Clothing{% endif %}</a>
                   </div>
                   <div class="header-menu__element">
                     <div class="header-menu__wrap">
-                      <h4 class="header-menu__headline">By Product</h4>
+                      <h4 class="header-menu__headline">{% if request.locale.iso_code == 'sv' %}EFTER PRODUKT{% else %}By Product{% endif %}</h4>
                       <div class="header-menu__items">
-                        <a href="{{ prefix }}collections/all?handle=clothings&features=shorts&min=0&max=500" class="header-menu__item">Shorts</a>
-                        <a href="{{ prefix }}collections/all?handle=clothings&features=top&min=0&max=500" class="header-menu__item">Top</a>
-                        <a href="{{ prefix }}collections/all?handle=clothings&features=trousers&min=0&max=500" class="header-menu__item">Trousers</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=shorts&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Shorts{% else %}Shorts{% endif %}</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=top&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Topp{% else %}Top{% endif %}</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=trousers&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Byxor{% else %}Trousers{% endif %}</a>
                       </div>
                     </div>
                     <div class="header-menu__wrap">
-                      <h4 class="header-menu__headline">By Type</h4>
+                      <h4 class="header-menu__headline">{% if request.locale.iso_code == 'sv' %}EFTER TYP{% else %}By Type{% endif %}</h4>
                       <div class="header-menu__items">
-                        <a href="{{ prefix }}collections/all?handle=clothings&features=padded&min=0&max=500" class="header-menu__item">Padded</a>
-                        <a href="{{ prefix }}collections/all?handle=clothings&features=unpadded&min=0&max=500" class="header-menu__item">Unpadded</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=padded&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Vadderad{% else %}Padded{% endif %}</a>
+                        <a href="{{ prefix }}collections/all?handle=clothings&features=unpadded&min=0&max=500" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Ovadderad{% else %}Unpadded{% endif %}</a>
                       </div>
                     </div>
                   </div>
@@ -251,47 +251,47 @@
               </div>
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  ACCESSORIES
+                  {% if request.locale.iso_code == 'sv' %}TILLBEHÖR{% else %}ACCESSORIES{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="{{ prefix }}collections/all?handle=accessories&min=0&max=500" class="header-menu__caption">Shop All Accessories</a>
+                    <a href="{{ prefix }}collections/all?handle=accessories&min=0&max=500" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Handla alla tillbehör{% else %}Shop All Accessories{% endif %}</a>
                   </div>
-                  <h4 class="header-menu__headline">By Product</h4>
+                  <h4 class="header-menu__headline">{% if request.locale.iso_code == 'sv' %}EFTER PRODUKT{% else %}By Product{% endif %}</h4>
                   <div class="header-menu__items">
-                    <a href="{{ prefix }}products/mini-shin-pads" class="header-menu__item">Shin Pads</a>
-                    <a href="{{ prefix }}products/2x-black-finger-protect-tape" class="header-menu__item">Finger Protect Tape</a>
-                    <a href="{{ prefix }}products/goalkeeper-cap-black-white" class="header-menu__item">Goalkeeper Cap</a>
-                    <a href="{{ prefix }}products/grip-socks" class="header-menu__item">Grip Socks</a>
-                    <a href="{{ prefix }}products/water-bottle" class="header-menu__item">Water Bottle</a>
-                    <a href="{{ prefix }}products/glove-wallet" class="header-menu__item">Glove Wallet</a>
-                    <a href="{{ prefix }}products/gripcharge" class="header-menu__item">Grip Charge</a>
-                    <a href="{{ prefix }}products/glove-towel" class="header-menu__item">Glove Towel</a>
+                    <a href="{{ prefix }}products/mini-shin-pads" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Benskydd{% else %}Shin Pads{% endif %}</a>
+                    <a href="{{ prefix }}products/2x-black-finger-protect-tape" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Fingerskyddstejp{% else %}Finger Protect Tape{% endif %}</a>
+                    <a href="{{ prefix }}products/goalkeeper-cap-black-white" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Målvaktskeps{% else %}Goalkeeper Cap{% endif %}</a>
+                    <a href="{{ prefix }}products/grip-socks" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Antihalkstrumpor{% else %}Grip Socks{% endif %}</a>
+                    <a href="{{ prefix }}products/water-bottle" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Vattenflaska{% else %}Water Bottle{% endif %}</a>
+                    <a href="{{ prefix }}products/glove-wallet" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Handske Plånbok{% else %}Glove Wallet{% endif %}</a>
+                    <a href="{{ prefix }}products/gripcharge" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Greppladdning{% else %}Grip Charge{% endif %}</a>
+                    <a href="{{ prefix }}products/glove-towel" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Handske Handduk{% else %}Glove Towel{% endif %}</a>
                   </div>
                 </div>
               </div>
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  BUNDLES
+                  {% if request.locale.iso_code == 'sv' %}PAKET{% else %}BUNDLES{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="{{ prefix }}collections/bundle" class="header-menu__caption">Shop All Bundles</a>
+                    <a href="{{ prefix }}collections/bundle" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Handla alla paket{% else %}Shop All Bundles{% endif %}</a>
                   </div>
-                  <h4 class="header-menu__headline">By Product</h4>
+                  <h4 class="header-menu__headline">{% if request.locale.iso_code == 'sv' %}{% else %}{% endif %} By Product</h4>
                   <div class="header-menu__items">
-                    <a href="{{ prefix }}products/core-skin-combo-bundle" class="header-menu__item">Core Skin - Combo Bundle</a>
-                    <a href="{{ prefix }}pages/academy-pack" class="header-menu__item">Academy Pack</a>
-                    <a href="{{ prefix }}apps/bundles/bundle/146719" class="header-menu__item">2x Pro Glove Bundle</a>
-                    <a href="{{ prefix }}apps/bundles/bundle/153564" class="header-menu__item">3x Pro Glove Bundle</a>
-                    <a href="{{ prefix }}products/match-day-add-on-kit" class="header-menu__item">Match Day Add-On Kit</a>
-                    <a href="{{ prefix }}products/full-protection-kit" class="header-menu__item">Full Protection Kit</a>
-                    <a href="{{ prefix }}products/3-padded-items" class="header-menu__item">3 padded items</a>
-                    <a href="{{ prefix }}products/3-core-skin-items" class="header-menu__item">3 Core Skin items</a>
+                    <a href="{{ prefix }}products/core-skin-combo-bundle" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Kärnskal - Kombinationspaket{% else %}Core Skin - Combo Bundle{% endif %}</a>
+                    <a href="{{ prefix }}pages/academy-pack" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Akademipaket{% else %}Academy Pack{% endif %}</a>
+                    <a href="{{ prefix }}apps/bundles/bundle/146719" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}2x pro målvaktshandskar – paket{% else %}2x Pro Glove Bundle{% endif %}</a>
+                    <a href="{{ prefix }}apps/bundles/bundle/153564" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}3x pro målvaktshandskar – paket{% else %}3x Pro Glove Bundle{% endif %}</a>
+                    <a href="{{ prefix }}products/match-day-add-on-kit" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Tilläggskit för matchdag{% else %}Match Day Add-On Kit{% endif %}</a>
+                    <a href="{{ prefix }}products/full-protection-kit" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}Fullskyddskit{% else %}Full Protection Kit{% endif %}</a>
+                    <a href="{{ prefix }}products/3-padded-items" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}3 vadderade plagg{% else %}3 padded items{% endif %}</a>
+                    <a href="{{ prefix }}products/3-core-skin-items" class="header-menu__item">{% if request.locale.iso_code == 'sv' %}3 core skin-produkter{% else %}3 Core Skin items{% endif %}</a>
                   </div>
                 </div>
               </div>
@@ -306,65 +306,49 @@
             <div class="header-menu__content other">
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  HELP ME CHOOSE
+                  {% if request.locale.iso_code == 'sv' %}HJÄLP MIG ATT VÄLJA{% else %}HELP ME CHOOSE{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="{{ prefix }}pages/for-matches" class="header-menu__caption">Best Gloves for Matches</a>
-                    <a href="{{ prefix }}pages/for-training" class="header-menu__caption">Best Gloves for Training</a>
-                    <a href="{{ prefix }}pages/for-child" class="header-menu__caption">Best Gloves for Your Child</a>
-                    <a href="{{ prefix }}pages/size-guid" class="header-menu__caption">Glove Size Guide</a>
+                    <a href="{{ prefix }}pages/for-matches" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Bästa handskar för matcher{% else %}Best Gloves for Matches{% endif %}</a>
+                    <a href="{{ prefix }}pages/for-training" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Bästa handskarna för träning{% else %}Best Gloves for Training{% endif %}</a>
+                    <a href="{{ prefix }}pages/for-child" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Bästa handskarna för ditt barn{% else %}Best Gloves for Your Child{% endif %}</a>
+                    <a href="{{ prefix }}pages/size-guid" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Storleksguide för handskar{% else %}Glove Size Guide{% endif %}</a>
                   </div>
                 </div>
               </div>
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  CARE & MAINTENANCE
+                  {% if request.locale.iso_code == 'sv' %}SKÖTSEL & UNDERHÅLL{% else %}CARE & MAINTENANCE{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="{{ prefix }}pages/care-guide" class="header-menu__caption">Care Guide & FAQ</a>
-                    <a href="{{ prefix }}pages/grip-guide" class="header-menu__caption">Latex Types & Grip Guide</a>
-                    <a href="{{ prefix }}pages/last-longer" class="header-menu__caption">Gloves Last Longer</a>
+                    <a href="{{ prefix }}pages/care-guide" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Skötselguide & FAQ{% else %}Care Guide & FAQ{% endif %}</a>
+                    <a href="{{ prefix }}pages/grip-guide" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Latex Typer & Grepp Guide{% else %}Latex Types & Grip Guide{% endif %}</a>
+                    <a href="{{ prefix }}pages/last-longer" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Handskar håller längre{% else %}Gloves Last Longer{% endif %}</a>
                   </div>
                 </div>
               </div>
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  GET HELP
+                  {% if request.locale.iso_code == 'sv' %}FÅ HJÄLP{% else %}GET HELP{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="{{ prefix }}pages/for-kids" class="header-menu__caption">Size Help for Kids</a>
-                    <a href="{{ prefix }}pages/glove-wear" class="header-menu__caption">Glove Wear</a>
-                    <a href="{{ prefix }}pages/plastic-film" class="header-menu__caption">Remove the Plastic Film</a>
-                    <a href="{{ prefix }}pages/goalkeeping-tips" class="header-menu__caption">Wet Weather</a>
-                    <a href="{{ prefix }}pages/us-different" class="header-menu__caption">What Makes Us Different</a>
+                    <a href="{{ prefix }}pages/for-kids" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Storlekshjälp för barn{% else %}Size Help for Kids{% endif %}</a>
+                    <a href="{{ prefix }}pages/glove-wear" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Handskar{% else %}Glove Wear{% endif %}</a>
+                    <a href="{{ prefix }}pages/plastic-film" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Ta bort plastfilmen{% else %}Remove the Plastic Film{% endif %}</a>
+                    <a href="{{ prefix }}pages/goalkeeping-tips" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Vått väder{% else %}Wet Weather{% endif %}</a>
+                    <a href="{{ prefix }}pages/us-different" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Vad som gör oss annorlunda’{% else %}What Makes Us Different{% endif %}</a>
                   </div>
                 </div>
               </div>
-              <!--
-              <div class="header-menu__elem">
-                <h3 class="header-menu__title">
-                  EXTRAS
-                  <span class="plus">+</span>
-                  <span class="minus">-</span>
-                </h3>
-                <div class="header-menu__block">
-                  <div class="header-menu__list">
-                    <a href="#" class="header-menu__caption">Glove Personalisation</a>
-                    <a href="#" class="header-menu__caption">Gift Cards</a>
-                    <a href="#" class="header-menu__caption">Wholesale & Academy Enquiries</a>
-                  </div>
-                </div>
-              </div>
-              -->
             </div>
           {% elsif forloop.index == 3 %}
             <div data-tab class="header-menu__href">
@@ -374,61 +358,46 @@
               </svg>
             </div>
             <div class="header-menu__content other">
-              <!--
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  ABOUT US
+                  {% if request.locale.iso_code == 'sv' %}BLOGG{% else %}BLOG{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="#" class="header-menu__caption">Our Story</a>
-                    <a href="#" class="header-menu__caption">What Makes Us Different</a>
-                    <a href="#" class="header-menu__caption">The Hundred Club</a>
+                    <a href="{{ prefix }}pages/size-guid" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Guider för handskar{% else %}Glove Guides{% endif %}</a>
+                    <a href="{{ prefix }}pages/goalkeeping-tips" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Tips & utbildning för målvakter{% else %}Keeper Tips & Training{% endif %}</a>
+                    <a href="{{ prefix }}pages/us-different" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Vad som gör oss annorlunda{% else %}What Makes Us Different{% endif %}</a>
                   </div>
                 </div>
               </div>
-              -->
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  BLOG
+                    {% if request.locale.iso_code == 'sv' %}FÖRÄLDRAZON{% else %}PARENT ZONE{% endif %}
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="{{ prefix }}pages/size-guid" class="header-menu__caption">Glove Guides</a>
-                    <a href="{{ prefix }}pages/goalkeeping-tips" class="header-menu__caption">Keeper Tips & Training</a>
-                    <a href="{{ prefix }}pages/us-different" class="header-menu__caption">What Makes Us Different</a>
+                    <a href="{{ prefix }}pages/for-child" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Köpa handskar till ditt barn{% else %}Buying Gloves for Your Child{% endif %}</a>
+                    <a href="{{ prefix }}pages/for-kids" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Hjälp med handskstorlek för barn{% else %}Glove Size Help for Kids{% endif %}</a>
+                    <a href="{{ prefix }}pages/last-longer" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}Hur man får handskar att hålla längre{% else %}How to Make Gloves Last Longer{% endif %}</a>
                   </div>
                 </div>
               </div>
               <div class="header-menu__elem">
                 <h3 class="header-menu__title">
-                  PARENT ZONE
-                  <span class="plus">+</span>
-                  <span class="minus">-</span>
-                </h3>
-                <div class="header-menu__block">
-                  <div class="header-menu__list">
-                    <a href="{{ prefix }}pages/for-child" class="header-menu__caption">Buying Gloves for Your Child</a>
-                    <a href="{{ prefix }}pages/for-kids" class="header-menu__caption">Glove Size Help for Kids</a>
-                    <a href="{{ prefix }}pages/last-longer" class="header-menu__caption">How to Make Gloves Last Longer</a>
-                  </div>
-                </div>
-              </div>
-              <div class="header-menu__elem">
-                <h3 class="header-menu__title">
+                  {% if request.locale.iso_code == 'sv' %}{% else %}{% endif %}
                   SOCIAL MEDIA
                   <span class="plus">+</span>
                   <span class="minus">-</span>
                 </h3>
                 <div class="header-menu__block">
                   <div class="header-menu__list">
-                    <a href="https://www.instagram.com/hundredgk/" class="header-menu__caption">Instagram</a>
-                    <a href="https://www.tiktok.com/@hundredgk" class="header-menu__caption">TikTok</a>
-                    <a href="https://www.youtube.com/@hundredgk" class="header-menu__caption">YouTube</a>
+                    <a href="https://www.instagram.com/hundredgk/" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}{% else %}{% endif %} Instagram</a>
+                    <a href="https://www.tiktok.com/@hundredgk" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}{% else %}{% endif %} TikTok</a>
+                    <a href="https://www.youtube.com/@hundredgk" class="header-menu__caption">{% if request.locale.iso_code == 'sv' %}{% else %}{% endif %} YouTube</a>
                   </div>
                 </div>
               </div>

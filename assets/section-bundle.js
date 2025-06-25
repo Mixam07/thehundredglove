@@ -58,12 +58,23 @@ const drawCart = () => {
                     </div>
                 </li>`;
         } else {
-            cart.innerHTML += `<li class="bundle__cart-item-empty">
-                ${
-                    i < 1 ? "Glove" :
-                    i < 4 ? "CLOTHING" : "Accessory" 
-                }
-            </li>`
+            const country = document.querySelector(".country")?.innerHTML.trim();
+
+            if(country == "sv"){
+                cart.innerHTML += `<li class="bundle__cart-item-empty">
+                    ${
+                        i < 1 ? "HANDSKE" :
+                        i < 4 ? "PLAGG" : "TILLBEHÖR"
+                    }
+                </li>`
+            }else{
+                cart.innerHTML += `<li class="bundle__cart-item-empty">
+                    ${
+                        i < 1 ? "Glove" :
+                        i < 4 ? "CLOTHING" : "Accessory"
+                    }
+                </li>`
+            }
         }
     }
     const t = bundle;
@@ -82,8 +93,14 @@ const drawCart = () => {
         return sum + (isNaN(num) ? 0 : num);
     }, 0);
 
-    document.querySelector(".bundle__cart-prevcost").textContent = total !== 0 ? currency + total.toFixed(2): ""
-    document.querySelector(".bundle__cart-caption").innerHTML = bundle.length < 5 ? `Add ${5 - bundle.length} MORE ITEMS FOR A FREE GIFT 🎁` : "CONGRATS, YOU'VE UNLOCKED A FREE GIFT 🎉";
+    const country = document.querySelector(".country")?.innerHTML.trim();
+
+    document.querySelector(".bundle__cart-prevcost").textContent = total !== 0 ? currency + total.toFixed(2): "";
+    if(country == "sv") {
+        document.querySelector(".bundle__cart-caption").innerHTML = bundle.length < 5 ? `LÄGG TILL ${5 - bundle.length} FLER ARTIKLAR FÖR EN GRATIS GÅVA 🎁` : "GRATTIS, DU HAR LÅST UPP EN GRATIS GÅVA 🎉";
+    }else{
+        document.querySelector(".bundle__cart-caption").innerHTML = bundle.length < 5 ? `Add ${5 - bundle.length} MORE ITEMS FOR A FREE GIFT 🎁` : "CONGRATS, YOU'VE UNLOCKED A FREE GIFT 🎉";
+    }
     document.querySelector(".bundle__cart-submit").disabled = bundle.length >= 5 ? false : true;
     document.querySelector(".bundle__cart-progress-active").style.width = bundle.length / 5 * 100 + "%";
     document.querySelectorAll("[data-delete]").forEach((button, i) => {
@@ -297,10 +314,13 @@ const addEvent = () => {
 function changeActivePage(i) {
     active = i;
     document.querySelector(".bundle__products-button").style.display = i !== 2? "flex": "none";
-    const titles = ["step 1 - choose your glove (1 pair)", "step 2 - Choose Your Clothing Size (3 items)", "step 3 - Choose Your Accessory (1 item)"];
+    const titles = ["step 1 - choose your glove (1 pair)", "step 2 - choose Your Clothing Size (3 items)", "step 3 - choose Your Accessory (1 item)"];
+    const titles_sv = ["step 1 - välj din handske (1 pair)", "step 2 - välj din klädstorlek (3 items)", "step 3 - välj ditt tillbehör (1 item)"];
     const classes = ["glove", "clothing", "accessory"]
 
     document.querySelector(".bundle__products-wrapper").innerHTML = "";
+
+    const country = document.querySelector(".country")?.innerHTML.trim();
 
     list.forEach((item, q) => {
         const avalible = item.variants.some(variant => variant.available);
@@ -311,9 +331,9 @@ function changeActivePage(i) {
             document.querySelector(".bundle__products-wrapper").innerHTML += `
                 <div class="section-glove__item">
                     ${
-                        item.tags.some(item => item == "fingersave") ? '<span class="card-top-badge">Fingersave</span>':
-                        item.tags.some(item => item == "best-seller") ? '<span class="card-top-badge">Best Seller</span>':
-                        item.tags.some(item => item == "new-in") ? '<span class="card-top-badge">New In</span>': ""
+                        item.tags.some(item => item == "fingersave") ? `<span class="card-top-badge">${country == "sv"? "Fingersave": "Fingersave"}</span>`:
+                        item.tags.some(item => item == "best-seller") ? `<span class="card-top-badge">${country == "sv"? "Best Seller": "Best Seller"}</span>`:
+                        item.tags.some(item => item == "new-in") ? `<span class="card-top-badge">${country == "sv"? "New In": "New In"}</span>`: ""
                     }
                     <div class="section-glove__image">
                         <img data-buttonPopup="${item.id}" alt="${item.title}" src="${item.images[0]}" />
@@ -591,7 +611,11 @@ function changeActivePage(i) {
 
     navigationItems[i].classList.add("active");
 
-    document.querySelector(".bundle__products-headline").innerHTML = titles[i];
+    if(country == "sv"){
+        document.querySelector(".bundle__products-headline").innerHTML = titles_sv[i];
+    }else{
+        document.querySelector(".bundle__products-headline").innerHTML = titles[i];
+    }
 
     addEvent();
 }

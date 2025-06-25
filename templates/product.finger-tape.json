@@ -105,7 +105,7 @@
         "custom_liquid_QQnEKX": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<h4 class=\"head-wrap\">COLOUR :</h4>\n\n<ul class=\"product-list\">\n  {% assign product_limit = 4\n%}\n  {% for product in collections.finger-tape.products limit:product_limit %}\n    <li class=\"product-item {% if product.url == request.path %}active{% endif %}\">\n      <a href=\"{{ product.url }}\">\n        <img src=\"{{ product.featured_image.src | img_url: 'medium' }}\" class=\"product-image\" alt=\"{{ product.featured_image.alt }}\">\n      </a>\n    </li>\n  {% endfor %}\n</ul>"
+            "custom_liquid": "<h4 class=\"prodt-wrap\">{% if request.locale.iso_code == 'sv' %}FÄRG:{% else %}COLOUR:{% endif %}</h4>\n\n<ul class=\"product-list\">\n  {% assign product_limit = 4\n%}\n  {% for product in collections.finger-tape.products limit:product_limit %}\n    <li class=\"product-item {% if product.url == request.path %}active{% endif %}\">\n      <a href=\"{{ product.url }}\">\n        <img src=\"{{ product.featured_image.src | img_url: 'medium' }}\" class=\"product-image\" alt=\"{{ product.featured_image.alt }}\">\n      </a>\n    </li>\n  {% endfor %}\n</ul>"
           }
         },
         "description": {
@@ -653,6 +653,8 @@
       ],
       "settings": {
         "title": "Customers Also Brought",
+        "title-sv": "Featured collection",
+        "style": false,
         "heading_size": "h1",
         "description": "",
         "show_description": false,

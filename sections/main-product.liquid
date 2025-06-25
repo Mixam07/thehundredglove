@@ -929,19 +929,19 @@
               <div class="banners">
                 <div class="banners__item">
                   <img src="{{ 'icon-1.svg' | asset_url }}" alt="icon" />
-                  <p class="banners__text">Fast Shipping</p>
+                  <p class="banners__text">{% if request.locale.iso_code == 'sv' %}snabb leverans{% else %}Fast Shipping{% endif %}</p>
                 </div>
                 <div class="banners__item">
                   <img src="{{ 'icon-2.svg' | asset_url }}" alt="icon" />
-                  <p class="banners__text">Money-Back Guarantee</p>
+                  <p class="banners__text">{% if request.locale.iso_code == 'sv' %}betrodd av proffsspelare{% else %}Money-Back Guarantee{% endif %}</p>
                 </div>
                 <div class="banners__item">
                   <img src="{{ 'icon-3.svg' | asset_url }}" alt="icon" />
-                  <p class="banners__text">Trusted by Pro Players</p>
+                  <p class="banners__text">{% if request.locale.iso_code == 'sv' %}pengar tillbaka-garanti{% else %}Trusted by Pro Players{% endif %}</p>
                 </div>
                 <div class="banners__item">
                   <img src="{{ 'icon-4.svg' | asset_url }}" alt="icon" />
-                  <p class="banners__text">20,000+ Satisfied Keepers</p>
+                  <p class="banners__text">{% if request.locale.iso_code == 'sv' %}över 20 000 nöjda målvakter{% else %}20,000+ Satisfied Keepers{% endif %}</p>
                 </div>
               </div>
 

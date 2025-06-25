@@ -243,11 +243,11 @@
     {% endif %}
       <div class="section-glove__item">
         {% if card_product.tags contains 'fingersave' %}
-            <span class="card-top-badge">Fingersave</span>
+            <span class="card-top-badge">{% if request.locale.iso_code == 'sv' %}FINGERSKYDD{% else %}Fingersave{% endif %}</span>
         {% elsif card_product.tags contains 'best-seller' %}
-            <span class="card-top-badge">Best Seller</span>
+            <span class="card-top-badge">{% if request.locale.iso_code == 'sv' %}GECKO-SKÄRNING{% else %}Best Seller{% endif %}</span>
         {% elsif card_product.tags contains 'new-in' %}
-            <span class="card-top-badge">New In</span>
+            <span class="card-top-badge">{% if request.locale.iso_code == 'sv' %}KÖP NU{% else %}New In{% endif %}</span>
         {% endif %}
         {% if card_product.id == 14991728279932 %}
           {% assign product_url = prefix | append: "/pages/academy-pack" %}
@@ -265,7 +265,7 @@
               data-rating="{{ card_product.metafields.loox.avg_rating }}"
               data-raters="{{ card_product.metafields.loox.num_reviews }}">
           </div>
-          <span>Reviews</span>
+          <span>{% if request.locale.iso_code == 'sv' %}recensioner {% else %}Reviews{% endif %}</span>
         </div>
         <a href="{{ product_url }}" class="section-glove__caption">{{ card_product.title }}</a>
         {% if card_product.collections contains collections['bundle'] %}

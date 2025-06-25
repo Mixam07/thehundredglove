@@ -1,7 +1,7 @@
 {{ 'section-category.css' | asset_url | stylesheet_tag }}
 
 <div class="category__container page-width">
-    <h1 class="category__title">Shop by category</h1>
+    <h1 class="category__title">{% if request.locale.iso_code == 'sv' %}SHOPPA EFTER KATEGORI{% else %}Shop by category{% endif %}</h1>
     <div class="category__list">
         {% for block in section.blocks %}
             {% if block.type == 'row' %}

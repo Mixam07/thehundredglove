@@ -36,29 +36,29 @@
 </style>
 
 <div class="page-width">
-    <h1 class="section-bundle-info__title">How to Build Your Bundle</h1>
+    <h1 class="section-bundle-info__title">{% if request.locale.iso_code == 'sv' %}SÅ HÄR BYGGER DU DITT PAKET{% else %}How to Build Your Bundle{% endif %}</h1>
     <div class="section-bundle-info__items">
         <div class="section-bundle-info__item">
             <img src="{{ 'info-1.svg' | asset_url }}" alt="arrow" />
-            <p class="section-bundle-info__caption">1. Choose Your 5 Items</p>
-            <p class="section-bundle-info__description">Start by picking any 5 essentials from our goalkeeper range below - you have loads of options from Gloves, padded kit, base layers, accessories - it’s your call.</p>
+            <p class="section-bundle-info__caption">{% if request.locale.iso_code == 'sv' %}1. VÄLJ DINA 5 ARTIKLAR{% else %}1. Choose Your 5 Items{% endif %}</p>
+            <p class="section-bundle-info__description">{% if request.locale.iso_code == 'sv' %}Börja med att välja 5 viktiga produkter från vårt målvaktsutbud nedan – du har massor av valmöjligheter från handskar, vadderad utrustning, baslager till tillbehör – valet är ditt.{% else %}Start by picking any 5 essentials from our goalkeeper range below - you have loads of options from Gloves, padded kit, base layers, accessories - it’s your call.{% endif %}</p>
         </div>
         <div class="section-bundle-info__item">
             <img src="{{ 'info-2.svg' | asset_url }}" alt="arrow" />
-            <p class="section-bundle-info__caption">2. Customise Your Sizes</p>
-            <p class="section-bundle-info__description">Select the right size for each item — gloves, tops, bottoms. We make it easy to mix sizes across the bundle.</p>
+            <p class="section-bundle-info__caption">{% if request.locale.iso_code == 'sv' %}2. ANPASSA DINA STORLEKAR{% else %}2. Customise Your Sizes{% endif %}</p>
+            <p class="section-bundle-info__description">{% if request.locale.iso_code == 'sv' %}Välj rätt storlek för varje artikel — handskar, överdelar, underdelar. Vi gör det enkelt att blanda storlekar i paketet.{% else %}Select the right size for each item — gloves, tops, bottoms. We make it easy to mix sizes across the bundle.{% endif %}</p>
         </div>
         <div class="section-bundle-info__item">
             <img src="{{ 'info-3.svg' | asset_url }}" alt="arrow" />
-            <p class="section-bundle-info__caption">3. Review & Checkout</p>
-            <p class="section-bundle-info__description">Double-check your picks, lock in your bundle, and you’re done. £124.99 for the full setup — delivered to your door.</p>
+            <p class="section-bundle-info__caption">{% if request.locale.iso_code == 'sv' %}3. GRANSKA & SLUTFÖR KÖPET{% else %}3. Review & Checkout{% endif %}</p>
+            <p class="section-bundle-info__description">{% if request.locale.iso_code == 'sv' %}Dubbelkolla dina val, bekräfta ditt paket, och du är klar. 124,99 £ för hela utrustningen — levererad till din dörr.{% else %}Double-check your picks, lock in your bundle, and you’re done. £124.99 for the full setup — delivered to your door.{% endif %}</p>
         </div>
     </div>
     <div class="section-bundle-info__wrap">
-        <a class="section-bundle-info__button" href="#build-bundle-product">BUILD THEIR BUNDLE →</a>
+        <a class="section-bundle-info__button" href="#build-bundle-product">{% if request.locale.iso_code == 'sv' %}BYGG DERAS PAKET →{% else %}BUILD THEIR BUNDLE →{% endif %}</a>
         <p class="section-bundle-info__text">
             <img src="{{ 'verified_black.svg' | asset_url }}" alt="arrow" />
-            10 Game Guarantee
+            {% if request.locale.iso_code == 'sv' %}10-matchers garanti{% else %}10 Game Guarantee{% endif %}
         </p>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="social_class"><h4 class="footer-block__heading">CONNECT</h4>
+<div class="social_class"><h4 class="footer-block__heading">{% if request.locale.iso_code == 'sv' %}ANSLUT{% else %}CONNECT{% endif %}</h4>
 <ul class="footer__list-social list-unstyled list-social">
   {%- if settings.social_facebook_link != blank -%}
     <li class="list-social__item">

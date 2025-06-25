@@ -24,6 +24,7 @@
           "type": "heading",
           "settings": {
             "heading": "THE BUNDLE ALL YOUNG KEEPERS NEED",
+            "heading-sv": "<strong>PAKETET ALLA UNGA MÅLVAKTERBEHÖVER</strong>",
             "heading_size": "h1"
           }
         },
@@ -31,6 +32,7 @@
           "type": "text",
           "settings": {
             "text": "Build Your Perfect Glove Bundle and Save Big",
+            "text-sv": "Bygg ditt perfekta handskpaket och spara stort",
             "text_style": "body"
           }
         },
@@ -41,12 +43,15 @@
             "icon_1": "check_mark",
             "image_1": "shopify://shop_images/red_background-checkbox-min.png",
             "heading_1": "ELITE GLOVES FOR JUNIORS",
+            "heading_1-sv": "ELITHANDSKAR FÖR JUNIORER",
             "icon_2": "return",
             "image_2": "shopify://shop_images/red_background-checkbox-min.png",
             "heading_2": "BUILT FOR HARD PITCHES",
+            "heading_2-sv": "BYGGDA FÖR HÅRDA PLANER",
             "icon_3": "truck",
             "image_3": "shopify://shop_images/red_background-checkbox-min.png",
             "heading_3": "ONE SIMPLE BUNDLE",
+            "heading_3-sv": "Ett enda paket",
             "heading_4": ""
           }
         },
@@ -69,7 +74,7 @@
         "buttons_aELMzH"
       ],
       "custom_css": [
-        ".banner__box h1 {font-size: 48px !important; line-height: 50px !important;}",
+        ".banner__box h1 {font-size: 48px !important; line-height: 62px !important;}",
         ".banner__text {margin: 1rem 0 0 0 !important;}",
         ".banner__content * {color: #fff;}",
         "@media (max-width: 749px) {.banner__heading {font-size: 30px; max-width: 100%; margin: 0 auto; text-align: center; } .banner__box h1 {font-size: 28px !important; line-height: 30px !important; } .banner__box {margin-top: 250px; } .banner__text {display: none; } .icon-with-text, .banner__box {display: flex; flex-direction: column; align-items: center; }}"
@@ -112,7 +117,9 @@
           "settings": {
             "content_image": "shopify://shop_images/Group_39827.png",
             "title": "Pro-level gloves as standard",
-            "description": "Proper grip, proper materials. The same latex trusted by older academy keepers — built to actually perform."
+            "title-sv": "PROFESSIONELLAHANDSKAR SOM STANDARD",
+            "description": "Proper grip, proper materials. The same latex trusted by older academy keepers — built to actually perform.",
+            "description-sv": "Rätt grepp, rätt material. Samma latex som äldre akademimålvakter litarpå — designad för att verkligen prestera."
           }
         },
         "image_content_ziMAUA": {
@@ -120,7 +127,9 @@
           "settings": {
             "content_image": "shopify://shop_images/Group_39828.png",
             "title": "Protection that matters",
-            "description": "Summer pitches are brutal. Our full padded kit absorbs impact and keeps them diving confidently on any surface."
+            "title-sv": "SKYDD SOM SPELAR ROLL",
+            "description": "Summer pitches are brutal. Our full padded kit absorbs impact and keeps them diving confidently on any surface.",
+            "description-sv": "Sommarplaner är tuffa. Vår fullt vadderadeutrustning absorberar stötar och gör att de kan dyka säkert på alla underlag."
           }
         },
         "image_content_WgkxQh": {
@@ -128,7 +137,9 @@
           "settings": {
             "content_image": "shopify://shop_images/Group_39829.png",
             "title": "More for your money",
-            "description": "Get everything in one hit — gloves, padded kit, and accessories — without paying over the odds piece by piece."
+            "title-sv": "MER FÖR PENGARNA",
+            "description": "Get everything in one hit — gloves, padded kit, and accessories — without paying over the odds piece by piece.",
+            "description-sv": "Få allt på en gång — handskar, vadderadutrustning och tillbehör — utan att betala överpris för varje del."
           }
         },
         "image_content_bUAW7C": {
@@ -136,7 +147,9 @@
           "settings": {
             "content_image": "shopify://shop_images/Group_39830.png",
             "title": "Trusted by thousands",
-            "description": "Already worn by over 25,000 goalkeepers. Parents know they’re getting proper kit, without cutting corners."
+            "title-sv": "BETRODD AV TUSENTALS",
+            "description": "Already worn by over 25,000 goalkeepers. Parents know they’re getting proper kit, without cutting corners.",
+            "description-sv": "Används redan av över 25 000 målvakter. Föräldrarvet att de får rätt utrustning utan kompromisser."
           }
         }
       },
@@ -155,6 +168,7 @@
       "settings": {
         "customClass": "",
         "title": "WHY PARENTS ARE PICKING THE ACADEMY PACK THIS PRE-SEASON",
+        "title-sv": "VARFÖR FÖRÄLDRAR VÄLJER AKADEMIPAKETET INFÖR DENNA FÖRSÄSONG",
         "heading_size": "h1",
         "button_url": "#build-bundle-product",
         "button_text": "Shop now",
@@ -323,6 +337,7 @@
           "type": "heading",
           "settings": {
             "heading": "Our Story",
+            "heading-sv": "Image banner",
             "heading_size": "h2"
           }
         },
@@ -331,6 +346,7 @@
           "disabled": true,
           "settings": {
             "text": "I grew tired of overpaying for gloves that didn't meet my performance needs. Determined to find a better solution, I founded The Hundred Glove to revolutionise the goalkeeping industry. Our mission is simple: provide top of the range gloves that combine cutting-edge technology, ergonomic design, and affordability. Every goalkeeper deserves the best equipment to excel on the field without breaking the bank. Join us in redefining what it means to be a goalkeeper with gloves crafted for champions, built to last, and designed to enhance every save.",
+            "text-sv": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
           }
         },
@@ -406,42 +422,54 @@
           "type": "row",
           "settings": {
             "faq-title": "What sizes should I order?",
-            "faq-description": "Our sizing is simple — you’ll choose glove, top, shorts and trousers sizes during the bundle build. If you’re unsure, you can check our size guide before ordering."
+            "faq-title-sv": "Vilka storlekar ska jag beställa?",
+            "faq-description": "Our sizing is simple — you’ll choose glove, top, shorts and trousers sizes during the bundle build. If you’re unsure, you can check our size guide before ordering.",
+            "faq-description-sv": "Våra storlekar är enkla — du väljer storlek påhandskar, tröja, shorts och byxor när du bygger ditt paket. Om du är osäker kandu kolla vår storleksguide innan du beställer."
           }
         },
         "row_kzpNjX": {
           "type": "row",
           "settings": {
             "faq-title": "What if I order the wrong size?",
-            "faq-description": "No problem. As long as items are unused and the glove film is still on, we offer easy size exchanges."
+            "faq-title-sv": "Vadhänder om jag beställer fel storlek?",
+            "faq-description": "No problem. As long as items are unused and the glove film is still on, we offer easy size exchanges.",
+            "faq-description-sv": "Inga problem. Så länge artiklarna är oanvända ochhandsken fortfarande har skyddsfilmen kvar, erbjuder vi enkla storleksbyten."
           }
         },
         "row_Qp4JHi": {
           "type": "row",
           "settings": {
             "faq-title": "How long does delivery take?",
-            "faq-description": "We ship almost every order within 24 hours. Most orders arrive in 1–3 business days depending on location."
+            "faq-title-sv": "Hur lång tid tar leveransen?",
+            "faq-description": "We ship almost every order within 24 hours. Most orders arrive in 1–3 business days depending on location.",
+            "faq-description-sv": "Vi skickar nästan allabeställningar inom 24 timmar. De flesta leveranser anländer inom 1–3arbetsdagar beroende på var du befinner dig."
           }
         },
         "row_mBYbV9": {
           "type": "row",
           "settings": {
             "faq-title": "Are the gloves different for juniors?",
-            "faq-description": "No. We don’t downgrade for juniors — all gloves use the same pro-grade latex as our senior models."
+            "faq-title-sv": "Ärhandskarna annorlunda för juniorer?",
+            "faq-description": "No. We don’t downgrade for juniors — all gloves use the same pro-grade latex as our senior models.",
+            "faq-description-sv": "Nej. Vi nedgraderar inte för juniorer – allahandskar använder samma pro-grade latex som våra seniormodeller."
           }
         },
         "row_VrLyWG": {
           "type": "row",
           "settings": {
             "faq-title": "Is there any extra cost at delivery?",
-            "faq-description": "No hidden charges. For European customers, all taxes and duties are covered upfront."
+            "faq-title-sv": "Finns detnågon extra kostnad vid leverans?",
+            "faq-description": "No hidden charges. For European customers, all taxes and duties are covered upfront.",
+            "faq-description-sv": "Inga dolda avgifter. För europeiska kunder täcksalla skatter och avgifter i förskott."
           }
         },
         "row_kYnhBr": {
           "type": "row",
           "settings": {
             "faq-title": "Will the gear last a full season?",
-            "faq-description": "That’s exactly what it’s built for. Durable gloves, padded kit, and proper stitching designed for weekly training and match days."
+            "faq-title-sv": "Kommerutrustningen att hålla en hel säsong?",
+            "faq-description": "That’s exactly what it’s built for. Durable gloves, padded kit, and proper stitching designed for weekly training and match days.",
+            "faq-description-sv": "Det är precis vad den är byggdför. Slitstarka handskar, vadderat kit och ordentliga sömmar designade förveckoträning och matchdagar."
           }
         }
       },
@@ -463,28 +491,36 @@
           "type": "slide",
           "settings": {
             "title": "Are all of your gloves durable?",
-            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear."
+            "title-sv": "",
+            "text": "Yes, all of our gloves are designed with durability in mind. All gloves are built with high-quality materials and go through rigorous testing processes to ensure that our gloves can withstand the toughest wear and tear.",
+            "text-sv": ""
           }
         },
         "slide_cj6Hm6": {
           "type": "slide",
           "settings": {
             "title": "How do you ensure both outstanding grip + durability?",
-            "text": "We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability."
+            "title-sv": "",
+            "text": "We’ve spent years working with material scientists to disrupt the way the modern goalkeeper glove is made, combining our findings with state-of-the-art manufacturing processes to create gloves that offer both exceptional grip and long-lasting durability.",
+            "text-sv": ""
           }
         },
         "slide_kGnE7z": {
           "type": "slide",
           "settings": {
             "title": "How long is the risk free guarantee?",
-            "text": "Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked."
+            "title-sv": "",
+            "text": "Simple - if you’re unhappy with the performance of the gloves after a minimum of 10 games (picture documentation needed after every game) then you can send the gloves back for a full refund. No questions asked.",
+            "text-sv": ""
           }
         },
         "slide_aPpca6": {
           "type": "slide",
           "settings": {
             "title": "Do all of your gloves fit true to size?",
-            "text": "They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available."
+            "title-sv": "",
+            "text": "They are true to size but can vary depending on the type of cut. A sizing guide is available on every glove product page and we have a guide to all of our glove cuts available.",
+            "text-sv": ""
           }
         }
       },
@@ -647,6 +683,7 @@
           "type": "heading",
           "settings": {
             "heading": "Ready To Join The Hundred Club?",
+            "heading-sv": "Image banner",
             "heading_size": "h2"
           }
         },
@@ -654,6 +691,7 @@
           "type": "text",
           "settings": {
             "text": "Ready to Join the Upper Echelon of Goalkeeping? Buy now for superior grip, precision, and comfort",
+            "text-sv": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
           }
         },

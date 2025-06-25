@@ -3,22 +3,22 @@
 <div class="page-width">
     <div class="section-bundle-advantages__wrapper">
         <div class="section-bundle-advantages__information">
-            <h1 class="section-bundle-advantages__title">Why Overpay for the Same Outcome?</h1>
-            <p class="section-bundle-advantages__description">Parents, kitting out a young goalkeeper shouldn’t cost you £200+ at the start of every season.</p>
-            <p class="section-bundle-advantages__description">With most brands, you're buying gloves here, a base layer there, and accessories from somewhere else - it adds up fast.</p>
-            <p class="section-bundle-advantages__description">That’s why we created the <span>Academy Pack.</span></p>
-            <p class="section-bundle-advantages__description uppercase"><span>One bundle. 5 essential items. Built for performance.</span></p>
+            <h1 class="section-bundle-advantages__title">{% if request.locale.iso_code == 'sv' %}VARFÖR BETALA MER FÖR SAMMA RESULTAT?{% else %}Why Overpay for the Same Outcome?{% endif %}</h1>
+            <p class="section-bundle-advantages__description">{% if request.locale.iso_code == 'sv' %}Föräldrar, att utrusta en ung målvakt ska inte kosta er över 200 £ i början av varje säsong.{% else %}Parents, kitting out a young goalkeeper shouldn’t cost you £200+ at the start of every season.{% endif %}</p>
+            <p class="section-bundle-advantages__description">{% if request.locale.iso_code == 'sv' %}Med de flesta märken köper ni handskar här, ett baslager där och tillbehör någon annanstans – det blir snabbt dyrt.{% else %}With most brands, you're buying gloves here, a base layer there, and accessories from somewhere else - it adds up fast.{% endif %}</p>
+            <p class="section-bundle-advantages__description">{% if request.locale.iso_code == 'sv' %}Därför tog vi fram <span>Akademipaketet</span>{% else %}That’s why we created the <span>Academy Pack.</span>{% endif %}</p>
+            <p class="section-bundle-advantages__description uppercase">{% if request.locale.iso_code == 'sv' %}<span>Ett paket. 5 viktiga artiklar. Skapat för prestation.</span>{% else %}<span>One bundle. 5 essential items. Built for performance.</span>{% endif %}</p>
         </div>
         <div class="section-bundle-advantages__image">
             <img src="https://cdn.shopify.com/s/files/1/0667/5877/0944/files/Frame_1984078211.png?v=1750438766" alt="img" />
         </div>
         <div class="section-bundle-advantages__other">
-            <p class="section-bundle-advantages__description uppercase"><span>All for £124.99.</span></p>
+            <p class="section-bundle-advantages__description uppercase">{% if request.locale.iso_code == 'sv' %}<span>Allt för 124,99 £.</span>{% else %}<span>All for £124.99.</span>{% endif %}</p>
             <div class="section-bundle-advantages__wrap">
-                <a class="section-bundle-advantages__button">BUILD THEIR BUNDLE →</a>
+                <a class="section-bundle-advantages__button">{% if request.locale.iso_code == 'sv' %}BYGG DERAS PAKET →{% else %}BUILD THEIR BUNDLE →{% endif %}</a>
                 <p class="section-bundle-advantages__info">
                     <img src="{{ 'verified_black.svg' | asset_url }}" alt="arrow" />
-                    10 Game Guarantee
+                    {% if request.locale.iso_code == 'sv' %}10-matchers garanti{% else %}10 Game Guarantee{% endif %}
                 </p>
             </div>
         </div>
